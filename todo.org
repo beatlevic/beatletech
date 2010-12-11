@@ -1,0 +1,9 @@
+* Steps [0/5]
+  - [ ] Github repository
+  - [ ] Clojure web framework
+    - ring
+    - compojure
+  - [ ] Clojure run web locally
+  - [ ] html5
+  - [ ] css3
+  - [ ] Put html output in files, and serve by PHP on TransIP server
