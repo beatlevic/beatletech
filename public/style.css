@@ -198,6 +198,9 @@ blockquote p { margin: 0; }
 	float: left;
 	width: 940px;
 	padding: 40px 10px 0 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+
 }
 
 /* Nav */
@@ -408,3 +411,6 @@ img.alignright { margin-left: 15px; }
 	transform: rotate(-2deg);
  }
 
+#map_canvas {
+    height: 100%;
+}
