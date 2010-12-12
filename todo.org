@@ -1,9 +1,13 @@
-* Steps [0/5]
-  - [ ] Github repository
-  - [ ] Clojure web framework
+* Steps [5/9]
+  - [X] Github repository
+  - [X] Cake
+  - [X] Clojure web framework
     - ring
     - compojure
-  - [ ] Clojure run web locally
+    - hiccup
+  - [X] Clojure run web locally
+  - [X] Run test html file on TransIP server
+  - [ ] sass emacs mode
   - [ ] html5
-  - [ ] css3
+  - [ ] css3 => sass
   - [ ] Put html output in files, and serve by PHP on TransIP server

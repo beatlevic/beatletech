@@ -1,0 +1,48 @@
+$grey_shadow: #e8e8e8;
+$grey_background: rgb(248, 248, 248);
+
+$color_unselected: rgb(12, 78, 166);
+$color_hover: #ff8828;
+
+$border_radius: "10px";
+
+@mixin text-shadow($color, $x, $y, $blur) {
+  text-shadow: $color $x $y "#{$blur}px";
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Color=#{$color},Direction=135,Strength=#{$blur})";
+}
+@mixin box-shadow($color) {
+  box-shadow: 3px 3px 4px $color;
+  -webkit-box-shadow: 3px 3px 4px $color;
+  -moz-box-shadow: 3px 3px 4px $color;
+}
+
+@mixin newcope-font-old($size) {
+  font-family: "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+  font-size: "#{$size}%";
+}
+
+@mixin newcope-font($size) {
+  font-family: Arial, sans-serif;
+  font-size: "#{$size}%";
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin border-radius-top($radius) {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  -moz-border-radius-topleft: $radius;
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  -webkit-border-top-right-radius: $radius;
+}
+
+html, body, div, span, applet, object, iframe, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, strong, tt, var, dl, dt, dd, blockquote, fieldset, form, i, b, caption, tbody, tfoot, thead, tr, th, td, ul, li {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
