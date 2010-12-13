@@ -185,10 +185,22 @@ blockquote p { margin: 0; }
 #header h1 a:hover {
 	background: none;
 	text-decoration: none; 
-	-webkit-transform: scale(1.1);
-	-moz-transform: scale(1.1);
-	transform: scale(1.1);
+	-webkit-transform: scale(1.1); /* rotate(-3deg); */
+	-moz-transform: scale(1.1); /* rotate(-3deg); */
+	transform: scale(1.1); /* rotate(-3deg); */
 }
+
+/* #header img { */
+/* 	-webkit-transition: all 0.15s linear; */
+/* 	-moz-transition: all 0.15s linear; */
+/* 	transition: all 0.15s linear; */
+/* } */
+
+/* #header img:hover { */
+/*     	-webkit-transform: scale(1.2); */
+/* 	-moz-transform: scale(1.2); */
+/* 	transform: scale(1.2); */
+/* } */
 
 #freelancer {
     text-align: right;
@@ -199,15 +211,17 @@ blockquote p { margin: 0; }
 /* Content */
 #content { 
 	background: url(images/content_bg.png) repeat; /* Fallback for browser that doesn't support rgba */
-	background: rgba(204, 204, 204, .4);
+	background: rgba(214, 214, 214, .4);
 	border: 1px solid #ccc;
 	border-left: none; border-right: none;
 	float: left;
 	width: 940px;
-	padding: 40px 10px 0 10px;
+	padding: 40px 10px 0 20px;
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
-
+	-webkit-box-shadow: 2px 3px 3px #ccc;
+	-moz-box-shadow: 2px 3px 3px #ccc;
+	box-shadow: 2px 3px 3px #ccc;
 }
 
 /* Nav */
@@ -405,18 +419,29 @@ img.alignright { margin-left: 15px; }
 
 /* Thumbnail rotation - Uncomment to use */
 
-
-.thumbnail {
-	-webkit-transform: rotate(2deg); 
-	-moz-transform: rotate(2deg); 
-	transform: rotate(2deg); 
+figure:hover {
+  -webkit-transform: rotate(-1deg); -moz-transform: rotate(1deg);
+  -webkit-box-shadow: 0 3px 10px #666; -moz-box-shadow: 0 3px 10px #666;
 }
 
-.post:nth-child(odd) .thumbnail {
-	-webkit-transform: rotate(-2deg);
-	-moz-transform: rotate(-2deg);
-	transform: rotate(-2deg);
- }
+figure:focus {
+  outline: none;
+  -webkit-transform: rotate(-3deg) scale(2.5); -moz-transform: rotate(-3deg) scale(2.5);
+   -webkit-box-shadow: 0 3px 10px #666; -moz-box-shadow: 0 3px 10px #666;
+  z-index: 9999;
+}
+
+/* .thumbnail { */
+/* 	-webkit-transform: rotate(2deg);  */
+/* 	-moz-transform: rotate(2deg);  */
+/* 	transform: rotate(2deg);  */
+/* } */
+
+/* .post:nth-child(odd) .thumbnail { */
+/* 	-webkit-transform: rotate(-2deg); */
+/* 	-moz-transform: rotate(-2deg); */
+/* 	transform: rotate(-2deg); */
+/*  } */
 
 #map_canvas {
     height: 100%;

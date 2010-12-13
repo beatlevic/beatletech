@@ -1,4 +1,4 @@
-* PHP html files [10/13]
+* PHP html files [10/15]
   - [X] Link beatletech.nl to .com
   - [X] Get theme based on HTML5 and CSS3
   - [X] Implement home style
@@ -10,8 +10,10 @@
   - [X] Add recked link
   - [X] Add clearly visible Freelance web developer text
   - [ ] Create copy texts
+  - [ ] Google analytics
   - [ ] Add freelance position to LinkedIn
   - [ ] check .nl forward link
+  - [ ] Language translation to dutch
 
 * Clojure Steps [8/11]
   - [X] Github repository
