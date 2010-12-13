@@ -204,7 +204,7 @@ blockquote p { margin: 0; }
 	border-left: none; border-right: none;
 	float: left;
 	width: 940px;
-	padding: 40px 10px 0 10px;
+	padding: 40px 10px 0 20px;
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
 	/* -webkit-box-shadow: 2px 3px 3px #cccccc; */ /* Box shadows slow down the entire page!!! */
