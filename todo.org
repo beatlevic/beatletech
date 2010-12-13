@@ -1,4 +1,19 @@
-* Steps [5/9]
+* PHP html files [10/13]
+  - [X] Link beatletech.nl to .com
+  - [X] Get theme based on HTML5 and CSS3
+  - [X] Implement home style
+  - [X] Add photo
+  - [X] Implement templates for about, contact and blog
+  - [X] Implement google maps
+  - [X] Push ongoing work to transip
+  - [X] Add twitter feed
+  - [X] Add recked link
+  - [X] Add clearly visible Freelance web developer text
+  - [ ] Create copy texts
+  - [ ] Add freelance position to LinkedIn
+  - [ ] check .nl forward link
+
+* Clojure Steps [8/11]
   - [X] Github repository
   - [X] Cake
   - [X] Clojure web framework
@@ -7,7 +22,11 @@
     - hiccup
   - [X] Clojure run web locally
   - [X] Run test html file on TransIP server
-  - [ ] sass emacs mode
-  - [ ] html5
-  - [ ] css3 => sass
-  - [ ] Put html output in files, and serve by PHP on TransIP server
+  - [X] sass emacs mode
+  - [X] html5
+  - [X] css3 => sass (no longer required)
+  - [ ] Implement hiccup variant of the created html files
+  - [ ] Deploy on server (EC2 micro)
+  - [ ] Implement blog
+
+
