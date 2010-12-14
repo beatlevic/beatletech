@@ -148,8 +148,8 @@ code { background: #cfcfcf; font-size: 12px; }
 
 blockquote {
 	background: url(images/quote.png) no-repeat 5px top;
-	border-left: 4px solid #F83D87;
-	border-bottom: 1px solid #F83D87;
+	border-left: 4px solid #8a8a8a;
+	border-bottom: 1px solid #8a8a8a;
 	color: #424242;
 	font-style: italic;
 	padding: 15px 0 10px 10px;
