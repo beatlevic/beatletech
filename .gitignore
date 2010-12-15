@@ -4,4 +4,4 @@ lib
 classes
 .cake
 build
-jekyll/_site
+jekyll/_site/*
