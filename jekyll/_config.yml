@@ -1,0 +1,2 @@
+server: false
+permalink: /:year/:month/:day/:title
