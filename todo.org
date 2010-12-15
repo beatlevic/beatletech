@@ -1,4 +1,4 @@
-* PHP html files [14/16]
+* PHP html files [14/17]
   - [X] Link beatletech.nl to .com
   - [X] Get theme based on HTML5 and CSS3
   - [X] Implement home style
@@ -13,6 +13,7 @@
   - [X] Google analytics
   - [X] Create copy texts
   - [X] Add freelance position to LinkedIn
+  - [ ] Jekyll => static blog aware site creator
   - [ ] check .nl forward link => email transip
   - [ ] Language translation to dutch
 
