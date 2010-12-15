@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 /* End reset */
 
 body { 
-	background: #eee url(images/bg.png) repeat;
+	background: #fff; /*#eee url(images/bg.png) repeat;*/
 	color: #333333;
 	font: 14px/24px Georgia, 'Times New Roman', Times, serif;
 }
