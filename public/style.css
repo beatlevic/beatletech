@@ -389,7 +389,7 @@ input[type=submit]:hover {
 
 img.alignleft, 
 img.alignright { 
-	background: #f2f2f2;
+	background: #fff;
 	border: 2px solid #cecdcd;
 	padding: 5px;
 	-webkit-transition: border 0.2s linear;
