@@ -403,6 +403,8 @@ img.alignright { margin-left: 15px; }
 .thumbnail { margin-left: -50px; }
 .thumbnail:hover { border: 2px solid #6b96c1; }
 
+.twitter-widget { margin-left: 15px; }
+
 .hide { display: none; }
 
 /* Thumbnail rotation - Uncomment to use */
