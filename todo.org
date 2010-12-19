@@ -1,4 +1,4 @@
-* PHP html files [16/17]
+* PHP html files [17/17]
   - [X] Link beatletech.nl to .com
   - [X] Get theme based on HTML5 and CSS3
   - [X] Implement home style
@@ -15,12 +15,13 @@
   - [X] Add freelance position to LinkedIn
   - [X] Jekyll => static blog aware site creator
   - [X] check .nl forward link => email transip
+  - [X] favicon
 
-* Jekyll
+* Jekyll [3/4]
   - [X] Implement Jekyll
   - [X] Add links on newcope website
+  - [X] Language translation to dutch
   - [ ] Create blog setup
-  - [ ] Language translation to dutch
 
 * Github
   - [ ] Cleanup code
@@ -30,6 +31,6 @@
 * Search
   - [ ] Google search website
 
-* TransIp
+* TransIp [2/2]
   - [X] forward email
-  - [ ] forward .nl
+  - [X] forward .nl with doorstuurservice
