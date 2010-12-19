@@ -3,20 +3,46 @@ layout: default
 location: blog
 menu: blog
 title: BeatleTech // Coen Stevens // Freelance web developer // Blog
-meta_keywords: web development, freelance web developer, freelance web programmer, beatlevic, web developer, Coen Stevens
+meta_keywords: web development, freelance web developer, freelance web Programmer, beatlevic, web developer, Coen Stevens
+topics: [ 'blogging', 'css', 'design', 'javascript', 'personal', 'projects', 'random', 'startups', 'web-development']
 ---               
 
+{% assign hide_extended = true %}
+
+
+<!-- <div class="cloud"> -->
+<!--   <aside> -->
+<!--     <h4>Topic list</h4> -->
+<!--     {% include cloud.html %} -->
+<!--   </aside> -->
+<!-- </div>  -->
+
 <div id="main" class="grid_8 alpha">
-  
-  <article class="post">
-    
-    <h2>Posts</h2>
-    
-    <p>
-      This is where I'll post about my ongoing work and challenges.
-    </p>
-    
-  </article>
+      
+{% for post in site.posts limit:1 %}
+ <div class="post">  
+   <h2>{{ post.title }}</h2>
+   <p class="date">{{ post.date | date: "%A, %d %B  %Y"}}  <em> <a href="http://www.google.com/search?q={{ post.topics }}+site%3Abeatltech.com/blog">{{ post.topics }}</a> </em> </p>
+   <p>{{ post.content }} <a href="{{ post.id }}/">Read more</a></p>
+ </div>
+{% endfor %}
+
+ <div class="previous_posts">
+   <aside>
+     <h4>Recent Posts</h4>
+     <table class="archive">
+       {% for post in site.posts offset:1 limit:5 %}
+       <tr>
+	 <td class="first">{{ post.date | date:"%b %d, %Y" }}</td>
+	 <td><a href="{{ post.url }}">{{ post.title }}</a></td>
+       </tr>
+       {% endfor %}
+     </table>
+     <!-- <p> -->
+     <!--    See the <a href="/archive/">archive</a> for more. -->
+     <!-- </p> -->
+   </aside>
+ </div>
   
 </div> <!-- end main -->
 

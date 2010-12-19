@@ -1,13 +1,99 @@
----
-layout: blog
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8" />
+    
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+    <title>{{ page.title }}</title>
+    
+    <meta name="description" content="Freelance company BeatleTech by Coen Stevens" />
+
+    {% if page.meta_keywords %}
+    <meta name="keywords" content="{{ page.meta_keywords }}" />
+    {% endif %}
+
+    <meta name="author" content="Coen Stevens" />
+    
+    <link href="../../../../css/960.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../style.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../css/syntax.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" href="../../../../favicon.ico" type="image/x-icon"/>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../../js/script.js"></script>
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-20231246-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+  
+  <body {% if page.menu == 'contact' %}onload="initialize()"{% endif %}>
+
+    <div id="wrapper" class="container_12">
+
+      <header id="header" class="grid_12">
+                
+        <h1><a href="index.html">BeatleTech</a></h1>
+        <img src="../../../../images/coen.jpg" alt="" class="thumbnail alignright" />
+        <div id="freelancer">Coen Stevens // Freelance web developer</div>
+      </header> <!-- end header -->
+      
+      <div id="content">
+
+        <nav>
+          <ul id="menu" class="clearfix">
+            <li><a href="../../../../index.html">Home</a></li>
+            <li><a href="../../../../about.html">About</a></li>
+            <li><a href="../../../../contact.html">Contact</a></li>
+            <li class="current"><a href="../../../../blog.html">Blog</a></li>
+            <li> <a href="../../../../nl/index.html">Nederlands</a></li>
+          </ul>
+          <br class="clear" />
+        </nav>
+
 <h1>{{ page.title }}<em>{{ post.topics }}</em></h1>
 
 <p class="date">Published on {{ page.date | date: "%A, %d %B  %Y"}}.</p>
 
 {{ content }}
-<div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/favrik/embed.js"></script><noscript><a href="http://favrik.disqus.com/?url=ref">View the discussion thread.</a></noscript>
-<p><a href="http://disqus.com">blog comments powered by <span class="logo-disqus" style="font-size: 100%">Disqus</span></a></p>
+
+<!-- <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/favrik/embed.js"></script><noscript><a href="http://favrik.disqus.com/?url=ref">View the discussion thread.</a></noscript> -->
+<!-- <p><a href="http://disqus.com">blog comments powered -->
+<!--     by <span class="logo-disqus" style="font-size: -->
+<!--                                         100%">Disqus</span></a></p> -->
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'beatletech'; // required: replace example with your forum shortname
+    var disqus_developer = 1;
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    // var disqus_identifier = 'unique_dynamic_id_1234';
+    // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
 
   <h3>Possibly related posts</h3>
   <ul class="">
@@ -16,8 +102,23 @@ layout: blog
       
       <a href="{{ post.id }}/">{{ post.title }}</a>
       
-        <em> <a href="http://www.google.com/search?q={{ post.topics }}+site%3Ablog.favrik.com">{{ post.topics }}</a> </em>
+        <em> <a href="http://www.google.com/search?q={{ post.topics }}+site%3Abeatletech.com">{{ post.topics }}</a> </em>
         </li>
     {% endfor %}
   </ul>
+
+
+        </div> <!-- end content -->
+      
+      <footer id="footer" class="grid_12">
+        <p>Copyright &copy; 2010 <a href="#">BeatleTech.com</a> -
+          Created by <a href="http://beatletech.com" title="BeatleTech by Coen Stevens">Coen Stevens</a></p>
+      </footer>
+      
+      <div class="clear"></div>
+
+    </div> <!-- end wrapper -->
+
+  </body>
+</html>
 

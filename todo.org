@@ -17,11 +17,16 @@
   - [X] check .nl forward link => email transip
   - [X] favicon
 
-* Jekyll [3/4]
+* Jekyll [3/9]
   - [X] Implement Jekyll
   - [X] Add links on newcope website
   - [X] Language translation to dutch
   - [ ] Create blog setup
+  - [ ] tagcloud
+  - [ ] sitemap.xml + robots.txt
+  - [ ] 404
+  - [ ] atom xml feed
+  - [ ] auto deploy script
 
 * Github
   - [ ] Cleanup code
