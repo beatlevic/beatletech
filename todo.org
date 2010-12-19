@@ -1,4 +1,4 @@
-* PHP html files [14/17]
+* PHP html files [16/17]
   - [X] Link beatletech.nl to .com
   - [X] Get theme based on HTML5 and CSS3
   - [X] Implement home style
@@ -13,24 +13,23 @@
   - [X] Google analytics
   - [X] Create copy texts
   - [X] Add freelance position to LinkedIn
-  - [ ] Jekyll => static blog aware site creator
-  - [ ] check .nl forward link => email transip
+  - [X] Jekyll => static blog aware site creator
+  - [X] check .nl forward link => email transip
+
+* Jekyll
+  - [X] Implement Jekyll
+  - [X] Add links on newcope website
+  - [ ] Create blog setup
   - [ ] Language translation to dutch
 
-* Clojure Steps [8/11]
-  - [X] Github repository
-  - [X] Cake
-  - [X] Clojure web framework
-    - ring
-    - compojure
-    - hiccup
-  - [X] Clojure run web locally
-  - [X] Run test html file on TransIP server
-  - [X] sass emacs mode
-  - [X] html5
-  - [X] css3 => sass (no longer required)
-  - [ ] Implement hiccup variant of the created html files
-  - [ ] Deploy on server (EC2 micro)
-  - [ ] Implement blog
+* Github
+  - [ ] Cleanup code
+  - [ ] Push to github
+  - [ ] Write blog post
 
+* Search
+  - [ ] Google search website
 
+* TransIp
+  - [X] forward email
+  - [ ] forward .nl
