@@ -1,12 +1,15 @@
 ---
 layout: post
-title: First post with a more than standard long name
-meta_description: Checking out the waters
+title: Second post
+meta_description: This is already my second post
 meta_keywords: post, welcome, beatletech, coen, stevens
 category: [javascript]
 ---
 
 Test text hello.
+
+
+different text here...!!! hello
 
 Is this a new paragraph?
 

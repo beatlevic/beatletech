@@ -108,7 +108,7 @@ ol, ul, pre, table, fieldset, blockquote, .widget {
 
 h1 { font-size: 32px; }
 h2 { font-size: 28px; }
-h3 { font-size: 36px; letter-spacing: -1px; }
+h3 { font-size: 24px; letter-spacing: -1px; }
 h4 { font-size: 23px; }
 h5 { font-size: 19px; }
 h6 { font-size: 16px; }
@@ -312,19 +312,41 @@ blockquote p { margin: 0; }
 	padding-top: 5px;
 }
 
-.widget h3 {
+.publishdate, h3 {
     color: #8a8a8a;
     -webkit-transition: opacity 0.15s ease-in-out;
     -moz-transition: opacity 0.15s ease-in-out;
     transition: opacity 0.15s ease-in-out;
 }
 
-.widget h3:hover { 
+h3:hover { 
 	background: none; 
 	opacity: 0.7; 
 	text-decoration: none;
 	text-shadow: none;
 }
+
+/* .latest ul { list-style-type: none } */
+
+/* .latest li { margin-left: 0px; border-bottom: 1px solid #BBB; } */
+
+/* .latest li a { color: #78a7d6; */
+/*              padding: 4px 5px;} */
+
+/* .latest li a:hover { color: #fff; } */
+
+.posttr { border: collapse }
+
+.date { width: 80px; 
+        border-bottom: 1px solid #BBB;}
+
+.postlink { width: 210px;
+            border-bottom: 1px solid #BBB;}
+
+.postlink a { color: #78a7d6; 
+              padding: 0px 0px;} 
+
+.postlink a:hover { color: #fff; }
 
 .widget li { line-height: 30px; }
 

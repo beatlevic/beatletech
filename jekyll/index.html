@@ -144,15 +144,34 @@ meta_keywords: web development, freelance web developer, freelance web programme
       <!-- <li><a href="#">Newcope</a></li> -->
     </ul>
   </aside> <!-- end widget -->
-  <aside class="twitter-widget widget">
+
+  <aside>
+    <h3>Latest posts</h3>
+    <!-- <ul class="latest"> -->
+    <table>
+      <tbody>
+
+        {% for post in site.posts offset: 0 limit: 5 %}
+        <tr class="posttr">
+          <td class="date">{{ post.date | date_to_string }}</td>
+          <td class="postlink"><a href="{{ post.id }}/">{{ post.title }}</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </aside>
+
+
+  <aside class="widget">
+    <h3>Twitter</h3>    
     <script src="http://widgets.twimg.com/j/2/widget.js"></script>
     <script>
       new TWTR.Widget({
       version: 2,
       type: 'profile',
-      rpp: 6,
+      rpp: 5,
       interval: 6000,
-      width: 270,
+      width: 290,
       height: 300,
       theme: {
       shell: {
