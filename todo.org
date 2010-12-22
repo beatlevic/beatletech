@@ -17,19 +17,19 @@
   - [X] check .nl forward link => email transip
   - [X] favicon
 
-* Jekyll [7/14]
+* Jekyll [9/14]
   - [X] Implement Jekyll
   - [X] Add links on newcope website
   - [X] Language translation to dutch
   - [X] Create blog setup
-  - [ ] Write 2 blog posts, intro and cake-swank
-  - [ ] Check if no comment/view comments works
-  - [ ] Turn off disqus developer mode
-  - [ ] Adding tags to posts
-  - [ ] tagcloud
+  - [X] Write 2 blog posts, intro and cake-swank
+  - [X] Turn off disqus developer mode
   - [X] sitemap.xml + robots.txt
   - [X] 404
   - [X] atom xml feed
+  - [ ] Check if no comment/view comments works
+  - [ ] Adding tags to posts
+  - [ ] tagcloud
   - [ ] auto deploy script
   - [ ] monthly archives e.g. mrdias.com
 
