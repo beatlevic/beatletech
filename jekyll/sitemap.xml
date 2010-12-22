@@ -1,0 +1,50 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for post in site.posts %}
+  <url>
+    <loc>http://beatletech.com/{{ post.url }}</loc>
+    {% if post.updated %}
+    <lastmod>{{ post.updated | date: "%Y-%m-%d" }}</lastmod>
+    {% else %}
+    <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
+    {% endif %}
+  </url>
+  {% endfor %}
+  <url>
+    <loc>http://beatletech.com</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://beatletech.com/nl</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://beatletech.com/about.html</loc>
+    <lastmod>2010-12-22</lastmod>
+  </url>
+  <url>
+    <loc>http://beatletech.com/contact.html</loc>
+    <lastmod>2010-12-22</lastmod>
+  </url>
+  <url>
+    <loc>http://beatletech.com/blog.html</loc>
+    <lastmod>weekly</lastmod>
+  </url>
+  <url>
+    <loc>http://beatletech.com/nl/about.html</loc>
+    <lastmod>2010-12-22</lastmod>
+  </url>
+  <url>
+    <loc>http://beatletech.com/nl/contact.html</loc>
+    <lastmod>2010-12-22</lastmod>
+  </url>
+  <url>
+    <loc>http://beatletech.com/nl/blog.html</loc>
+    <lastmod>weekly</lastmod>
+  </url>
+</urlset>

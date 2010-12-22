@@ -1,0 +1,26 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>beatltetech.com</title>
+ <link href="http://beatletech.com/atom.xml" rel="self"/>
+ <link href="http://beatletech.com/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>http://beatletech.com/</id>
+ <author>
+   <name>Coen Stevens</name>
+ </author>
+
+ {% for post in site.posts | limit: 20 %}
+ <entry>
+   <title>{{ post.title | strip_html }}</title>
+   <link href="http://beatletech.com{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http://beatletech.com{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
+ </entry>
+ {% endfor %}
+ 
+</feed>
