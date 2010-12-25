@@ -72,7 +72,7 @@ body {
 	background: #fff; /*#eee url(images/bg.png) repeat;*/
 	color: #333333;
 	font: 14px/24px Georgia, 'Times New Roman', Times, serif;
-        background-image:url('images/escher7.jpg');
+        background-image:url('images/escher8.jpg');
 }
 
 /* HTML5 */
@@ -217,9 +217,9 @@ blockquote p { margin: 0; }
 
 /* Content */
 #content { 
-	background: url(images/content_bg.png) repeat; /* Fallback for browser that doesn't support rgba */
-	background: rgba(230, 230, 230, .8);
-        /* background: white; */
+	/*background: url(images/content_bg.png) repeat; /* Fallback for browser that doesn't support rgba */
+	/* background: rgba(240, 240, 240, .8); */
+        background: #ededed;
 	border: solid 1px #cacaca;
 	/* border-left: none; border-right: none; */
 	float: left;
