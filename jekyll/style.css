@@ -69,10 +69,12 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 /* End reset */
 
 body { 
-	background: #fff; /*#eee url(images/bg.png) repeat;*/
+	/*background: #fff; /*#eee url(images/bg.png) repeat;*/
 	color: #333333;
 	font: 14px/24px Georgia, 'Times New Roman', Times, serif;
         background-image:url('images/escher8.jpg');
+        /* background:url('images/gradient.jpg') repeat-x; */
+        /* background-color:black; */
 }
 
 /* HTML5 */
@@ -219,7 +221,7 @@ blockquote p { margin: 0; }
 #content { 
 	/*background: url(images/content_bg.png) repeat; /* Fallback for browser that doesn't support rgba */
 	/* background: rgba(240, 240, 240, .8); */
-        background: #ededed;
+        background: white;/*#ededed; */
 	border: solid 1px #cacaca;
 	/* border-left: none; border-right: none; */
 	float: left;
