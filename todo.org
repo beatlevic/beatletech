@@ -17,7 +17,7 @@
   - [X] check .nl forward link => email transip
   - [X] favicon
 
-* Jekyll [9/14]
+* Jekyll [11/15]
   - [X] Implement Jekyll
   - [X] Add links on newcope website
   - [X] Language translation to dutch
@@ -27,7 +27,8 @@
   - [X] sitemap.xml + robots.txt
   - [X] 404
   - [X] atom xml feed
-  - [ ] Check if no comment/view comments works
+  - [X] Check if no comment/view comments works
+  - [X] create feedburner
   - [ ] Adding tags to posts
   - [ ] tagcloud
   - [ ] auto deploy script
