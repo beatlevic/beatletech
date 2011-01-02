@@ -1,0 +1,34 @@
+<aside class="widget">
+  <h3>Twitter</h3>
+  <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+  <script>
+    new TWTR.Widget({
+    version: 2,
+    type: 'profile',
+    rpp: 6,
+    interval: 6000,
+    width: 290,
+    height: 300,
+    theme: {
+    shell: {
+    background: '#999999',
+    color: '#ffffff'
+    },
+    tweets: {
+    background: '#fbfbfb',
+    color: '#757475',
+    links: '#79a6d4'
+    }
+    },
+    features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    hashtags: true,
+    timestamp: true,
+    avatars: false,
+    behavior: 'all'
+    }
+    }).render().setUser('Beatlevic').start();
+  </script>
+</aside> <!-- end widget -->

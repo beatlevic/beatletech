@@ -1,0 +1,23 @@
+<aside class="widget">
+  <h3>Recent posts <a href="http://feeds.feedburner.com/beatletech">
+      {% case page.layout %}
+        {% when 'nl' %}
+        <img src="../images/feed.png" border="0"/>
+        {% when 'post' %}
+        <img src="../../../../images/feed.png" border="0"/>
+        {% else %}
+        <img src="images/feed.png" border="0"/>
+      {% endcase %}
+  </a></h3>
+  <table>
+    <tbody>
+
+      {% for post in site.posts offset: 0 limit: 5 %}
+      <tr class="posttr">
+        <td class="date">{{ post.date | date_to_string }}</td>
+        <td class="postlink"><a href="{{ post.id }}/">{{ post.title }}</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</aside>

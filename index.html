@@ -126,80 +126,9 @@ meta_keywords: web development, freelance web developer, freelance web programme
 
 <div id="sidebar" class="grid_4 omega">
 
-  <aside class="widget">
-    <h3>Technologies</h3>
-    <ul>
-      <li><a href="index.html#ruby">Ruby on Rails</a></li>
-      <li><a href="index.html#nodejs">Javascript / JQuery / Node.js</a></li>
-      <li><a href="index.html#clojure">Clojure</a></li>
-      <li><a href="index.html#java">Java</a></li>
-      <li><a href="index.html#php">PHP Symfony</a></li>
-      <li><a href="index.html#">HTML5 / CSS3</a></li>
-    </ul>
-  </aside> <!-- end widget -->
-
-  <aside class="widget">
-    <h3>Links</h3>
-    <ul>
-      <li><a href="http://linkedin.com/in/beatlevic">LinkedIn</a></li>
-      <li><a href="http://recked.org">Recked / Recommender system</a></li>
-      <li><a href="http://ycombinator.com">Y Combinator</a></li>
-      <li><a href="http://www.businessweek.com/magazine/content/10_12/b4171027577226.htm">Business Week</a></li>
-      <!-- <li><a href="#">Newcope</a></li> -->
-    </ul>
-  </aside> <!-- end widget -->
-
-  <aside>
-    <h3>Recent posts <a href="http://feeds.feedburner.com/beatletech"><img src="images/feed.png"
-    border="0"/></a></h3>
-    <!-- <ul class="latest"> -->
-    <table>
-      <tbody>
-
-        {% for post in site.posts offset: 0 limit: 5 %}
-        <tr class="posttr">
-          <td class="date">{{ post.date | date_to_string }}</td>
-          <td class="postlink"><a href="{{ post.id }}/">{{ post.title }}</a></td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </aside>
-
-
-  <aside class="widget">
-    <h3>Twitter</h3>    
-    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
-    <script>
-      new TWTR.Widget({
-      version: 2,
-      type: 'profile',
-      rpp: 6,
-      interval: 6000,
-      width: 290,
-      height: 300,
-      theme: {
-      shell: {
-      background: '#999999',
-      color: '#ffffff'
-      },
-      tweets: {
-      background: '#fbfbfb',
-      color: '#757475',
-      links: '#79a6d4'
-      }
-      },
-      features: {
-      scrollbar: false,
-      loop: false,
-      live: false,
-      hashtags: true,
-      timestamp: true,
-      avatars: false,
-      behavior: 'all'
-      }
-      }).render().setUser('Beatlevic').start();
-    </script>
-  </aside> <!-- end widget -->
+  {% include technologies-widget.html %}
+  {% include recent-posts-widget.html %}
+  {% include links-widget.html %}
+  {% include twitter-widget.html %}
 
 </div> <!-- end sidebar -->

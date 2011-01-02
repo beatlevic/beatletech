@@ -35,21 +35,6 @@ topics: [ 'blogging', 'css', 'design', 'javascript', 'personal', 'projects', 'ra
 
 <div id="sidebar" class="grid_4 omega">
 
-  <aside>
-    <h3>Recent posts <a href="http://feeds.feedburner.com/beatletech"><img src="images/feed.png"
-    border="0"/></a></h3>
-
-    <table>
-      <tbody>
-
-        {% for post in site.posts offset: 0 limit: 10 %}
-        <tr class="posttr">
-          <td class="date">{{ post.date | date_to_string }}</td>
-          <td class="postlink"><a href="{{ post.id }}/">{{ post.title }}</a></td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </aside>
+  {% include recent-posts-widget.html %}
   
 </div> <!-- end sidebar -->
