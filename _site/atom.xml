@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>beatltetech.com</title>
+ <link href="http://beatletech.com/atom.xml" rel="self"/>
+ <link href="http://beatletech.com/"/>
+ <updated>2011-01-02T01:08:04+01:00</updated>
+ <id>http://beatletech.com/</id>
+ <author>
+   <name>Coen Stevens</name>
+ </author>
+
+ 
+ <entry>
+   <title>Cake and Emacs: cake-swank</title>
+   <link href="http://beatletech.com/2010/12/23/cake-swank"/>
+   <updated>2010-12-23T00:00:00+01:00</updated>
+   <id>http://beatletech.com/2010/12/23/cake-swank</id>
+   <content type="html">&lt;p&gt;So far I have been using &lt;a href=&quot;https://github.com/technomancy/leiningen&quot;&gt;leiningen&lt;/a&gt; as my
+standard build tool for Clojure, and together with a very nice Emacs package
+called &lt;a href=&quot;http://blog.remvee.net/2010/08/19/elein_el_leiningen_functions_for_emacs&quot;&gt;elein&lt;/a&gt;
+I was able to run leiningen tasks from within emacs. The functions I use
+ most often are elein-swank and elein-reswank to (re)connect with slime.&lt;/p&gt;
+
+&lt;p&gt;Now this is all great, but lately an alternative build tool has catched my
+eyes and is called &lt;a href=&quot;https://github.com/ninjudd/cake&quot;&gt;cake&lt;/a&gt;. It features a
+persistent JVM, which speeds up startup time tremendeously, and has an
+easier way for setting up tasks similar to ruby rake
+tasks. Now in order to make my swanking and reswanking work in emacs
+with cake I thought of reusing the elein-swank code, but as it turns
+out, in order to kill swank I had to kill cake and thereby killing the
+persistent JVM (missing the whole purpose). So instead of doing that I
+got the advice to just keep swank running, and only reload the
+classpath. This resulted in me implementing the following elisp function.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;clojure&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;defun&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;cake-swank&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;&amp;quot;Connect or reconnect to swank while reloading cake class path files with cake -r.&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;interactive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-connected-p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-disconnect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;buffer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;get-buffer-create&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;ecake-swank-buffer-name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;flet&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;display-buffer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;buffer-or-name&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;&amp;amp;optional&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;not-this-window&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;bury-buffer&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ecake-in-project-root&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;shell-command&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;cake -r&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-connect&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;127.0.0.1&amp;quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;4005&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;In order for this to work one needs to get the latest cake master
+version, so you can reload class path files (cake -r). Additionally one has
+to turn on swank autostart for cake. This can be done by adding the
+line &quot;swank.autostart = localhost:4005&quot; to your .cake/config file.&lt;/p&gt;
+
+&lt;p&gt;So now you can easily switch to cake, keeping reswank in your toolset.&lt;/p&gt;
+
+&lt;p&gt;Tip: If you find yourself always getting the following mini-buffer
+message when connecting with slime: &quot;Versions differ: nil (slime)
+vs. 20100404 (swank). Continue? (y or n)&quot;, then all you should do is
+removing the slime.elc file in your .emacs.d/elpa/slime-X folder, and
+consider it history.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BeatleTech online</title>
+   <link href="http://beatletech.com/2010/12/19/beatletech-online"/>
+   <updated>2010-12-19T00:00:00+01:00</updated>
+   <id>http://beatletech.com/2010/12/19/beatletech-online</id>
+   <content type="html">&lt;p&gt;With BeatleTech life and kicking, I found it about time to add some blogging
+functionality, and to start writing about my ongoing work, research and
+serendipity events.&lt;/p&gt;
+
+&lt;p&gt;In my ongoing work you will find me blogging about my emacs journey,
+my clojure lessons, rails mambo, and basically any other technology I
+will be working with. Further more in my research I will cover topics in
+cognitive science, human perception and AI, but all in due time.&lt;/p&gt;
+
+&lt;p&gt;If you are in need for an architect, developer or advisor, then know that
+BeatleTech is there for you, and Beatle is available for hire!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>

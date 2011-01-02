@@ -32,16 +32,21 @@
   - [ ] Adding tags to posts
   - [ ] tagcloud
   - [ ] auto deploy script
-  - [ ] monthly archives e.g. mrdias.com
 
-* Github
-  - [ ] Cleanup code
+* Github [0/3]
+  - [ ] Cleanup code [0/3]
+    - [ ] remove clojure code
+    - [ ] move jekyll folder
+    - [ ] create includes
   - [ ] Push to github
   - [ ] Write blog post
 
-* Search
+* Later [1/3]
+  - [X] install rb-gsl
   - [ ] Google search website
+  - [ ] monthly archives e.g. mrdias.com
 
-* TransIp [2/2]
+* TransIp [2/3]
   - [X] forward email
+  - [ ] check email forward
   - [X] forward .nl with doorstuurservice
