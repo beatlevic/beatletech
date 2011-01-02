@@ -17,7 +17,7 @@
   - [X] check .nl forward link => email transip
   - [X] favicon
 
-* Jekyll [11/15]
+* Jekyll [11/16]
   - [X] Implement Jekyll
   - [X] Add links on newcope website
   - [X] Language translation to dutch
@@ -29,14 +29,16 @@
   - [X] atom xml feed
   - [X] Check if no comment/view comments works
   - [X] create feedburner
+  - [ ] check different colors on windows and macbook
+  - [ ] add company logos to front page
   - [ ] Adding tags to posts
   - [ ] tagcloud
   - [ ] auto deploy script
 
 * Github [0/3]
-  - [ ] Cleanup code [0/3]
-    - [ ] remove clojure code
-    - [ ] move jekyll folder
+  - [-] Cleanup code [2/3]
+    - [X] remove clojure code
+    - [X] move jekyll folder
     - [ ] create includes
   - [ ] Push to github
   - [ ] Write blog post

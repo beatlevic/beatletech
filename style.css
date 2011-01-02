@@ -190,14 +190,15 @@ blockquote p { margin: 0; }
 }
 
 #header h1 a {
-	color: #1e1e1e;
+	color: #1e1e1e; 
+        /* color: #78a7d6; */
 	font-size: 76px;
 	font-weight: bold;
 	float: left;
 	margin-top: 65px;
 	padding: 20px 2px;
 	letter-spacing: -3px;
-	text-shadow: 0 1px 0 #fff;
+        /*text-shadow: #78a7d6 0px 1px 0px; /* #F71570 */     
 	-webkit-transition: all 0.15s linear;
 	-moz-transition: all 0.15s linear;
 	transition: all 0.15s linear;
