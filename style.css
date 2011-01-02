@@ -385,10 +385,13 @@ h3:hover {
 .postlink a:hover { color: #fff; 
                   padding: 2px 2px;}
 
-.widget li { line-height: 30px; }
+.widget li { 
+    line-height: 30px; 
+    color: #999;
+}
 
 .widget li a { 
-	color: #333;
+	color: #999; /*#333;*/
 	padding: 4px 5px; 
 	-webkit-transition: margin-left 0.3s linear;
 	-moz-transition: margin-left 0.3s linear;
