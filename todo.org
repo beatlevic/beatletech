@@ -17,7 +17,7 @@
   - [X] check .nl forward link => email transip
   - [X] favicon
 
-* Jekyll [11/16]
+* Jekyll [13/17]
   - [X] Implement Jekyll
   - [X] Add links on newcope website
   - [X] Language translation to dutch
@@ -29,8 +29,9 @@
   - [X] atom xml feed
   - [X] Check if no comment/view comments works
   - [X] create feedburner
+  - [X] add company logos to front page
+  - [X] compress png images -> pngcrush
   - [ ] check different colors on windows and macbook
-  - [ ] add company logos to front page
   - [ ] Adding tags to posts
   - [ ] tagcloud
   - [ ] auto deploy script
