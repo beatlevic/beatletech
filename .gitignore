@@ -1,7 +1,1 @@
-pom.xml
-*jar
-lib
-classes
-.cake
-build
-jekyll/_site/*
+_site/*
