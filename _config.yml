@@ -3,3 +3,5 @@ server: false
 permalink: /:year/:month/:day/:title
 lsi: true
 pygments: true
+
+exclude: [ README.markdown, todo.org ]
