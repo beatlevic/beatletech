@@ -538,3 +538,20 @@ background: none;
 .cloud ul .cloud-rank-9 a { color: #929292; }
 .cloud ul .cloud-rank-10 { font-size: 0.6em; }
 .cloud ul .cloud-rank-10 a { color: #888; }
+
+/* Tags */
+
+div.tags
+{
+  /*margin: -1em 0 0 0;*/
+  line-height: 1.7em;
+  color: #8a8a8a;
+  float: right;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+div.clear_both
+{
+  clear: both;
+}

@@ -42,19 +42,19 @@ jekyll
 # explicitly ping google only when 'ping' is passed as a parameter to the script
 # ie, ./deploy ping
 
-# if [ $# -gt 0 ] ; then
-# if [ $1 = ping ] ; then
-# 	echo "Pinging Update Services..."
+if [ $# -gt 0 ] ; then
+if [ $1 = ping ] ; then
+	echo "Pinging Update Services..."
 
-# 	# Ping google tell them the sitemap has been updated
-# 	wget --output-document=/dev/null http://www.google.com/webmasters/tools/ping?sitemap=http%3A%2F%2Fjason.the-graham.com%2Fsitemap.xml
+	# Ping google tell them the sitemap has been updated
+	wget --output-document=/dev/null http://www.google.com/webmasters/tools/ping?sitemap=http%3A%2F%2Fbeatletech.com%2Fsitemap.xml
 
-# 	# and bing
-# 	wget --output-document=/dev/null http://www.bing.com/webmaster/ping.aspx?siteMap=http://jason.the-graham.com/sitemap.xml
+	# and bing
+	wget --output-document=/dev/null http://www.bing.com/webmaster/ping.aspx?siteMap=http://beatletech.com/sitemap.xml
 
-# 	# and blog search engines
-# 	./_scripts/rpcping.pl "Blog for Jason Graham" http://jason.the-graham.com/
-# else
-# 	echo "Use \"$0 ping\" to ping google about an update."
-# fi
-# fi
+	# and blog search engines
+	# ./_scripts/rpcping.pl "Blog for Jason Graham" http://jason.the-graham.com/
+else
+	echo "Use \"$0 ping\" to ping google about an update."
+fi
+fi
