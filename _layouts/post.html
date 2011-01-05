@@ -26,6 +26,14 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
     <script type="text/javascript" src="../../../../js/script.js"></script>
 
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+       
+    <!--[if lte IE 7]>
+      <link href="css/ie.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -46,7 +54,7 @@
     <div id="wrapper" class="container_12">
 
       <header id="header" class="grid_12">
-                
+        
         <h1><a href="../../../../index.html">BeatleTech</a></h1>
         <img src="../../../../images/coen.jpg" alt="" class="thumbnail alignright" />
         <div id="freelancer">Coen Stevens // Freelance web developer</div>
@@ -75,7 +83,10 @@
 
             {{ content }}
 
-            <div class='clear_both tags'>
+            <div style="display:block;vertical-align:baseline;height:2px">
+              
+            </div>
+            <div class="clear_both tags">
               <span>
                 tags:   
                 {% for t in page.tags %} 
@@ -84,26 +95,12 @@
               </span>
             </div>
 
+            <p>
+            </p>
+
           </article>
 
           <div id="disqus_thread"></div>
-
-          <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'beatletech'; // required: replace example with your forum shortname
-            //var disqus_developer = 1;
-
-            // The following are highly recommended additional parameters. Remove the slashes in front to use.
-            // var disqus_identifier = 'unique_dynamic_id_1234';
-            // var disqus_url = 'http://example.com/permalink-to-page.html';
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-          </script>
 
           <h3>Possibly related posts</h3>
 
@@ -141,7 +138,22 @@
       <div class="clear"></div>
 
       <script type="text/javascript" src="../../../../js/sweet-justice.min.js"></script>
+      <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'beatletech'; // required: replace example with your forum shortname
+        //var disqus_developer = 1;
 
+        // The following are highly recommended additional parameters. Remove the slashes in front to use.
+        // var disqus_identifier = 'unique_dynamic_id_1234';
+        // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
     </div> <!-- end wrapper -->
 
   </body>

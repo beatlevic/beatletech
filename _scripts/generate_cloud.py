@@ -69,8 +69,8 @@ if __name__ == '__main__':
     print "<ul>"
     for t in sorted(sorted_keys[:cloud_size]):
 	rank = max_ranks - int(math.log(counts[t] - min_count + 1) * factor)
-	print "  <li class='cloud-rank-%d'>"\
-	    "<a rel='tag' href='http://www.google.com/search?q=%s+site%%3Abeatletech.com'>"\
+	print "  <li class=\"cloud-rank-%d\">"\
+	    "<a rel=\"tag\" href=\"http://www.google.com/search?q=%s+site%%3Abeatletech.com\">"\
 	    "%s</a></li>" % \
 	    (rank, urllib.quote_plus(t), t)
     print "</ul>"

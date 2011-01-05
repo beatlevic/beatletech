@@ -541,7 +541,7 @@ background: none;
 
 /* Tags */
 
-div.tags
+.tags
 {
   /*margin: -1em 0 0 0;*/
   line-height: 1.7em;
@@ -551,7 +551,7 @@ div.tags
   margin-bottom: 10px;
 }
 
-div.clear_both
+.clear_both
 {
   clear: both;
 }
