@@ -1,0 +1,18 @@
+<div class="paginator">
+
+<div class="left_column">
+{% if page.previous %}
+<a href="{{ page.previous.url }}/" title="{{ page.previous.title }}">&larr; Previous Post</a>
+{% endif %}
+</div>
+
+<div class="right_column">
+{% if page.next %}
+<a href="{{ page.next.url }}/" title="{{ page.next.title }}">Next Post &rarr;</a>
+{% endif %}
+</div>
+
+<div class="clear_both">
+</div>
+
+</div>

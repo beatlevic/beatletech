@@ -4,4 +4,4 @@ permalink: /:year/:month/:day/:title
 lsi: true
 pygments: true
 
-exclude: [ README.markdown, todo.org ]
+exclude: [ README.markdown, todo.org, deploy.sh ]

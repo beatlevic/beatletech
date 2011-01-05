@@ -3,6 +3,7 @@ layout: post
 title: "Cake and Emacs: cake-swank"
 meta_description: Connect or reconnect to swank while reloading cake class path files with cake -r
 meta_keywords: post, emacs, cake, swank, clojure, lisp
+tags: [cake, emacs, clojure, leiningen]
 category: [emacs]
 ---
 

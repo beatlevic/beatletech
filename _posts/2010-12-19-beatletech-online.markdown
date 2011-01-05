@@ -3,6 +3,7 @@ layout: post
 title: BeatleTech online
 meta_description: Checking out the waters
 meta_keywords: post, welcome, beatletech, coen, stevens
+tags: [beatletech, web-development, clojure, work]
 category: [javascript]
 ---
 

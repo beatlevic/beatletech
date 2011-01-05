@@ -3,6 +3,7 @@ layout: post
 title: "BeatleTech generated with Jekyll"
 meta_description: BeatleTech is generated with jekyll and the source code can be found on github.
 meta_keywords: post, jekyll, ruby, html, generation, web-development, static, site, html5
+tags: [jekyll, web-development, github, clojure, ruby]
 category: [web-development]
 ---
 
