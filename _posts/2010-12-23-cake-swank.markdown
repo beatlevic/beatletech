@@ -2,8 +2,8 @@
 layout: post
 title: "Cake and Emacs: cake-swank"
 meta_description: Connect or reconnect to swank while reloading cake class path files with cake -r
-meta_keywords: post, emacs, cake, swank, clojure, lisp
-tags: [cake, emacs, clojure, leiningen]
+meta_keywords: post, emacs, cake, swank, clojure, lisp, linux
+tags: [cake, emacs, clojure, leiningen, linux]
 category: [emacs]
 ---
 
@@ -22,18 +22,38 @@ with cake I thought of reusing the elein-swank code, but as it turns
 out, in order to kill swank I had to kill cake and thereby killing the
 persistent JVM (missing the whole purpose). So instead of doing that I
 got the advice to just keep swank running, and only reload the
-classpath. This resulted in me implementing the following elisp function.
+classpath. This resulted in me implementing the following elisp functions.
 
 {% highlight clojure %}
 
+(defun cake-project-root ()
+  "Look for project.clj file to find project root."
+  (let ((cwd default-directory)
+        (found nil)
+        (max 10))
+    (while (and (not found) (> max 0))
+      (if (file-exists-p (concat cwd "project.clj"))
+        (setq found cwd)
+        (setq cwd (concat cwd "../") max (- max 1))))
+    (and found (expand-file-name found))))
+
+(defmacro cake-in-project-root (body)
+  "Wrap BODY to make `default-directory' the project root."
+  (let ((dir (gensym)))
+    `(let ((,dir (cake-project-root)))
+       (if ,dir
+         (let ((default-directory ,dir)) ,body)
+         (error "No cake project root found")))))
+         
 (defun cake-swank ()
   "Connect or reconnect to swank while reloading cake class path files with cake -r."
   (interactive)
-  (if (slime-connected-p) (slime-disconnect))
-  (let ((buffer (get-buffer-create ecake-swank-buffer-name)))
+  (if (slime-connected-p)
+      (slime-disconnect))
+  (let ((buffer (get-buffer-create "*cake-swank*")))
     (flet ((display-buffer (buffer-or-name &optional not-this-window frame) nil))
       (bury-buffer buffer)
-      (ecake-in-project-root (shell-command "cake -r" buffer)))
+      (cake-in-project-root (shell-command "cake -r" buffer)))
     (slime-connect "127.0.0.1" "4005")))
 
 {% endhighlight %}
