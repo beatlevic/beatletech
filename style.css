@@ -71,7 +71,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 body { 
 	/*background: #fff; /*#eee url(images/bg.png) repeat;*/
 	color: #333333;
-	font: 14px/24px Georgia, 'Times New Roman', Times, serif;
+	/* font: 14px/24px Georgia, 'Times New Roman', Times, serif; */
+        font: 14px 'Helvetica Neue', Verdana, Arial, Helvetica, sans-serif;
         background-image:url('images/escher8.jpg');
         /* background:url('images/gradient.jpg') repeat-x; */
         /* background-color:black; */
@@ -110,7 +111,7 @@ a:hover {
 	background: #78a8d8;
         Padding: 2px 1px;
 	text-decoration: none;
-	text-shadow: #6b96c1 1px 1px 1px; /* #F71570 */
+	/*text-shadow: #6b96c1 1px 1px 1px; /* #F71570 */
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -120,7 +121,7 @@ a:hover {
 
 p, dl, hr, h1, h2, h3, h4, h5, h6,
 ol, ul, pre, table, fieldset, blockquote, .widget {
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 
 p {
@@ -195,7 +196,7 @@ blockquote p { margin: 0; }
 	font-size: 76px;
 	font-weight: bold;
 	float: left;
-	margin-top: 65px;
+	margin-top: 38px; /* 65*/
 	padding: 20px 2px;
 	letter-spacing: -3px;
         /*text-shadow: #78a7d6 0px 1px 0px; /* #F71570 */     
@@ -215,7 +216,7 @@ blockquote p { margin: 0; }
 #freelancer {
     text-align: right;
     margin-right: 180px;
-    margin-top: 85px;
+    margin-top: 90px;
 }
 
 /* Content */
@@ -299,7 +300,7 @@ blockquote p { margin: 0; }
 .post h2 {
 	color: #78a7d6;/*#6b96c1;/* #333; */
 	display: block;
-	font-size: 36px;
+	font-size: 30px;
 	font-weight: bold;
 	margin-left: 10px;
 	letter-spacing: -1px;
@@ -311,7 +312,7 @@ blockquote p { margin: 0; }
 .post h2 a {
 	color: #78a7d6;/*#6b96c1;/* #333; */
 	display: block;
-	font-size: 36px;
+	font-size: 30px;
 	font-weight: bold;
 	letter-spacing: -1px;
 	-webkit-transition: opacity 0.15s ease-in-out;
@@ -370,23 +371,25 @@ h3:hover {
 
 /* .latest li a:hover { color: #fff; } */
 
-.posttr { border: collapse }
+.posttr { border: collapse; }
 
-.date { width: 80px; 
+.date { width: 90px; 
         border-bottom: 1px solid #BBB;
-        color: #8a8a8a;}
+        color: #8a8a8a;
+        padding: 2px 0px;}
 
-.postlink { width: 210px;
-            border-bottom: 1px solid #BBB;}
+.postlink { width: 230px;
+            border-bottom: 1px solid #BBB;
+            padding: 2px 0px;}}
 
 .postlink a { color: #78a7d6; 
-              padding: 0px 0px;} 
+              padding: 2px 0px;} 
 
 .postlink a:hover { color: #fff; 
                   padding: 2px 2px;}
 
 .widget li { 
-    line-height: 30px; 
+    line-height: 25px; 
     color: #999;
 }
 
@@ -544,7 +547,7 @@ background: none;
 .tags
 {
   /*margin: -1em 0 0 0;*/
-  line-height: 1.7em;
+  /* line-height: 1.7em; */
   color: #8a8a8a;
   float: right;
   margin-right: 30px;

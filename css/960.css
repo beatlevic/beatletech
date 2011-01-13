@@ -12,7 +12,7 @@
 .container_16 {
 	margin-left: auto;
 	margin-right: auto;
-	width: 960px;
+	width: 980px;
 }
 
 /* `Grid >> Global
@@ -64,10 +64,10 @@
 
 .container_12 .grid_1 { width: 60px; }
 .container_12 .grid_2 { width: 140px; }
-.container_12 .grid_4 { width: 300px; }
+.container_12 .grid_4 { width: 320px; } /* 300 */
 .container_12 .grid_5 { width: 380px; }
 .container_12 .grid_7 { width: 540px; }
-.container_12 .grid_8 { width: 620px; }
+.container_12 .grid_8 { width: 590px; } /* 620 */
 .container_12 .grid_10 { width: 780px; }
 .container_12 .grid_11 { width: 860px; }
 
