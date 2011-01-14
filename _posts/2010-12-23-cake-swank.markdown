@@ -46,12 +46,13 @@ classpath. This resulted in me implementing the following elisp functions.
          (error "No cake project root found")))))
          
 (defun cake-swank ()
-  "Connect or reconnect to swank while reloading cake class path files with cake -r."
+  "Connect or reconnect to swank while reloading cake class path files."
   (interactive)
   (if (slime-connected-p)
       (slime-disconnect))
   (let ((buffer (get-buffer-create "*cake-swank*")))
-    (flet ((display-buffer (buffer-or-name &optional not-this-window frame) nil))
+    (flet ((display-buffer 
+             (buffer-or-name &optional not-this-window frame) nil))
       (bury-buffer buffer)
       (cake-in-project-root (shell-command "cake -r" buffer)))
     (slime-connect "127.0.0.1" "4005")))

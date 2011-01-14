@@ -293,7 +293,7 @@ blockquote p { margin: 0; }
 	position: relative;
 }
 
-.post p { padding-right: 30px; }
+.post p { padding-right: 50px; }
 
 .post img.thumbnail + p { margin-top: 25px; } /* First p after the thumbnail */
 
@@ -551,7 +551,7 @@ background: none;
   /* line-height: 1.7em; */
   color: #8a8a8a;
   float: right;
-  margin-right: 30px;
+  margin-right: 50px;
   margin-bottom: 10px;
 }
 
