@@ -227,7 +227,7 @@ blockquote p { margin: 0; }
 	border: solid 1px #cacaca;
 	/* border-left: none; border-right: none; */
 	float: left;
-	width: 940px;
+	width: 920px;
 	padding: 40px 10px 0 20px;
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
@@ -293,7 +293,7 @@ blockquote p { margin: 0; }
 	position: relative;
 }
 
-.post p { padding-right: 50px; }
+.post p { padding-right: 20px; }
 
 .post img.thumbnail + p { margin-top: 25px; } /* First p after the thumbnail */
 
@@ -377,7 +377,7 @@ h3:hover {
 .date { width: 90px; 
         border-bottom: 1px solid #BBB;
         color: #8a8a8a;
-        padding: 2px 0px;}
+        padding: 2px 0px 2px 12px;}
 
 .postlink { width: 230px;
             border-bottom: 1px solid #BBB;
@@ -463,8 +463,8 @@ img.alignright {
 	transition: border 0.2s linear;
 }
 
-img.alignleft { margin-right: 15px; }
-img.alignright { margin-left: 15px; }
+img.alignleft { margin-left: 15px; }
+img.alignright { margin-right: 15px; }
 
 .thumbnail { margin-left: -50px; }
 .thumbnail:hover { border: 2px solid #6b96c1; }
@@ -551,7 +551,7 @@ background: none;
   /* line-height: 1.7em; */
   color: #8a8a8a;
   float: right;
-  margin-right: 50px;
+  margin-right: 20px;
   margin-bottom: 10px;
 }
 
