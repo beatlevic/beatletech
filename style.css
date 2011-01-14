@@ -345,6 +345,7 @@ blockquote p { margin: 0; }
 .widget {
 	overflow: hidden;
 	padding-top: 5px;
+        font-size: 13px;
 }
 
 .publishdate, h3 {
