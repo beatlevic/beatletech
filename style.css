@@ -392,6 +392,10 @@ h3:hover {
 .postlink a:hover { color: #fff; 
                   padding: 2px 2px;}
 
+.post li {
+    line-height: 20px;
+}
+
 .widget li { 
     line-height: 25px; 
     color: #999;
