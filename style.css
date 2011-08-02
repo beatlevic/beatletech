@@ -2,27 +2,27 @@
  * HTML5 And CSS3 Theme version 1.2
  * By Jayj.dk 2009-2010
  * Download for free at http://jayj.dk/a-free-html5-and-css3-theme/
- 
+
 	Released under New BSD License
 	http://www.opensource.org/licenses/bsd-license.php
-	 
+
 	Copyright (c) 2009-2010, Jayj.dk
 	All rights reserved.
-	
+
 	Redistribution and use in source and binary forms, with or without modification,
 	are permitted provided that the following conditions are met:
-	
+
 		* Redistributions of source code must retain the above copyright notice,
 		  this list of conditions and the following disclaimer.
-	
+
 		* Redistributions in binary form must reproduce the above copyright notice,
 		  this list of conditions and the following disclaimer in the documentation
 		  and/or other materials provided with the distribution.
-	
+
 		* Neither the name of Jayj.dk nor the names of its
 		  contributors may be used to endorse or promote products derived from this
 		  software without specific prior written permission.
-	
+
 	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 	ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
 	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
@@ -48,7 +48,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, q, small, strong, sub, sup, tt, var,
 ol, ul, li, fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
+article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -68,7 +68,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 /* End reset */
 
-body { 
+body {
 	/*background: #fff; /*#eee url(images/bg.png) repeat;*/
 	color: #333333;
 	/* font: 14px/24px Georgia, 'Times New Roman', Times, serif; */
@@ -80,7 +80,7 @@ body {
 
 /* HTML5 */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section { 
+footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
@@ -191,7 +191,7 @@ blockquote p { margin: 0; }
 }
 
 #header h1 a {
-	color: #1e1e1e; 
+	color: #1e1e1e;
         /* color: #78a7d6; */
 	font-size: 76px;
 	font-weight: bold;
@@ -199,18 +199,18 @@ blockquote p { margin: 0; }
 	margin-top: 38px; /* 65*/
 	padding: 20px 2px;
 	letter-spacing: -3px;
-        /*text-shadow: #78a7d6 0px 1px 0px; /* #F71570 */     
-	-webkit-transition: all 0.15s linear;
+        /*text-shadow: #78a7d6 0px 1px 0px; /* #F71570 */
+	/*-webkit-transition: all 0.15s linear;
 	-moz-transition: all 0.15s linear;
-	transition: all 0.15s linear;
+	transition: all 0.15s linear;*/
 }
 
 #header h1 a:hover {
 	background: none;
-	text-decoration: none; 
-	-webkit-transform: scale(1.1);
+	text-decoration: none;
+	/*-webkit-transform: scale(1.1);
 	-moz-transform: scale(1.1);
-	transform: scale(1.1);
+	transform: scale(1.1);*/
 }
 
 #freelancer {
@@ -220,7 +220,7 @@ blockquote p { margin: 0; }
 }
 
 /* Content */
-#content { 
+#content {
 	/*background: url(images/content_bg.png) repeat; /* Fallback for browser that doesn't support rgba */
 	/* background: rgba(240, 240, 240, .8); */
         background: white;/*#ededed; */
@@ -269,32 +269,32 @@ blockquote p { margin: 0; }
 		left: 0; top: 100%;
 		z-index: 100;
 		text-shadow: 1px 1px 0 #eae7e7;
-		
+
 		-webkit-box-shadow: 2px 3px 3px #4d4b4b;
 		-moz-box-shadow: 2px 3px 3px #4d4b4b;
 		box-shadow: 2px 3px 3px #4d4b4b;
-		
+
 		-webkit-border-bottom-right-radius: 5px;
 		-moz-border-radius-bottomright: 5px;
 		border-bottom-right-radius: 5px;
 	}
-	
+
 	#menu li:hover > ul { display: block;  }
-	
+
 	#menu ul li {
 		float: none;
 		min-width: 150px;
 	}
-	
+
 /* Post */
-.post { 
+.post {
 	min-height: 30px;
 	margin-bottom: 20px;
 	position: relative;
 }
 
-.post p { 
-          padding-right: 20px; 
+.post p {
+          padding-right: 20px;
           line-height: 1.5em;
 }
 
@@ -324,9 +324,9 @@ blockquote p { margin: 0; }
 }
 
 .post h2 a:hover,
-.post h2:hover { 
-	background: none; 
-	opacity: 0.7; 
+.post h2:hover {
+	background: none;
+	opacity: 0.7;
 	text-decoration: none;
 	text-shadow: none;
 }
@@ -339,7 +339,7 @@ blockquote p { margin: 0; }
 		overflow: hidden;
 		text-shadow: 1px 1px 1px #F71570;
 	}
-	
+
 	.postmeta a { color: #fff; }
 
 
@@ -359,9 +359,9 @@ blockquote p { margin: 0; }
     margin-left: 10px;
 }
 
-h3:hover { 
-	background: none; 
-	opacity: 0.7; 
+h3:hover {
+	background: none;
+	opacity: 0.7;
 	text-decoration: none;
 	text-shadow: none;
 }
@@ -377,7 +377,7 @@ h3:hover {
 
 .posttr { border: collapse; }
 
-.date { width: 90px; 
+.date { width: 90px;
         border-bottom: 1px solid #BBB;
         color: #8a8a8a;
         padding: 2px 0px 2px 12px;}
@@ -386,24 +386,24 @@ h3:hover {
             border-bottom: 1px solid #BBB;
             padding: 2px 0px;}}
 
-.postlink a { color: #78a7d6; 
-              padding: 2px 0px;} 
+.postlink a { color: #78a7d6;
+              padding: 2px 0px;}
 
-.postlink a:hover { color: #fff; 
+.postlink a:hover { color: #fff;
                   padding: 2px 2px;}
 
 .post li {
     line-height: 20px;
 }
 
-.widget li { 
-    line-height: 25px; 
+.widget li {
+    line-height: 25px;
     color: #999;
 }
 
-.widget li a { 
+.widget li a {
 	color: #999; /*#333;*/
-	padding: 4px 5px; 
+	padding: 4px 5px;
 	-webkit-transition: margin-left 0.3s linear;
 	-moz-transition: margin-left 0.3s linear;
 	transition: margin-left 0.3s linear;
@@ -418,7 +418,7 @@ h3:hover {
 }
 
 /* Footer */
-#footer { 
+#footer {
 	margin: 20px 0 30px 20px;
 	text-shadow: 1px 0 1px #fff;
 }
@@ -451,7 +451,7 @@ input[type=submit]  {
 	padding: 5px 16px;
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px; 
+	-moz-border-radius: 10px;
 }
 
 .btn:hover,
@@ -460,8 +460,8 @@ input[type=submit]:hover {
 	background: #F71570;
 }
 
-img.alignleft, 
-img.alignright { 
+img.alignleft,
+img.alignright {
 	background: #fff;
 	border: 2px solid #cecdcd;
 	padding: 5px;
@@ -510,15 +510,15 @@ img.alignright { margin-right: 15px; }
     padding-top: 5px;
 }
 
-.cloud ul 
+.cloud ul
 {
 margin: 0;
 padding: 0 0 10px 0;
 text-align: justify;
 font-size: 1em;
 }
- 
-.cloud ul li 
+
+.cloud ul li
 {
 display: inline;
 margin: 0;

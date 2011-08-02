@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Skylines 1.0"
+meta_description: Skylines
+meta_keywords: post, development, work, freelancing, php, skylines, iphone
+tags: [freelancing, work, development]
+category: [development]
+---
+
+Skylines is a really cool iPhone app that helps you follow what you
+like, based on realtime pictures, and for the last couple of weeks I
+have been working with the skylines team to create a solid and scalable
+backend.
+
+Last week at the SXSW conference we had our 1.0 soft launch and the app is
+now available in the app store. We are currently working hard on the
+next 1.1 version, which will feature some great additional
+options. In the meantime please try out the app, and follow your
+interests in a realtime image stream.
+
+<img src="http://beatletech.s3.amazonaws.com/skylines.png" alt="Skylines.net" height="485" width="467">
+
+Just checkout <a href="http://skylines.net">skylines.net</a> and download
+the app from the app store.
