@@ -1,0 +1,4 @@
+Sitemap: http://beatletech.com/sitemap.xml
+
+User-agent: *
+Disallow: /images/

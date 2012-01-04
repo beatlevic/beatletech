@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>beatltetech.com</title>
+ <link href="http://beatletech.com/atom.xml" rel="self"/>
+ <link href="http://beatletech.com/"/>
+ <updated>2011-07-28T16:26:35+02:00</updated>
+ <id>http://beatletech.com/</id>
+ <author>
+   <name>Coen Stevens</name>
+ </author>
+
+ 
+ <entry>
+   <title>Malmberg: E-Publishing platform</title>
+   <link href="http://beatletech.com/2011/07/28/malmberg-e-publishing-platform"/>
+   <updated>2011-07-28T00:00:00+02:00</updated>
+   <id>http://beatletech.com/2011/07/28/malmberg-e-publishing-platform</id>
+   <content type="html">&lt;p&gt;The past couple of months have been very busy. First off I was still working partime
+for &lt;a href=&quot;http://skylines.net&quot;&gt;Skylines&lt;/a&gt; with which we made it
+into &lt;a href=&quot;http://disrupt.techcrunch.com/&quot;&gt;Techcrunch&lt;/a&gt; &lt;a
+href=&quot;http://www.dutchdailynews.com/skylines-nyc/&quot;&gt;Disrupt&lt;/a&gt; NY as a
+finalist. Skylines was actually the first Dutch startup ever to become a
+finalist of this highly rated conference competition. Great stuff,
+showing that Amsterdam can be a great place too when it comes to
+bootstrapping your global startup.&lt;/p&gt;
+
+&lt;p&gt;Next, starting in April, I was hired as a Rails developer by &lt;a
+href=&quot;http://www.ciber.com/application-development/&quot;&gt;Ciber&lt;/a&gt; on a scrum
+project for their client &lt;a
+href=&quot;http://www.malmberg.nl/Voortgezet-onderwijs/ePack-ICT/Nieuwe-generatie-methodes/Introductie.htm&quot;&gt;Malmberg&lt;/a&gt;,
+an educational publisher, to work on the next iteration of their
+e-publishing platform. The work consisted of a redesign of the old
+platform, and developing a Rails 3 application on top of the existing
+data models and MSSQL database (Rails 3 actually works perfectly fine with
+other sql dbs besides Mysql and Postgres). The application allows for
+teachers to manage their online courses, materials, exams and results,
+where students have easy access to all of this. The system is actually
+pretty smart in assigning followup courses based on your test scores,
+but still gives teachers total control.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately I can't show a link to the product or demo, as the
+application is currently being tested by the client, and will be rolled
+out for the new students in september. However I can say that I like
+the end product.&lt;/p&gt;
+
+&lt;p&gt;I strongly believe we will see a lot more development in this
+area of online learning platforms. Looking for instance at the &lt;a
+href=&quot;http://www.khanacademy.org/&quot;&gt;Khan Academy&lt;/a&gt; or &lt;a
+href=&quot;http://studyflow.com&quot;&gt;Studyflow&lt;/a&gt; we can see that the
+landscape is changing. Also a word from my teacher friends tells me that the
+Dutch curriculum on both primary and high schools is already filled with more and
+more computer courses, that provide custom tailored education for each
+individual youngster.&lt;/p&gt;
+
+&lt;p&gt;I enjoyed my work at Ciber, working with a great team of skilled
+developers, and I don't rule out that I in the foreseeable future will
+be working on next generation learning platforms again.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Bottlenose closed Beta</title>
+   <link href="http://beatletech.com/2011/04/26/bottlenose-closed-beta"/>
+   <updated>2011-04-26T00:00:00+02:00</updated>
+   <id>http://beatletech.com/2011/04/26/bottlenose-closed-beta</id>
+   <content type="html">&lt;p&gt;I guess most of you have heared about &quot;stealth&quot; startup &lt;a
+href=&quot;http://bottleno.se&quot;&gt;Bottlenose&lt;/a&gt;, which already got some great pre
+release write-ups on &lt;a
+href=&quot;http://techcrunch.com/2011/04/05/bottlenose/&quot;&gt;Techcrunch&lt;/a&gt; and &lt;a
+href=&quot;http://mashable.com/2011/04/05/bottlenose/&quot;&gt;Mashable&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In case you haven't, Bottlenose describes itself as &quot;a smarter way to surf the Stream. It's a new
+personalization tool that helps the important information find you in
+social networks like Twitter and Facebook. Use Bottlenose to track
+your interests, visualize trends, and curate knowledge with your
+friends.&quot; (Bottleno.se)&lt;/p&gt;
+
+&lt;p&gt;The Netherlands doesn't feature that many high tech startups, so I was
+happy to work together with cofounder &lt;a href=&quot;dominiek.com&quot;&gt;Dominiek
+ter Heide&lt;/a&gt; this month (who helped us out last year with our YC company &lt;a href=&quot;newcope.com&quot;&gt;Newcope&lt;/a&gt;).
+Armed with Node.js my goal is to, where possible, make the tool even smarter than it already is.
+For this challenge it helps a lot to be part of a highly skilled javascript team, who are
+pushing the boundaries forward. And besides being a cool high tech product
+to work on, I also believe Bottlenose is a must needed solution for an
+information overload problem that is getting bigger each day.&lt;/p&gt;
+
+&lt;p&gt;Bottlenose is currently in alpha, but you can sign up now on &lt;a
+href=&quot;http://bottleno.se&quot;&gt;Bottleno.se&lt;/a&gt;, and hopefully be one
+of the lucky ones for the closed beta to have early access to a tool that will enrich your
+twitter and facebook experience.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://beatletech.s3.amazonaws.com/bottlenose.png&quot;
+alt=&quot;Bottleno.se&quot; height=&quot;157&quot; width=&quot;523&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Bottlenose = Node.js = #winning&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Skylines 1.0</title>
+   <link href="http://beatletech.com/2011/03/27/skylines-1-0"/>
+   <updated>2011-03-27T00:00:00+01:00</updated>
+   <id>http://beatletech.com/2011/03/27/skylines-1-0</id>
+   <content type="html">&lt;p&gt;Skylines is a really cool iPhone app that helps you follow what you
+like, based on realtime pictures, and for the last couple of weeks I
+have been working with the skylines team to create a solid and scalable
+backend.&lt;/p&gt;
+
+&lt;p&gt;Last week at the SXSW conference we had our 1.0 soft launch and the app is
+now available in the app store. We are currently working hard on the
+next 1.1 version, which will feature some great additional
+options. In the meantime please try out the app, and follow your
+interests in a realtime image stream.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://beatletech.s3.amazonaws.com/skylines.png&quot; alt=&quot;Skylines.net&quot; height=&quot;485&quot; width=&quot;467&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Just checkout &lt;a href=&quot;http://skylines.net&quot;&gt;skylines.net&lt;/a&gt; and download
+the app from the app store.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BeatleTech generated with Jekyll</title>
+   <link href="http://beatletech.com/2011/01/03/beatletech-generated-with-jekyll"/>
+   <updated>2011-01-03T00:00:00+01:00</updated>
+   <id>http://beatletech.com/2011/01/03/beatletech-generated-with-jekyll</id>
+   <content type="html">&lt;p&gt;When I started with the creation of BeatleTech.com and blog, I didn't
+want to rely on Wordpress (or others) as I wanted more flexibility and
+control, and I definitely didn't want to separate the blog from the main site,
+i.e. linking to a blog on Posterous.&lt;/p&gt;
+
+&lt;p&gt;So my initial plan was to build the site in clojure, given a nice
+online clojure blog example, Brian Carper's &lt;a href=&quot;https://github.com/briancarper/cow-blog&quot;&gt;Cow-blog&lt;/a&gt;.
+However, shortly after having started, my friend Jeff Rose introduced
+me to &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt;, which is
+a blog-aware, static site generator in Ruby. It allows for templating,
+and uses Disqus for showing a dynamic javascript blog. Generating a static
+site allowed me to copy all the html files to my Transip webhosting
+server, and thereby keeping it extremely low cost. Running a clojure
+site on Google App Engine could have been a good alterative, but I
+liked giving Jekyll a try. It turned out to be very easy and already has tons of
+examples online to check out. I also put the source code of BeatleTech
+on &lt;a href=&quot;https://github.com/beatlevic/BeatleTech&quot;&gt;Github&lt;/a&gt; for sharing, and hope it could be of any use for you.&lt;/p&gt;
+
+&lt;p&gt;So if you are looking for a way to create your website-blog and
+(just like me) already paid for webhosting, which sadly only allows you to do some php
+wizardry, then rest assured as Jekyll can save your day.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Cake and Emacs: cake-swank</title>
+   <link href="http://beatletech.com/2010/12/23/cake-swank"/>
+   <updated>2010-12-23T00:00:00+01:00</updated>
+   <id>http://beatletech.com/2010/12/23/cake-swank</id>
+   <content type="html">&lt;p&gt;So far I have been using &lt;a href=&quot;https://github.com/technomancy/leiningen&quot;&gt;leiningen&lt;/a&gt; as my
+standard build tool for Clojure, and together with a very nice Emacs package
+called &lt;a href=&quot;http://blog.remvee.net/2010/08/19/elein_el_leiningen_functions_for_emacs&quot;&gt;elein&lt;/a&gt;
+I was able to run leiningen tasks from within emacs. The functions I use
+ most often are elein-swank and elein-reswank to (re)connect with slime.&lt;/p&gt;
+
+&lt;p&gt;Now this is all great, but lately an alternative build tool has catched my
+eyes and is called &lt;a href=&quot;https://github.com/ninjudd/cake&quot;&gt;cake&lt;/a&gt;. It features a
+persistent JVM, which speeds up startup time tremendeously, and has an
+easier way for setting up tasks similar to ruby rake
+tasks. Now in order to make my swanking and reswanking work in emacs
+with cake I thought of reusing the elein-swank code, but as it turns
+out, in order to kill swank I had to kill cake and thereby killing the
+persistent JVM (missing the whole purpose). So instead of doing that I
+got the advice to just keep swank running, and only reload the
+classpath. This resulted in me implementing the following elisp functions.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;clojure&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;defun&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;cake-project-root&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;&amp;quot;Look for project.clj file to find project root.&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cwd&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;default-directory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;found&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;and &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;not &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;file-exists-p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;concat &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cwd&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;project.clj&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;found&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;cwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;cwd&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;concat &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cwd&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;../&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;- &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;and &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;found&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;expand-file-name&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;defmacro &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cake-in-project-root&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;&amp;quot;Wrap BODY to make `default-directory&amp;#39; the project root.&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dir&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;gensym&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cake-project-root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;default-directory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;No cake project root found&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))))&lt;/span&gt;
+         
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;defun&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;cake-swank&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;&amp;quot;Connect or reconnect to swank while reloading cake class path files.&amp;quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;interactive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-connected-p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-disconnect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;buffer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;get-buffer-create&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;*cake-swank*&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;flet&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;display-buffer&lt;/span&gt; 
+             &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;buffer-or-name&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;&amp;amp;optional&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;not-this-window&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;bury-buffer&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cake-in-project-root&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;shell-command&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;cake -r&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-connect&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;127.0.0.1&amp;quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;4005&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;In order for this to work one needs to get the latest cake master
+version, so you can reload class path files (cake -r). Additionally one has
+to turn on swank autostart for cake. This can be done by adding the
+line &quot;swank.autostart = localhost:4005&quot; to your .cake/config file.&lt;/p&gt;
+
+&lt;p&gt;So now you can easily switch to cake, keeping reswank in your toolset.&lt;/p&gt;
+
+&lt;p&gt;Tip: If you find yourself always getting the following mini-buffer
+message when connecting with slime: &quot;Versions differ: nil (slime)
+vs. 20100404 (swank). Continue? (y or n)&quot;, then all you should do is
+removing the slime.elc file in your .emacs.d/elpa/slime-X folder, and
+consider it history.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BeatleTech online</title>
+   <link href="http://beatletech.com/2010/12/19/beatletech-online"/>
+   <updated>2010-12-19T00:00:00+01:00</updated>
+   <id>http://beatletech.com/2010/12/19/beatletech-online</id>
+   <content type="html">&lt;p&gt;With BeatleTech life and kicking, I found it about time to add some blogging
+functionality, and to start writing about my ongoing work, research and
+serendipity events.&lt;/p&gt;
+
+&lt;p&gt;In my ongoing work you will find me blogging about my emacs journey,
+my clojure lessons, rails mambo, and basically any other technology I
+will be working with. Further more in my research I will cover topics in
+cognitive science, human perception and AI, but all in due time.&lt;/p&gt;
+
+&lt;p&gt;If you are in need for an architect, developer or advisor, then know that
+BeatleTech is there for you, and Beatle is available for hire!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>
