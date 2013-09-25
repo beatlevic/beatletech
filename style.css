@@ -200,17 +200,17 @@ blockquote p { margin: 0; }
 	padding: 20px 2px;
 	letter-spacing: -3px;
         /*text-shadow: #78a7d6 0px 1px 0px; /* #F71570 */
-	/*-webkit-transition: all 0.15s linear;
+	-webkit-transition: all 0.15s linear;
 	-moz-transition: all 0.15s linear;
-	transition: all 0.15s linear;*/
+	transition: all 0.15s linear;
 }
 
 #header h1 a:hover {
 	background: none;
 	text-decoration: none;
-	/*-webkit-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
 	-moz-transform: scale(1.1);
-	transform: scale(1.1);*/
+	transform: scale(1.1);
 }
 
 #freelancer {
