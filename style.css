@@ -394,6 +394,26 @@ h3:hover {
 
 .post li {
     line-height: 20px;
+    padding: 4px 5px;
+    p-webkit-transition: margin-left 0.3s linear;
+    -moz-transition: margin-left 0.3s linear;
+    transition: margin-left 0.3s linear;
+}
+
+.post a {
+	color: #333333;
+	padding: 4px 5px;
+	-webkit-transition: margin-left 0.3s linear;
+	-moz-transition: margin-left 0.3s linear;
+	transition: margin-left 0.3s linear;
+}
+
+.post a:hover {
+	color: #fff;
+	margin-left: 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 
 .widget li {
