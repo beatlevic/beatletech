@@ -393,7 +393,7 @@ h3:hover {
                   padding: 2px 2px;}
 
 .post li {
-    line-height: 20px;
+    line-height: 15px;
     padding: 4px 5px;
     p-webkit-transition: margin-left 0.3s linear;
     -moz-transition: margin-left 0.3s linear;
