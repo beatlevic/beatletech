@@ -400,7 +400,7 @@ h3:hover {
     transition: margin-left 0.3s linear;
 }
 
-.post a {
+.post li a {
 	color: #333333;
 	padding: 4px 5px;
 	-webkit-transition: margin-left 0.3s linear;
@@ -408,7 +408,7 @@ h3:hover {
 	transition: margin-left 0.3s linear;
 }
 
-.post a:hover {
+.post li a:hover {
 	color: #fff;
 	margin-left: 10px;
 	-webkit-border-radius: 5px;
