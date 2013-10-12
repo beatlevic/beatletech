@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2013-10-12T11:02:33+02:00</updated>
+ <updated>2013-10-12T15:01:55+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -16,11 +16,18 @@
    <link href="http://beatletech.com/2013/08/12/dokzorg-live"/>
    <updated>2013-08-12T00:00:00+02:00</updated>
    <id>http://beatletech.com/2013/08/12/dokzorg-live</id>
-   <content type="html">&lt;p&gt;Dokzorg&lt;/p&gt;
+   <content type="html">&lt;p&gt;A couple of weeks ago I ordered two dedicated machines at Hetzner for myself to develop and run some side projects on a Node.js/MongoDb/Elasticsearch stack.
+While these are work in progress, I also finished moving BeatleTech.com to my new server (previously hosted by TransIp) and decided to help out my spouse by
+building a website for her freelancing GP (Huisarts) practices. The end result is here today, as &lt;a href=&quot;http://dokzorg.nl&quot; target=&quot;blank&quot;&gt;Dokzorg.nl&lt;/a&gt; is live as of now.&lt;/p&gt;
+
+&lt;p&gt;She basically wanted a simple landing page with just enough info to get potential employers excited and be findable on the web, without explicitly creating
+an online presence by blogging and tweeting. We currently like the end result and hope others like it too. See below for a screenshot of the landing page, and follow the
+link to check it out.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://dokzorg.nl&quot; target=&quot;blank&quot;&gt;&lt;img src=&quot;http://beatletech.s3.amazonaws.com/dokzorg.png&quot; alt=&quot;Dokzorg.nl&quot; height=&quot;300&quot; width=&quot;540&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Just checkout &lt;a href=&quot;http://dokzorg.nl&quot;&gt;http://dokzorg.nl&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;And now after spending some time front-end developing this project,
+I'm looking forward to dive back in the other back-end projects I have going for which I can happily ignore HTML and CSS..&lt;/p&gt;
 </content>
  </entry>
  
