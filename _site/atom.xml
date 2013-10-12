@@ -4,12 +4,25 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2013-09-26T23:40:58+02:00</updated>
+ <updated>2013-10-12T11:02:33+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
  </author>
 
+ 
+ <entry>
+   <title>Dokzorg.nl live!</title>
+   <link href="http://beatletech.com/2013/08/12/dokzorg-live"/>
+   <updated>2013-08-12T00:00:00+02:00</updated>
+   <id>http://beatletech.com/2013/08/12/dokzorg-live</id>
+   <content type="html">&lt;p&gt;Dokzorg&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://dokzorg.nl&quot; target=&quot;blank&quot;&gt;&lt;img src=&quot;http://beatletech.s3.amazonaws.com/dokzorg.png&quot; alt=&quot;Dokzorg.nl&quot; height=&quot;300&quot; width=&quot;540&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Just checkout &lt;a href=&quot;http://dokzorg.nl&quot;&gt;http://dokzorg.nl&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Bottlenose secures $3.6 Million</title>
