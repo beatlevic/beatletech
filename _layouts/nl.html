@@ -3,12 +3,12 @@
   <head>
 
     <meta charset="utf-8" />
-    
+
     <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    
+
     <title>{{ page.title }}</title>
-    
+
     <meta name="description" content="Freelance company BeatleTech by Coen Stevens" />
 
     {% if page.meta_keywords %}
@@ -16,7 +16,7 @@
     {% endif %}
 
     <meta name="author" content="Coen Stevens" />
-    
+
     <link href="../css/960.css" rel="stylesheet" type="text/css" />
     <link href="../style.css" rel="stylesheet" type="text/css" />
     <link href="../css/syntax.css" rel="stylesheet" type="text/css" />
@@ -26,14 +26,15 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
     <script type="text/javascript" src="../js/script.js"></script>
 
-    {% if page.menu == 'contact' %} 
+    {% if page.menu == 'contact' %}
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    
+
     <script type="text/javascript">
       function initialize() {
-      var latlng = new google.maps.LatLng(52.31675,4.85880);
+      //var latlng = new google.maps.LatLng(52.31675,4.85880);
+      var latlng = new google.maps.LatLng(52.293080,4.885989);
       var myOptions = {
         zoom: 11,
         center: latlng,
@@ -42,10 +43,10 @@
       var map = new google.maps.Map(document.getElementById("map_canvas"),
         myOptions);
       var marker = new google.maps.Marker({
-        position: latlng, 
-        map: map, 
+        position: latlng,
+        map: map,
         title:"BeatleTech HQ"
-      }); 
+      });
       }
 
     </script>
@@ -54,7 +55,7 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]-->
-       
+
     <!--[if lte IE 7]>
       <link href="css/ie.css" rel="stylesheet" type="text/css" />
     <![endif]-->
@@ -73,18 +74,18 @@
 
     </script>
   </head>
-  
+
   <body {% if page.menu == 'contact' %}onload="initialize()"{% endif %}>
 
     <div id="wrapper" class="container_12">
 
       <header id="header" class="grid_12">
-                
+
         <h1><a href="index.html">BeatleTech</a></h1>
         <img src="../images/coen.jpg" alt="" height="155" width="115" class="thumbnail alignright" />
         <div id="freelancer">Coen Stevens // Freelance web developer &amp; architect</div>
       </header> <!-- end header -->
-      
+
       <div id="content">
 
         <nav>
@@ -97,11 +98,11 @@
           </ul>
           <br class="clear" />
         </nav>
-        
-        <!-- Show a "Please Upgrade" box to both IE7 and IE6 users 
-             (Edit to IE 6 if you just want to show it to IE6 users) - 
+
+        <!-- Show a "Please Upgrade" box to both IE7 and IE6 users
+             (Edit to IE 6 if you just want to show it to IE6 users) -
              jQuery will load the content from js/ie.html into the div -->
-        
+
         <!--[if lte IE 7]>
             <div class="ie grid_7"></div>
         <![endif]-->
@@ -109,12 +110,12 @@
         {{ content }}
 
         </div> <!-- end content -->
-      
+
       <footer id="footer" class="grid_12">
         <p>Copyright &copy; 2010 <a href="#">BeatleTech.com</a> -
           Created by <a href="http://beatletech.com" title="BeatleTech by Coen Stevens">Coen Stevens</a></p>
       </footer>
-      
+
       <div class="clear"></div>
 
       <script type="text/javascript">
