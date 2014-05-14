@@ -5,23 +5,23 @@ menu: blog
 title: BeatleTech // Coen Stevens // Freelance web developer & architect // Blog
 meta_keywords: web development, freelance web developer, beatlevic, web developer, Coen Stevens, hacker, architect, freelancer, ruby, clojure, javascript
 topics: [ 'blogging', 'css', 'design', 'javascript', 'personal', 'projects', 'random', 'startups', 'web-development']
----               
+---
 
 {% assign hide_extended = true %}
 
-<div id="main" class="grid_8 alpha">
-  <!-- limit:1 -->    
+<div id="main" class="grid_9 alpha">
+  <!-- limit:1 -->
   {% for post in site.posts %}
-  <div class="post">  
+  <div class="post">
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <p class="publishdate">{{ post.date | date: "%A, %d %B  %Y"}}  <em> <a href="http://www.google.com/search?q={{ post.topics }}+site%3Abeatletech.com/blog">{{ post.topics }}</a> </em> </p>
-    <p>{{ post.content }} 
+    <p>{{ post.content }}
       <div class='clear_both tags'>
         <span>
-          tags:   
-          {% for t in post.tags %} 
+          tags:
+          {% for t in post.tags %}
           <a href='http://www.google.com/search?q={{ t | escape }}+site:beatltetech.com'>{{ t }}</a>{% if forloop.last == false %}, {% endif %}
-          {% endfor %}                    
+          {% endfor %}
         </span>
       </div>
       <div class="comments">
@@ -32,14 +32,3 @@ topics: [ 'blogging', 'css', 'design', 'javascript', 'personal', 'projects', 'ra
   {% endfor %}
 
 </div> <!-- end main -->
-
-<div id="sidebar" class="grid_4 omega">
-
-  {% include recent-posts-widget.html %}
-
-  <aside class="cloud">
-    <h3>Topic list</h3>
-    {% include cloud.html %}
-  </aside>
-  
-</div> <!-- end sidebar -->

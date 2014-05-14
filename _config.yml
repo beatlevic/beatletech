@@ -1,7 +1,6 @@
 markdown: rdiscount
-server: false
 permalink: /:year/:month/:day/:title
 lsi: true
-pygments: true
+highlighter: pygments
 
 exclude: [ README.markdown, todo.org, deploy.sh ]

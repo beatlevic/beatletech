@@ -72,7 +72,9 @@ body {
 	/*background: #fff; /*#eee url(images/bg.png) repeat;*/
 	color: #333333;
 	/* font: 14px/24px Georgia, 'Times New Roman', Times, serif; */
-        font: 13px 'Helvetica Neue', Verdana, Arial, Helvetica, sans-serif;
+        /* font: 13px 'Helvetica Neue', Verdana, Arial, Helvetica, sans-serif; */
+        font: 300 90%/1.5 Oxygen, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 400;
         background-image:url('images/escher8.jpg');
         /* background:url('images/gradient.jpg') repeat-x; */
         /* background-color:black; */
@@ -196,8 +198,8 @@ blockquote p { margin: 0; }
 	font-size: 76px;
 	font-weight: bold;
 	float: left;
-	margin-top: 38px; /* 65*/
-	padding: 20px 2px;
+	margin-top: 22px; /* 65*/
+	padding: 20px 2px 2px 2px;
 	letter-spacing: -3px;
         /*text-shadow: #78a7d6 0px 1px 0px; /* #F71570 */
 	-webkit-transition: all 0.15s linear;
@@ -217,6 +219,7 @@ blockquote p { margin: 0; }
     text-align: right;
     margin-right: 180px;
     margin-top: 90px;
+    font-size: 90%;
 }
 
 /* Content */
@@ -293,9 +296,19 @@ blockquote p { margin: 0; }
 	position: relative;
 }
 
+.post .publishdate {
+    margin-left: 10px;
+}
+
 .post p {
           padding-right: 20px;
           line-height: 1.5em;
+          text-align: left;
+          margin-left: 60px;
+}
+
+.post .comments {
+   margin-left: 10px;
 }
 
 .post img.thumbnail + p { margin-top: 25px; } /* First p after the thumbnail */

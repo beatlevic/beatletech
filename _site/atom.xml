@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2013-10-12T15:13:10+02:00</updated>
+ <updated>2014-05-14T13:05:50+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -24,10 +24,10 @@ building a website for her freelancing GP (Huisarts) practices. The end result i
 an online presence by blogging and tweeting. We currently like the end result and hope others like it too. See below for a screenshot of the landing page, and follow the
 link to check it out.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://dokzorg.nl&quot; target=&quot;blank&quot;&gt;&lt;img src=&quot;http://beatletech.s3.amazonaws.com/dokzorg.png&quot; alt=&quot;Dokzorg.nl&quot; height=&quot;300&quot; width=&quot;540&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a style=&quot;margin-left:-25px;&quot; href=&quot;http://dokzorg.nl&quot; target=&quot;blank&quot;&gt;&lt;img src=&quot;http://beatletech.s3.amazonaws.com/dokzorg.png&quot; alt=&quot;Dokzorg.nl&quot; height=&quot;400&quot; width=&quot;720&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;And now after spending some time front-end developing this project,
-I'm looking forward to dive back in the other back-end projects I have going for which I can happily ignore HTML and CSS..&lt;/p&gt;
+I&#39;m looking forward to dive back in the other back-end projects I have going for which I can happily ignore HTML and CSS..&lt;/p&gt;
 </content>
  </entry>
  
@@ -37,7 +37,7 @@ I'm looking forward to dive back in the other back-end projects I have going for
    <updated>2013-07-30T00:00:00+02:00</updated>
    <id>http://beatletech.com/2013/07/30/bottlenose-secures-four-million</id>
    <content type="html">&lt;p&gt;Bottlenose just secured a $3.6 Million series A round to bring
-'Trendfluence' to the Enterprise. With Bottlenose enterprise, while
+&#39;Trendfluence&#39; to the Enterprise. With Bottlenose enterprise, while
 currently in private beta, we already work with several large brands and
 agencies (Pepsi, FleishmanHillard, Razorfish, and DigitasLBi) that
 leverage Bottlenose Enterprise for tracking live and emerging trends
@@ -47,7 +47,7 @@ customer communities and gathering industry intelligence.&lt;/p&gt;
 &lt;p&gt;For the actual press release please check out
 &lt;a
 href=&quot;http://www.novaspivack.com/business/bottlenose-series-a-to-bring-trendfluence-to-the-enterprise&quot;&gt;Nova
-Spivack's blog&lt;/a&gt; (Bottlenose CEO), or the Techcrunch
+Spivack&#39;s blog&lt;/a&gt; (Bottlenose CEO), or the Techcrunch
 &lt;a href=&quot;http://techcrunch.com/2013/07/30/social-media-dashboard-bottlenose-raises-3-6m/&quot;&gt;article&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;If we can keep current momentum at &lt;a
@@ -156,7 +156,7 @@ where students have easy access to all of this. The system is actually
 pretty smart in assigning followup courses based on your test scores,
 but still gives teachers total control.&lt;/p&gt;
 
-&lt;p&gt;Unfortunately I can't show a link to the product or demo, as the
+&lt;p&gt;Unfortunately I can&#39;t show a link to the product or demo, as the
 application is currently being tested by the client, and will be rolled
 out for the new students in september. However I can say that I like
 the end product.&lt;/p&gt;
@@ -171,7 +171,7 @@ more computer courses, that provide custom tailored education for each
 individual youngster.&lt;/p&gt;
 
 &lt;p&gt;I enjoyed my work at Ciber, working with a great team of skilled
-developers, and I don't rule out that I in the foreseeable future will
+developers, and I don&#39;t rule out that I in the foreseeable future will
 be working on next generation learning platforms again.&lt;/p&gt;
 </content>
  </entry>
@@ -187,13 +187,13 @@ release write-ups on &lt;a
 href=&quot;http://techcrunch.com/2011/04/05/bottlenose/&quot;&gt;Techcrunch&lt;/a&gt; and &lt;a
 href=&quot;http://mashable.com/2011/04/05/bottlenose/&quot;&gt;Mashable&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;In case you haven't, Bottlenose describes itself as &quot;a smarter way to surf the Stream. It's a new
+&lt;p&gt;In case you haven&#39;t, Bottlenose describes itself as &quot;a smarter way to surf the Stream. It&#39;s a new
 personalization tool that helps the important information find you in
 social networks like Twitter and Facebook. Use Bottlenose to track
 your interests, visualize trends, and curate knowledge with your
 friends.&quot; (Bottleno.se)&lt;/p&gt;
 
-&lt;p&gt;The Netherlands doesn't feature that many high tech startups, so I was
+&lt;p&gt;The Netherlands doesn&#39;t feature that many high tech startups, so I was
 happy to work together with cofounder &lt;a href=&quot;dominiek.com&quot;&gt;Dominiek
 ter Heide&lt;/a&gt; this month (who helped us out last year with our YC company &lt;a href=&quot;newcope.com&quot;&gt;Newcope&lt;/a&gt;).
 Armed with Node.js my goal is to, where possible, make the tool even smarter than it already is.
@@ -242,13 +242,13 @@ the app from the app store.&lt;/p&gt;
    <link href="http://beatletech.com/2011/01/03/beatletech-generated-with-jekyll"/>
    <updated>2011-01-03T00:00:00+01:00</updated>
    <id>http://beatletech.com/2011/01/03/beatletech-generated-with-jekyll</id>
-   <content type="html">&lt;p&gt;When I started with the creation of BeatleTech.com and blog, I didn't
+   <content type="html">&lt;p&gt;When I started with the creation of BeatleTech.com and blog, I didn&#39;t
 want to rely on Wordpress (or others) as I wanted more flexibility and
-control, and I definitely didn't want to separate the blog from the main site,
+control, and I definitely didn&#39;t want to separate the blog from the main site,
 i.e. linking to a blog on Posterous.&lt;/p&gt;
 
 &lt;p&gt;So my initial plan was to build the site in clojure, given a nice
-online clojure blog example, Brian Carper's &lt;a href=&quot;https://github.com/briancarper/cow-blog&quot;&gt;Cow-blog&lt;/a&gt;.
+online clojure blog example, Brian Carper&#39;s &lt;a href=&quot;https://github.com/briancarper/cow-blog&quot;&gt;Cow-blog&lt;/a&gt;.
 However, shortly after having started, my friend Jeff Rose introduced
 me to &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt;, which is
 a blog-aware, static site generator in Ruby. It allows for templating,
@@ -293,18 +293,18 @@ classpath. This resulted in me implementing the following elisp functions.&lt;/p
   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cwd&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;default-directory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;found&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;and &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;not &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;and &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;not &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;&amp;gt; max &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;file-exists-p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;concat &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cwd&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;project.clj&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;found&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;cwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;cwd&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;concat &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cwd&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;../&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;- &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;max&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;cwd&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;concat &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cwd&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;../&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;max &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;- max &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;and &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;found&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;expand-file-name&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;
 
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;defmacro &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cake-in-project-root&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;defmacro &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cake-in-project-root&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;s&quot;&gt;&amp;quot;Wrap BODY to make `default-directory&amp;#39; the project root.&amp;quot;&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dir&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;gensym&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cake-project-root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-       &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt;
-         &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;default-directory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;,&lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cake-project-root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;,&lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;default-directory&lt;/span&gt; ,&lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; ,&lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
          &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;No cake project root found&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))))&lt;/span&gt;
          
 &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;defun&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;cake-swank&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
@@ -314,12 +314,10 @@ classpath. This resulted in me implementing the following elisp functions.&lt;/p
       &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-disconnect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;buffer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;get-buffer-create&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;*cake-swank*&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;flet&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;display-buffer&lt;/span&gt; 
-             &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;buffer-or-name&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;&amp;amp;optional&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;not-this-window&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+             &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;buffer-or-name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;optional&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;not-this-window&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;bury-buffer&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cake-in-project-root&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;shell-command&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;cake -r&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-connect&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;127.0.0.1&amp;quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;4005&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-connect&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;127.0.0.1&amp;quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;4005&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;In order for this to work one needs to get the latest cake master
