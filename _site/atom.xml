@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2014-05-14T13:05:50+02:00</updated>
+ <updated>2014-05-14T15:15:05+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -24,7 +24,7 @@ building a website for her freelancing GP (Huisarts) practices. The end result i
 an online presence by blogging and tweeting. We currently like the end result and hope others like it too. See below for a screenshot of the landing page, and follow the
 link to check it out.&lt;/p&gt;
 
-&lt;p&gt;&lt;a style=&quot;margin-left:-25px;&quot; href=&quot;http://dokzorg.nl&quot; target=&quot;blank&quot;&gt;&lt;img src=&quot;http://beatletech.s3.amazonaws.com/dokzorg.png&quot; alt=&quot;Dokzorg.nl&quot; height=&quot;400&quot; width=&quot;720&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://dokzorg.nl&quot; target=&quot;blank&quot;&gt;&lt;img src=&quot;http://beatletech.s3.amazonaws.com/dokzorg.png&quot; alt=&quot;Dokzorg.nl&quot; height=&quot;400&quot; width=&quot;720&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;And now after spending some time front-end developing this project,
 I&#39;m looking forward to dive back in the other back-end projects I have going for which I can happily ignore HTML and CSS..&lt;/p&gt;
@@ -77,7 +77,7 @@ have some interesting speakers lined up so I hope to see you all at our
 next or future meetups. You can follow any announcement on &lt;a
 href=&quot;http://www.meetup.com/amsnode/&quot;&gt;meetup.com&lt;/a&gt; of follow &lt;a href=&quot;http://twitter.com/amsnode&quot;&gt;us&lt;/a&gt; on Twitter.&lt;/p&gt;
 
-&lt;div style=&quot;width:425px&quot; id=&quot;__ss_12232685&quot;&gt; &lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/beatlevic/when-to-use-node-lessons-learned&quot; title=&quot;When to use Node? Lessons learned&quot; target=&quot;_blank&quot;&gt;When to use Node? Lessons learned&lt;/a&gt;&lt;/strong&gt; &lt;iframe src=&quot;http://www.slideshare.net/slideshow/embed_code/12232685&quot; width=&quot;425&quot; height=&quot;355&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt; &lt;div style=&quot;padding:5px 0 12px&quot;&gt; View more &lt;a href=&quot;http://www.slideshare.net/&quot; target=&quot;_blank&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/beatlevic&quot; target=&quot;_blank&quot;&gt;beatlevic&lt;/a&gt; &lt;/div&gt; &lt;/div&gt;
+&lt;div style=&quot;width:800px;text-align:center&quot; id=&quot;__ss_12232685&quot;&gt; &lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/beatlevic/when-to-use-node-lessons-learned&quot; title=&quot;When to use Node? Lessons learned&quot; target=&quot;_blank&quot;&gt;When to use Node? Lessons learned&lt;/a&gt;&lt;/strong&gt; &lt;iframe src=&quot;http://www.slideshare.net/slideshow/embed_code/12232685&quot; width=&quot;425&quot; height=&quot;355&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt; &lt;div style=&quot;padding:5px 0 12px&quot;&gt; View more &lt;a href=&quot;http://www.slideshare.net/&quot; target=&quot;_blank&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/beatlevic&quot; target=&quot;_blank&quot;&gt;beatlevic&lt;/a&gt; &lt;/div&gt; &lt;/div&gt;
 
 
 &lt;p&gt;Node.js = #winning&lt;/p&gt;
