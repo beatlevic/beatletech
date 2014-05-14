@@ -74,13 +74,13 @@
           <br class="clear" />
         </nav>
 
-        <div id="main" class="grid_8 alpha">
+        <div id="main" class="grid_9 alpha">
 
-          <article class="post">
+          <article class="post blog">
 
             <h2>{{ page.title }}<em>{{ post.topics }}</em></h2>
 
-            <p class="publishdate">Published on {{ page.date | date: "%A, %d %B  %Y"}}.</p>
+            <p class="publishdate">{{ page.date | date: "%A, %d %B  %Y"}}.</p>
 
             {{ content }}
 
@@ -130,21 +130,21 @@
           </ul>
         </div> <!-- end main -->
 
-        <div id="sidebar" class="grid_4 omega">
+        <!-- <div id="sidebar" class="grid_4 omega"> -->
 
-          {% include recent-posts-widget.html %}
+        <!--   {% include recent-posts-widget.html %} -->
 
-          <aside class="cloud">
-            <h3>Topic list</h3>
-            {% include cloud.html %}
-          </aside>
+        <!--   <aside class="cloud"> -->
+        <!--     <h3>Topic list</h3> -->
+        <!--     {% include cloud.html %} -->
+        <!--   </aside> -->
 
-        </div> <!-- end sidebar -->
+        <!-- </div> <\!-- end sidebar -\-> -->
 
       </div> <!-- end content -->
 
       <footer id="footer" class="grid_12">
-        <p>Copyright &copy; 2010 <a href="#">BeatleTech.com</a> -
+        <p>Copyright &copy; 2010-2014 <a href="#">BeatleTech.com</a> -
           Created by <a href="http://beatletech.com" title="BeatleTech by Coen Stevens">Coen Stevens</a></p>
       </footer>
 
@@ -171,4 +171,3 @@
 
   </body>
 </html>
-
