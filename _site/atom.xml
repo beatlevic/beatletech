@@ -4,12 +4,25 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2014-05-14T17:39:20+02:00</updated>
+ <updated>2014-09-04T14:44:57+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
  </author>
 
+ 
+ <entry>
+   <title>Project brAIn</title>
+   <link href="http://beatletech.com/2014/09/03/project-brain"/>
+   <updated>2014-09-03T00:00:00+02:00</updated>
+   <id>http://beatletech.com/2014/09/03/project-brain</id>
+   <content type="html">&lt;p&gt;After years of talking and thinking about creating our own Artificial Intelligence (AI), &lt;a href=&quot;http://linkedin.com/in/markvoortman&quot;&gt;Mark Voortman&lt;/a&gt; and I finaly decided a couple of months ago to actually start working on it. So project brAIn was born. With brAIn we have the modest goal to build an AI that will change the world as we know it. Using Deep Learning techniques we are building towards some cool applications.&lt;/p&gt;
+
+&lt;p&gt;We have launched a new website and wrote an &lt;a href=&quot;http://br-ai-n.com/2014/09/03/introducing-brain/&quot;&gt;introductory post&lt;/a&gt; with more details on our goals and progress. So check out &lt;a href=&quot;http://br-ai-n.com&quot;&gt;br-ai-n.com&lt;/a&gt; and stay tuned for future posts!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://br-ai-n.com/images/screenshot-brAIn-v0.0.2.png&quot; alt=&quot;Skylines.net&quot; height=&quot;485&quot; width=&quot;800&quot;&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Dokzorg.nl live!</title>

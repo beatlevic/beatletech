@@ -7,12 +7,12 @@
     <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>BeatleTech // Coen Stevens // Cake and Emacs: cake-swank</title>
+    <title>BeatleTech // Coen Stevens // Project brAIn</title>
 
     <meta name="description" content="Freelance company BeatleTech by Coen Stevens" />
 
     
-    <meta name="keywords" content="post, emacs, cake, swank, clojure, lisp, linux" />
+    <meta name="keywords" content="post, development, deep learning, AI, machine learning" />
     
 
     <meta name="author" content="Coen Stevens" />
@@ -78,71 +78,15 @@
 
           <article class="post blog">
 
-            <h2>Cake and Emacs: cake-swank<em></em></h2>
+            <h2>Project brAIn<em></em></h2>
 
-            <p class="publishdate">Thursday, 23 December  2010.</p>
+            <p class="publishdate">Wednesday, 03 September  2014.</p>
 
-            <p>So far I have been using <a href="https://github.com/technomancy/leiningen">leiningen</a> as my
-standard build tool for Clojure, and together with a very nice Emacs package
-called <a href="http://blog.remvee.net/2010/08/19/elein_el_leiningen_functions_for_emacs">elein</a>
-I was able to run leiningen tasks from within emacs. The functions I use
- most often are elein-swank and elein-reswank to (re)connect with slime.</p>
+            <p>After years of talking and thinking about creating our own Artificial Intelligence (AI), <a href="http://linkedin.com/in/markvoortman">Mark Voortman</a> and I finaly decided a couple of months ago to actually start working on it. So project brAIn was born. With brAIn we have the modest goal to build an AI that will change the world as we know it. Using Deep Learning techniques we are building towards some cool applications.</p>
 
-<p>Now this is all great, but lately an alternative build tool has catched my
-eyes and is called <a href="https://github.com/ninjudd/cake">cake</a>. It features a
-persistent JVM, which speeds up startup time tremendeously, and has an
-easier way for setting up tasks similar to ruby rake
-tasks. Now in order to make my swanking and reswanking work in emacs
-with cake I thought of reusing the elein-swank code, but as it turns
-out, in order to kill swank I had to kill cake and thereby killing the
-persistent JVM (missing the whole purpose). So instead of doing that I
-got the advice to just keep swank running, and only reload the
-classpath. This resulted in me implementing the following elisp functions.</p>
+<p>We have launched a new website and wrote an <a href="http://br-ai-n.com/2014/09/03/introducing-brain/">introductory post</a> with more details on our goals and progress. So check out <a href="http://br-ai-n.com">br-ai-n.com</a> and stay tuned for future posts!</p>
 
-<div class="highlight"><pre><code class="clojure"><span class="p">(</span><span class="nf">defun</span> <span class="nv">cake-project-root</span> <span class="p">()</span>
-  <span class="s">&quot;Look for project.clj file to find project root.&quot;</span>
-  <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">cwd</span> <span class="nv">default-directory</span><span class="p">)</span>
-        <span class="p">(</span><span class="nf">found</span> <span class="nv">nil</span><span class="p">)</span>
-        <span class="p">(</span><span class="nb">max </span><span class="mi">10</span><span class="p">))</span>
-    <span class="p">(</span><span class="nf">while</span> <span class="p">(</span><span class="nb">and </span><span class="p">(</span><span class="nb">not </span><span class="nv">found</span><span class="p">)</span> <span class="p">(</span><span class="nb">&gt; max </span><span class="mi">0</span><span class="p">))</span>
-      <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nf">file-exists-p</span> <span class="p">(</span><span class="nb">concat </span><span class="nv">cwd</span> <span class="s">&quot;project.clj&quot;</span><span class="p">))</span>
-        <span class="p">(</span><span class="nf">setq</span> <span class="nv">found</span> <span class="nv">cwd</span><span class="p">)</span>
-        <span class="p">(</span><span class="nf">setq</span> <span class="nv">cwd</span> <span class="p">(</span><span class="nb">concat </span><span class="nv">cwd</span> <span class="s">&quot;../&quot;</span><span class="p">)</span> <span class="nb">max </span><span class="p">(</span><span class="nb">- max </span><span class="mi">1</span><span class="p">))))</span>
-    <span class="p">(</span><span class="nb">and </span><span class="nv">found</span> <span class="p">(</span><span class="nf">expand-file-name</span> <span class="nv">found</span><span class="p">))))</span>
-
-<span class="p">(</span><span class="kd">defmacro </span><span class="nv">cake-in-project-root</span> <span class="p">(</span><span class="nf">body</span><span class="p">)</span>
-  <span class="s">&quot;Wrap BODY to make `default-directory&#39; the project root.&quot;</span>
-  <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">dir</span> <span class="p">(</span><span class="nf">gensym</span><span class="p">)))</span>
-    <span class="o">`</span><span class="p">(</span><span class="k">let </span><span class="p">((</span>,<span class="nv">dir</span> <span class="p">(</span><span class="nf">cake-project-root</span><span class="p">)))</span>
-       <span class="p">(</span><span class="k">if </span>,<span class="nv">dir</span>
-         <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">default-directory</span> ,<span class="nv">dir</span><span class="p">))</span> ,<span class="nv">body</span><span class="p">)</span>
-         <span class="p">(</span><span class="nf">error</span> <span class="s">&quot;No cake project root found&quot;</span><span class="p">)))))</span>
-         
-<span class="p">(</span><span class="nf">defun</span> <span class="nv">cake-swank</span> <span class="p">()</span>
-  <span class="s">&quot;Connect or reconnect to swank while reloading cake class path files.&quot;</span>
-  <span class="p">(</span><span class="nf">interactive</span><span class="p">)</span>
-  <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nf">slime-connected-p</span><span class="p">)</span>
-      <span class="p">(</span><span class="nf">slime-disconnect</span><span class="p">))</span>
-  <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">buffer</span> <span class="p">(</span><span class="nf">get-buffer-create</span> <span class="s">&quot;*cake-swank*&quot;</span><span class="p">)))</span>
-    <span class="p">(</span><span class="nf">flet</span> <span class="p">((</span><span class="nf">display-buffer</span> 
-             <span class="p">(</span><span class="nf">buffer-or-name</span> <span class="o">&amp;</span><span class="nv">optional</span> <span class="nv">not-this-window</span> <span class="nv">frame</span><span class="p">)</span> <span class="nv">nil</span><span class="p">))</span>
-      <span class="p">(</span><span class="nf">bury-buffer</span> <span class="nv">buffer</span><span class="p">)</span>
-      <span class="p">(</span><span class="nf">cake-in-project-root</span> <span class="p">(</span><span class="nf">shell-command</span> <span class="s">&quot;cake -r&quot;</span> <span class="nv">buffer</span><span class="p">)))</span>
-    <span class="p">(</span><span class="nf">slime-connect</span> <span class="s">&quot;127.0.0.1&quot;</span> <span class="s">&quot;4005&quot;</span><span class="p">)))</span></code></pre></div>
-
-
-<p>In order for this to work one needs to get the latest cake master
-version, so you can reload class path files (cake -r). Additionally one has
-to turn on swank autostart for cake. This can be done by adding the
-line "swank.autostart = localhost:4005" to your .cake/config file.</p>
-
-<p>So now you can easily switch to cake, keeping reswank in your toolset.</p>
-
-<p>Tip: If you find yourself always getting the following mini-buffer
-message when connecting with slime: "Versions differ: nil (slime)
-vs. 20100404 (swank). Continue? (y or n)", then all you should do is
-removing the slime.elc file in your .emacs.d/elpa/slime-X folder, and
-consider it history.</p>
+<p><img src="http://br-ai-n.com/images/screenshot-brAIn-v0.0.2.png" alt="Skylines.net" height="485" width="800"></p>
 
 
 
@@ -153,15 +97,13 @@ consider it history.</p>
               <span>
                 tags:
                 
-                <a href='http://www.google.com/search?q=cake+site:beatletech.com'>cake</a>, 
+                <a href='http://www.google.com/search?q=brAIn+site:beatletech.com'>brAIn</a>, 
                 
-                <a href='http://www.google.com/search?q=emacs+site:beatletech.com'>emacs</a>, 
+                <a href='http://www.google.com/search?q=development+site:beatletech.com'>development</a>, 
                 
-                <a href='http://www.google.com/search?q=clojure+site:beatletech.com'>clojure</a>, 
+                <a href='http://www.google.com/search?q=AI+site:beatletech.com'>AI</a>, 
                 
-                <a href='http://www.google.com/search?q=leiningen+site:beatletech.com'>leiningen</a>, 
-                
-                <a href='http://www.google.com/search?q=linux+site:beatletech.com'>linux</a>
+                <a href='http://www.google.com/search?q=deep-learning+site:beatletech.com'>deep-learning</a>
                 
               </span>
             </div>
@@ -189,25 +131,25 @@ consider it history.</p>
           <ul class="">
             
 
-            <li>23 Dec 2010 &raquo;
+            <li>04 Jan 2012 &raquo;
 
-              <a href="/2010/12/23/cake-swank/">Cake and Emacs: cake-swank</a>
-
-              <em> <a href="http://www.google.com/search?q=+site%3Abeatletech.com"></a> </em>
-            </li>
-            
-
-            <li>03 Jan 2011 &raquo;
-
-              <a href="/2011/01/03/beatletech-generated-with-jekyll/">BeatleTech generated with Jekyll</a>
+              <a href="/2012/01/04/bottlenose-2012/">Bottlenose 2012</a>
 
               <em> <a href="http://www.google.com/search?q=+site%3Abeatletech.com"></a> </em>
             </li>
             
 
-            <li>26 Apr 2011 &raquo;
+            <li>28 Jul 2011 &raquo;
 
-              <a href="/2011/04/26/bottlenose-closed-beta/">Bottlenose closed Beta</a>
+              <a href="/2011/07/28/malmberg-e-publishing-platform/">Malmberg: E-Publishing platform</a>
+
+              <em> <a href="http://www.google.com/search?q=+site%3Abeatletech.com"></a> </em>
+            </li>
+            
+
+            <li>16 Apr 2012 &raquo;
+
+              <a href="/2012/04/16/amsterdam-nodejs-meetup/">Amsterdam Node meetup group</a>
 
               <em> <a href="http://www.google.com/search?q=+site%3Abeatletech.com"></a> </em>
             </li>

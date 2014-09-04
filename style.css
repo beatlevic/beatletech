@@ -133,14 +133,14 @@ p {
 h1 { font-size: 32px; }
 h2 { font-size: 28px; line-height: 30px; }
 h3 { font-size: 24px; letter-spacing: -1px; }
-h4 { font-size: 23px; }
-h5 { font-size: 19px; }
+h4 { font-size: 18px; }
+h5 { font-size: 17px; }
 h6 { font-size: 16px; }
 
 #header h1,
 .post h2,
 #freelancer,
-h3 {
+h3, h4 {
 	font-family: 'ChunkFive Regular', Arial, Helvetica, sans-serif; /* Chunkfive is called via @font-face */
 }
 
@@ -370,8 +370,9 @@ blockquote p { margin: 0; }
 }
 
 .post h3 { margin: 30px 0; }
+.post h4 { margin: 10px 0px 10px 10px; }
 
-	/* Post meta */
+/* Post meta */
 	.postmeta {
 		margin: 30px 35px 0 0;
 		overflow: hidden;
@@ -403,6 +404,22 @@ h3:hover {
 	text-decoration: none;
 	text-shadow: none;
 }
+
+h4 {
+    color: #92949f;
+    -webkit-transition: opacity 0.15s ease-in-out;
+    -moz-transition: opacity 0.15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
+    margin-left: 10px;
+}
+
+h4:hover {
+	background: none;
+	opacity: 0.7;
+	text-decoration: none;
+	text-shadow: none;
+}
+
 
 /* .latest ul { list-style-type: none } */
 
