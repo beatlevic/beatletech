@@ -371,6 +371,10 @@ blockquote p { margin: 0; }
 	transition: opacity 0.15s ease-in-out;
 }
 
+.blog h2 a{
+	font-size: 32px;
+}
+
 .blog {
 	  border-bottom: 1px solid #cacaca;
     margin-bottom: 30px;
