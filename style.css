@@ -142,7 +142,7 @@ p {
 }
 
 h1 { font-size: 32px; }
-h2 { font-size: 28px; line-height: 30px; }
+h2 { font-size: 24px; line-height: 24px; }
 h3 { font-size: 24px; letter-spacing: -1px; }
 h4 { font-size: 18px; }
 h5 { font-size: 17px; }
@@ -352,8 +352,7 @@ blockquote p { margin: 0; }
 .post h2 {
 	color: #78a7d6;/*#6b96c1;/* #333; */
 	display: block;
-	font-size: 30px;
-	font-weight: bold;
+	font-size: 24px;
 	margin-left: -15px;
 	letter-spacing: -1px;
 	-webkit-transition: opacity 0.15s ease-in-out;
@@ -364,8 +363,7 @@ blockquote p { margin: 0; }
 .post h2 a {
 	color: #78a7d6;/*#6b96c1;/* #333; */
 	display: block;
-	font-size: 30px;
-	font-weight: bold;
+	font-size: 24px;
 	letter-spacing: -1px;
 	-webkit-transition: opacity 0.15s ease-in-out;
 	-moz-transition: opacity 0.15s ease-in-out;
@@ -409,9 +407,13 @@ blockquote p { margin: 0; }
 /* Sidebar */
 
 .widget {
-	overflow: hidden;
-	padding-top: 5px;
-        font-size: 13px;
+	  overflow: hidden;
+	  padding-top: 5px;
+    font-size: 13px;
+}
+
+.widget ul {
+    margin-left: -5px;
 }
 
 .publishdate {
