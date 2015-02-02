@@ -1,0 +1,88 @@
+---
+layout: post
+title: "My System"
+meta_description: My system inspired by how to fail at almost everything and still win big (Scott Adams)
+meta_keywords: post, lifestyle
+tags: [lifestyle, paleo]
+category: [lifestyle]
+---
+
+Book by Scott Adams I read in January 2014 titled
+["How to Fail at Almost Everything and Still Win Big"](https://www.goodreads.com/book/show/17859574-how-to-fail-at-almost-everything-and-still-win-big).
+
+Goals are for losers. Systems are for winners.
+
+To summerize the system approach:
+
+- Create habits and reserve your will-power for learning new habits.
+- Reduce daily decisions to routine.
+- Avoid setting (high) goals, instead have a system that will keep you going
+- Keeping up your personal energy, which is your primary metric
+- Simplicity is key
+
+Related to a recent blog post
+["Screw motivation, what you need is discipline"](http://www.wisdomination.com/screw-motivation-what-you-need-is-discipline/)
+
+Basically boils down to growing habits and not let yourself be driven by your emotional state.
+So stop waiting until you feel good to start a particular task and get into the habit of allocating
+time to just do stuff and get it done.
+
+Have a family with kids (third one is due any moment), you have to get more organized and
+disciplined to get things done, without sacrifrizing a lot of quality time with the kids (and boy do
+they grow up fast).
+
+
+
+#### Exercise (daily 30/60min):
+- Running
+- Sprinting
+- Push-ups / Sit-ups / Plank / Triceps-dips / 7-minute workout cycles
+- Walking
+- Cycling
+
+#### Sports:
+- football
+- kickboxing / Taekwondo / Muay thai
+
+#### Sleep:
+- Go to bed before 00:00 (Yes, this one is hard if you do remote work for US companies from Europe)
+- sleep 8 hours
+
+#### Flexible schedule:
+- Freelance on average 3 days a week
+- Plan holidays/time-off
+- Be in charge of your schedule. OK to make fixed planning schedule for things you want to do.
+- Plan fixed slots for daily exercise
+- Plan stuff that makes you want to get out of bed for it
+
+#### Diet:
+- No bread/rice/potatoes
+- No Candy/Cookies/Chips
+- No Soda
+- No Coffee ()
+- Occasionally olcohol (celebrations)
+- Meal skipping is OK, fasting once in a while is good
+- Snacks: nuts and fruit
+- More vegetables by improving seasoning
+
+#### Steadily improving / Skills:
+- Programming (Python, Clojure, Julia, Euler, Math)
+- Book reading / knowledge gathering
+- Blogging (on side-projects / programming)
+- Piano
+- Coursera courses
+
+#### Imagine an incredible future
+- (related: stay optimistic and opportunistic)
+
+#### Help others:
+- Be there for my kids and wife
+- Offer free advice and guidance for start-ups
+- Engage at meet-ups and help people out
+
+#### Show gratitude:
+- Value what you already have
+- Enjoy the moment
+
+#### Have a healthy dose of Stoicism:
+- Avoid the persuit of materialistic goals, and don't get attached to stuff
