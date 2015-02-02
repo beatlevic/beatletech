@@ -72,12 +72,12 @@ body {
 	/*background: #fff; /*#eee url(images/bg.png) repeat;*/
 	color: #333333;
 	/* font: 14px/24px Georgia, 'Times New Roman', Times, serif; */
-        /* font: 13px 'Helvetica Neue', Verdana, Arial, Helvetica, sans-serif; */
-        font: 300 90%/1.5 Oxygen, "Helvetica Neue", Arial, sans-serif;
-        font-weight: 400;
-        background-image:url('images/escher8.jpg');
-        /* background:url('images/gradient.jpg') repeat-x; */
-        /* background-color:black; */
+  /* font: 13px 'Helvetica Neue', Verdana, Arial, Helvetica, sans-serif; */
+  font: 300 90%/1.5 Oxygen, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  background-image:url('images/escher8.jpg');
+  /* background:url('images/gradient.jpg') repeat-x; */
+  /* background-color:black; */
 }
 
 /* HTML5 */
@@ -97,6 +97,11 @@ a {
         padding: 2px 1px;
 }
 
+.blog a {
+	color: #6b96c1;
+	text-decoration: none;
+}
+
 .widget a:hover,
 #menu .current a {
 	background: #78a8d8;/* #F83D87; */
@@ -111,7 +116,7 @@ a {
 a:hover {
 	color: #fff;
 	background: #78a8d8;
-        Padding: 2px 1px;
+  Padding: 2px 1px;
 	text-decoration: none;
 	/*text-shadow: #6b96c1 1px 1px 1px; /* #F71570 */
 	-webkit-border-radius: 3px;
@@ -119,7 +124,13 @@ a:hover {
 	border-radius: 3px;
 }
 
-
+.blog h4 a:hover {
+	color: #6b96c1;
+  background: #fff;
+  Padding: 0px;
+	text-decoration: none;
+	/*text-shadow: #6b96c1 1px 1px 1px; /* #F71570 */
+}
 
 p, dl, hr, h1, h2, h3, h4, h5, h6,
 ol, ul, pre, table, fieldset, blockquote, .widget {
@@ -167,8 +178,12 @@ li { margin-left: 30px; }
 /* 	opacity: 1;	 */
 /* } */
 
-/* pre code { background: none; } */
-/* code { background: #cfcfcf; font-size: 12px; } */
+pre code {
+    background: none;
+    color: #333333;
+    font: 300 100%/1.5 Oxygen, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+}
 
 blockquote {
 	background: url(images/quote.png) no-repeat 5px top;
@@ -232,8 +247,8 @@ blockquote p { margin: 0; }
 	float: left;
 	width: 920px;
 	padding: 40px 10px 0 20px;
-        -moz-border-radius: 10px;
-        -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
 	/* -webkit-box-shadow: 2px 3px 3px #cccccc; */ /* Box shadows slow down the entire page!!! */
 	/* -moz-box-shadow: 2px 3px 3px #cccccc; */
 	/* box-shadow: 2px 3px 3px #cccccc;         */
@@ -297,13 +312,13 @@ blockquote p { margin: 0; }
 }
 
 .post p {
-          line-height: 1.5em;
-          text-align: left;
+    line-height: 1.5em;
+    text-align: left;
 }
 
-/* .blog p { */
-/*     margin-left: 60px; */
-/* } */
+.blog {
+    margin-left: 40px;
+}
 
 /* .blog .publishdate { */
 /*     margin-left: 60px; */
@@ -313,7 +328,7 @@ blockquote p { margin: 0; }
           padding-right: 20px;
           line-height: 1.5em;
           text-align: left;
-          margin-left: 60px;
+          margin-left: 20px;
 }
 
 .post .highlight {
@@ -324,12 +339,12 @@ blockquote p { margin: 0; }
 }
 
 
-/* .post .comments { */
-/*    margin-left: 60px; */
-/* } */
+.post .comments {
+   margin-left: -15px;
+}
 
 .blog img {
-    margin-left: 20px;
+    margin-left: 0px;
 }
 
 .post img.thumbnail + p { margin-top: 25px; } /* First p after the thumbnail */
@@ -339,7 +354,7 @@ blockquote p { margin: 0; }
 	display: block;
 	font-size: 30px;
 	font-weight: bold;
-	margin-left: 10px;
+	margin-left: -15px;
 	letter-spacing: -1px;
 	-webkit-transition: opacity 0.15s ease-in-out;
 	-moz-transition: opacity 0.15s ease-in-out;
@@ -357,6 +372,10 @@ blockquote p { margin: 0; }
 	transition: opacity 0.15s ease-in-out;
 }
 
+.grid_8 h2 {
+	margin-left: 10px;
+}
+
 /* .blog h2 { */
 /*     margin-left: 30px; */
 /* } */
@@ -369,8 +388,8 @@ blockquote p { margin: 0; }
 	text-shadow: none;
 }
 
-.post h3 { margin: 30px 0; }
-.post h4 { margin: 10px 0px 10px 10px; }
+.post h3 { margin: 20px 0 10px -15px; }
+.post h4 { margin: 10px 0px 10px -15px; }
 
 /* Post meta */
 	.postmeta {
@@ -395,7 +414,7 @@ blockquote p { margin: 0; }
     -webkit-transition: opacity 0.15s ease-in-out;
     -moz-transition: opacity 0.15s ease-in-out;
     transition: opacity 0.15s ease-in-out;
-    margin-left: 10px;
+    margin-left: -15px;
 }
 
 h3:hover {

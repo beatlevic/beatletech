@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://beatletech.com//2015/02/03/coursera-courses</loc>
+    
+    <lastmod>2015-02-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://beatletech.com//2015/01/31/my-system</loc>
+    
+    <lastmod>2015-01-31</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://beatletech.com//2014/09/03/project-brain</loc>
     
     <lastmod>2014-09-03</lastmod>
@@ -80,12 +94,12 @@
   
   <url>
     <loc>http://beatletech.com</loc>
-    <lastmod>2014-09-04</lastmod>
+    <lastmod>2015-02-02</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>http://beatletech.com/nl</loc>
-    <lastmod>2014-09-04</lastmod>
+    <lastmod>2015-02-02</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>

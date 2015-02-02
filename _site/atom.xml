@@ -4,12 +4,228 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2014-09-04T14:44:57+02:00</updated>
+ <updated>2015-02-02T22:01:44+01:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
  </author>
 
+ 
+ <entry>
+   <title>Completed 4 Coursera courses</title>
+   <link href="http://beatletech.com/2015/02/03/coursera-courses"/>
+   <updated>2015-02-03T00:00:00+01:00</updated>
+   <id>http://beatletech.com/2015/02/03/coursera-courses</id>
+   <content type="html">&lt;p&gt;As I already pointed out in my previous blog post (&lt;a href=&quot;http://beatletech.com/2015/01/31/my-system&quot;&gt;My System&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A couple of months ago I&lt;/p&gt;
+
+&lt;p&gt;In the past couple of months I have tried a couple of online courses of which I eventually finished
+four of them.&lt;/p&gt;
+
+&lt;p&gt;Gradually started doing the following courses.&lt;/p&gt;
+
+&lt;p&gt;After the first course I was hungry for more.&lt;/p&gt;
+
+&lt;p&gt;Wanted to follow courses with actual programming excercises&lt;/p&gt;
+
+&lt;p&gt;Statement of accomplishments&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/ml&quot;&gt;Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/algo&quot;&gt;Algorithms: Design and Analysis, Part 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/bioinformatics&quot;&gt;Bioinformatics Algorithms, Part 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/learning&quot;&gt;Learning How to Learn&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;Courses&lt;/h3&gt;
+
+&lt;h4&gt;&lt;a href=&quot;https://www.coursera.org/course/ml&quot;&gt;Machine Learning&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Stanford university&lt;/p&gt;
+
+&lt;p&gt;Matlab (vs Octave)&lt;/p&gt;
+
+&lt;p&gt;Machine learning refreshing knowledge.&lt;/p&gt;
+
+&lt;p&gt;Bottlenose focus on Data science&lt;/p&gt;
+
+&lt;p&gt;June-September 2014, 12 weeks of study, 6 hours per week,&lt;/p&gt;
+
+&lt;h4&gt;&lt;a href=&quot;https://www.coursera.org/course/algo&quot;&gt;Algorithms: Design and Analysis&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Stanford university.&lt;/p&gt;
+
+&lt;p&gt;Besides Building more experience with Python (vs project euler).
+Exploring &lt;a href=&quot;http://julialang.org/&quot;&gt;Julia&lt;/a&gt; and &lt;a href=&quot;http://www.rust-lang.org/&quot;&gt;Rust&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;October-December 2014, 6 weeks of study, 7 hours per week&lt;/p&gt;
+
+&lt;h4&gt;&lt;a href=&quot;https://www.coursera.org/course/bioinformatics&quot;&gt;Bioinformatics&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Exploring the bioinformatics domain&lt;/p&gt;
+
+&lt;p&gt;UC San Diego.&lt;/p&gt;
+
+&lt;p&gt;October 2014 - Feb 2015, 10 weeks of study, 10 hours per week&lt;/p&gt;
+
+&lt;p&gt;distinction&lt;/p&gt;
+
+&lt;h4&gt;&lt;a href=&quot;https://www.coursera.org/course/learning&quot;&gt;Learning How to Learn&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Really getting the hang of following online courses, wanted to make sure that what I learned would
+not be in vain, i.e. ephimeral and quickly forgotten when moving onto other topics of interest.&lt;/p&gt;
+
+&lt;p&gt;January 2015, 4 weeks of study, 2 hours per week&lt;/p&gt;
+
+&lt;h3&gt;What&#39;s next?&lt;/h3&gt;
+
+&lt;p&gt;In 2015 I want to at least take the following courses, of which the first two are continuations of
+two courses I already completed:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/algo2&quot;&gt;Algorithms: Design and Analysis, Part 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/bioinformatics2&quot;&gt;Bioinformatics Algorithms, Part 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/pgm&quot;&gt;Probabilistic Graphical Models&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Additionaly I&#39;m looking forward to follow more courses specialized in the field of bioinformatics
+(e.g. genetics, biomedicine, evolution, neuroscience) and Data Science (mining datasets, pattern
+discovery, advanced statistics)&lt;/p&gt;
+
+&lt;p&gt;Also want to finish Linear and Integer Programming, which I only completed 2/7 weeks and dropped due
+to time constraints of other overlapping courses.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>My System</title>
+   <link href="http://beatletech.com/2015/01/31/my-system"/>
+   <updated>2015-01-31T00:00:00+01:00</updated>
+   <id>http://beatletech.com/2015/01/31/my-system</id>
+   <content type="html">&lt;p&gt;Book by Scott Adams I read in January 2014 titled
+&lt;a href=&quot;https://www.goodreads.com/book/show/17859574-how-to-fail-at-almost-everything-and-still-win-big&quot;&gt;&quot;How to Fail at Almost Everything and Still Win Big&quot;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Goals are for losers. Systems are for winners.&lt;/p&gt;
+
+&lt;p&gt;To summerize the system approach:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create habits and reserve your will-power for learning new habits.&lt;/li&gt;
+&lt;li&gt;Reduce daily decisions to routine.&lt;/li&gt;
+&lt;li&gt;Avoid setting (high) goals, instead have a system that will keep you going&lt;/li&gt;
+&lt;li&gt;Keeping up your personal energy, which is your primary metric&lt;/li&gt;
+&lt;li&gt;Simplicity is key&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Related to a recent blog post
+&lt;a href=&quot;http://www.wisdomination.com/screw-motivation-what-you-need-is-discipline/&quot;&gt;&quot;Screw motivation, what you need is discipline&quot;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Basically boils down to growing habits and not let yourself be driven by your emotional state.
+So stop waiting until you feel good to start a particular task and get into the habit of allocating
+time to just do stuff and get it done.&lt;/p&gt;
+
+&lt;p&gt;Have a family with kids (third one is due any moment), you have to get more organized and
+disciplined to get things done, without sacrifrizing a lot of quality time with the kids (and boy do
+they grow up fast).&lt;/p&gt;
+
+&lt;h4&gt;Exercise (daily 30/60min):&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Running&lt;/li&gt;
+&lt;li&gt;Sprinting&lt;/li&gt;
+&lt;li&gt;Push-ups / Sit-ups / Plank / Triceps-dips / 7-minute workout cycles&lt;/li&gt;
+&lt;li&gt;Walking&lt;/li&gt;
+&lt;li&gt;Cycling&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;Sports:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;football&lt;/li&gt;
+&lt;li&gt;kickboxing / Taekwondo / Muay thai&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;Sleep:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go to bed before 00:00 (Yes, this one is hard if you do remote work for US companies from Europe)&lt;/li&gt;
+&lt;li&gt;sleep 8 hours&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;Flexible schedule:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Plan holidays/time-off&lt;/li&gt;
+&lt;li&gt;Be in charge of your schedule. OK to make fixed planning schedule for things you want to do.&lt;/li&gt;
+&lt;li&gt;Plan fixed slots for daily exercise&lt;/li&gt;
+&lt;li&gt;Plan stuff that makes you want to get out of bed for it&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;Diet:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;No bread/rice/potatoes&lt;/li&gt;
+&lt;li&gt;No Candy/Cookies/Chips&lt;/li&gt;
+&lt;li&gt;No Soda&lt;/li&gt;
+&lt;li&gt;No Coffee ()&lt;/li&gt;
+&lt;li&gt;Occasionally olcohol (celebrations)&lt;/li&gt;
+&lt;li&gt;Meal skipping is OK, fasting once in a while is good&lt;/li&gt;
+&lt;li&gt;Snacks: nuts and fruit&lt;/li&gt;
+&lt;li&gt;More vegetables by improving seasoning&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;Steadily improving / Skills:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Programming (Python, Clojure, Julia, Euler, Math)&lt;/li&gt;
+&lt;li&gt;Book reading / knowledge gathering&lt;/li&gt;
+&lt;li&gt;Blogging (on side-projects / programming)&lt;/li&gt;
+&lt;li&gt;Piano&lt;/li&gt;
+&lt;li&gt;Coursera courses&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;Imagine an incredible future&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;(related: stay optimistic and opportunistic)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;Help others:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Be there for my kids and wife&lt;/li&gt;
+&lt;li&gt;Offer free advice and guidance for start-ups&lt;/li&gt;
+&lt;li&gt;Engage at meet-ups and help people out&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;Show gratitude:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Value what you already have&lt;/li&gt;
+&lt;li&gt;Enjoy the moment&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;Have a healthy dose of Stoicism:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Avoid the persuit of materialistic goals, and don&#39;t get attached to stuff&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Project brAIn</title>
