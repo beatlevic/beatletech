@@ -414,13 +414,22 @@ blockquote p { margin: 0; }
         font-size: 13px;
 }
 
-.publishdate, h3 {
+.publishdate {
     color: #8a8a8a;
     -webkit-transition: opacity 0.15s ease-in-out;
     -moz-transition: opacity 0.15s ease-in-out;
     transition: opacity 0.15s ease-in-out;
     margin-left: -15px;
 }
+
+h3 {
+    color: #8a8a8a;
+    -webkit-transition: opacity 0.15s ease-in-out;
+    -moz-transition: opacity 0.15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
+    margin-left: 10px;
+}
+
 
 h3:hover {
 	background: none;
