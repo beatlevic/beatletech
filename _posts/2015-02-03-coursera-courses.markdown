@@ -7,7 +7,7 @@ tags: [learning, Coursera, education]
 category: [education]
 ---
 
-As I already pointed out in my previous blog post ([My System](http://beatletech.com/2015/01/31/my-system)
+As I already pointed out in my previous blog post ([My System](http://beatletech.com/2015/01/31/my-system))
 
 A couple of months ago I
 
@@ -29,7 +29,7 @@ Statement of accomplishments
 - [Learning How to Learn](https://www.coursera.org/course/learning)
 
 ### Courses
-#### [Machine Learning](https://www.coursera.org/course/ml)
+#### Machine Learning
 
 Stanford university
 
@@ -41,7 +41,7 @@ Bottlenose focus on Data science
 
 June-September 2014, 12 weeks of study, 6 hours per week,
 
-#### [Algorithms: Design and Analysis](https://www.coursera.org/course/algo)
+#### Algorithms: Design and Analysis
 
 Stanford university.
 
@@ -50,7 +50,7 @@ Exploring [Julia](http://julialang.org/) and [Rust](http://www.rust-lang.org/)
 
 October-December 2014, 6 weeks of study, 7 hours per week
 
-#### [Bioinformatics](https://www.coursera.org/course/bioinformatics)
+#### Bioinformatics
 
 Exploring the bioinformatics domain
 
@@ -60,7 +60,7 @@ October 2014 - Feb 2015, 10 weeks of study, 10 hours per week
 
 distinction
 
-#### [Learning How to Learn](https://www.coursera.org/course/learning)
+#### Learning How to Learn
 
 Really getting the hang of following online courses, wanted to make sure that what I learned would
 not be in vain, i.e. ephimeral and quickly forgotten when moving onto other topics of interest.

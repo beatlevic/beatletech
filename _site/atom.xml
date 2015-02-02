@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2015-02-03T00:32:26+01:00</updated>
+ <updated>2015-02-03T00:46:19+01:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -16,7 +16,7 @@
    <link href="http://beatletech.com/2015/02/03/coursera-courses"/>
    <updated>2015-02-03T00:00:00+01:00</updated>
    <id>http://beatletech.com/2015/02/03/coursera-courses</id>
-   <content type="html">&lt;p&gt;As I already pointed out in my previous blog post (&lt;a href=&quot;http://beatletech.com/2015/01/31/my-system&quot;&gt;My System&lt;/a&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;As I already pointed out in my previous blog post (&lt;a href=&quot;http://beatletech.com/2015/01/31/my-system&quot;&gt;My System&lt;/a&gt;)&lt;/p&gt;
 
 &lt;p&gt;A couple of months ago I&lt;/p&gt;
 
@@ -41,7 +41,7 @@ four of them.&lt;/p&gt;
 
 &lt;h3&gt;Courses&lt;/h3&gt;
 
-&lt;h4&gt;&lt;a href=&quot;https://www.coursera.org/course/ml&quot;&gt;Machine Learning&lt;/a&gt;&lt;/h4&gt;
+&lt;h4&gt;Machine Learning&lt;/h4&gt;
 
 &lt;p&gt;Stanford university&lt;/p&gt;
 
@@ -53,7 +53,7 @@ four of them.&lt;/p&gt;
 
 &lt;p&gt;June-September 2014, 12 weeks of study, 6 hours per week,&lt;/p&gt;
 
-&lt;h4&gt;&lt;a href=&quot;https://www.coursera.org/course/algo&quot;&gt;Algorithms: Design and Analysis&lt;/a&gt;&lt;/h4&gt;
+&lt;h4&gt;Algorithms: Design and Analysis&lt;/h4&gt;
 
 &lt;p&gt;Stanford university.&lt;/p&gt;
 
@@ -62,7 +62,7 @@ Exploring &lt;a href=&quot;http://julialang.org/&quot;&gt;Julia&lt;/a&gt; and &l
 
 &lt;p&gt;October-December 2014, 6 weeks of study, 7 hours per week&lt;/p&gt;
 
-&lt;h4&gt;&lt;a href=&quot;https://www.coursera.org/course/bioinformatics&quot;&gt;Bioinformatics&lt;/a&gt;&lt;/h4&gt;
+&lt;h4&gt;Bioinformatics&lt;/h4&gt;
 
 &lt;p&gt;Exploring the bioinformatics domain&lt;/p&gt;
 
@@ -72,7 +72,7 @@ Exploring &lt;a href=&quot;http://julialang.org/&quot;&gt;Julia&lt;/a&gt; and &l
 
 &lt;p&gt;distinction&lt;/p&gt;
 
-&lt;h4&gt;&lt;a href=&quot;https://www.coursera.org/course/learning&quot;&gt;Learning How to Learn&lt;/a&gt;&lt;/h4&gt;
+&lt;h4&gt;Learning How to Learn&lt;/h4&gt;
 
 &lt;p&gt;Really getting the hang of following online courses, wanted to make sure that what I learned would
 not be in vain, i.e. ephimeral and quickly forgotten when moving onto other topics of interest.&lt;/p&gt;
