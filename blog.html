@@ -2,7 +2,7 @@
 layout: default
 location: blog
 menu: blog
-title: BeatleTech // Coen Stevens // Software Architict & Data Scientist // Blog
+title: BeatleTech // Coen Stevens // Software Architect & Data Scientist // Blog
 meta_keywords: Data science, web developer, beatlevic, Coen Stevens, hacker, architect, freelancer, ruby, clojure, javascript, machine learning
 topics: [ 'blogging', 'css', 'design', 'javascript', 'personal', 'projects', 'random', 'startups', 'web-development']
 ---
@@ -13,7 +13,7 @@ topics: [ 'blogging', 'css', 'design', 'javascript', 'personal', 'projects', 'ra
   <!-- limit:1 -->
   {% for post in site.posts %}
   <div class="post blog">
-    <h2><a href="{{ post.url }}"><span style="color:#8a8a8a">&gt;&gt;&gt;</span> {{ post.title }}</a></h2>
+    <h2><a href="{{ post.url }}"><span style="color:#8a8a8a">&gt;&gt;&gt;</span> {{ post.title }} <span style="color:#8a8a8a">&lt;&lt;&lt;</span></a></h2>
     <p class="publishdate">{{ post.date | date: "%A, %d %B  %Y"}}  <em> <a href="http://www.google.com/search?q={{ post.topics }}+site%3Abeatletech.com/blog">{{ post.topics }}</a> </em> </p>
     <p>{{ post.content }}
       <div class='clear_both tags'>

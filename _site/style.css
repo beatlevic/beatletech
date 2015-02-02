@@ -354,6 +354,7 @@ blockquote p { margin: 0; }
 	display: block;
 	font-size: 24px;
 	margin-left: -15px;
+  margin-top: 10px;
 	letter-spacing: -1px;
 	-webkit-transition: opacity 0.15s ease-in-out;
 	-moz-transition: opacity 0.15s ease-in-out;
