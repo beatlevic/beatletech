@@ -3,7 +3,7 @@ layout: post
 title: "My System"
 meta_description: My system inspired by how to fail at almost everything and still win big (Scott Adams)
 meta_keywords: post, lifestyle
-tags: [lifestyle, paleo]
+tags: [lifestyle, paleo, books]
 category: [lifestyle]
 ---
 
