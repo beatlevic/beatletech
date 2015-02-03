@@ -5,6 +5,7 @@ meta_description: Four Cousera courses I have completed recently
 meta_keywords: post, courses, learning, machine learning, bioinformatics, algorithms, education
 tags: [learning, Coursera, education]
 category: [education]
+published: false
 ---
 
 As I already pointed out in my previous blog post ([My System](http://beatletech.com/2015/01/31/my-system))
