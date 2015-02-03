@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My System"
+title: "My System to Win Big"
 meta_description: My system inspired by how to fail at almost everything and still win big (Scott Adams)
 meta_keywords: post, lifestyle
 tags: [lifestyle, paleo, books]
@@ -48,7 +48,7 @@ that Scott describes in his book. I have been adhering to this system for a full
 minor changes and occasional missteps I'm still following through and it has definitely made a
 hugely positive impact on my life and productivity.
 
-Now without further ado, My System:
+Now without further ado, My System to Win Big:
 
 #### Exercise
 One or more of the following activities I do daily for at least 30 to 60 minutes
