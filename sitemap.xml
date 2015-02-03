@@ -19,32 +19,11 @@ layout: nil
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://beatletech.com/nl</loc>
-    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>http://beatletech.com/about.html</loc>
-    <lastmod>2010-12-22</lastmod>
-  </url>
-  <url>
-    <loc>http://beatletech.com/contact.html</loc>
-    <lastmod>2010-12-22</lastmod>
-  </url>
-  <url>
     <loc>http://beatletech.com/blog.html</loc>
     <lastmod>weekly</lastmod>
   </url>
   <url>
-    <loc>http://beatletech.com/nl/about.html</loc>
-    <lastmod>2010-12-22</lastmod>
-  </url>
-  <url>
-    <loc>http://beatletech.com/nl/contact.html</loc>
-    <lastmod>2010-12-22</lastmod>
-  </url>
-  <url>
-    <loc>http://beatletech.com/nl/blog.html</loc>
+    <loc>http://beatletech.com/archive.html</loc>
     <lastmod>weekly</lastmod>
   </url>
 </urlset>
