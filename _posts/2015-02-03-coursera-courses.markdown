@@ -11,29 +11,31 @@ published: true
 In the past couple of months I managed to complete 4 online courses on
 [Coursera](http://coursera.com), which is an education platform that partners with top universities
 to offer free [MOOCs](http://en.wikipedia.org/wiki/Massive_open_online_course) (Massive open online
-courses). In this post I like to present you my experiences with my completed courses and my plans for any
+courses). In this post I like to present you my experiences with these courses and my plans for any
 future courses.
 
 The reason for me to start following online courses has to do with what I already pointed out in my
-previous blog post "[My System to Win Big](http://beatletech.com/2015/01/31/my-system)". I want to
+previous blog post "[My System to Win Big](http://beatletech.com/2015/02/03/my-system-to-win-big)". I want to
 keep on improving myself and acquire more knowledge in domains of my interest. Part of it is
 revisiting knowledge I'm "supposed" to know to gain an even better understanding, and the other part
 is exploring new uncharted territories. I also wanted to follow courses where I would have to
 practise and hone my programming skills.
 
 But why follow online courses with a rigid schedule and deadlines if you can simply read and study books or solve some tough problems on
-[Project Euler](https://projecteuler.net/) at your own pace?
+[Project Euler](https://projecteuler.net/) at your own pace? Well, for me as it turns out, having a fixed
+course schedule releases me of the burden of planning and serves as a nice stick to finish on time,
+which made it easier to get into the habit of spending evening hours on education. This way I didn't
+have to spend my will-power every time to get started, and now that I have grown this study habit and
+with it the displine to follow through, I'm in a much better position to also study at my own pace.
 
-Discipline, structure
-
-
-
-Statement of accomplishments
+The courses for which I have received statements of accomplishment are in chronological order:
 
 - [Machine Learning](https://www.coursera.org/course/ml)
 - [Algorithms: Design and Analysis, Part 1](https://www.coursera.org/course/algo)
 - [Bioinformatics Algorithms, Part 1](https://www.coursera.org/course/bioinformatics)
 - [Learning How to Learn](https://www.coursera.org/course/learning)
+
+In the subsequent sections I will decribe each course in more detail.
 
 ### Courses
 #### Machine Learning
