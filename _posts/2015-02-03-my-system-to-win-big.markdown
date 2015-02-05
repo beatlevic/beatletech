@@ -12,7 +12,7 @@ Back in January 2014 I read a book by Scott Adams (of Dilbert fame) titled:
 The book was brought to my attention when I was reading up on some interesting research and ideas on
 passion and discipline ([Carl Newport](https://www.youtube.com/watch?v=qwOdU02SE0w) comes to mind,
 explaining why following your passion is bad career advice). Reading Adam's book definitely struck a
-chord with me and even motivated me to change my work flow and longheld believes on what to focus on
+chord with me and even motivated me to change my work flow and long-held believes on what to focus on
 in life. Two things stood out for me:
 
 - Passion is bullshit. It is only after you have put in the work and are lucky enough in having
@@ -25,7 +25,7 @@ often had a hard time trying to find the perfect answer to these questions, whic
 inertia to get started and in some cases I was setting myself up for ever higher and greater goals.
 
 Reading about the system approach as an alternative to goal setting made a lot of sense to me. The
-system approach can be summerized as follows:
+system approach can be summarized as follows:
 
 - Create habits and reserve your will-power for learning new habits.
 - Reduce daily decisions to routine.
@@ -34,7 +34,7 @@ system approach can be summerized as follows:
 - Simplicity is key
 - A system will keep you going, also in moments of failure
 
-One of the key points here is the creation of (good) habits and the displine to carry it out. A
+One of the key points here is the creation of (good) habits and the discipline to carry it out. A
 recent blog post titled:
 ["Screw motivation, what you need is discipline"](http://www.wisdomination.com/screw-motivation-what-you-need-is-discipline/)
 argues for the same point. It basically boils down to growing habits and not let yourself be driven by your emotional state.
@@ -73,7 +73,7 @@ Needless to say you need a good amount of sleep.
 
 #### Flexible schedule
 Being flexible here means being in charge of your own schedule. Making a fixed planning and schedule for
-things you want to do is higly recommended for young parents, as long as you are the one who chooses
+things you want to do is highly recommended for young parents, as long as you are the one who chooses
 to make time for it.
 
 - Plan holidays/time-off
@@ -115,7 +115,7 @@ keeping it real.
 - Enjoy the moment
 
 #### Have a healthy dose of Stoicism
-- Avoid the persuit of materialistic goals and don't get attached to stuff
+- Avoid the pursuit of materialistic goals and don't get attached to stuff
 
 ### Final words
 
