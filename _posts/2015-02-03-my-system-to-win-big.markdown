@@ -25,13 +25,14 @@ often had a hard time trying to find the perfect answer to these questions, whic
 inertia to get started and in some cases I was setting myself up for ever higher and greater goals.
 
 Reading about the system approach as an alternative to goal setting made a lot of sense to me. The
-system approach can be summerized as:
+system approach can be summerized as follows:
 
 - Create habits and reserve your will-power for learning new habits.
 - Reduce daily decisions to routine.
 - Avoid setting (high) goals, instead have a system that will keep you going
 - Keeping up your personal energy, which is your primary metric
 - Simplicity is key
+- A system will keep you going, also in moments of failure
 
 One of the key points here is the creation of (good) habits and the displine to carry it out. A
 recent blog post titled:
@@ -43,8 +44,8 @@ time to just do stuff to get things done. Focus on the process (your system) and
 
 While in general you want to be the most productive you can be, for me having a family with the third kid
 on his way (due any moment now), you have to get even more organized and disciplined to get things
-done. The way in which I manage this is what I want to present to you next by outlining my system along several dimensions
-that Scott describes in his book. I have been adhering to this system for a full year and besides some
+done. The way in which I manage this is what I want to present to you
+next by outlining my system along several dimensions that Scott describes in his book. I have been adhering to this system for a full year and besides some
 minor changes and occasional missteps I'm still following through and it has definitely made a
 hugely positive impact on my life and productivity.
 
@@ -118,8 +119,12 @@ keeping it real.
 
 ### Final words
 
-My System helped me become more productive and happier overall. Of course my system isn't
-perfect. Of course my system is tailored to suit me and can be vastly different for you.
+My system helped me become more productive and happier overall, which
+may not yet be the fame and fortune that Scott Adams achieved, but it is
+still a big win to me, and I'm ready when any big opportunity arises
+in the future to take it head on.
+
+Of course my system isn't perfect. Of course my system is tailored to suit me and can be different for you.
 Of course I'm still failing every so often, but at least I have my system to hold on to and to
 remind me how I want things to go. Get your self into the habit of working on what matters to you
-and with a little bit of luck you can win big too!
+and with a little bit of luck and serendipity you can win big too!

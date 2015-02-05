@@ -8,7 +8,7 @@ category: [education]
 published: false
 ---
 
-As I already pointed out in my previous blog post ([My System](http://beatletech.com/2015/01/31/my-system))
+As I already pointed out in my previous blog post "[My System to Win Big](http://beatletech.com/2015/01/31/my-system)"
 
 A couple of months ago I
 
