@@ -5,22 +5,28 @@ meta_description: Four Cousera courses I have completed recently
 meta_keywords: post, courses, learning, machine learning, bioinformatics, algorithms, education
 tags: [learning, Coursera, education]
 category: [education]
-published: false
+published: true
 ---
 
-As I already pointed out in my previous blog post "[My System to Win Big](http://beatletech.com/2015/01/31/my-system)"
+In the past couple of months I managed to complete 4 online courses on
+[Coursera](http://coursera.com), which is an education platform that partners with top universities
+to offer free [MOOCs](http://en.wikipedia.org/wiki/Massive_open_online_course) (Massive open online
+courses). In this post I like to present you my experiences with my completed courses and my plans for any
+future courses.
 
-A couple of months ago I
+The reason for me to start following online courses has to do with what I already pointed out in my
+previous blog post "[My System to Win Big](http://beatletech.com/2015/01/31/my-system)". I want to
+keep on improving myself and acquire more knowledge in domains of my interest. Part of it is
+revisiting knowledge I'm "supposed" to know to gain an even better understanding, and the other part
+is exploring new uncharted territories. I also wanted to follow courses where I would have to
+practise and hone my programming skills.
+
+But why follow online courses with a rigid schedule and deadlines if you can simply read and study books or solve some tough problems on
+[Project Euler](https://projecteuler.net/) at your own pace?
+
+Discipline, structure
 
 
-In the past couple of months I have tried a couple of online courses of which I eventually finished
-four of them.
-
-Gradually started doing the following courses.
-
-After the first course I was hungry for more.
-
-Wanted to follow courses with actual programming excercises
 
 Statement of accomplishments
 

@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2015-02-05T09:45:32+01:00</updated>
+ <updated>2015-02-05T11:19:30+01:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -183,6 +183,100 @@ in the future to take it head on.&lt;/p&gt;
 Of course I&#39;m still failing every so often, but at least I have my system to hold on to and to
 remind me how I want things to go. Get your self into the habit of working on what matters to you
 and with a little bit of luck and serendipity you can win big too!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Completed 4 Coursera courses</title>
+   <link href="http://beatletech.com/2015/02/03/coursera-courses"/>
+   <updated>2015-02-03T00:00:00+01:00</updated>
+   <id>http://beatletech.com/2015/02/03/coursera-courses</id>
+   <content type="html">&lt;p&gt;In the past couple of months I managed to complete 4 online courses on
+&lt;a href=&quot;http://coursera.com&quot;&gt;Coursera&lt;/a&gt;, which is an education platform that partners with top universities
+to offer free &lt;a href=&quot;http://en.wikipedia.org/wiki/Massive_open_online_course&quot;&gt;MOOCs&lt;/a&gt; (Massive open online
+courses). In this post I like to present you my experiences with my completed courses and my plans for any
+future courses.&lt;/p&gt;
+
+&lt;p&gt;The reason for me to start following online courses has to do with what I already pointed out in my
+previous blog post &quot;&lt;a href=&quot;http://beatletech.com/2015/01/31/my-system&quot;&gt;My System to Win Big&lt;/a&gt;&quot;. I want to
+keep on improving myself and acquire more knowledge in domains of my interest. Part of it is
+revisiting knowledge I&#39;m &quot;supposed&quot; to know to gain an even better understanding, and the other part
+is exploring new uncharted territories. I also wanted to follow courses where I would have to
+practise and hone my programming skills.&lt;/p&gt;
+
+&lt;p&gt;But why follow online courses with a rigid schedule and deadlines if you can simply read and study books or solve some tough problems on
+&lt;a href=&quot;https://projecteuler.net/&quot;&gt;Project Euler&lt;/a&gt; at your own pace?&lt;/p&gt;
+
+&lt;p&gt;Discipline, structure&lt;/p&gt;
+
+&lt;p&gt;Statement of accomplishments&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/ml&quot;&gt;Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/algo&quot;&gt;Algorithms: Design and Analysis, Part 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/bioinformatics&quot;&gt;Bioinformatics Algorithms, Part 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/learning&quot;&gt;Learning How to Learn&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;Courses&lt;/h3&gt;
+
+&lt;h4&gt;Machine Learning&lt;/h4&gt;
+
+&lt;p&gt;Stanford university&lt;/p&gt;
+
+&lt;p&gt;Matlab (vs Octave)&lt;/p&gt;
+
+&lt;p&gt;Machine learning refreshing knowledge.&lt;/p&gt;
+
+&lt;p&gt;Bottlenose focus on Data science&lt;/p&gt;
+
+&lt;p&gt;June-September 2014, 12 weeks of study, 6 hours per week,&lt;/p&gt;
+
+&lt;h4&gt;Algorithms: Design and Analysis&lt;/h4&gt;
+
+&lt;p&gt;Stanford university.&lt;/p&gt;
+
+&lt;p&gt;Besides Building more experience with Python (vs project euler).
+Exploring &lt;a href=&quot;http://julialang.org/&quot;&gt;Julia&lt;/a&gt; and &lt;a href=&quot;http://www.rust-lang.org/&quot;&gt;Rust&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;October-December 2014, 6 weeks of study, 7 hours per week&lt;/p&gt;
+
+&lt;h4&gt;Bioinformatics&lt;/h4&gt;
+
+&lt;p&gt;Exploring the bioinformatics domain&lt;/p&gt;
+
+&lt;p&gt;UC San Diego.&lt;/p&gt;
+
+&lt;p&gt;October 2014 - Feb 2015, 10 weeks of study, 10 hours per week&lt;/p&gt;
+
+&lt;p&gt;distinction&lt;/p&gt;
+
+&lt;h4&gt;Learning How to Learn&lt;/h4&gt;
+
+&lt;p&gt;Really getting the hang of following online courses, wanted to make sure that what I learned would
+not be in vain, i.e. ephimeral and quickly forgotten when moving onto other topics of interest.&lt;/p&gt;
+
+&lt;p&gt;January 2015, 4 weeks of study, 2 hours per week&lt;/p&gt;
+
+&lt;h3&gt;What&#39;s next?&lt;/h3&gt;
+
+&lt;p&gt;In 2015 I want to at least take the following courses, of which the first two are continuations of
+two courses I already completed:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/algo2&quot;&gt;Algorithms: Design and Analysis, Part 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/bioinformatics2&quot;&gt;Bioinformatics Algorithms, Part 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/pgm&quot;&gt;Probabilistic Graphical Models&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Additionaly I&#39;m looking forward to follow more courses specialized in the field of bioinformatics
+(e.g. genetics, biomedicine, evolution, neuroscience) and Data Science (mining datasets, pattern
+discovery, advanced statistics)&lt;/p&gt;
+
+&lt;p&gt;Also want to finish Linear and Integer Programming, which I only completed 2/7 weeks and dropped due
+to time constraints of other overlapping courses.&lt;/p&gt;
 </content>
  </entry>
  
