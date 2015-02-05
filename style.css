@@ -132,6 +132,10 @@ a:hover {
 	/*text-shadow: #6b96c1 1px 1px 1px; /* #F71570 */
 }
 
+.blog strong {
+  color: #92949f;
+}
+
 p, dl, hr, h1, h2, h3, h4, h5, h6,
 ol, ul, pre, table, fieldset, blockquote, .widget {
 	margin-bottom: 15px;

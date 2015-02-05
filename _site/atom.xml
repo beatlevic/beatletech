@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2015-02-05T12:27:21+01:00</updated>
+ <updated>2015-02-05T21:40:11+01:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -52,7 +52,8 @@ with it the displine to follow through, I&#39;m in a much better position to als
 
 &lt;h4&gt;Machine Learning&lt;/h4&gt;
 
-&lt;p&gt;Stanford university&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;Stanford University // June-September 2014 // 12 weeks of study // 6 hours per week // &lt;a href=&quot;https://www.coursera.org/course/ml&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
+&lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Easy&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Matlab (vs Octave)&lt;/p&gt;
 
@@ -60,33 +61,32 @@ with it the displine to follow through, I&#39;m in a much better position to als
 
 &lt;p&gt;Bottlenose focus on Data science&lt;/p&gt;
 
-&lt;p&gt;June-September 2014, 12 weeks of study, 6 hours per week,&lt;/p&gt;
-
 &lt;h4&gt;Algorithms: Design and Analysis&lt;/h4&gt;
 
-&lt;p&gt;Stanford university.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;Stanford University // October-December 2014 // 6 weeks of study // 7 hours per week
+// &lt;a href=&quot;https://www.coursera.org/course/algo&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
+&lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Medium&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Besides Building more experience with Python (vs project euler).
 Exploring &lt;a href=&quot;http://julialang.org/&quot;&gt;Julia&lt;/a&gt; and &lt;a href=&quot;http://www.rust-lang.org/&quot;&gt;Rust&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;October-December 2014, 6 weeks of study, 7 hours per week&lt;/p&gt;
-
 &lt;h4&gt;Bioinformatics&lt;/h4&gt;
 
+&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;UC San Diego // October 2014 - Feb 2015 // 10 weeks of study // 10 hours per week //
+&lt;a href=&quot;https://www.coursera.org/course/bioinformatics&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
+&lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Medium/Hard&lt;/em&gt;&lt;/p&gt;
+
 &lt;p&gt;Exploring the bioinformatics domain&lt;/p&gt;
-
-&lt;p&gt;UC San Diego.&lt;/p&gt;
-
-&lt;p&gt;October 2014 - Feb 2015, 10 weeks of study, 10 hours per week&lt;/p&gt;
 
 &lt;p&gt;distinction&lt;/p&gt;
 
 &lt;h4&gt;Learning How to Learn&lt;/h4&gt;
 
+&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;UC San Diego // January 2015 // 4 weeks of study // 2 hours per week // &lt;a href=&quot;https://www.coursera.org/course/learning&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
+&lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Very easy&lt;/em&gt;&lt;/p&gt;
+
 &lt;p&gt;Really getting the hang of following online courses, wanted to make sure that what I learned would
 not be in vain, i.e. ephimeral and quickly forgotten when moving onto other topics of interest.&lt;/p&gt;
-
-&lt;p&gt;January 2015, 4 weeks of study, 2 hours per week&lt;/p&gt;
 
 &lt;h3&gt;What&#39;s next?&lt;/h3&gt;
 
@@ -556,8 +556,10 @@ wizardry, then rest assured as Jekyll can save your day.&lt;/p&gt;
    <link href="http://beatletech.com/2010/12/23/cake-swank"/>
    <updated>2010-12-23T00:00:00+01:00</updated>
    <id>http://beatletech.com/2010/12/23/cake-swank</id>
-   <content type="html">&lt;p&gt;So far I have been using &lt;a href=&quot;https://github.com/technomancy/leiningen&quot;&gt;leiningen&lt;/a&gt; as my
-standard build tool for Clojure, and together with a very nice Emacs package
+   <content type="html">&lt;p&gt;So far I have been using &lt;a
+href=&quot;https://github.com/technomancy/leiningen&quot;&gt;leiningen&lt;/a&gt; as my
+standard build tool for Clojure, and together with a very nice Emacs
+package
 called &lt;a href=&quot;http://blog.remvee.net/2010/08/19/elein_el_leiningen_functions_for_emacs&quot;&gt;elein&lt;/a&gt;
 I was able to run leiningen tasks from within emacs. The functions I use
  most often are elein-swank and elein-reswank to (re)connect with slime.&lt;/p&gt;
@@ -591,14 +593,14 @@ classpath. This resulted in me implementing the following elisp functions.&lt;/p
        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;,&lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt;
          &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;default-directory&lt;/span&gt; ,&lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; ,&lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
          &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;No cake project root found&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))))&lt;/span&gt;
-         
+
 &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;defun&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;cake-swank&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
   &lt;span class=&quot;s&quot;&gt;&amp;quot;Connect or reconnect to swank while reloading cake class path files.&amp;quot;&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;interactive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-connected-p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-disconnect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;buffer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;get-buffer-create&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;*cake-swank*&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;flet&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;display-buffer&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;flet&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;display-buffer&lt;/span&gt;
              &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;buffer-or-name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;optional&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;not-this-window&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;bury-buffer&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cake-in-project-root&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;shell-command&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;cake -r&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;

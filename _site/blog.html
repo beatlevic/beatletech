@@ -125,7 +125,8 @@ with it the displine to follow through, I'm in a much better position to also st
 
 <h4>Machine Learning</h4>
 
-<p>Stanford university</p>
+<p><strong>Overview:</strong> <em>Stanford University // June-September 2014 // 12 weeks of study // 6 hours per week // <a href="https://www.coursera.org/course/ml">Coursera link</a></em><br/>
+<strong>Difficulty:</strong> <em>Easy</em></p>
 
 <p>Matlab (vs Octave)</p>
 
@@ -133,33 +134,32 @@ with it the displine to follow through, I'm in a much better position to also st
 
 <p>Bottlenose focus on Data science</p>
 
-<p>June-September 2014, 12 weeks of study, 6 hours per week,</p>
-
 <h4>Algorithms: Design and Analysis</h4>
 
-<p>Stanford university.</p>
+<p><strong>Overview:</strong> <em>Stanford University // October-December 2014 // 6 weeks of study // 7 hours per week
+// <a href="https://www.coursera.org/course/algo">Coursera link</a></em><br/>
+<strong>Difficulty:</strong> <em>Medium</em></p>
 
 <p>Besides Building more experience with Python (vs project euler).
 Exploring <a href="http://julialang.org/">Julia</a> and <a href="http://www.rust-lang.org/">Rust</a></p>
 
-<p>October-December 2014, 6 weeks of study, 7 hours per week</p>
-
 <h4>Bioinformatics</h4>
 
+<p><strong>Overview:</strong> <em>UC San Diego // October 2014 - Feb 2015 // 10 weeks of study // 10 hours per week //
+<a href="https://www.coursera.org/course/bioinformatics">Coursera link</a></em><br/>
+<strong>Difficulty:</strong> <em>Medium/Hard</em></p>
+
 <p>Exploring the bioinformatics domain</p>
-
-<p>UC San Diego.</p>
-
-<p>October 2014 - Feb 2015, 10 weeks of study, 10 hours per week</p>
 
 <p>distinction</p>
 
 <h4>Learning How to Learn</h4>
 
+<p><strong>Overview:</strong> <em>UC San Diego // January 2015 // 4 weeks of study // 2 hours per week // <a href="https://www.coursera.org/course/learning">Coursera link</a></em><br/>
+<strong>Difficulty:</strong> <em>Very easy</em></p>
+
 <p>Really getting the hang of following online courses, wanted to make sure that what I learned would
 not be in vain, i.e. ephimeral and quickly forgotten when moving onto other topics of interest.</p>
-
-<p>January 2015, 4 weeks of study, 2 hours per week</p>
 
 <h3>What's next?</h3>
 
@@ -795,8 +795,10 @@ wizardry, then rest assured as Jekyll can save your day.</p>
   <div class="post blog">
     <h2><a href="/2010/12/23/cake-swank">Cake and Emacs: cake-swank</a></h2>
     <p class="publishdate">Thursday, 23 December  2010  <em> <a href="http://www.google.com/search?q=+site%3Abeatletech.com/blog"></a> </em> </p>
-    <p><p>So far I have been using <a href="https://github.com/technomancy/leiningen">leiningen</a> as my
-standard build tool for Clojure, and together with a very nice Emacs package
+    <p><p>So far I have been using <a
+href="https://github.com/technomancy/leiningen">leiningen</a> as my
+standard build tool for Clojure, and together with a very nice Emacs
+package
 called <a href="http://blog.remvee.net/2010/08/19/elein_el_leiningen_functions_for_emacs">elein</a>
 I was able to run leiningen tasks from within emacs. The functions I use
  most often are elein-swank and elein-reswank to (re)connect with slime.</p>
@@ -830,14 +832,14 @@ classpath. This resulted in me implementing the following elisp functions.</p>
        <span class="p">(</span><span class="k">if </span>,<span class="nv">dir</span>
          <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">default-directory</span> ,<span class="nv">dir</span><span class="p">))</span> ,<span class="nv">body</span><span class="p">)</span>
          <span class="p">(</span><span class="nf">error</span> <span class="s">&quot;No cake project root found&quot;</span><span class="p">)))))</span>
-         
+
 <span class="p">(</span><span class="nf">defun</span> <span class="nv">cake-swank</span> <span class="p">()</span>
   <span class="s">&quot;Connect or reconnect to swank while reloading cake class path files.&quot;</span>
   <span class="p">(</span><span class="nf">interactive</span><span class="p">)</span>
   <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nf">slime-connected-p</span><span class="p">)</span>
       <span class="p">(</span><span class="nf">slime-disconnect</span><span class="p">))</span>
   <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">buffer</span> <span class="p">(</span><span class="nf">get-buffer-create</span> <span class="s">&quot;*cake-swank*&quot;</span><span class="p">)))</span>
-    <span class="p">(</span><span class="nf">flet</span> <span class="p">((</span><span class="nf">display-buffer</span> 
+    <span class="p">(</span><span class="nf">flet</span> <span class="p">((</span><span class="nf">display-buffer</span>
              <span class="p">(</span><span class="nf">buffer-or-name</span> <span class="o">&amp;</span><span class="nv">optional</span> <span class="nv">not-this-window</span> <span class="nv">frame</span><span class="p">)</span> <span class="nv">nil</span><span class="p">))</span>
       <span class="p">(</span><span class="nf">bury-buffer</span> <span class="nv">buffer</span><span class="p">)</span>
       <span class="p">(</span><span class="nf">cake-in-project-root</span> <span class="p">(</span><span class="nf">shell-command</span> <span class="s">&quot;cake -r&quot;</span> <span class="nv">buffer</span><span class="p">)))</span>

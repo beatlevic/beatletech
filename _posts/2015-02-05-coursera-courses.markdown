@@ -40,7 +40,9 @@ In the subsequent sections I will decribe each course in more detail.
 ### Courses
 #### Machine Learning
 
-Stanford university
+**Overview:** *Stanford University // June-September 2014 // 12 weeks of study // 6 hours per week // [Coursera link](https://www.coursera.org/course/ml)*  
+**Difficulty:** *Easy*
+
 
 Matlab (vs Octave)
 
@@ -48,34 +50,39 @@ Machine learning refreshing knowledge.
 
 Bottlenose focus on Data science
 
-June-September 2014, 12 weeks of study, 6 hours per week,
 
 #### Algorithms: Design and Analysis
 
-Stanford university.
+**Overview:** *Stanford University // October-December 2014 // 6 weeks of study // 7 hours per week
+// [Coursera link](https://www.coursera.org/course/algo)*  
+**Difficulty:** *Medium*
 
 Besides Building more experience with Python (vs project euler).
 Exploring [Julia](http://julialang.org/) and [Rust](http://www.rust-lang.org/)
 
-October-December 2014, 6 weeks of study, 7 hours per week
+
 
 #### Bioinformatics
 
+**Overview:** *UC San Diego // October 2014 - Feb 2015 // 10 weeks of study // 10 hours per week //
+[Coursera link](https://www.coursera.org/course/bioinformatics)*  
+**Difficulty:** *Medium/Hard*
+
 Exploring the bioinformatics domain
 
-UC San Diego.
-
-October 2014 - Feb 2015, 10 weeks of study, 10 hours per week
 
 distinction
 
 #### Learning How to Learn
 
+**Overview:** *UC San Diego // January 2015 // 4 weeks of study // 2 hours per week // [Coursera link](https://www.coursera.org/course/learning)*  
+**Difficulty:** *Very easy*
+
 Really getting the hang of following online courses, wanted to make sure that what I learned would
 not be in vain, i.e. ephimeral and quickly forgotten when moving onto other topics of interest.
 
 
-January 2015, 4 weeks of study, 2 hours per week
+
 
 ### What's next?
 

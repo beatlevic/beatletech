@@ -7,11 +7,13 @@ tags: [cake, emacs, clojure, leiningen, linux]
 category: [emacs]
 ---
 
-So far I have been using <a href="https://github.com/technomancy/leiningen">leiningen</a> as my
-standard build tool for Clojure, and together with a very nice Emacs package
+So far I have been using <a
+href="https://github.com/technomancy/leiningen">leiningen</a> as my
+standard build tool for Clojure, and together with a very nice Emacs
+package
 called <a href="http://blog.remvee.net/2010/08/19/elein_el_leiningen_functions_for_emacs">elein</a>
 I was able to run leiningen tasks from within emacs. The functions I use
- most often are elein-swank and elein-reswank to (re)connect with slime. 
+ most often are elein-swank and elein-reswank to (re)connect with slime.
 
 Now this is all great, but lately an alternative build tool has catched my
 eyes and is called <a href="https://github.com/ninjudd/cake">cake</a>. It features a
@@ -44,14 +46,14 @@ classpath. This resulted in me implementing the following elisp functions.
        (if ,dir
          (let ((default-directory ,dir)) ,body)
          (error "No cake project root found")))))
-         
+
 (defun cake-swank ()
   "Connect or reconnect to swank while reloading cake class path files."
   (interactive)
   (if (slime-connected-p)
       (slime-disconnect))
   (let ((buffer (get-buffer-create "*cake-swank*")))
-    (flet ((display-buffer 
+    (flet ((display-buffer
              (buffer-or-name &optional not-this-window frame) nil))
       (bury-buffer buffer)
       (cake-in-project-root (shell-command "cake -r" buffer)))
