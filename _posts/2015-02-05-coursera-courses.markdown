@@ -19,14 +19,14 @@ previous blog post "[My System to Win Big](http://beatletech.com/2015/02/03/my-s
 keep on improving myself and acquire more knowledge in domains of my interest. Part of it is
 revisiting knowledge I'm "supposed" to know to gain an even better understanding, and the other part
 is exploring new uncharted territories. I also wanted to follow courses where I would have to
-practise and hone my programming skills.
+practice and hone my programming skills.
 
-But why follow online courses with a rigid schedule and deadlines if you can simply read and study books or solve some tough problems on
+But why follow online courses with a rigid schedule and deadlines if you can simply study books or solve some tough problems on
 [Project Euler](https://projecteuler.net/) at your own pace? Well, for me as it turns out, having a fixed
 course schedule releases me of the burden of planning and serves as a nice stick to finish on time,
 which made it easier to get into the habit of spending evening hours on education. This way I didn't
 have to spend my will-power every time to get started, and now that I have grown this study habit and
-with it the displine to follow through, I'm in a much better position to also study at my own pace.
+with it the discipline to follow through, I'm in a much better position to also study at my own pace.
 
 The courses for which I have received statements of accomplishment are in chronological order:
 
@@ -35,7 +35,7 @@ The courses for which I have received statements of accomplishment are in chrono
 - [Bioinformatics Algorithms, Part 1](https://www.coursera.org/course/bioinformatics)
 - [Learning How to Learn](https://www.coursera.org/course/learning)
 
-In the subsequent sections I will decribe each course in more detail.
+In the subsequent sections I will describe each course in more detail.
 
 ### Courses
 #### Machine Learning
@@ -43,15 +43,31 @@ In the subsequent sections I will decribe each course in more detail.
 **Overview:** *Stanford University // June-September 2014 // 12 weeks of study // 6 hours per week // [Coursera link](https://www.coursera.org/course/ml)*  
 **Difficulty:** *Easy*
 
+Half a year ago at [Bottlenose](http://bottlenose.com) I was shifting more from a Software Architect
+role to a Data Scientist role, and therefore spending more time on Machine Learning problems. So I
+thought it was valuable to refresh my knowledge in this particular domain. Besides reading up on
+some study books I decided to enroll in the Stanford Machine Learning course, which presented a nice
+overview with some basic programming exercises. Topics included (as listed on the Coursera page):
 
-Matlab (vs Octave)
+- Supervised learning (parametric/non-parametric algorithms, support vector machines, kernels,
+neural networks).
+- Unsupervised learning (clustering, dimensionality reduction, recommender systems, deep learning). 
+- Best practices in Machine Learning (bias/variance theory; innovation process in machine learning and AI)
 
-Machine learning refreshing knowledge.
+Given that I was already very familiar with these topics, combined with an excellent presentation by
+the instructor [Andrew Ng](https://www.coursera.org/instructor/andrewng), it may not be a surprise that I found the
+course easy to follow and the programming exercises not hard to implement with only the (frequent)
+annoyances of coding in Matlab. 
 
-Bottlenose focus on Data science
+It felt good to revisit all the topics in the course, which presented me once again the wide variety
+of Machine Learning approaches and techniques. Perhaps in hindsight other specialized courses on
+Machine Learning on a more graduate level would have been more worthwhile. However, I don't regret
+my time spent on this course as it never hurts to go back to the basics once in a while.
+Additionally, as this was my first online course, it was a great way to get started with Coursera
+and familiarize myself with this new educational format. And after finding out that it
+worked really well for me, I instantly signed up for a lot of other (more specialized) courses.
 
-
-#### Algorithms: Design and Analysis
+#### Algorithms: Design and Analysis, Part 1
 
 **Overview:** *Stanford University // October-December 2014 // 6 weeks of study // 7 hours per week
 // [Coursera link](https://www.coursera.org/course/algo)*  
@@ -62,7 +78,7 @@ Exploring [Julia](http://julialang.org/) and [Rust](http://www.rust-lang.org/)
 
 
 
-#### Bioinformatics
+#### Bioinformatics Algorithms, Part 1
 
 **Overview:** *UC San Diego // October 2014 - Feb 2015 // 10 weeks of study // 10 hours per week //
 [Coursera link](https://www.coursera.org/course/bioinformatics)*  
@@ -79,7 +95,7 @@ distinction
 **Difficulty:** *Very easy*
 
 Really getting the hang of following online courses, wanted to make sure that what I learned would
-not be in vain, i.e. ephimeral and quickly forgotten when moving onto other topics of interest.
+not be in vain, i.e. ephemeral and quickly forgotten when moving onto other topics of interest.
 
 
 
@@ -93,9 +109,15 @@ two courses I already completed:
 - [Bioinformatics Algorithms, Part 2](https://www.coursera.org/course/bioinformatics2)
 - [Probabilistic Graphical Models](https://www.coursera.org/course/pgm)
 
-Additionaly I'm looking forward to follow more courses specialized in the field of bioinformatics
-(e.g. genetics, biomedicine, evolution, neuroscience) and Data Science (mining datasets, pattern
+Additionally I'm looking forward to follow more courses specialized in the field of bioinformatics
+(e.g. genetics, bio-medicine, evolution, neuroscience) and Data Science (mining datasets, pattern
 discovery, advanced statistics)
 
 Also want to finish Linear and Integer Programming, which I only completed 2/7 weeks and dropped due
 to time constraints of other overlapping courses.
+
+### Tips
+
+Not too many courses at once
+
+Find some friends => Study group => flow dock (ptegelaar, ncrombach)

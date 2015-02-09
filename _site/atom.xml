@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2015-02-05T21:40:11+01:00</updated>
+ <updated>2015-02-09T01:29:35+01:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -27,14 +27,14 @@ previous blog post &quot;&lt;a href=&quot;http://beatletech.com/2015/02/03/my-sy
 keep on improving myself and acquire more knowledge in domains of my interest. Part of it is
 revisiting knowledge I&#39;m &quot;supposed&quot; to know to gain an even better understanding, and the other part
 is exploring new uncharted territories. I also wanted to follow courses where I would have to
-practise and hone my programming skills.&lt;/p&gt;
+practice and hone my programming skills.&lt;/p&gt;
 
-&lt;p&gt;But why follow online courses with a rigid schedule and deadlines if you can simply read and study books or solve some tough problems on
+&lt;p&gt;But why follow online courses with a rigid schedule and deadlines if you can simply study books or solve some tough problems on
 &lt;a href=&quot;https://projecteuler.net/&quot;&gt;Project Euler&lt;/a&gt; at your own pace? Well, for me as it turns out, having a fixed
 course schedule releases me of the burden of planning and serves as a nice stick to finish on time,
 which made it easier to get into the habit of spending evening hours on education. This way I didn&#39;t
 have to spend my will-power every time to get started, and now that I have grown this study habit and
-with it the displine to follow through, I&#39;m in a much better position to also study at my own pace.&lt;/p&gt;
+with it the discipline to follow through, I&#39;m in a much better position to also study at my own pace.&lt;/p&gt;
 
 &lt;p&gt;The courses for which I have received statements of accomplishment are in chronological order:&lt;/p&gt;
 
@@ -46,7 +46,7 @@ with it the displine to follow through, I&#39;m in a much better position to als
 &lt;/ul&gt;
 
 
-&lt;p&gt;In the subsequent sections I will decribe each course in more detail.&lt;/p&gt;
+&lt;p&gt;In the subsequent sections I will describe each course in more detail.&lt;/p&gt;
 
 &lt;h3&gt;Courses&lt;/h3&gt;
 
@@ -55,13 +55,34 @@ with it the displine to follow through, I&#39;m in a much better position to als
 &lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;Stanford University // June-September 2014 // 12 weeks of study // 6 hours per week // &lt;a href=&quot;https://www.coursera.org/course/ml&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
 &lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Easy&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Matlab (vs Octave)&lt;/p&gt;
+&lt;p&gt;Half a year ago at &lt;a href=&quot;http://bottlenose.com&quot;&gt;Bottlenose&lt;/a&gt; I was shifting more from a Software Architect
+role to a Data Scientist role, and therefore spending more time on Machine Learning problems. So I
+thought it was valuable to refresh my knowledge in this particular domain. Besides reading up on
+some study books I decided to enroll in the Stanford Machine Learning course, which presented a nice
+overview with some basic programming exercises. Topics included (as listed on the Coursera page):&lt;/p&gt;
 
-&lt;p&gt;Machine learning refreshing knowledge.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Supervised learning (parametric/non-parametric algorithms, support vector machines, kernels,
+neural networks).&lt;/li&gt;
+&lt;li&gt;Unsupervised learning (clustering, dimensionality reduction, recommender systems, deep learning).&lt;/li&gt;
+&lt;li&gt;Best practices in Machine Learning (bias/variance theory; innovation process in machine learning and AI)&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Bottlenose focus on Data science&lt;/p&gt;
 
-&lt;h4&gt;Algorithms: Design and Analysis&lt;/h4&gt;
+&lt;p&gt;Given that I was already very familiar with these topics, combined with an excellent presentation by
+the instructor &lt;a href=&quot;https://www.coursera.org/instructor/andrewng&quot;&gt;Andrew Ng&lt;/a&gt;, it may not be a surprise that I found the
+course easy to follow and the programming exercises not hard to implement with only the (frequent)
+annoyances of coding in Matlab.&lt;/p&gt;
+
+&lt;p&gt;It felt good to revisit all the topics in the course, which presented me once again the wide variety
+of Machine Learning approaches and techniques. Perhaps in hindsight other specialized courses on
+Machine Learning on a more graduate level would have been more worthwhile. However, I don&#39;t regret
+my time spent on this course as it never hurts to go back to the basics once in a while.
+Additionally, as this was my first online course, it was a great way to get started with Coursera
+and familiarize myself with this new educational format. And after finding out that it
+worked really well for me, I instantly signed up for a lot of other (more specialized) courses.&lt;/p&gt;
+
+&lt;h4&gt;Algorithms: Design and Analysis, Part 1&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;Stanford University // October-December 2014 // 6 weeks of study // 7 hours per week
 // &lt;a href=&quot;https://www.coursera.org/course/algo&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
@@ -70,7 +91,7 @@ with it the displine to follow through, I&#39;m in a much better position to als
 &lt;p&gt;Besides Building more experience with Python (vs project euler).
 Exploring &lt;a href=&quot;http://julialang.org/&quot;&gt;Julia&lt;/a&gt; and &lt;a href=&quot;http://www.rust-lang.org/&quot;&gt;Rust&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4&gt;Bioinformatics&lt;/h4&gt;
+&lt;h4&gt;Bioinformatics Algorithms, Part 1&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;UC San Diego // October 2014 - Feb 2015 // 10 weeks of study // 10 hours per week //
 &lt;a href=&quot;https://www.coursera.org/course/bioinformatics&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
@@ -86,7 +107,7 @@ Exploring &lt;a href=&quot;http://julialang.org/&quot;&gt;Julia&lt;/a&gt; and &l
 &lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Very easy&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Really getting the hang of following online courses, wanted to make sure that what I learned would
-not be in vain, i.e. ephimeral and quickly forgotten when moving onto other topics of interest.&lt;/p&gt;
+not be in vain, i.e. ephemeral and quickly forgotten when moving onto other topics of interest.&lt;/p&gt;
 
 &lt;h3&gt;What&#39;s next?&lt;/h3&gt;
 
@@ -100,12 +121,18 @@ two courses I already completed:&lt;/p&gt;
 &lt;/ul&gt;
 
 
-&lt;p&gt;Additionaly I&#39;m looking forward to follow more courses specialized in the field of bioinformatics
-(e.g. genetics, biomedicine, evolution, neuroscience) and Data Science (mining datasets, pattern
+&lt;p&gt;Additionally I&#39;m looking forward to follow more courses specialized in the field of bioinformatics
+(e.g. genetics, bio-medicine, evolution, neuroscience) and Data Science (mining datasets, pattern
 discovery, advanced statistics)&lt;/p&gt;
 
 &lt;p&gt;Also want to finish Linear and Integer Programming, which I only completed 2/7 weeks and dropped due
 to time constraints of other overlapping courses.&lt;/p&gt;
+
+&lt;h3&gt;Tips&lt;/h3&gt;
+
+&lt;p&gt;Not too many courses at once&lt;/p&gt;
+
+&lt;p&gt;Find some friends =&gt; Study group =&gt; flow dock (ptegelaar, ncrombach)&lt;/p&gt;
 </content>
  </entry>
  
