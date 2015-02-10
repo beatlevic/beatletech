@@ -4,12 +4,181 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2015-02-10T22:37:30+01:00</updated>
+ <updated>2015-02-11T00:25:00+01:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
  </author>
 
+ 
+ <entry>
+   <title>Completed 4 Coursera courses</title>
+   <link href="http://beatletech.com/2015/02/10/coursera-courses"/>
+   <updated>2015-02-10T00:00:00+01:00</updated>
+   <id>http://beatletech.com/2015/02/10/coursera-courses</id>
+   <content type="html">&lt;p&gt;In the past couple of months I managed to complete 4 online courses on
+&lt;a href=&quot;http://coursera.com&quot;&gt;Coursera&lt;/a&gt;, which is an education platform that partners with top universities
+to offer free &lt;a href=&quot;http://en.wikipedia.org/wiki/Massive_open_online_course&quot;&gt;MOOCs&lt;/a&gt; (Massive open online
+courses). In this post I like to present you my experiences with these courses and my plans for any
+future courses.&lt;/p&gt;
+
+&lt;p&gt;The reason for me to start following online courses has to do with what I already pointed out in my
+previous blog post &quot;&lt;a href=&quot;http://beatletech.com/2015/02/03/my-system-to-win-big&quot;&gt;My System to Win Big&lt;/a&gt;&quot;. I want to
+keep on improving myself and acquire more knowledge in domains of my interest. Part of it is
+revisiting knowledge I&#39;m &quot;supposed&quot; to know to gain an even better understanding, and the other part
+is exploring new uncharted territories. I also wanted to follow courses where I would have to
+practice and hone my programming skills.&lt;/p&gt;
+
+&lt;p&gt;But why follow online courses with a rigid schedule and deadlines if you can simply study books or solve some tough problems on
+&lt;a href=&quot;https://projecteuler.net/&quot;&gt;Project Euler&lt;/a&gt; at your own pace? Well, for me as it turns out, having a fixed
+course schedule releases me of the burden of planning and serves as a nice stick to finish on time,
+which made it easier to get into the habit of spending evening hours on education. This way I didn&#39;t
+have to spend my will-power every time to get started, and now that I have grown this study habit and
+with it the discipline to follow through, I&#39;m in a much better position to also study at my own pace.&lt;/p&gt;
+
+&lt;p&gt;The courses for which I have received statements of accomplishment are in chronological order:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/ml&quot;&gt;Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/algo&quot;&gt;Algorithms: Design and Analysis, Part 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/bioinformatics&quot;&gt;Bioinformatics Algorithms, Part 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/learning&quot;&gt;Learning How to Learn&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;In the subsequent sections I will describe each course in more detail.&lt;/p&gt;
+
+&lt;h3&gt;Courses&lt;/h3&gt;
+
+&lt;h4&gt;Machine Learning&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;Stanford University // June-September 2014 // 12 weeks of study // 6 hours per week // &lt;a href=&quot;https://www.coursera.org/course/ml&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
+&lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Easy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Half a year ago at &lt;a href=&quot;http://bottlenose.com&quot;&gt;Bottlenose&lt;/a&gt; I was shifting more from a Software Architect
+role to a Data Scientist role, and therefore spending more time on Machine Learning problems. So I
+thought it was valuable to refresh my knowledge in this particular domain. Besides reading up on
+some study books I decided to enroll in the Stanford Machine Learning course, which presented a nice
+overview with some basic programming exercises. Topics included (as listed on the Coursera page):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Supervised learning (parametric/non-parametric algorithms, support vector machines, kernels,
+neural networks).&lt;/li&gt;
+&lt;li&gt;Unsupervised learning (clustering, dimensionality reduction, recommender systems, deep learning).&lt;/li&gt;
+&lt;li&gt;Best practices in Machine Learning (bias/variance theory; innovation process in machine learning and AI)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Given that I was already very familiar with these topics, combined with an excellent presentation by
+the instructor &lt;a href=&quot;https://www.coursera.org/instructor/andrewng&quot;&gt;Andrew Ng&lt;/a&gt;, it may not be a surprise that I found the
+course easy to follow and the programming exercises not hard to implement with only the (frequent)
+annoyances of coding in Matlab.&lt;/p&gt;
+
+&lt;p&gt;It felt good to revisit all the topics in the course, which presented me once again the wide variety
+of Machine Learning approaches and techniques. Perhaps in hindsight other specialized courses on
+Machine Learning on a more graduate level would have been more worthwhile. However, I don&#39;t regret
+my time spent on this course as it never hurts to go back to the basics once in a while.
+Additionally, as this was my first online course, it was a great way to get started with Coursera
+and familiarize myself with this new educational format. And after finding out that it
+worked really well for me, I instantly signed up for a lot of other (more specialized) courses.&lt;/p&gt;
+
+&lt;h4&gt;Algorithms: Design and Analysis, Part 1&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;Stanford University // October-December 2014 // 6 weeks of study // 7 hours per week
+// &lt;a href=&quot;https://www.coursera.org/course/algo&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
+&lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Medium&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;After finishing the Machine Learning exercises in Matlab I wanted my next Coursera course to entail
+a &quot;real&quot; and more interesting programming language, and at the time I was already reading up on two
+other programming languages that I liked to put into practice, which were
+&lt;a href=&quot;http://julialang.org/&quot;&gt;Julia&lt;/a&gt; and &lt;a href=&quot;http://www.rust-lang.org/&quot;&gt;Rust&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I was already aware of the &quot;Algorithms: Design and Analysis&quot; class, which two of my friends already
+completed and recommended, thereby making it interesting candidate. Having finished a similar
+course (in Java) during my study at Delft University I thought this course would be a walk in the park and a
+good playground for testing the waters with Julia and Rust. At the same time I was starting with the
+&quot;Bioinformatics Algorithms&quot; class, which also focussed on implementing algorithms, but in the domain of biology
+(more on Bioinformatics later). Both courses I started with Julia.&lt;/p&gt;
+
+&lt;p&gt;I can honestly say that I really like the Julia language, which was born out of its creators wish to
+have a programming language that is:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&quot;... open source, with a liberal license. We want the speed of C with the
+  dynamism of Ruby. We want a language that’s homoiconic, with true macros like Lisp, but with
+  obvious, familiar mathematical notation like Matlab. We want something as usable for general
+  programming as Python, as easy for statistics as R, as natural for string processing as Perl, as
+  powerful for linear algebra as Matlab, as good at gluing programs together as the shell. Something
+  that is dirt simple to learn, yet keeps the most serious hackers happy. We want it interactive and
+  we want it compiled.&quot; (Blog:
+  &lt;a href=&quot;http://julialang.org/blog/2012/02/why-we-created-julia/&quot;&gt;Why we created Julia&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The first week&#39;s programming assignment, a counting algorithm piggy backing on merge-sort, I also
+implemented in Rust after finishing the Julia version. The Rust implementation was a painful
+delivery, which was mostly me fighting the compiler and having a hard time finding clues on the web
+due to a lot of breaking changes in Rust&#39;s development towards the 1.0 release version. Add to that
+the resulting performance being slower than my Julia implementation, and I quickly decided to leave
+Rust alone or at least until the language would be more stable (1.0 alpha was released Jan 2015).&lt;/p&gt;
+
+&lt;p&gt;While I was getting the hang of Julia, I also started exploring possibilities to introduce the
+language at Bottlenose, but found the language too immature just yet (at version 0.3), especially
+compared with Python and its vast amount of available (scientific) packages. While it would have
+been interesting to complete the entire course in Julia, I deemed it more valuable to switch to
+Python along the way and perhaps to revisit Julia again in a couple of years from now.&lt;/p&gt;
+
+&lt;p&gt;Let me now turn to the actual course contents after this (quite long)
+Julia-Rust-experience-intermezzo. When I mentioned that I believed this course to be an easy ride, I
+was actually quite mistaken. The lectures had a lot of technical and mathematical depth, and the
+quizes were often very challenging. You simply cannot fly through this course without a good
+understanding of the introduced concepts, which are luckily very well presented by the course
+instructor &lt;a href=&quot;https://www.coursera.org/instructor/~214&quot;&gt;Tim Roughgarden&lt;/a&gt;. All in all I can highly
+recommend this course for both expert and aspiring computer scientists for learning (or revisiting) several
+fundamental principles of algorithm design, and I&#39;m looking forward in participating in Part 2 of
+this course later this year.&lt;/p&gt;
+
+&lt;h4&gt;Bioinformatics Algorithms, Part 1&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;UC San Diego // October 2014 - Feb 2015 // 10 weeks of study // 10 hours per week //
+&lt;a href=&quot;https://www.coursera.org/course/bioinformatics&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
+&lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Medium/Hard&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Exploring the bioinformatics domain&lt;/p&gt;
+
+&lt;p&gt;distinction&lt;/p&gt;
+
+&lt;h4&gt;Learning How to Learn&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;UC San Diego // January 2015 // 4 weeks of study // 2 hours per week // &lt;a href=&quot;https://www.coursera.org/course/learning&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
+&lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Very easy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Really getting the hang of following online courses, wanted to make sure that what I learned would
+not be in vain, i.e. ephemeral and quickly forgotten when moving onto other topics of interest.&lt;/p&gt;
+
+&lt;h3&gt;What&#39;s next?&lt;/h3&gt;
+
+&lt;p&gt;In 2015 I want to at least take the following courses, of which the first two are continuations of
+two courses I already completed:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/algo2&quot;&gt;Algorithms: Design and Analysis, Part 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/bioinformatics2&quot;&gt;Bioinformatics Algorithms, Part 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/pgm&quot;&gt;Probabilistic Graphical Models&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Additionally I&#39;m looking forward to follow more courses specialized in the field of bioinformatics
+(e.g. genetics, bio-medicine, evolution, neuroscience) and Data Science (mining datasets, pattern
+discovery, advanced statistics)&lt;/p&gt;
+
+&lt;p&gt;Also want to finish Linear and Integer Programming, which I only completed 2/7 weeks and dropped due
+to time constraints of other overlapping courses.&lt;/p&gt;
+
+&lt;h3&gt;Tips&lt;/h3&gt;
+
+&lt;p&gt;Not too many courses at once&lt;/p&gt;
+
+&lt;p&gt;Find some friends =&gt; Study group =&gt; flow dock (ptegelaar, ncrombach)&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Bottlenose scores $13.4 Million</title>
