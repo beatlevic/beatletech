@@ -82,7 +82,7 @@ I was already aware of the "Algorithms: Design and Analysis" class, which two of
 completed and recommended, thereby making it interesting candidate. Having finished a similar
 course (in Java) during my study at Delft University I thought this course would be a walk in the park and a
 good playground for testing the waters with Julia and Rust. At the same time I was starting with the
-"Bioinformatics Algorithms" class, which also focussed on implementing algorithms, but in the domain of biology
+"Bioinformatics Algorithms" class, which also focused on implementing algorithms, but in the domain of biology
 (more on Bioinformatics later). Both courses I started with Julia.
 
 I can honestly say that I really like the Julia language, which was born out of its creators wish to
@@ -113,7 +113,7 @@ Python along the way and perhaps to revisit Julia again in a couple of years fro
 Let me now turn to the actual course contents after this (quite long)
 Julia-Rust-experience-intermezzo. When I mentioned that I believed this course to be an easy ride, I
 was actually quite mistaken. The lectures had a lot of technical and mathematical depth, and the
-quizes were often very challenging. You simply cannot fly through this course without a good
+quizzes were often very challenging. You simply cannot fly through this course without a good
 understanding of the introduced concepts, which are luckily very well presented by the course
 instructor [Tim Roughgarden](https://www.coursera.org/instructor/~214). All in all I can highly
 recommend this course for both expert and aspiring computer scientists for learning (or revisiting) several
@@ -140,19 +140,19 @@ the interactive text book ["Bioinformatics Algorithms: an Active Learning Approa
 - Are There Fragile Regions in the Human Genome? (Combinatorial Algorithms)
 
 In a way this was the "Algorithms: Design and Analysis" course all over again applied to the
-biological domain. The practical application of the algoritms really made this course stand out for
+biological domain. The practical application of the algorithms really made this course stand out for
 me, and made all algorithms more tangible. The interactive book accompanied by the online lectures
 had great production value and introduced concepts and terminology very well.
 
-The programming assignements throughout the book were the real meat of the course, and it is where
-you will spend most (90%) of your time. Where most excerises were not too hard, there was still a
+The programming assignments throughout the book were the real meat of the course, and it is where
+you will spend most (90%) of your time. Where most exercises were not too hard, there was still a
 big chunk of problems that were very challenging. Sometimes due to the automated solution checker
 that would be a bit too strict in the solutions it would accept (and no feedback on why you are
 wrong), but mostly it were simply hard problems to solve. Once you worked your way through the chapter and
 finished all the exercises, the corresponding quiz was easy to do.
 
 To get a statement of accomplishment you needed to score 70%, which is definitely doable. I went the
-extra mile and focussed on scoring above 85% for an accomplishment with distinction, which meant no
+extra mile and focused on scoring above 85% for an accomplishment with distinction, which meant no
 hiding from the difficult parts. In the end I was very proud that I achieved my statement of
 accomplishment with distinction.
 
@@ -170,7 +170,7 @@ follow to have a lasting impact and not be forgotten when you are quickly moving
 course. This brings us to the topic of how you can learn to learn more effectively, which is what
 the course "Learning how to learn" has to offer.
 
-While the course is very easy and lacking real depth, it is still benificial to at least watch the
+While the course is very easy and lacking real depth, it is still beneficial to at least watch the
 lectures and the interviews, as there might be some tricks you can pick up that will improve your
 learning capabilities and help you overcome procrastination when it hits you.
 
@@ -181,8 +181,8 @@ My key takeaway points are:
   just read. Formulating your thoughts really helps, so talking and explaining to others is another
   big plus.
 - Focus on "process" not "product".
-- Make todo lists for next day.
-- Excerise really helps when you get stuck on some hard problem. Shifting you focus can set you
+- Make to-do lists for next day.
+- Exercise really helps when you get stuck on some hard problem. Shifting you focus can set you
   subconscious and diffuse mode of thinking work for you in the background.
 - Skim through an article or paper to get a sense of of the context
 
@@ -210,7 +210,7 @@ I want to conclude with two tips for when you are going to embark on your own Co
 
 - Do no take too many courses at once. It might seem sometimes that you could easily squeeze in
   another course, but they often take more time than you anticipate. Additionally if you end up
-  stalling in one or more courses, you might get demotivated and stop alltogether.
+  stalling in one or more courses, you might get demotivated and stop all-together.
 - Find yourself some friends who are already following online courses or talk them into joining
   you. Having a study group of like-minded individuals will really help you stay on course and make
   the ride less lonely and a lot more fun.

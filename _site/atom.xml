@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2015-02-11T01:55:14+01:00</updated>
+ <updated>2015-02-11T01:57:59+01:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -13,9 +13,9 @@
  
  <entry>
    <title>Completed 4 Coursera courses</title>
-   <link href="http://beatletech.com/2015/02/10/coursera-courses"/>
-   <updated>2015-02-10T00:00:00+01:00</updated>
-   <id>http://beatletech.com/2015/02/10/coursera-courses</id>
+   <link href="http://beatletech.com/2015/02/11/coursera-courses"/>
+   <updated>2015-02-11T00:00:00+01:00</updated>
+   <id>http://beatletech.com/2015/02/11/coursera-courses</id>
    <content type="html">&lt;p&gt;In the past couple of months I managed to complete 4 online courses on
 &lt;a href=&quot;http://coursera.com&quot;&gt;Coursera&lt;/a&gt;, which is an education platform that partners with top universities
 to offer free &lt;a href=&quot;http://en.wikipedia.org/wiki/Massive_open_online_course&quot;&gt;MOOCs&lt;/a&gt; (Massive open online
@@ -97,7 +97,7 @@ other programming languages that I liked to put into practice, which were
 completed and recommended, thereby making it interesting candidate. Having finished a similar
 course (in Java) during my study at Delft University I thought this course would be a walk in the park and a
 good playground for testing the waters with Julia and Rust. At the same time I was starting with the
-&quot;Bioinformatics Algorithms&quot; class, which also focussed on implementing algorithms, but in the domain of biology
+&quot;Bioinformatics Algorithms&quot; class, which also focused on implementing algorithms, but in the domain of biology
 (more on Bioinformatics later). Both courses I started with Julia.&lt;/p&gt;
 
 &lt;p&gt;I can honestly say that I really like the Julia language, which was born out of its creators wish to
@@ -128,7 +128,7 @@ Python along the way and perhaps to revisit Julia again in a couple of years fro
 &lt;p&gt;Let me now turn to the actual course contents after this (quite long)
 Julia-Rust-experience-intermezzo. When I mentioned that I believed this course to be an easy ride, I
 was actually quite mistaken. The lectures had a lot of technical and mathematical depth, and the
-quizes were often very challenging. You simply cannot fly through this course without a good
+quizzes were often very challenging. You simply cannot fly through this course without a good
 understanding of the introduced concepts, which are luckily very well presented by the course
 instructor &lt;a href=&quot;https://www.coursera.org/instructor/~214&quot;&gt;Tim Roughgarden&lt;/a&gt;. All in all I can highly
 recommend this course for both expert and aspiring computer scientists for learning (or revisiting) several
@@ -158,19 +158,19 @@ the interactive text book &lt;a href=&quot;http://bioinformaticsalgorithms.com/&
 
 
 &lt;p&gt;In a way this was the &quot;Algorithms: Design and Analysis&quot; course all over again applied to the
-biological domain. The practical application of the algoritms really made this course stand out for
+biological domain. The practical application of the algorithms really made this course stand out for
 me, and made all algorithms more tangible. The interactive book accompanied by the online lectures
 had great production value and introduced concepts and terminology very well.&lt;/p&gt;
 
-&lt;p&gt;The programming assignements throughout the book were the real meat of the course, and it is where
-you will spend most (90%) of your time. Where most excerises were not too hard, there was still a
+&lt;p&gt;The programming assignments throughout the book were the real meat of the course, and it is where
+you will spend most (90%) of your time. Where most exercises were not too hard, there was still a
 big chunk of problems that were very challenging. Sometimes due to the automated solution checker
 that would be a bit too strict in the solutions it would accept (and no feedback on why you are
 wrong), but mostly it were simply hard problems to solve. Once you worked your way through the chapter and
 finished all the exercises, the corresponding quiz was easy to do.&lt;/p&gt;
 
 &lt;p&gt;To get a statement of accomplishment you needed to score 70%, which is definitely doable. I went the
-extra mile and focussed on scoring above 85% for an accomplishment with distinction, which meant no
+extra mile and focused on scoring above 85% for an accomplishment with distinction, which meant no
 hiding from the difficult parts. In the end I was very proud that I achieved my statement of
 accomplishment with distinction.&lt;/p&gt;
 
@@ -188,7 +188,7 @@ follow to have a lasting impact and not be forgotten when you are quickly moving
 course. This brings us to the topic of how you can learn to learn more effectively, which is what
 the course &quot;Learning how to learn&quot; has to offer.&lt;/p&gt;
 
-&lt;p&gt;While the course is very easy and lacking real depth, it is still benificial to at least watch the
+&lt;p&gt;While the course is very easy and lacking real depth, it is still beneficial to at least watch the
 lectures and the interviews, as there might be some tricks you can pick up that will improve your
 learning capabilities and help you overcome procrastination when it hits you.&lt;/p&gt;
 
@@ -200,8 +200,8 @@ for a moment after you have read some text, look away, and forcing yourself to r
 just read. Formulating your thoughts really helps, so talking and explaining to others is another
 big plus.&lt;/li&gt;
 &lt;li&gt;Focus on &quot;process&quot; not &quot;product&quot;.&lt;/li&gt;
-&lt;li&gt;Make todo lists for next day.&lt;/li&gt;
-&lt;li&gt;Excerise really helps when you get stuck on some hard problem. Shifting you focus can set you
+&lt;li&gt;Make to-do lists for next day.&lt;/li&gt;
+&lt;li&gt;Exercise really helps when you get stuck on some hard problem. Shifting you focus can set you
 subconscious and diffuse mode of thinking work for you in the background.&lt;/li&gt;
 &lt;li&gt;Skim through an article or paper to get a sense of of the context&lt;/li&gt;
 &lt;/ul&gt;
@@ -235,7 +235,7 @@ overlapping courses.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Do no take too many courses at once. It might seem sometimes that you could easily squeeze in
 another course, but they often take more time than you anticipate. Additionally if you end up
-stalling in one or more courses, you might get demotivated and stop alltogether.&lt;/li&gt;
+stalling in one or more courses, you might get demotivated and stop all-together.&lt;/li&gt;
 &lt;li&gt;Find yourself some friends who are already following online courses or talk them into joining
 you. Having a study group of like-minded individuals will really help you stay on course and make
 the ride less lonely and a lot more fun.&lt;/li&gt;
