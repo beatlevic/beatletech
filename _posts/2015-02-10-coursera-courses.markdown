@@ -186,7 +186,6 @@ My key takeaway points are:
   subconscious and diffuse mode of thinking work for you in the background.
 - Skim through an article or paper to get a sense of of the context
 
-
 ### What's next?
 
 In 2015 I want to at least take the following courses, of which the first two are continuations of
@@ -209,13 +208,13 @@ overlapping courses.
 
 I want to conclude with two tips for when you are going to embark on your own Coursera journey:
 
-- Do no take on too many courses at once. It might seem sometimes that you could easily squeeze in
-  another course, but often courses take more time than you anticipate. Additionally if you end up
+- Do no take too many courses at once. It might seem sometimes that you could easily squeeze in
+  another course, but they often take more time than you anticipate. Additionally if you end up
   stalling in one or more courses, you might get demotivated and stop alltogether.
-- Find yourself some friends who are already taking online courses or talk them into joining
-  you. Having a study group of likeminded individuals will really help you stay on course and make
+- Find yourself some friends who are already following online courses or talk them into joining
+  you. Having a study group of like-minded individuals will really help you stay on course and make
   the ride less lonely and a lot more fun.
 
-
+Good luck with our own online education!
 
 
