@@ -163,10 +163,28 @@ I'm looking forward to part 2 of the course, which will start this month.
 **Overview:** *UC San Diego // January 2015 // 4 weeks of study // 2 hours per week // [Coursera link](https://www.coursera.org/course/learning)*  
 **Difficulty:** *Very easy*
 
-Really getting the hang of following online courses, wanted to make sure that what I learned would
-not be in vain, i.e. ephemeral and quickly forgotten when moving onto other topics of interest.
+When you are spending your spare time following online courses and you notice there isn't enough
+time in the week to follow all the courses you would like, you have to make choices. And it is not
+only the choices that you want to make correctly, you also want the courses that you do decide to
+follow to have a lasting impact and not be forgotten when you are quickly moving on to another
+course. This brings us to the topic of how you can learn to learn more effectively, which is what
+the course "Learning how to learn" has to offer.
 
+While the course is very easy and lacking real depth, it is still benificial to at least watch the
+lectures and the interviews, as there might be some tricks you can pick up that will improve your
+learning capabilities and help you overcome procrastination when it hits you.
 
+My key takeaway points are:
+
+- Recall: A great way to improve your understanding and ability to form strong memories is to pause
+  for a moment after you have read some text, look away, and forcing yourself to recall what you
+  just read. Formulating your thoughts really helps, so talking and explaining to others is another
+  big plus.
+- Focus on "process" not "product".
+- Make todo lists for next day.
+- Excerise really helps when you get stuck on some hard problem. Shifting you focus can set you
+  subconscious and diffuse mode of thinking work for you in the background.
+- Skim through an article or paper to get a sense of of the context
 
 
 ### What's next?
@@ -182,11 +200,22 @@ Additionally I'm looking forward to follow more courses specialized in the field
 (e.g. genetics, bio-medicine, evolution, neuroscience) and Data Science (mining datasets, pattern
 discovery, advanced statistics)
 
-Also want to finish Linear and Integer Programming, which I only completed 2/7 weeks and dropped due
-to time constraints of other overlapping courses.
+I also want to finish
+[Linear and Integer Programming](https://www.coursera.org/course/linearprogramming), of which I
+already completed 2 out of 7 weeks, but discontinued the course due to time constraints of other
+overlapping courses.
 
 ### Tips
 
-Not too many courses at once
+I want to conclude with two tips for when you are going to embark on your own Coursera journey:
 
-Find some friends => Study group => flow dock (ptegelaar, ncrombach)
+- Do no take on too many courses at once. It might seem sometimes that you could easily squeeze in
+  another course, but often courses take more time than you anticipate. Additionally if you end up
+  stalling in one or more courses, you might get demotivated and stop alltogether.
+- Find yourself some friends who are already taking online courses or talk them into joining
+  you. Having a study group of likeminded individuals will really help you stay on course and make
+  the ride less lonely and a lot more fun.
+
+
+
+
