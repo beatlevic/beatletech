@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Completed 4 Coursera courses"
+title: "My recent Coursera journey"
 meta_description: Four Cousera courses I have completed recently
 meta_keywords: post, courses, learning, machine learning, bioinformatics, algorithms, education
 tags: [learning, Coursera, education]
