@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2015-02-11T00:25:00+01:00</updated>
+ <updated>2015-02-11T01:15:24+01:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -103,14 +103,14 @@ good playground for testing the waters with Julia and Rust. At the same time I w
 &lt;p&gt;I can honestly say that I really like the Julia language, which was born out of its creators wish to
 have a programming language that is:&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;&quot;... open source, with a liberal license. We want the speed of C with the
+&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;... open source, with a liberal license. We want the speed of C with the
   dynamism of Ruby. We want a language that’s homoiconic, with true macros like Lisp, but with
   obvious, familiar mathematical notation like Matlab. We want something as usable for general
   programming as Python, as easy for statistics as R, as natural for string processing as Perl, as
   powerful for linear algebra as Matlab, as good at gluing programs together as the shell. Something
   that is dirt simple to learn, yet keeps the most serious hackers happy. We want it interactive and
-  we want it compiled.&quot; (Blog:
-  &lt;a href=&quot;http://julialang.org/blog/2012/02/why-we-created-julia/&quot;&gt;Why we created Julia&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+  we want it compiled.&lt;br/&gt;
+  (Blog:  &lt;a href=&quot;http://julialang.org/blog/2012/02/why-we-created-julia/&quot;&gt;Why we created Julia&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
 
 &lt;p&gt;The first week&#39;s programming assignment, a counting algorithm piggy backing on merge-sort, I also
 implemented in Rust after finishing the Julia version. The Rust implementation was a painful
@@ -141,9 +141,40 @@ this course later this year.&lt;/p&gt;
 &lt;a href=&quot;https://www.coursera.org/course/bioinformatics&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
 &lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Medium/Hard&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Exploring the bioinformatics domain&lt;/p&gt;
+&lt;p&gt;I always had a particular interest in genetics and biology in general, and if you combine this with
+my interest in algorithms and Data Science, you can see why I had Bioinformatics high on
+my wish list to dive into. Along came &quot;Bioinformatics Algorithms&quot; on Coursera and I could no longer resist
+signing up and was eager to get started. The syllabus consists of chapters of
+the interactive text book &lt;a href=&quot;http://bioinformaticsalgorithms.com/&quot;&gt;&quot;Bioinformatics Algorithms: an Active Learning Approach&quot;&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;distinction&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Where in the Genome Does DNA Replication Begin? (Algorithmic Warmup)&lt;/li&gt;
+&lt;li&gt;How Do We Sequence Antibiotics? (Brute Force Algorithms)&lt;/li&gt;
+&lt;li&gt;Which DNA Patterns Act As Cellular Clocks? (Randomized Algorithms)&lt;/li&gt;
+&lt;li&gt;How Do We Assemble Genomes? (Graph Algorithms)&lt;/li&gt;
+&lt;li&gt;How Do We Compare Biological Sequences? (Dynamic Programming Algorithms)&lt;/li&gt;
+&lt;li&gt;Are There Fragile Regions in the Human Genome? (Combinatorial Algorithms)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;In a way this was the &quot;Algorithms: Design and Analysis&quot; course all over again applied to the
+biological domain. The practical applications of the algoritms really made this course stand out for
+me, and made all algorithms more tangible. The interactive book accompanied by the online
+lectures had great production value and introduced concepts and terminology very well.&lt;/p&gt;
+
+&lt;p&gt;The programming assignements throughout the book were the real meat of the course, and it is where
+you will spend most (90%) of your time. Where most excerises were not too hard, there was still a
+big chunk of problems that were very challenging. Sometimes due to the automated solution checker
+that would be a bit too strict in the solutions it would accept (and no feedback on why you are
+wrong), but mostly it were simply hard problems to solve. Once you went through the chapter and
+finished all the exercises, the corresponding quiz was easy to do.&lt;/p&gt;
+
+&lt;p&gt;To get a statement of accomplishment you needed to score 70%, which is definitely doable. I went the
+extra mile and focussed on scoring above 85% for an accomplishment with distinction, which meant no
+hiding from the difficult parts. In the end I was very proud that I achieved my statement of
+accomplishment with distinction.&lt;/p&gt;
+
+&lt;p&gt;I&#39;m looking forward to part 2 of the course, which will start this month.&lt;/p&gt;
 
 &lt;h4&gt;Learning How to Learn&lt;/h4&gt;
 

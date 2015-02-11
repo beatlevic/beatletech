@@ -88,14 +88,14 @@ good playground for testing the waters with Julia and Rust. At the same time I w
 I can honestly say that I really like the Julia language, which was born out of its creators wish to
 have a programming language that is:
 
-*"... open source, with a liberal license. We want the speed of C with the
+> *... open source, with a liberal license. We want the speed of C with the
   dynamism of Ruby. We want a language that’s homoiconic, with true macros like Lisp, but with
   obvious, familiar mathematical notation like Matlab. We want something as usable for general
   programming as Python, as easy for statistics as R, as natural for string processing as Perl, as
   powerful for linear algebra as Matlab, as good at gluing programs together as the shell. Something
   that is dirt simple to learn, yet keeps the most serious hackers happy. We want it interactive and
-  we want it compiled." (Blog:
-  [Why we created Julia](http://julialang.org/blog/2012/02/why-we-created-julia/))*
+  we want it compiled.  
+  (Blog:  [Why we created Julia](http://julialang.org/blog/2012/02/why-we-created-julia/))*
 
 The first week's programming assignment, a counting algorithm piggy backing on merge-sort, I also
 implemented in Rust after finishing the Julia version. The Rust implementation was a painful
@@ -120,17 +120,43 @@ recommend this course for both expert and aspiring computer scientists for learn
 fundamental principles of algorithm design, and I'm looking forward in participating in Part 2 of
 this course later this year.
 
-
 #### Bioinformatics Algorithms, Part 1
 
 **Overview:** *UC San Diego // October 2014 - Feb 2015 // 10 weeks of study // 10 hours per week //
 [Coursera link](https://www.coursera.org/course/bioinformatics)*  
 **Difficulty:** *Medium/Hard*
 
-Exploring the bioinformatics domain
+I always had a particular interest in genetics and biology in general, and if you combine this with
+my interest in algorithms and Data Science, you can see why I had Bioinformatics high on
+my wish list to dive into. Along came "Bioinformatics Algorithms" on Coursera and I could no longer resist
+signing up and was eager to get started. The syllabus consists of chapters of
+the interactive text book ["Bioinformatics Algorithms: an Active Learning Approach"](http://bioinformaticsalgorithms.com/):
 
+- Where in the Genome Does DNA Replication Begin? (Algorithmic Warmup)
+- How Do We Sequence Antibiotics? (Brute Force Algorithms)
+- Which DNA Patterns Act As Cellular Clocks? (Randomized Algorithms)
+- How Do We Assemble Genomes? (Graph Algorithms)
+- How Do We Compare Biological Sequences? (Dynamic Programming Algorithms)
+- Are There Fragile Regions in the Human Genome? (Combinatorial Algorithms)
 
-distinction
+In a way this was the "Algorithms: Design and Analysis" course all over again applied to the
+biological domain. The practical applications of the algoritms really made this course stand out for
+me, and made all algorithms more tangible. The interactive book accompanied by the online
+lectures had great production value and introduced concepts and terminology very well.
+
+The programming assignements throughout the book were the real meat of the course, and it is where
+you will spend most (90%) of your time. Where most excerises were not too hard, there was still a
+big chunk of problems that were very challenging. Sometimes due to the automated solution checker
+that would be a bit too strict in the solutions it would accept (and no feedback on why you are
+wrong), but mostly it were simply hard problems to solve. Once you went through the chapter and
+finished all the exercises, the corresponding quiz was easy to do.
+
+To get a statement of accomplishment you needed to score 70%, which is definitely doable. I went the
+extra mile and focussed on scoring above 85% for an accomplishment with distinction, which meant no
+hiding from the difficult parts. In the end I was very proud that I achieved my statement of
+accomplishment with distinction.
+
+I'm looking forward to part 2 of the course, which will start this month.
 
 #### Learning How to Learn
 
