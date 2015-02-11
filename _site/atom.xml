@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2015-02-11T01:57:59+01:00</updated>
+ <updated>2015-02-11T02:22:35+01:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -46,7 +46,7 @@ with it the discipline to follow through, I&#39;m in a much better position to a
 &lt;/ul&gt;
 
 
-&lt;p&gt;In the subsequent sections I will describe each course in more detail.&lt;/p&gt;
+&lt;p&gt;In the subsequent sections I will describe each course and my experiences in more detail.&lt;/p&gt;
 
 &lt;h3&gt;Courses&lt;/h3&gt;
 
@@ -55,31 +55,32 @@ with it the discipline to follow through, I&#39;m in a much better position to a
 &lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;Stanford University // June-September 2014 // 12 weeks of study // 6 hours per week // &lt;a href=&quot;https://www.coursera.org/course/ml&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
 &lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Easy&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Half a year ago at &lt;a href=&quot;http://bottlenose.com&quot;&gt;Bottlenose&lt;/a&gt; I was shifting more from a Software Architect
-role to a Data Scientist role, and therefore spending more time on Machine Learning problems. So I
-thought it was valuable to refresh my knowledge in this particular domain. Besides reading up on
-some study books I decided to enroll in the Stanford Machine Learning course, which presented a nice
-overview with some basic programming exercises. Topics included (as listed on the Coursera page):&lt;/p&gt;
+&lt;p&gt;Half a year ago at &lt;a href=&quot;http://bottlenose.com&quot;&gt;Bottlenose&lt;/a&gt; I was shifting from primarily a Software
+Architect role to more of a Data Scientist role, and therefore spending more time on Machine
+Learning problems. So I thought it was valuable to refresh my knowledge in this particular
+domain. Besides reading up on some study books I decided to enroll in the Stanford Machine Learning
+course, which presented a nice overview with some basic programming exercises. Topics included (as
+listed on the Coursera page):&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Supervised learning (parametric/non-parametric algorithms, support vector machines, kernels,
 neural networks).&lt;/li&gt;
 &lt;li&gt;Unsupervised learning (clustering, dimensionality reduction, recommender systems, deep learning).&lt;/li&gt;
-&lt;li&gt;Best practices in Machine Learning (bias/variance theory; innovation process in machine learning and AI)&lt;/li&gt;
+&lt;li&gt;Best practices in Machine Learning (bias/variance theory, innovation process in machine learning and AI).&lt;/li&gt;
 &lt;/ul&gt;
 
 
 &lt;p&gt;Given that I was already very familiar with these topics, combined with an excellent presentation by
-the instructor &lt;a href=&quot;https://www.coursera.org/instructor/andrewng&quot;&gt;Andrew Ng&lt;/a&gt;, it may not be a surprise that I found the
+instructor &lt;a href=&quot;https://www.coursera.org/instructor/andrewng&quot;&gt;Andrew Ng&lt;/a&gt;, it may not come as a surprise that I found the
 course easy to follow and the programming exercises not hard to implement with only the (frequent)
 annoyances of coding in Matlab.&lt;/p&gt;
 
-&lt;p&gt;It felt good to revisit all the topics in the course, which presented me once again the wide variety
-of Machine Learning approaches and techniques. Perhaps in hindsight other specialized courses on
-Machine Learning on a more graduate level would have been more worthwhile. However, I don&#39;t regret
-my time spent on this course as it never hurts to go back to the basics once in a while.
-Additionally, as this was my first online course, it was a great way to get started with Coursera
-and familiarize myself with this new educational format. And after finding out that it
+&lt;p&gt;It felt good to revisit all the topics in the course, which presented me once again with the wide
+variety of Machine Learning approaches and techniques. Perhaps in hindsight other specialized
+courses on Machine Learning on a more graduate level would have been more worthwhile. However, I
+don&#39;t regret my time spent on this course as it never hurts to go back to the basics once in a
+while.  Additionally, as this was my first online course, it was a great way to get started with
+Coursera and familiarize myself with this new educational format. And after finding out that it
 worked really well for me, I instantly signed up for a lot of other (more specialized) courses.&lt;/p&gt;
 
 &lt;h4&gt;Algorithms: Design and Analysis, Part 1&lt;/h4&gt;
@@ -88,13 +89,12 @@ worked really well for me, I instantly signed up for a lot of other (more specia
 // &lt;a href=&quot;https://www.coursera.org/course/algo&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
 &lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Medium&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;After finishing the Machine Learning exercises in Matlab I wanted my next Coursera course to entail
+&lt;p&gt;After finishing the Machine Learning exercises in Matlab I wanted my next Coursera course to require
 a &quot;real&quot; and more interesting programming language, and at the time I was already reading up on two
-other programming languages that I liked to put into practice, which were
-&lt;a href=&quot;http://julialang.org/&quot;&gt;Julia&lt;/a&gt; and &lt;a href=&quot;http://www.rust-lang.org/&quot;&gt;Rust&lt;/a&gt;.&lt;/p&gt;
+other programming languages that I liked to put into practice: &lt;a href=&quot;http://julialang.org/&quot;&gt;Julia&lt;/a&gt; and &lt;a href=&quot;http://www.rust-lang.org/&quot;&gt;Rust&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I was already aware of the &quot;Algorithms: Design and Analysis&quot; class, which two of my friends already
-completed and recommended, thereby making it interesting candidate. Having finished a similar
+completed and recommended, thereby making it interesting candidate as my next course. Having finished a similar
 course (in Java) during my study at Delft University I thought this course would be a walk in the park and a
 good playground for testing the waters with Julia and Rust. At the same time I was starting with the
 &quot;Bioinformatics Algorithms&quot; class, which also focused on implementing algorithms, but in the domain of biology
@@ -116,22 +116,24 @@ have a programming language that is:&lt;/p&gt;
 implemented in Rust after finishing the Julia version. The Rust implementation was a painful
 delivery, which was mostly me fighting the compiler and having a hard time finding clues on the web
 due to a lot of breaking changes in Rust&#39;s development towards the 1.0 release version. Add to that
-the resulting performance being slower than my Julia implementation, and I quickly decided to leave
-Rust alone or at least until the language would be more stable (1.0 alpha was released Jan 2015).&lt;/p&gt;
+the resulting performance being slower than with my Julia implementation, and I quickly decided to
+leave Rust alone or at least until the language would be more stable (1.0 alpha was released Jan
+2015).&lt;/p&gt;
 
 &lt;p&gt;While I was getting the hang of Julia, I also started exploring possibilities to introduce the
-language at Bottlenose, but found the language too immature just yet (at version 0.3), especially
-compared with Python and its vast amount of available (scientific) packages. While it would have
-been interesting to complete the entire course in Julia, I deemed it more valuable to switch to
-Python along the way and perhaps to revisit Julia again in a couple of years from now.&lt;/p&gt;
+language at &lt;a href=&quot;http://bottlenose.com&quot;&gt;Bottlenose&lt;/a&gt;, but found the language too immature just yet (at
+version 0.3), especially compared with Python and its vast amount of available (scientific)
+packages. It would have been interesting to complete the entire course in Julia, but I deemed it
+more valuable to switch to Python along the way and perhaps revisit Julia again in a couple of
+years from now.&lt;/p&gt;
 
 &lt;p&gt;Let me now turn to the actual course contents after this (quite long)
 Julia-Rust-experience-intermezzo. When I mentioned that I believed this course to be an easy ride, I
 was actually quite mistaken. The lectures had a lot of technical and mathematical depth, and the
 quizzes were often very challenging. You simply cannot fly through this course without a good
-understanding of the introduced concepts, which are luckily very well presented by the course
-instructor &lt;a href=&quot;https://www.coursera.org/instructor/~214&quot;&gt;Tim Roughgarden&lt;/a&gt;. All in all I can highly
-recommend this course for both expert and aspiring computer scientists for learning (or revisiting) several
+understanding of the introduced concepts, which are luckily very well presented by course instructor
+&lt;a href=&quot;https://www.coursera.org/instructor/~214&quot;&gt;Tim Roughgarden&lt;/a&gt;. All in all I can highly recommend this
+course for both expert and aspiring computer scientists for learning (or revisiting) several
 fundamental principles of algorithm design, and I&#39;m looking forward in participating in Part 2 of
 this course later this year.&lt;/p&gt;
 
@@ -141,11 +143,12 @@ this course later this year.&lt;/p&gt;
 &lt;a href=&quot;https://www.coursera.org/course/bioinformatics&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
 &lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Medium/Hard&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;I always had a particular interest in genetics and biology in general, and if you combine this with
-my interest in algorithms and Data Science, you can see why I had Bioinformatics high on
-my wish list to dive into. Along came &quot;Bioinformatics Algorithms&quot; on Coursera and I could no longer resist
-signing up and was eager to get started. The syllabus consists of chapters of
-the interactive text book &lt;a href=&quot;http://bioinformaticsalgorithms.com/&quot;&gt;&quot;Bioinformatics Algorithms: an Active Learning Approach&quot;&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;I always had a general interest in biology with genetics in particular, and if you combine this with
+my interest in algorithms and Data Science, you can see why I had a course in bioinformatics high on
+my wish list. Along came &quot;Bioinformatics Algorithms&quot; on Coursera and I could no longer resist
+signing up and was eager to get started. The syllabus consists of chapters of the interactive text
+book
+&lt;a href=&quot;http://bioinformaticsalgorithms.com/&quot;&gt;&quot;Bioinformatics Algorithms: an Active Learning Approach&quot;&lt;/a&gt;:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Where in the Genome Does DNA Replication Begin? (Algorithmic Warmup)&lt;/li&gt;
@@ -165,9 +168,9 @@ had great production value and introduced concepts and terminology very well.&lt
 &lt;p&gt;The programming assignments throughout the book were the real meat of the course, and it is where
 you will spend most (90%) of your time. Where most exercises were not too hard, there was still a
 big chunk of problems that were very challenging. Sometimes due to the automated solution checker
-that would be a bit too strict in the solutions it would accept (and no feedback on why you are
-wrong), but mostly it were simply hard problems to solve. Once you worked your way through the chapter and
-finished all the exercises, the corresponding quiz was easy to do.&lt;/p&gt;
+that would be a bit too strict in the solutions it would accept (and no feedback on why you were
+wrong), but mostly it were just hard problems to solve. Once you worked your way through the chapter
+and finished all the exercises, the corresponding quiz was easy to pass.&lt;/p&gt;
 
 &lt;p&gt;To get a statement of accomplishment you needed to score 70%, which is definitely doable. I went the
 extra mile and focused on scoring above 85% for an accomplishment with distinction, which meant no
@@ -183,14 +186,14 @@ accomplishment with distinction.&lt;/p&gt;
 
 &lt;p&gt;When you are spending your spare time following online courses and you notice there isn&#39;t enough
 time in the week to follow all the courses you would like, you have to make choices. And it is not
-only the choices that you want to make correctly, you also want the courses that you do decide to
-follow to have a lasting impact and not be forgotten when you are quickly moving on to another
-course. This brings us to the topic of how you can learn to learn more effectively, which is what
-the course &quot;Learning how to learn&quot; has to offer.&lt;/p&gt;
+only the choices that are difficult, you also want the courses that you decide to follow to have a
+lasting impact and not be quickly forgotten when you are moving on to another course. This brings us
+to the topic of how you can learn to learn more effectively, which is what the course &quot;Learning how
+to learn&quot; has to offer.&lt;/p&gt;
 
-&lt;p&gt;While the course is very easy and lacking real depth, it is still beneficial to at least watch the
-lectures and the interviews, as there might be some tricks you can pick up that will improve your
-learning capabilities and help you overcome procrastination when it hits you.&lt;/p&gt;
+&lt;p&gt;While the course is very easy and lacks real depth, it is still beneficial to at least watch the
+lectures and the interviews, as there might be some tips and tricks you can pick up that will
+improve your learning capabilities and help you overcome procrastination when it hits you.&lt;/p&gt;
 
 &lt;p&gt;My key takeaway points are:&lt;/p&gt;
 
@@ -201,15 +204,15 @@ just read. Formulating your thoughts really helps, so talking and explaining to 
 big plus.&lt;/li&gt;
 &lt;li&gt;Focus on &quot;process&quot; not &quot;product&quot;.&lt;/li&gt;
 &lt;li&gt;Make to-do lists for next day.&lt;/li&gt;
-&lt;li&gt;Exercise really helps when you get stuck on some hard problem. Shifting you focus can set you
+&lt;li&gt;Exercise really helps when you get stuck on some hard problem. Shifting you focus can make your
 subconscious and diffuse mode of thinking work for you in the background.&lt;/li&gt;
-&lt;li&gt;Skim through an article or paper to get a sense of of the context&lt;/li&gt;
+&lt;li&gt;Skim through an article or paper to get a sense of of the context to help structuring new knowledge.&lt;/li&gt;
 &lt;/ul&gt;
 
 
 &lt;h3&gt;What&#39;s next?&lt;/h3&gt;
 
-&lt;p&gt;In 2015 I want to at least take the following courses, of which the first two are continuations of
+&lt;p&gt;In 2015 I want at least take the following courses, of which the first two are continuations of
 two courses I already completed:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -224,7 +227,7 @@ two courses I already completed:&lt;/p&gt;
 discovery, advanced statistics)&lt;/p&gt;
 
 &lt;p&gt;I also want to finish
-&lt;a href=&quot;https://www.coursera.org/course/linearprogramming&quot;&gt;Linear and Integer Programming&lt;/a&gt;, of which I
+&lt;a href=&quot;https://www.coursera.org/course/linearprogramming&quot;&gt;Linear and Integer Programming&lt;/a&gt; of which I
 already completed 2 out of 7 weeks, but discontinued the course due to time constraints of other
 overlapping courses.&lt;/p&gt;
 

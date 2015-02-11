@@ -35,7 +35,7 @@ The courses for which I have received statements of accomplishment are in chrono
 - [Bioinformatics Algorithms, Part 1](https://www.coursera.org/course/bioinformatics)
 - [Learning How to Learn](https://www.coursera.org/course/learning)
 
-In the subsequent sections I will describe each course in more detail.
+In the subsequent sections I will describe each course and my experiences in more detail.
 
 ### Courses
 #### Machine Learning
@@ -43,28 +43,29 @@ In the subsequent sections I will describe each course in more detail.
 **Overview:** *Stanford University // June-September 2014 // 12 weeks of study // 6 hours per week // [Coursera link](https://www.coursera.org/course/ml)*  
 **Difficulty:** *Easy*
 
-Half a year ago at [Bottlenose](http://bottlenose.com) I was shifting more from a Software Architect
-role to a Data Scientist role, and therefore spending more time on Machine Learning problems. So I
-thought it was valuable to refresh my knowledge in this particular domain. Besides reading up on
-some study books I decided to enroll in the Stanford Machine Learning course, which presented a nice
-overview with some basic programming exercises. Topics included (as listed on the Coursera page):
+Half a year ago at [Bottlenose](http://bottlenose.com) I was shifting from primarily a Software
+Architect role to more of a Data Scientist role, and therefore spending more time on Machine
+Learning problems. So I thought it was valuable to refresh my knowledge in this particular
+domain. Besides reading up on some study books I decided to enroll in the Stanford Machine Learning
+course, which presented a nice overview with some basic programming exercises. Topics included (as
+listed on the Coursera page):
 
 - Supervised learning (parametric/non-parametric algorithms, support vector machines, kernels,
 neural networks).
 - Unsupervised learning (clustering, dimensionality reduction, recommender systems, deep learning). 
-- Best practices in Machine Learning (bias/variance theory; innovation process in machine learning and AI)
+- Best practices in Machine Learning (bias/variance theory, innovation process in machine learning and AI).
 
 Given that I was already very familiar with these topics, combined with an excellent presentation by
-the instructor [Andrew Ng](https://www.coursera.org/instructor/andrewng), it may not be a surprise that I found the
+instructor [Andrew Ng](https://www.coursera.org/instructor/andrewng), it may not come as a surprise that I found the
 course easy to follow and the programming exercises not hard to implement with only the (frequent)
 annoyances of coding in Matlab. 
 
-It felt good to revisit all the topics in the course, which presented me once again the wide variety
-of Machine Learning approaches and techniques. Perhaps in hindsight other specialized courses on
-Machine Learning on a more graduate level would have been more worthwhile. However, I don't regret
-my time spent on this course as it never hurts to go back to the basics once in a while.
-Additionally, as this was my first online course, it was a great way to get started with Coursera
-and familiarize myself with this new educational format. And after finding out that it
+It felt good to revisit all the topics in the course, which presented me once again with the wide
+variety of Machine Learning approaches and techniques. Perhaps in hindsight other specialized
+courses on Machine Learning on a more graduate level would have been more worthwhile. However, I
+don't regret my time spent on this course as it never hurts to go back to the basics once in a
+while.  Additionally, as this was my first online course, it was a great way to get started with
+Coursera and familiarize myself with this new educational format. And after finding out that it
 worked really well for me, I instantly signed up for a lot of other (more specialized) courses.
 
 #### Algorithms: Design and Analysis, Part 1
@@ -73,13 +74,12 @@ worked really well for me, I instantly signed up for a lot of other (more specia
 // [Coursera link](https://www.coursera.org/course/algo)*  
 **Difficulty:** *Medium*
 
-After finishing the Machine Learning exercises in Matlab I wanted my next Coursera course to entail
+After finishing the Machine Learning exercises in Matlab I wanted my next Coursera course to require
 a "real" and more interesting programming language, and at the time I was already reading up on two
-other programming languages that I liked to put into practice, which were
-[Julia](http://julialang.org/) and [Rust](http://www.rust-lang.org/).
+other programming languages that I liked to put into practice: [Julia](http://julialang.org/) and [Rust](http://www.rust-lang.org/).
 
 I was already aware of the "Algorithms: Design and Analysis" class, which two of my friends already
-completed and recommended, thereby making it interesting candidate. Having finished a similar
+completed and recommended, thereby making it interesting candidate as my next course. Having finished a similar
 course (in Java) during my study at Delft University I thought this course would be a walk in the park and a
 good playground for testing the waters with Julia and Rust. At the same time I was starting with the
 "Bioinformatics Algorithms" class, which also focused on implementing algorithms, but in the domain of biology
@@ -101,22 +101,24 @@ The first week's programming assignment, a counting algorithm piggy backing on m
 implemented in Rust after finishing the Julia version. The Rust implementation was a painful
 delivery, which was mostly me fighting the compiler and having a hard time finding clues on the web
 due to a lot of breaking changes in Rust's development towards the 1.0 release version. Add to that
-the resulting performance being slower than my Julia implementation, and I quickly decided to leave
-Rust alone or at least until the language would be more stable (1.0 alpha was released Jan 2015).
+the resulting performance being slower than with my Julia implementation, and I quickly decided to
+leave Rust alone or at least until the language would be more stable (1.0 alpha was released Jan
+2015).
 
 While I was getting the hang of Julia, I also started exploring possibilities to introduce the
-language at Bottlenose, but found the language too immature just yet (at version 0.3), especially
-compared with Python and its vast amount of available (scientific) packages. While it would have
-been interesting to complete the entire course in Julia, I deemed it more valuable to switch to
-Python along the way and perhaps to revisit Julia again in a couple of years from now.
+language at [Bottlenose](http://bottlenose.com), but found the language too immature just yet (at
+version 0.3), especially compared with Python and its vast amount of available (scientific)
+packages. It would have been interesting to complete the entire course in Julia, but I deemed it
+more valuable to switch to Python along the way and perhaps revisit Julia again in a couple of
+years from now.
 
 Let me now turn to the actual course contents after this (quite long)
 Julia-Rust-experience-intermezzo. When I mentioned that I believed this course to be an easy ride, I
 was actually quite mistaken. The lectures had a lot of technical and mathematical depth, and the
 quizzes were often very challenging. You simply cannot fly through this course without a good
-understanding of the introduced concepts, which are luckily very well presented by the course
-instructor [Tim Roughgarden](https://www.coursera.org/instructor/~214). All in all I can highly
-recommend this course for both expert and aspiring computer scientists for learning (or revisiting) several
+understanding of the introduced concepts, which are luckily very well presented by course instructor
+[Tim Roughgarden](https://www.coursera.org/instructor/~214). All in all I can highly recommend this
+course for both expert and aspiring computer scientists for learning (or revisiting) several
 fundamental principles of algorithm design, and I'm looking forward in participating in Part 2 of
 this course later this year.
 
@@ -126,11 +128,12 @@ this course later this year.
 [Coursera link](https://www.coursera.org/course/bioinformatics)*  
 **Difficulty:** *Medium/Hard*
 
-I always had a particular interest in genetics and biology in general, and if you combine this with
-my interest in algorithms and Data Science, you can see why I had Bioinformatics high on
-my wish list to dive into. Along came "Bioinformatics Algorithms" on Coursera and I could no longer resist
-signing up and was eager to get started. The syllabus consists of chapters of
-the interactive text book ["Bioinformatics Algorithms: an Active Learning Approach"](http://bioinformaticsalgorithms.com/):
+I always had a general interest in biology with genetics in particular, and if you combine this with
+my interest in algorithms and Data Science, you can see why I had a course in bioinformatics high on
+my wish list. Along came "Bioinformatics Algorithms" on Coursera and I could no longer resist
+signing up and was eager to get started. The syllabus consists of chapters of the interactive text
+book
+["Bioinformatics Algorithms: an Active Learning Approach"](http://bioinformaticsalgorithms.com/):
 
 - Where in the Genome Does DNA Replication Begin? (Algorithmic Warmup)
 - How Do We Sequence Antibiotics? (Brute Force Algorithms)
@@ -147,9 +150,9 @@ had great production value and introduced concepts and terminology very well.
 The programming assignments throughout the book were the real meat of the course, and it is where
 you will spend most (90%) of your time. Where most exercises were not too hard, there was still a
 big chunk of problems that were very challenging. Sometimes due to the automated solution checker
-that would be a bit too strict in the solutions it would accept (and no feedback on why you are
-wrong), but mostly it were simply hard problems to solve. Once you worked your way through the chapter and
-finished all the exercises, the corresponding quiz was easy to do.
+that would be a bit too strict in the solutions it would accept (and no feedback on why you were
+wrong), but mostly it were just hard problems to solve. Once you worked your way through the chapter
+and finished all the exercises, the corresponding quiz was easy to pass.
 
 To get a statement of accomplishment you needed to score 70%, which is definitely doable. I went the
 extra mile and focused on scoring above 85% for an accomplishment with distinction, which meant no
@@ -165,14 +168,14 @@ I'm looking forward to part 2 of the course, which will start this month.
 
 When you are spending your spare time following online courses and you notice there isn't enough
 time in the week to follow all the courses you would like, you have to make choices. And it is not
-only the choices that you want to make correctly, you also want the courses that you do decide to
-follow to have a lasting impact and not be forgotten when you are quickly moving on to another
-course. This brings us to the topic of how you can learn to learn more effectively, which is what
-the course "Learning how to learn" has to offer.
+only the choices that are difficult, you also want the courses that you decide to follow to have a
+lasting impact and not be quickly forgotten when you are moving on to another course. This brings us
+to the topic of how you can learn to learn more effectively, which is what the course "Learning how
+to learn" has to offer.
 
-While the course is very easy and lacking real depth, it is still beneficial to at least watch the
-lectures and the interviews, as there might be some tricks you can pick up that will improve your
-learning capabilities and help you overcome procrastination when it hits you.
+While the course is very easy and lacks real depth, it is still beneficial to at least watch the
+lectures and the interviews, as there might be some tips and tricks you can pick up that will
+improve your learning capabilities and help you overcome procrastination when it hits you.
 
 My key takeaway points are:
 
@@ -182,13 +185,13 @@ My key takeaway points are:
   big plus.
 - Focus on "process" not "product".
 - Make to-do lists for next day.
-- Exercise really helps when you get stuck on some hard problem. Shifting you focus can set you
+- Exercise really helps when you get stuck on some hard problem. Shifting you focus can make your
   subconscious and diffuse mode of thinking work for you in the background.
-- Skim through an article or paper to get a sense of of the context
+- Skim through an article or paper to get a sense of of the context to help structuring new knowledge.
 
 ### What's next?
 
-In 2015 I want to at least take the following courses, of which the first two are continuations of
+In 2015 I want at least take the following courses, of which the first two are continuations of
 two courses I already completed:
 
 - [Algorithms: Design and Analysis, Part 2](https://www.coursera.org/course/algo2)
@@ -200,7 +203,7 @@ Additionally I'm looking forward to follow more courses specialized in the field
 discovery, advanced statistics)
 
 I also want to finish
-[Linear and Integer Programming](https://www.coursera.org/course/linearprogramming), of which I
+[Linear and Integer Programming](https://www.coursera.org/course/linearprogramming) of which I
 already completed 2 out of 7 weeks, but discontinued the course due to time constraints of other
 overlapping courses.
 
