@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2015-05-17T16:48:34+02:00</updated>
+ <updated>2015-05-17T20:37:16+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -16,7 +16,7 @@
    <link href="http://beatletech.com/2015/05/17/goodbye-pvalues-hello-bayesian-statistics"/>
    <updated>2015-05-17T00:00:00+02:00</updated>
    <id>http://beatletech.com/2015/05/17/goodbye-pvalues-hello-bayesian-statistics</id>
-   <content type="html">&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note: This is a repost of my original blog post at &lt;a href=&quot;http://www.othot.com/blog&quot;&gt;OThot&lt;/a&gt;, where I work since January of 2015 as Senior Data Scientist.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note: This is a repost of my original blog post at &lt;a href=&quot;http://www.othot.com/goodbye-p-values-hello-bayesian-statistics/&quot;&gt;OThot&lt;/a&gt;, where I work since January of 2015 as Senior Data Scientist.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;In statistics there is the old and ongoing debate of Frequentism versus Bayesianism, which has been humorously depicted in the following popular XKCD cartoon [&lt;a href=&quot;http://www.xkcd.com/1132/&quot;&gt;1&lt;/a&gt;]:&lt;/p&gt;
 
@@ -68,15 +68,16 @@ good alternative. [&lt;a href=&quot;http://www.nature.com/news/statistics-p-valu
 &lt;p&gt;The Scientific American article adds the following about p-values, and confirms the aforementioned
 hypothetical other datasets problem with Frequentism:&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;&quot;Unfortunately, p-values are also widely misunderstood, often believed to furnish more information
-than they do. Many researchers have labored under the misbelief that the p-value gives the
-probability that their study’s results are just pure random chance. But statisticians say the
+&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;&quot;Unfortunately, p-values are also widely misunderstood, often believed to furnish more
+information than they do. Many researchers have labored under the misbelief that the p-value gives
+the probability that their study’s results are just pure random chance. But statisticians say the
 p-value’s information is much more non-specific, and can interpreted only in the context of
 hypothetical alternative scenarios: The p-value summarizes how often results at least as extreme as
 those observed would show up if the study were repeated an infinite number of times when in fact
 only pure random chance were at work. This means that the p-value is a statement about imaginary
 data in hypothetical study replications, not a statement about actual conclusions in any given
-study&quot;&lt;/em&gt; [&lt;a href=&quot;http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact&quot;&gt;6&lt;/a&gt;]&lt;/p&gt;
+study&quot;&lt;/em&gt;
+[&lt;a href=&quot;http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact&quot;&gt;6&lt;/a&gt;]&lt;/p&gt;&lt;/blockquote&gt;
 
 &lt;p&gt;Needless to say, but at &lt;a href=&quot;http://www.othot.com&quot;&gt;OThot&lt;/a&gt; we are big proponents of the Bayesian approach for statistical inferences. In a previous blog post by Mark Voortman [&lt;a href=&quot;http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common&quot;&gt;7&lt;/a&gt;], we already started talking and explaining the Bayesian approach and you can safely bet to expect more of that.&lt;/p&gt;
 

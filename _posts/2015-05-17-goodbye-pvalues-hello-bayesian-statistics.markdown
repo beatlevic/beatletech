@@ -8,7 +8,7 @@ category: [statistics]
 published: true
 ---
 
-***Note: This is a repost of my original blog post at [OThot](http://www.othot.com/blog), where I work since January of 2015 as Senior Data Scientist.***
+***Note: This is a repost of my original blog post at [OThot](http://www.othot.com/goodbye-p-values-hello-bayesian-statistics/), where I work since January of 2015 as Senior Data Scientist.***
 
 In statistics there is the old and ongoing debate of Frequentism versus Bayesianism, which has been humorously depicted in the following popular XKCD cartoon \[[1](http://www.xkcd.com/1132/)\]:
 
@@ -57,15 +57,16 @@ good alternative. \[[5](http://www.nature.com/news/statistics-p-values-are-just-
 The Scientific American article adds the following about p-values, and confirms the aforementioned
 hypothetical other datasets problem with Frequentism:
 
-*"Unfortunately, p-values are also widely misunderstood, often believed to furnish more information
-than they do. Many researchers have labored under the misbelief that the p-value gives the
-probability that their study’s results are just pure random chance. But statisticians say the
+> *"Unfortunately, p-values are also widely misunderstood, often believed to furnish more
+information than they do. Many researchers have labored under the misbelief that the p-value gives
+the probability that their study’s results are just pure random chance. But statisticians say the
 p-value’s information is much more non-specific, and can interpreted only in the context of
 hypothetical alternative scenarios: The p-value summarizes how often results at least as extreme as
 those observed would show up if the study were repeated an infinite number of times when in fact
 only pure random chance were at work. This means that the p-value is a statement about imaginary
 data in hypothetical study replications, not a statement about actual conclusions in any given
-study"* \[[6](http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact)\]
+study"*
+\[[6](http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact)\]
 
 Needless to say, but at [OThot](http://www.othot.com) we are big proponents of the Bayesian approach for statistical inferences. In a previous blog post by Mark Voortman \[[7](http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common)\], we already started talking and explaining the Bayesian approach and you can safely bet to expect more of that. 
 
