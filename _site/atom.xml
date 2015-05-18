@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2015-05-17T20:45:41+02:00</updated>
+ <updated>2015-05-18T09:30:06+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -16,7 +16,8 @@
    <link href="http://beatletech.com/2015/05/17/goodbye-pvalues-hello-bayesian-statistics"/>
    <updated>2015-05-17T00:00:00+02:00</updated>
    <id>http://beatletech.com/2015/05/17/goodbye-pvalues-hello-bayesian-statistics</id>
-   <content type="html">&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note: This is a repost of my original blog post at &lt;a href=&quot;http://www.othot.com/goodbye-p-values-hello-bayesian-statistics/&quot;&gt;OThot&lt;/a&gt;, where I work since January of 2015 as Senior Data Scientist.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note: This is a repost of my original blog post at
+   &lt;a href=&quot;http://www.othot.com/goodbye-p-values-hello-bayesian-statistics/&quot;&gt;OThot&lt;/a&gt;, where I also work as Senior Data Scientist.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;In statistics there is the old and ongoing debate of Frequentism versus Bayesianism, which has been humorously depicted in the following popular XKCD cartoon [&lt;a href=&quot;http://www.xkcd.com/1132/&quot;&gt;1&lt;/a&gt;]:&lt;/p&gt;
 

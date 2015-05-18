@@ -8,7 +8,8 @@ category: [statistics]
 published: true
 ---
 
-***Note: This is a repost of my original blog post at [OThot](http://www.othot.com/goodbye-p-values-hello-bayesian-statistics/), where I work since January of 2015 as Senior Data Scientist.***
+***Note: This is a repost of my original blog post at
+   [OThot](http://www.othot.com/goodbye-p-values-hello-bayesian-statistics/), where I also work as Senior Data Scientist.***
 
 In statistics there is the old and ongoing debate of Frequentism versus Bayesianism, which has been humorously depicted in the following popular XKCD cartoon \[[1](http://www.xkcd.com/1132/)\]:
 
