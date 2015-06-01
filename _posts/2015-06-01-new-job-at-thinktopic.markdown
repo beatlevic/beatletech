@@ -32,6 +32,6 @@ going cold turkey on my former colleagues (only switching rooms).
 I'm excited to go on this new ThinkTopic adventure, which for today means diving back into
 Convolutional Neural Networks. May the fun and challenge begin.
 
-
-
+<img src="https://s3.amazonaws.com/beatletech/thinktopic-logo.png" alt="ThinkTopic" width="646"
+height="195" style="margin-left:60px">
 
