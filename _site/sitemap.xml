@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://beatletech.com//2015/06/01/new-job-at-thinktopic</loc>
+    
+    <lastmod>2015-06-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://beatletech.com//2015/05/17/goodbye-pvalues-hello-bayesian-statistics</loc>
     
     <lastmod>2015-05-17</lastmod>
@@ -108,7 +115,7 @@
   
   <url>
     <loc>http://beatletech.com</loc>
-    <lastmod>2015-05-22</lastmod>
+    <lastmod>2015-06-01</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
