@@ -4,12 +4,60 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2015-06-01T10:34:25+02:00</updated>
+ <updated>2015-09-11T16:34:58+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
  </author>
 
+ 
+ <entry>
+   <title>O Data Scientist, Where Art Thou?</title>
+   <link href="http://beatletech.com/2015/09/10/o-data-scientist-where-art-thou"/>
+   <updated>2015-09-10T00:00:00+02:00</updated>
+   <id>http://beatletech.com/2015/09/10/o-data-scientist-where-art-thou</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note: This is a repost of my original blog post at
+   &lt;a href=&quot;http://www.othot.com/o-data-scientist-where-art-thou/&quot;&gt;OThot&lt;/a&gt;, where I also work as Senior Data Scientist.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;By now you have probably heard about the &lt;strong&gt;“Big Data”&lt;/strong&gt; hype in one form [&lt;a href=&quot;http://www.wired.com/insights/2014/04/big-data-big-hype/&quot;&gt;1&lt;/a&gt;] or another [&lt;a href=&quot;http://www.forbes.com/sites/larrymyler/2015/07/29/big-data-is-a-big-problem-thats-getting-bigger/&quot;&gt;2&lt;/a&gt;], or read about how other companies are achieving success harnessing their data [&lt;a href=&quot;http://www.forbes.com/sites/howardbaldwin/2015/06/08/whos-ready-for-some-big-data-success-stories/&quot;&gt;3&lt;/a&gt;]. With all the attention for Big Data and the accompanied field of Data Science to make sense of the data, it would be no surprise if you want your company to benefit as well from one or more Data Scientists generating actionable insights from your ever-growing sea of data.&lt;/p&gt;
+
+&lt;p&gt;When you are at this stage with your company and start to search for some great Data Scientists you will quickly find out that these people are in short supply. Now why is that? And why is it potentially dangerous if you simply want to bump or educate one of your company’s developers to a Data Scientist role if your search keeps turning up empty?&lt;/p&gt;
+
+&lt;p&gt;The reason why Data Scientists are scarce is twofold. First off, the aforementioned Big Data hype with its growing need for Data Scientists (with the amount of data outgrowing the number of data analysts [&lt;a href=&quot;http://www.delphianalytics.net/wp-content/uploads/2013/04/GrowthOfDataVsDataAnalysts.png&quot;&gt;4&lt;/a&gt;]), is creating a high demand for Data Scientists. With many Data Science positions opening up, there is also the troublesome side effect of developers starting to market themselves as Data Scientists, while having zero to none of the required expertise.&lt;/p&gt;
+
+&lt;p&gt;Secondly, and somewhat problematic, is the required skill set for a Data Scientist. Why problematic? Well, this is expressed clearly in the by now classic illustration of the Data Science skill set, the Data Science Venn Diagram [&lt;a href=&quot;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&quot;&gt;5&lt;/a&gt;]:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/beatletech/Data_Science_VD.png&quot; alt=&quot;Data Science Venn Diagram&quot;
+style=&quot;margin-left:100px&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;The three main skills (indicated by the primary colors) are hacking skills, math and stats knowledge, and substantive expertise. What this implies is that you need to be a programmer and statistician, while also having a lot of experience in these fields and in the relevant problem domain and business context. Given that each of these skills on their own already poses a challenge when you want to find a great candidate, then searching for all of them combined in one person can send you on a wild goose chase.&lt;/p&gt;
+
+&lt;p&gt;Earlier I mentioned the danger of turning developers (with hacking
+skills) into Data Scientists, which if you look at the diagram, might
+put you in the Danger Zone! Reason being that if you have hackers
+without substantive Math and Statistics knowledge you &lt;em&gt;&quot;[..] give people
+the ability to create what appears to be a legitimate analysis without
+any understanding of how they got there or what they have created&quot;&lt;/em&gt; [&lt;a href=&quot;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&quot;&gt;5&lt;/a&gt;]. This could give rise to flat-out wrong business decisions based on wrong interpretations of the data.&lt;/p&gt;
+
+&lt;p&gt;This is not meant to say that you cannot turn a developer into a Data Scientist, but rather that you have be aware that you also have to teach them the required math and statistics background. Or the other way around, you need to make sure that you are teaching your statisticians to gain better development skills. Nowadays there are many resources on the internet for learning Data Science [&lt;a href=&quot;https://www.dataquest.io/blog/how-to-actually-learn-data-science/&quot;&gt;6&lt;/a&gt;].  This will get you started, but it will take a lot of time and practice to gain enough experience for a desired level of proficiency.&lt;/p&gt;
+
+&lt;p&gt;We believe there might be a better alternative to growing your own in-house Data Science team and that is to have OThot be of service. OThot can either take the Data Science challenge off your hands completely or complement your Data Scientists with substantial expertise in all required skills. So don’t hesitate to reach out if you want to know more about what &lt;a href=&quot;http://www.othot.com&quot;&gt;OThot&lt;/a&gt; has to offer!&lt;/p&gt;
+
+&lt;h4&gt;Sources&lt;/h4&gt;
+
+&lt;p&gt;[1] Big Data, Big Hype? &lt;a href=&quot;http://www.wired.com/insights/2014/04/big-data-big-hype/&quot;&gt;http://www.wired.com/insights/2014/04/big-data-big-hype/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[2] Big Data Is A Big Problem That’s Getting Bigger: &lt;a href=&quot;http://www.forbes.com/sites/larrymyler/2015/07/29/big-data-is-a-big-problem-thats-getting-bigger/&quot;&gt;http://www.forbes.com/sites/larrymyler/2015/07/29/big-data-is-a-big-problem-thats-getting-bigger/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[3] Who is ready for some big data success stories: &lt;a href=&quot;http://www.forbes.com/sites/howardbaldwin/2015/06/08/whos-ready-for-some-big-data-success-stories/&quot;&gt;http://www.forbes.com/sites/howardbaldwin/2015/06/08/whos-ready-for-some-big-data-success-stories/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[4] Growth of Data vs Growth of Data Analysts: &lt;a href=&quot;http://www.delphianalytics.net/wp-content/uploads/2013/04/GrowthOfDataVsDataAnalysts.png&quot;&gt;http://www.delphianalytics.net/wp-content/uploads/2013/04/GrowthOfDataVsDataAnalysts.png&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[5] The Data Science Venn Diagram: &lt;a href=&quot;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&quot;&gt;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[6] How to actually learn data science: &lt;a href=&quot;https://www.dataquest.io/blog/how-to-actually-learn-data-science/&quot;&gt;https://www.dataquest.io/blog/how-to-actually-learn-data-science/&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>New Job at ThinkTopic</title>
