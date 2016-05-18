@@ -4,12 +4,23 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2016-05-18T15:37:14+02:00</updated>
+ <updated>2016-05-18T15:54:45+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
  </author>
 
+ 
+ <entry>
+   <title>Othot raises $1.7 Million</title>
+   <link href="http://beatletech.com/2016/05/02/othot-raises-capital"/>
+   <updated>2016-05-02T00:00:00+02:00</updated>
+   <id>http://beatletech.com/2016/05/02/othot-raises-capital</id>
+   <content type="html">&lt;p&gt;Great news for Othot as they just secured $1.7 Million in their first
+round of outside financing. For more details and a shoutout for
+Dr. Mark Voortman check out &lt;a href=&quot;http://markets.financialcontent.com/mng-ba.mercurynews/news/read?GUID=32015429&quot;&gt;MercuryNews&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>O Data Scientist, Where Art Thou?</title>
