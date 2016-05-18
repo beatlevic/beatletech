@@ -40,7 +40,7 @@ classpath. This resulted in me implementing the following elisp functions.
     (and found (expand-file-name found))))
 
 (defmacro cake-in-project-root (body)
-  "Wrap BODY to make `default-directory' the project root."
+  "Wrap BODY to make 'default-directory' the project root."
   (let ((dir (gensym)))
     `(let ((,dir (cake-project-root)))
        (if ,dir

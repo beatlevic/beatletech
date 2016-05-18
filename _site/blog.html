@@ -784,7 +784,7 @@ and with a little bit of luck and serendipity you can win big too!</p>
 
 <p>We have launched a new website and wrote an <a href="http://br-ai-n.com/2014/09/03/introducing-brain/">introductory post</a> with more details on our goals and progress. So check out <a href="http://br-ai-n.com">br-ai-n.com</a> and stay tuned for future posts!</p>
 
-<p><img src="http://br-ai-n.com/images/screenshot-brAIn-v0.0.2.png" alt="Skylines.net" height="485" width="800"></p>
+<p><img src="https://s3.amazonaws.com/beatletech/screenshot-brAIn-v0.0.2.png" alt="br-ai-n.com" height="485" width="800"></p>
 
       <div class='clear_both tags'>
         <span>
@@ -1201,7 +1201,7 @@ persistent JVM (missing the whole purpose). So instead of doing that I
 got the advice to just keep swank running, and only reload the
 classpath. This resulted in me implementing the following elisp functions.</p>
 
-<div class="highlight"><pre><code class="clojure"><span class="p">(</span><span class="nf">defun</span> <span class="nv">cake-project-root</span> <span class="p">()</span>
+<p><figure class="highlight"><pre><code class="language-clojure" data-lang="clojure"><span class="p">(</span><span class="nf">defun</span> <span class="nv">cake-project-root</span> <span class="p">()</span>
   <span class="s">&quot;Look for project.clj file to find project root.&quot;</span>
   <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">cwd</span> <span class="nv">default-directory</span><span class="p">)</span>
         <span class="p">(</span><span class="nf">found</span> <span class="nv">nil</span><span class="p">)</span>
@@ -1210,28 +1210,27 @@ classpath. This resulted in me implementing the following elisp functions.</p>
       <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nf">file-exists-p</span> <span class="p">(</span><span class="nb">concat </span><span class="nv">cwd</span> <span class="s">&quot;project.clj&quot;</span><span class="p">))</span>
         <span class="p">(</span><span class="nf">setq</span> <span class="nv">found</span> <span class="nv">cwd</span><span class="p">)</span>
         <span class="p">(</span><span class="nf">setq</span> <span class="nv">cwd</span> <span class="p">(</span><span class="nb">concat </span><span class="nv">cwd</span> <span class="s">&quot;../&quot;</span><span class="p">)</span> <span class="nb">max </span><span class="p">(</span><span class="nb">- max </span><span class="mi">1</span><span class="p">))))</span>
-    <span class="p">(</span><span class="nb">and </span><span class="nv">found</span> <span class="p">(</span><span class="nf">expand-file-name</span> <span class="nv">found</span><span class="p">))))</span>
+    <span class="p">(</span><span class="nb">and </span><span class="nv">found</span> <span class="p">(</span><span class="nf">expand-file-name</span> <span class="nv">found</span><span class="p">))))</span></p>
 
-<span class="p">(</span><span class="kd">defmacro </span><span class="nv">cake-in-project-root</span> <span class="p">(</span><span class="nf">body</span><span class="p">)</span>
-  <span class="s">&quot;Wrap BODY to make `default-directory&#39; the project root.&quot;</span>
+<p><span class="p">(</span><span class="kd">defmacro </span><span class="nv">cake-in-project-root</span> <span class="p">(</span><span class="nf">body</span><span class="p">)</span>
+  <span class="s">&quot;Wrap BODY to make &#39;default-directory&#39; the project root.&quot;</span>
   <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">dir</span> <span class="p">(</span><span class="nf">gensym</span><span class="p">)))</span>
     <span class="o">`</span><span class="p">(</span><span class="k">let </span><span class="p">((</span>,<span class="nv">dir</span> <span class="p">(</span><span class="nf">cake-project-root</span><span class="p">)))</span>
        <span class="p">(</span><span class="k">if </span>,<span class="nv">dir</span>
          <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">default-directory</span> ,<span class="nv">dir</span><span class="p">))</span> ,<span class="nv">body</span><span class="p">)</span>
-         <span class="p">(</span><span class="nf">error</span> <span class="s">&quot;No cake project root found&quot;</span><span class="p">)))))</span>
+         <span class="p">(</span><span class="nf">error</span> <span class="s">&quot;No cake project root found&quot;</span><span class="p">)))))</span></p>
 
-<span class="p">(</span><span class="nf">defun</span> <span class="nv">cake-swank</span> <span class="p">()</span>
+<p><span class="p">(</span><span class="nf">defun</span> <span class="nv">cake-swank</span> <span class="p">()</span>
   <span class="s">&quot;Connect or reconnect to swank while reloading cake class path files.&quot;</span>
   <span class="p">(</span><span class="nf">interactive</span><span class="p">)</span>
   <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nf">slime-connected-p</span><span class="p">)</span>
       <span class="p">(</span><span class="nf">slime-disconnect</span><span class="p">))</span>
-  <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">buffer</span> <span class="p">(</span><span class="nf">get-buffer-create</span> <span class="s">&quot;*cake-swank*&quot;</span><span class="p">)))</span>
+  <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">buffer</span> <span class="p">(</span><span class="nf">get-buffer-create</span> <span class="s">&quot;<em>cake-swank</em>&quot;</span><span class="p">)))</span>
     <span class="p">(</span><span class="nf">flet</span> <span class="p">((</span><span class="nf">display-buffer</span>
              <span class="p">(</span><span class="nf">buffer-or-name</span> <span class="o">&amp;</span><span class="nv">optional</span> <span class="nv">not-this-window</span> <span class="nv">frame</span><span class="p">)</span> <span class="nv">nil</span><span class="p">))</span>
       <span class="p">(</span><span class="nf">bury-buffer</span> <span class="nv">buffer</span><span class="p">)</span>
       <span class="p">(</span><span class="nf">cake-in-project-root</span> <span class="p">(</span><span class="nf">shell-command</span> <span class="s">&quot;cake -r&quot;</span> <span class="nv">buffer</span><span class="p">)))</span>
-    <span class="p">(</span><span class="nf">slime-connect</span> <span class="s">&quot;127.0.0.1&quot;</span> <span class="s">&quot;4005&quot;</span><span class="p">)))</span></code></pre></div>
-
+    <span class="p">(</span><span class="nf">slime-connect</span> <span class="s">&quot;127.0.0.1&quot;</span> <span class="s">&quot;4005&quot;</span><span class="p">)))</span></code></pre></figure></p>
 
 <p>In order for this to work one needs to get the latest cake master
 version, so you can reload class path files (cake -r). Additionally one has
@@ -1310,7 +1309,7 @@ BeatleTech is there for you, and Beatle is available for hire!</p>
         </div> <!-- end content -->
 
       <footer id="footer" class="grid_12">
-        <p>Copyright &copy; 2010-2015 <a href="#">BeatleTech.com</a> -
+        <p>Copyright &copy; 2010-2016 <a href="#">BeatleTech.com</a> -
           Created by <a href="http://beatletech.com" title="BeatleTech by Coen Stevens">Coen Stevens</a></p>
       </footer>
 
