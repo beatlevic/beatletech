@@ -15,7 +15,7 @@
       {% for post in site.posts offset: 0 limit: 8 %}
       <tr class="posttr">
         <td class="date">{{ post.date | date_to_string }}</td>
-        <td class="postlink"><a href="{{ post.id }}/">{{ post.title }}</a></td>
+        <td class="postlink"><a href="{{ post.url }}">{{ post.title }}</a></td>
       </tr>
       {% endfor %}
     </tbody>
