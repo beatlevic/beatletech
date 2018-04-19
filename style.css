@@ -102,6 +102,17 @@ a {
 	text-decoration: none;
 }
 
+.column a {
+	color: #6b96c1;
+	text-decoration: none;
+}
+
+.column a:hover {
+	color: #6b96c1;
+	text-decoration: none;
+  background: #fff;
+}
+
 .widget a:hover,
 #menu .current a {
 	background: #78a8d8;/* #F83D87; */
