@@ -23,7 +23,7 @@
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="alternate" type="application/atom+xml" title="Recent Posts" href="http://feeds.feedburner.com/beatletech" />
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 
     <!--[if lt IE 9]>
@@ -65,14 +65,18 @@
 
 
 
-        <nav class="post">
+        <nav>
           <ul id="menu" class="clearfix">
             <!-- <li class="current"><a href="/">Home</a></li> -->
             <!-- <li ><a href="blog">Blog</a></li> -->
             <!-- <li ><a href="archive">Archive</a></li> -->
             <!-- <li><a href="http://br-ai-n.com" target="_blank"
                         style="target-new: tab;">brAIn</a></li> -->
-            <h2 style="margin-left: 15px;">Software Architect, Data Engineer &amp; Scientist</h2>
+            <!-- <li><h2 style="margin-left: 15px;">Software
+                Architect, Data Engineer &amp; Scientist</h2><li> -->
+            <li class="current"><a href="/">Home</a></li>
+            <li ><a href="blog">Articles</a></li>
+            <li ><a href="archive">Archive</a></li>
           </ul>
 
           <!-- <br class="clear" /> -->
@@ -89,6 +93,7 @@
         <div id="main" class="grid_8 alpha">
 
   <article class="post">
+    <h2>Big Data &amp; Machine Learning Engineer</h2>
     <p>
       BeatleTech is my (Coen Stevens) freelance company where I offer my services, skills and expertise in web development, software architectures and Data Science.
     </p>
@@ -110,34 +115,23 @@
   </article>
 
   <article class="post">
-    <h2>Clients</h2>
-    <div ="row" style="clear: both;
-                       display: table;">
+    <h2>Recent Clients</h2>
+    <div ="row" style="clear: both; display: table;">
       <div class="column" style="float: left;
-                                 width: 40%;
+                                 width: 30%;
                                  padding: 5px;">
         <a href="http://www.persgroep.nl"><img src="images/DPN-Logo-Staand-Secundair-300dpi-web.png"
                                  alt="De Persgroep" style="width:60%"></a>
       </div>
       <div class="column" style="float: left;
-                                 width: 40%;
-                                 padding: 5px;">
-        <a href="http://thinktopic.com"><img src="images/thinktopic_logo_horizontal.png" alt="ThinkTopic" style="width:80%"></a>
-      </div>
-      <div class="column" style="float: left;
-                                 width: 40%;
-                                 padding: 5px;">
-        <a href="http://bottlenose.com"><img src="images/bottlenose.png" alt="Bottlenose" style="width:80%"></a>
-      </div>
-      <div class="column" style="float: left;
-                                 width: 40%;
-                                 padding: 5px;">
-        <a href="http://wakoopa.com"><img src="images/wakoopa.png" alt="Wakoopa" style="width:80%"></a>
-      </div>
-      <div class="column" style="float: left;
                                  width: 30%;
                                  padding: 10px;">
         <a href="http://othot.com"><img src="images/othot-logo.jpg" alt="Othot" style="width:80%;"></a>
+      </div>
+      <div class="column" style="float: left;
+                                 width: 30%;
+                                 padding: 5px;">
+        <a href="http://bottlenose.com"><img src="images/bottlenose.png" alt="Bottlenose" style="width:80%"></a>
       </div>
     </div>
   </article>
@@ -179,31 +173,29 @@
 
   </article>
 
-
   <article class="post">
     <p>
-      For my full CV and recent projects, please check out <a href="http://linkedin.com/in/beatlevic">LinkedIn</a>
+      For my full CV and recent projects, please check out
+      my <a href="http://linkedin.com/in/beatlevic">LinkedIn</a> profile.
     </p>
     <p>
       Contact email: <a href="mailto:beatlevic@gmail.com">beatlevic@gmail.com</a>
     </p>
+    <p>
+      Work Location: Amsterdam Area
+    </p>
   </article>
-
+  <div class="column" style="padding-left:10px;padding-bottom:10px"><a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/"><img src="images/AWS-CSAA.png" alt="AWS" align="center" width="110px" heigth="110px" /></a></div>
 </div> <!-- end main -->
 
 <div id="sidebar" class="grid_4 omega">
 
   <aside class="widget">
-  <h3>Technology Skills</h3>
-  <ul>
-    <li><a href="index.html#nodejs">Programming: Scala | Python | Node | Clj | RoR</a></li>
-    <li><a href="index.html#nosql">NoSQL: Elasticsearch | MongoDb | Cassandra</a></li>
-    <li><a href="index.html#bigdata">BigData: Spark | Redshift | Airflow </a></li>
-  </ul>
-</aside> <!-- end widget -->
-<div class="column" style="padding-left:10px;padding-bottom:10px"><a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/"><img src="images/AWS-CSAA.png" alt="AWS" align="center" width="110px" heigth="110px" /></a></div>
+  <!-- <ul id="menu" class="clearfix"> -->
+  <!--   <li ><a href="blog">Blog</a></li> -->
+  <!--   <li ><a href="archive">Archive</a></li> -->
+  <!-- </ul> -->
 
-  <!-- <aside class="widget">
   <h3>Recent posts <a href="http://feeds.feedburner.com/beatletech">
       
         <img src="images/feed.png" border="0"/>
@@ -256,7 +248,16 @@
     </tbody>
   </table>
 </aside>
- -->
+
+  <aside class="widget">
+  <h3>Technology Skills</h3>
+  <ul>
+    <li><a href="index.html#nodejs">Programming: Scala | Python | Node | Clj | RoR</a></li>
+    <li><a href="index.html#nosql">NoSQL: Elasticsearch | MongoDb | Cassandra</a></li>
+    <li><a href="index.html#bigdata">BigData: Spark | Redshift | Airflow </a></li>
+  </ul>
+</aside> <!-- end widget -->
+
   <aside class="widget">
   <h3>Links</h3>
   <ul>
