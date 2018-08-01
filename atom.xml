@@ -13,7 +13,7 @@ layout: null
    <name>Coen Stevens</name>
  </author>
 
- {% for post in site.posts | limit: 20 %}
+ {% for post in site.posts limit: 20 %}
  <entry>
    <title>{{ post.title | strip_html }}</title>
    <link href="http://beatletech.com{{ post.url }}"/>
