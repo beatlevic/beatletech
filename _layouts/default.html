@@ -23,7 +23,7 @@
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="alternate" type="application/atom+xml" title="Recent Posts" href="http://feeds.feedburner.com/beatletech" />
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 
     <!--[if lt IE 9]>
@@ -56,20 +56,23 @@
 
       <header id="header" class="grid_12">
 
-        <h1><a href="index.html">BeatleTech</a></h1>
-        <img src="images/coen2.png" alt="" height="155" width="123" class="thumbnail alignright" />
-        <div id="freelancer">Coen Stevens // Software Architect &amp; Data Scientist</div>
+        <h1><a href="/">BeatleTech</a></h1>
+        <img src="images/jc.png" alt="It's only Hubris if you lose." title="It's only Hubris if you lose." height="155" width="200" class="thumbnail alignright" />
+        <div id="freelancer">Coen JC Stevens</div>
       </header> <!-- end header -->
 
       <div id="content">
 
+
+
         <nav>
           <ul id="menu" class="clearfix">
-            <li {% if page.menu == 'home' %}class="current"{% endif %}><a href="index.html">Home</a></li>
-            <li {% if page.menu == 'blog' %}class="current"{% endif %}><a href="blog.html">Blog</a></li>
-            <li {% if page.menu == 'archive' %}class="current"{% endif %}><a href="archive.html">Archive</a></li>
-            <!-- <li><a href="http://br-ai-n.com" target="_blank" style="target-new: tab;">brAIn</a></li> -->
+            <!-- <li><h2 style="margin-left: 15px;">Software Architect, Data Engineer &amp; Scientist</h2><li> -->
+            <li {% if page.menu == 'home' %}class="current"{% endif %}><a href="/">Home</a></li>
+            <li {% if page.menu == 'blog' %}class="current"{% endif %}><a href="blog">Articles</a></li>
+            <li {% if page.menu == 'archive' %}class="current"{% endif %}><a href="archive">Archive</a></li>
           </ul>
+
           <br class="clear" />
         </nav>
 
@@ -86,7 +89,7 @@
         </div> <!-- end content -->
 
       <footer id="footer" class="grid_12">
-        <p>Copyright &copy; 2010-2015 <a href="#">BeatleTech.com</a> -
+        <p>Copyright &copy; 2010-2018 <a href="#">BeatleTech.com</a> -
           Created by <a href="http://beatletech.com" title="BeatleTech by Coen Stevens">Coen Stevens</a></p>
       </footer>
 

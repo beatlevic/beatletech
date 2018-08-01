@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8" />
+
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>BeatleTech // Coen Stevens // O Data Scientist, Where Art Thou?</title>
+
+    <meta name="description" content="Freelance company BeatleTech by Coen Stevens" />
+
+    
+    <meta name="keywords" content="post, OThot, Data Science" />
+    
+
+    <meta name="author" content="Coen Stevens" />
+
+    <link href="../../../../css/960.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../style.css" rel="stylesheet" type="text/css" />
+    <link href="../../../../css/syntax.css" rel="stylesheet" type="text/css" />
+
+    <link rel="shortcut icon" href="../../../../favicon.ico" type="image/x-icon"/>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../../js/script.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <!--[if lte IE 7]>
+      <link href="css/ie.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-20231246-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+
+  <body>
+
+    <div id="wrapper" class="container_12">
+
+      <header id="header" class="grid_12">
+
+        <h1><a href="/">BeatleTech</a></h1>
+        <img src="../../../../images/coen2.png" alt="" height="155" width="123" class="thumbnail alignright" />
+        <div id="freelancer">Coen Stevens // Software Architect &amp; Data Scientist</div>
+      </header> <!-- end header -->
+
+      <div id="content">
+
+        <nav>
+          <ul id="menu" class="clearfix">
+            <li><a href="/">Home</a></li>
+            <li class="current"><a href="../../../../blog">Blog</a></li>
+            <li><a href="../../../../archive">Archive</a></li>
+            <!-- <li><a href="http://br-ai-n.com" target="_blank" style="target-new: tab;">brAIn</a></li> -->
+          </ul>
+          <br class="clear" />
+        </nav>
+
+        <!-- Show a "Please Upgrade" box to both IE7 and IE6 users
+             (Edit to IE 6 if you just want to show it to IE6 users) -
+             jQuery will load the content from js/ie.html into the div -->
+
+        <!--[if lte IE 7]>
+            <div class="ie grid_7"></div>
+        <![endif]-->
+
+        <div id="main" class="grid_9 alpha">
+
+          <article class="post blog">
+
+            <h2>O Data Scientist, Where Art Thou?<em></em></h2>
+
+            <p class="publishdate">Thursday, 10 September  2015.</p>
+
+            <p><strong><em>Note: This is a repost of my original blog post at
+   <a href="http://www.othot.com/o-data-scientist-where-art-thou/">OThot</a>, where I also work as Senior Data Scientist.</em></strong></p>
+
+<p>By now you have probably heard about the <strong>“Big Data”</strong> hype in one form [<a href="http://www.wired.com/insights/2014/04/big-data-big-hype/">1</a>] or another [<a href="http://www.forbes.com/sites/larrymyler/2015/07/29/big-data-is-a-big-problem-thats-getting-bigger/">2</a>], or read about how other companies are achieving success harnessing their data [<a href="http://www.forbes.com/sites/howardbaldwin/2015/06/08/whos-ready-for-some-big-data-success-stories/">3</a>]. With all the attention for Big Data and the accompanied field of Data Science to make sense of the data, it would be no surprise if you want your company to benefit as well from one or more Data Scientists generating actionable insights from your ever-growing sea of data.</p>
+
+<p>When you are at this stage with your company and start to search for some great Data Scientists you will quickly find out that these people are in short supply. Now why is that? And why is it potentially dangerous if you simply want to bump or educate one of your company’s developers to a Data Scientist role if your search keeps turning up empty?</p>
+
+<p>The reason why Data Scientists are scarce is twofold. First off, the aforementioned Big Data hype with its growing need for Data Scientists (with the amount of data outgrowing the number of data analysts [<a href="http://www.delphianalytics.net/wp-content/uploads/2013/04/GrowthOfDataVsDataAnalysts.png">4</a>]), is creating a high demand for Data Scientists. With many Data Science positions opening up, there is also the troublesome side effect of developers starting to market themselves as Data Scientists, while having zero to none of the required expertise.</p>
+
+<p>Secondly, and somewhat problematic, is the required skill set for a Data Scientist. Why problematic? Well, this is expressed clearly in the by now classic illustration of the Data Science skill set, the Data Science Venn Diagram [<a href="http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram">5</a>]:</p>
+
+<p><img src="https://s3.amazonaws.com/beatletech/Data_Science_VD.png" alt="Data Science Venn Diagram" style="margin-left:100px" /></p>
+
+<p>The three main skills (indicated by the primary colors) are hacking skills, math and stats knowledge, and substantive expertise. What this implies is that you need to be a programmer and statistician, while also having a lot of experience in these fields and in the relevant problem domain and business context. Given that each of these skills on their own already poses a challenge when you want to find a great candidate, then searching for all of them combined in one person can send you on a wild goose chase.</p>
+
+<p>Earlier I mentioned the danger of turning developers (with hacking
+skills) into Data Scientists, which if you look at the diagram, might
+put you in the Danger Zone! Reason being that if you have hackers
+without substantive Math and Statistics knowledge you <em>“[..] give people
+the ability to create what appears to be a legitimate analysis without
+any understanding of how they got there or what they have created”</em> [<a href="http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram">5</a>]. This could give rise to flat-out wrong business decisions based on wrong interpretations of the data.</p>
+
+<p>This is not meant to say that you cannot turn a developer into a Data Scientist, but rather that you have be aware that you also have to teach them the required math and statistics background. Or the other way around, you need to make sure that you are teaching your statisticians to gain better development skills. Nowadays there are many resources on the internet for learning Data Science [<a href="https://www.dataquest.io/blog/how-to-actually-learn-data-science/">6</a>].  This will get you started, but it will take a lot of time and practice to gain enough experience for a desired level of proficiency.</p>
+
+<p>We believe there might be a better alternative to growing your own in-house Data Science team and that is to have OThot be of service. OThot can either take the Data Science challenge off your hands completely or complement your Data Scientists with substantial expertise in all required skills. So don’t hesitate to reach out if you want to know more about what <a href="http://www.othot.com">OThot</a> has to offer!</p>
+
+<h4 id="sources">Sources</h4>
+
+<p>[1] Big Data, Big Hype? <a href="http://www.wired.com/insights/2014/04/big-data-big-hype/">http://www.wired.com/insights/2014/04/big-data-big-hype/</a></p>
+
+<p>[2] Big Data Is A Big Problem That’s Getting Bigger: <a href="http://www.forbes.com/sites/larrymyler/2015/07/29/big-data-is-a-big-problem-thats-getting-bigger/">http://www.forbes.com/sites/larrymyler/2015/07/29/big-data-is-a-big-problem-thats-getting-bigger/</a></p>
+
+<p>[3] Who is ready for some big data success stories: <a href="http://www.forbes.com/sites/howardbaldwin/2015/06/08/whos-ready-for-some-big-data-success-stories/">http://www.forbes.com/sites/howardbaldwin/2015/06/08/whos-ready-for-some-big-data-success-stories/</a></p>
+
+<p>[4] Growth of Data vs Growth of Data Analysts: <a href="http://www.delphianalytics.net/wp-content/uploads/2013/04/GrowthOfDataVsDataAnalysts.png">http://www.delphianalytics.net/wp-content/uploads/2013/04/GrowthOfDataVsDataAnalysts.png</a></p>
+
+<p>[5] The Data Science Venn Diagram: <a href="http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram">http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram</a></p>
+
+<p>[6] How to actually learn data science: <a href="https://www.dataquest.io/blog/how-to-actually-learn-data-science/">https://www.dataquest.io/blog/how-to-actually-learn-data-science/</a></p>
+
+
+
+            <div style="display:block;vertical-align:baseline;height:2px">
+
+            </div>
+            <div class="clear_both tags">
+              <span>
+                tags:
+                
+                <a href='http://www.google.com/search?q=work+site:beatletech.com'>work</a>, 
+                
+                <a href='http://www.google.com/search?q=development+site:beatletech.com'>development</a>
+                
+              </span>
+            </div>
+
+
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=beatlevic" class="addthis_button_compact">Share</a>
+<span class="addthis_separator">|</span>
+<a class="addthis_button_facebook"></a>
+<a class="addthis_button_twitter"></a>
+<a class="addthis_button_email"></a>
+<a class="addthis_button_hackernews"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=beatlevic"></script>
+<!-- AddThis Button END -->
+
+          </article>
+
+          <div id="disqus_thread"></div>
+
+          <h3>Possibly related posts</h3>
+
+          <ul class="">
+            
+
+            <li>10 Sep 2015 &raquo;
+
+              <a href="/2015/09/10/o-data-scientist-where-art-thou">O Data Scientist, Where Art Thou?</a>
+
+              <em> <a href="http://www.google.com/search?q=+site%3Abeatletech.com"></a> </em>
+            </li>
+            
+
+            <li>11 Feb 2015 &raquo;
+
+              <a href="/2015/02/11/coursera-courses">My recent Coursera journey</a>
+
+              <em> <a href="http://www.google.com/search?q=+site%3Abeatletech.com"></a> </em>
+            </li>
+            
+
+            <li>03 Feb 2015 &raquo;
+
+              <a href="/2015/02/03/my-system-to-win-big">My System to Win Big</a>
+
+              <em> <a href="http://www.google.com/search?q=+site%3Abeatletech.com"></a> </em>
+            </li>
+            
+          </ul>
+        </div> <!-- end main -->
+
+      </div> <!-- end content -->
+
+      <footer id="footer" class="grid_12">
+        <p>Copyright &copy; 2010-2016 <a href="#">BeatleTech.com</a> -
+          Created by <a href="http://beatletech.com" title="BeatleTech by Coen Stevens">Coen Stevens</a></p>
+      </footer>
+
+      <div class="clear"></div>
+
+      <!-- <script type="text/javascript" src="../../../../js/sweet-justice.min.js"></script> -->
+      <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'beatletech'; // required: replace example with your forum shortname
+        //var disqus_developer = 1;
+
+        // The following are highly recommended additional parameters. Remove the slashes in front to use.
+        // var disqus_identifier = 'unique_dynamic_id_1234';
+        // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+    </div> <!-- end wrapper -->
+
+  </body>
+</html>

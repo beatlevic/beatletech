@@ -1,15 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
+
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2015-06-01T10:34:25+02:00</updated>
+ <updated>2018-08-02T00:30:32+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
  </author>
 
+ 
+ <entry>
+   <title>Othot raises $1.7 Million</title>
+   <link href="http://beatletech.com/2016/05/02/othot-raises-capital"/>
+   <updated>2016-05-02T00:00:00+02:00</updated>
+   <id>http://beatletech.com/2016/05/02/othot-raises-capital</id>
+   <content type="html">&lt;p&gt;Great news for Othot as they just secured $1.7 Million in their first
+round of outside financing. For more details and a shoutout for
+Dr. Mark Voortman check out &lt;a href=&quot;http://markets.financialcontent.com/mng-ba.mercurynews/news/read?GUID=32015429&quot;&gt;MercuryNews&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>O Data Scientist, Where Art Thou?</title>
+   <link href="http://beatletech.com/2015/09/10/o-data-scientist-where-art-thou"/>
+   <updated>2015-09-10T00:00:00+02:00</updated>
+   <id>http://beatletech.com/2015/09/10/o-data-scientist-where-art-thou</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note: This is a repost of my original blog post at
+   &lt;a href=&quot;http://www.othot.com/o-data-scientist-where-art-thou/&quot;&gt;OThot&lt;/a&gt;, where I also work as Senior Data Scientist.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;By now you have probably heard about the &lt;strong&gt;“Big Data”&lt;/strong&gt; hype in one form [&lt;a href=&quot;http://www.wired.com/insights/2014/04/big-data-big-hype/&quot;&gt;1&lt;/a&gt;] or another [&lt;a href=&quot;http://www.forbes.com/sites/larrymyler/2015/07/29/big-data-is-a-big-problem-thats-getting-bigger/&quot;&gt;2&lt;/a&gt;], or read about how other companies are achieving success harnessing their data [&lt;a href=&quot;http://www.forbes.com/sites/howardbaldwin/2015/06/08/whos-ready-for-some-big-data-success-stories/&quot;&gt;3&lt;/a&gt;]. With all the attention for Big Data and the accompanied field of Data Science to make sense of the data, it would be no surprise if you want your company to benefit as well from one or more Data Scientists generating actionable insights from your ever-growing sea of data.&lt;/p&gt;
+
+&lt;p&gt;When you are at this stage with your company and start to search for some great Data Scientists you will quickly find out that these people are in short supply. Now why is that? And why is it potentially dangerous if you simply want to bump or educate one of your company’s developers to a Data Scientist role if your search keeps turning up empty?&lt;/p&gt;
+
+&lt;p&gt;The reason why Data Scientists are scarce is twofold. First off, the aforementioned Big Data hype with its growing need for Data Scientists (with the amount of data outgrowing the number of data analysts [&lt;a href=&quot;http://www.delphianalytics.net/wp-content/uploads/2013/04/GrowthOfDataVsDataAnalysts.png&quot;&gt;4&lt;/a&gt;]), is creating a high demand for Data Scientists. With many Data Science positions opening up, there is also the troublesome side effect of developers starting to market themselves as Data Scientists, while having zero to none of the required expertise.&lt;/p&gt;
+
+&lt;p&gt;Secondly, and somewhat problematic, is the required skill set for a Data Scientist. Why problematic? Well, this is expressed clearly in the by now classic illustration of the Data Science skill set, the Data Science Venn Diagram [&lt;a href=&quot;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&quot;&gt;5&lt;/a&gt;]:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/beatletech/Data_Science_VD.png&quot; alt=&quot;Data Science Venn Diagram&quot; style=&quot;margin-left:100px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The three main skills (indicated by the primary colors) are hacking skills, math and stats knowledge, and substantive expertise. What this implies is that you need to be a programmer and statistician, while also having a lot of experience in these fields and in the relevant problem domain and business context. Given that each of these skills on their own already poses a challenge when you want to find a great candidate, then searching for all of them combined in one person can send you on a wild goose chase.&lt;/p&gt;
+
+&lt;p&gt;Earlier I mentioned the danger of turning developers (with hacking
+skills) into Data Scientists, which if you look at the diagram, might
+put you in the Danger Zone! Reason being that if you have hackers
+without substantive Math and Statistics knowledge you &lt;em&gt;“[..] give people
+the ability to create what appears to be a legitimate analysis without
+any understanding of how they got there or what they have created”&lt;/em&gt; [&lt;a href=&quot;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&quot;&gt;5&lt;/a&gt;]. This could give rise to flat-out wrong business decisions based on wrong interpretations of the data.&lt;/p&gt;
+
+&lt;p&gt;This is not meant to say that you cannot turn a developer into a Data Scientist, but rather that you have be aware that you also have to teach them the required math and statistics background. Or the other way around, you need to make sure that you are teaching your statisticians to gain better development skills. Nowadays there are many resources on the internet for learning Data Science [&lt;a href=&quot;https://www.dataquest.io/blog/how-to-actually-learn-data-science/&quot;&gt;6&lt;/a&gt;].  This will get you started, but it will take a lot of time and practice to gain enough experience for a desired level of proficiency.&lt;/p&gt;
+
+&lt;p&gt;We believe there might be a better alternative to growing your own in-house Data Science team and that is to have OThot be of service. OThot can either take the Data Science challenge off your hands completely or complement your Data Scientists with substantial expertise in all required skills. So don’t hesitate to reach out if you want to know more about what &lt;a href=&quot;http://www.othot.com&quot;&gt;OThot&lt;/a&gt; has to offer!&lt;/p&gt;
+
+&lt;h4 id=&quot;sources&quot;&gt;Sources&lt;/h4&gt;
+
+&lt;p&gt;[1] Big Data, Big Hype? &lt;a href=&quot;http://www.wired.com/insights/2014/04/big-data-big-hype/&quot;&gt;http://www.wired.com/insights/2014/04/big-data-big-hype/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[2] Big Data Is A Big Problem That’s Getting Bigger: &lt;a href=&quot;http://www.forbes.com/sites/larrymyler/2015/07/29/big-data-is-a-big-problem-thats-getting-bigger/&quot;&gt;http://www.forbes.com/sites/larrymyler/2015/07/29/big-data-is-a-big-problem-thats-getting-bigger/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[3] Who is ready for some big data success stories: &lt;a href=&quot;http://www.forbes.com/sites/howardbaldwin/2015/06/08/whos-ready-for-some-big-data-success-stories/&quot;&gt;http://www.forbes.com/sites/howardbaldwin/2015/06/08/whos-ready-for-some-big-data-success-stories/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[4] Growth of Data vs Growth of Data Analysts: &lt;a href=&quot;http://www.delphianalytics.net/wp-content/uploads/2013/04/GrowthOfDataVsDataAnalysts.png&quot;&gt;http://www.delphianalytics.net/wp-content/uploads/2013/04/GrowthOfDataVsDataAnalysts.png&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[5] The Data Science Venn Diagram: &lt;a href=&quot;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&quot;&gt;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[6] How to actually learn data science: &lt;a href=&quot;https://www.dataquest.io/blog/how-to-actually-learn-data-science/&quot;&gt;https://www.dataquest.io/blog/how-to-actually-learn-data-science/&lt;/a&gt;&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>New Job at ThinkTopic</title>
@@ -34,14 +93,14 @@ the company grow to where it is right now, and the potential of where it could g
 and together with all the work over the years the idea of no longer being part of Bottlenose feels a
 bit weird. Bottlenose has given me a lot in terms of experience, joy and friendships.&lt;/p&gt;
 
-&lt;p&gt;Having said that, I&#39;m keeping my desk at the Hackers and Founders building in Amsterdam, so I&#39;m not
+&lt;p&gt;Having said that, I’m keeping my desk at the Hackers and Founders building in Amsterdam, so I’m not
 going cold turkey on my former colleagues (only switching rooms).&lt;/p&gt;
 
-&lt;p&gt;I&#39;m excited to go on this new ThinkTopic adventure, which for today means diving back into
+&lt;p&gt;I’m excited to go on this new ThinkTopic adventure, which for today means diving back into
 Convolutional Neural Networks. May the fun and challenge begin.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/beatletech/thinktopic-logo.png&quot; alt=&quot;ThinkTopic&quot; width=&quot;646&quot;
-height=&quot;195&quot; style=&quot;margin-left:60px&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/beatletech/thinktopic-logo.png&quot; alt=&quot;ThinkTopic&quot; width=&quot;646&quot; height=&quot;195&quot; style=&quot;margin-left:60px&quot; /&gt;&lt;/p&gt;
+
 </content>
  </entry>
  
@@ -55,7 +114,7 @@ height=&quot;195&quot; style=&quot;margin-left:60px&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;In statistics there is the old and ongoing debate of Frequentism versus Bayesianism, which has been humorously depicted in the following popular XKCD cartoon [&lt;a href=&quot;http://www.xkcd.com/1132/&quot;&gt;1&lt;/a&gt;]:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://imgs.xkcd.com/comics/frequentists_vs_bayesians.png&quot; alt=&quot;Frequentism vs Bayesianism&quot; width=&quot;468&quot; heigth=&quot;709&quot; style=&quot;margin-left:100px&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://imgs.xkcd.com/comics/frequentists_vs_bayesians.png&quot; alt=&quot;Frequentism vs Bayesianism&quot; width=&quot;468&quot; heigth=&quot;709&quot; style=&quot;margin-left:100px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In this cartoon we see the Frequentist statistician believing that the odds (p-value) of the
 neutrino detector lying are below the (arbitrary) significance level of 0.05, saying that it is
@@ -69,19 +128,18 @@ priors, but they are fixed), is one difference most statisticians know about. Ho
 actually more subtle differences that carry big consequences that can sometimes lead to
 contradictive conclusions between the two approaches.&lt;/p&gt;
 
-&lt;p&gt;The popular blogging site &lt;strong&gt;&quot;Pythonic Perambulations&quot;&lt;/strong&gt; has a great series of technical posts that give
+&lt;p&gt;The popular blogging site &lt;strong&gt;“Pythonic Perambulations”&lt;/strong&gt; has a great series of technical posts that give
 a practical introduction to Frequentism and Bayesianism [&lt;a href=&quot;http://jakevdp.github.io/blog/2014/03/11/frequentism-and-bayesianism-a-practical-intro/&quot;&gt;2&lt;/a&gt;], which are highly recommended. In this
 series Jake Vanderplas explains with great clarity the differences, which are summarized as follows:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Frequentists and Bayesians disagree about the definition of probability&lt;/li&gt;
-&lt;li&gt;Frequentism considers probabilities to be objective and related to frequencies of real or hypothetical events&lt;/li&gt;
-&lt;li&gt;Bayesianism considers probabilities to be subjective and measures degrees of knowledge or belief&lt;/li&gt;
+  &lt;li&gt;Frequentists and Bayesians disagree about the definition of probability&lt;/li&gt;
+  &lt;li&gt;Frequentism considers probabilities to be objective and related to frequencies of real or hypothetical events&lt;/li&gt;
+  &lt;li&gt;Bayesianism considers probabilities to be subjective and measures degrees of knowledge or belief&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;p&gt;As a result he explains: &lt;em&gt;&quot;[..] frequentists consider model parameters to be fixed and data to be
-random, while Bayesians consider model parameters to be random and data to be fixed.&quot;&lt;/em&gt; [&lt;a href=&quot;http://jakevdp.github.io/blog/2014/06/12/frequentism-and-bayesianism-3-confidence-credibility/&quot;&gt;3&lt;/a&gt;]&lt;/p&gt;
+&lt;p&gt;As a result he explains: &lt;em&gt;“[..] frequentists consider model parameters to be fixed and data to be
+random, while Bayesians consider model parameters to be random and data to be fixed.”&lt;/em&gt; [&lt;a href=&quot;http://jakevdp.github.io/blog/2014/06/12/frequentism-and-bayesianism-3-confidence-credibility/&quot;&gt;3&lt;/a&gt;]&lt;/p&gt;
 
 &lt;p&gt;This actually has far stretching consequences for the use of Frequentism in Science, where you most
 often have one dataset (i.e., fixed data) for which you want to make inferences, and you are not
@@ -91,11 +149,11 @@ and confidence intervals in this context are useless.&lt;/p&gt;
 
 &lt;p&gt;But you might ask, why then is the use of p-values the de facto standard in scientific research, if
 it is fundamentally wrong? Good question. The problem is that confidence intervals are easy to
-compute and often give similar results to the Bayesian approach. This doesn&#39;t change the fact that
-the approach is flat out invalid, and doesn&#39;t support the conclusions made.&lt;/p&gt;
+compute and often give similar results to the Bayesian approach. This doesn’t change the fact that
+the approach is flat out invalid, and doesn’t support the conclusions made.&lt;/p&gt;
 
 &lt;p&gt;Recently the science community started acknowledging this fact and we are now starting to see
-journals, e.g., &lt;strong&gt;&quot;Basic and Applied Social Psychology&quot;&lt;/strong&gt; [&lt;a href=&quot;http://www.tandfonline.com/doi/abs/10.1080/01973533.2015.1012991&quot;&gt;4&lt;/a&gt;], where research using p-values is being
+journals, e.g., &lt;strong&gt;“Basic and Applied Social Psychology”&lt;/strong&gt; [&lt;a href=&quot;http://www.tandfonline.com/doi/abs/10.1080/01973533.2015.1012991&quot;&gt;4&lt;/a&gt;], where research using p-values is being
 rejected. This has not gone unnoticed as both Nature, the international weekly journal of Science,
 as well as Scientific American, wrote about it in depth and both proposed Bayesian statistics as a
 good alternative. [&lt;a href=&quot;http://www.nature.com/news/statistics-p-values-are-just-the-tip-of-the-iceberg-1.17412&quot;&gt;5&lt;/a&gt;][&lt;a href=&quot;http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact&quot;&gt;6&lt;/a&gt;]&lt;/p&gt;
@@ -103,7 +161,8 @@ good alternative. [&lt;a href=&quot;http://www.nature.com/news/statistics-p-valu
 &lt;p&gt;The Scientific American article adds the following about p-values, and confirms the aforementioned
 hypothetical other datasets problem with Frequentism:&lt;/p&gt;
 
-&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;&quot;Unfortunately, p-values are also widely misunderstood, often believed to furnish more
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“Unfortunately, p-values are also widely misunderstood, often believed to furnish more
 information than they do. Many researchers have labored under the misbelief that the p-value gives
 the probability that their study’s results are just pure random chance. But statisticians say the
 p-value’s information is much more non-specific, and can interpreted only in the context of
@@ -111,12 +170,13 @@ hypothetical alternative scenarios: The p-value summarizes how often results at 
 those observed would show up if the study were repeated an infinite number of times when in fact
 only pure random chance were at work. This means that the p-value is a statement about imaginary
 data in hypothetical study replications, not a statement about actual conclusions in any given
-study&quot;&lt;/em&gt;
-[&lt;a href=&quot;http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact&quot;&gt;6&lt;/a&gt;]&lt;/p&gt;&lt;/blockquote&gt;
+study”&lt;/em&gt;
+[&lt;a href=&quot;http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact&quot;&gt;6&lt;/a&gt;]&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;Needless to say, but at &lt;a href=&quot;http://www.othot.com&quot;&gt;OThot&lt;/a&gt; we are big proponents of the Bayesian approach for statistical inferences. In a previous blog post by Mark Voortman [&lt;a href=&quot;http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common&quot;&gt;7&lt;/a&gt;], we already started talking and explaining the Bayesian approach and you can safely bet to expect more of that.&lt;/p&gt;
 
-&lt;h4&gt;Sources&lt;/h4&gt;
+&lt;h4 id=&quot;sources&quot;&gt;Sources&lt;/h4&gt;
 
 &lt;p&gt;[1] XKCD: Frequentists vs. Bayesians &lt;a href=&quot;http://www.xkcd.com/1132/&quot;&gt;http://www.xkcd.com/1132/&lt;/a&gt;&lt;/p&gt;
 
@@ -133,6 +193,7 @@ study&quot;&lt;/em&gt;
 &lt;p&gt;[6] Scientists Perturbed by Loss of Stat Tools to Sift Research Fudge from Fact &lt;a href=&quot;http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact&quot;&gt;http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;[7] What Do Searching For a Plane and a Doctor’s Diagnosis Have in Common? &lt;a href=&quot;http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common&quot;&gt;http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common&lt;/a&gt;&lt;/p&gt;
+
 </content>
  </entry>
  
@@ -148,36 +209,34 @@ courses). In this post I like to present you my experiences with these courses a
 future courses.&lt;/p&gt;
 
 &lt;p&gt;The reason for me to start following online courses has to do with what I already pointed out in my
-previous blog post &quot;&lt;a href=&quot;http://beatletech.com/2015/02/03/my-system-to-win-big&quot;&gt;My System to Win Big&lt;/a&gt;&quot;. I want to
+previous blog post “&lt;a href=&quot;http://beatletech.com/2015/02/03/my-system-to-win-big&quot;&gt;My System to Win Big&lt;/a&gt;”. I want to
 keep on improving myself and acquire more knowledge in domains of my interest. Part of it is
-revisiting knowledge I&#39;m &quot;supposed&quot; to know to gain an even better understanding, and the other part
+revisiting knowledge I’m “supposed” to know to gain an even better understanding, and the other part
 is exploring new uncharted territories. I also wanted to follow courses where I would have to
 practice and hone my programming skills.&lt;/p&gt;
 
 &lt;p&gt;But why follow online courses with a rigid schedule and deadlines if you can simply study books or solve some tough problems on
 &lt;a href=&quot;https://projecteuler.net/&quot;&gt;Project Euler&lt;/a&gt; at your own pace? Well, for me as it turns out, having a fixed
 course schedule releases me of the burden of planning and serves as a nice stick to finish on time,
-which made it easier to get into the habit of spending evening hours on education. This way I didn&#39;t
+which made it easier to get into the habit of spending evening hours on education. This way I didn’t
 have to spend my will-power every time to get started, and now that I have grown this study habit and
-with it the discipline to follow through, I&#39;m in a much better position to also study at my own pace.&lt;/p&gt;
+with it the discipline to follow through, I’m in a much better position to also study at my own pace.&lt;/p&gt;
 
 &lt;p&gt;The courses for which I have received statements of accomplishment are in chronological order:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/ml&quot;&gt;Machine Learning&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/algo&quot;&gt;Algorithms: Design and Analysis, Part 1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/bioinformatics&quot;&gt;Bioinformatics Algorithms, Part 1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/learning&quot;&gt;Learning How to Learn&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/ml&quot;&gt;Machine Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/algo&quot;&gt;Algorithms: Design and Analysis, Part 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/bioinformatics&quot;&gt;Bioinformatics Algorithms, Part 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/learning&quot;&gt;Learning How to Learn&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 
 &lt;p&gt;In the subsequent sections I will describe each course and my experiences in more detail.&lt;/p&gt;
 
-&lt;h3&gt;Courses&lt;/h3&gt;
+&lt;h3 id=&quot;courses&quot;&gt;Courses&lt;/h3&gt;
+&lt;h4 id=&quot;machine-learning&quot;&gt;Machine Learning&lt;/h4&gt;
 
-&lt;h4&gt;Machine Learning&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;Stanford University // June-September 2014 // 12 weeks of study // 6 hours per week // &lt;a href=&quot;https://www.coursera.org/course/ml&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
+&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;Stanford University // June-September 2014 // 12 weeks of study // 6 hours per week // &lt;a href=&quot;https://www.coursera.org/course/ml&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
 &lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Easy&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Half a year ago at &lt;a href=&quot;http://bottlenose.com&quot;&gt;Bottlenose&lt;/a&gt; I was shifting from primarily a Software
@@ -188,12 +247,11 @@ course, which presented a nice overview with some basic programming exercises. T
 listed on the Coursera page):&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Supervised learning (parametric/non-parametric algorithms, support vector machines, kernels,
+  &lt;li&gt;Supervised learning (parametric/non-parametric algorithms, support vector machines, kernels,
 neural networks).&lt;/li&gt;
-&lt;li&gt;Unsupervised learning (clustering, dimensionality reduction, recommender systems, deep learning).&lt;/li&gt;
-&lt;li&gt;Best practices in Machine Learning (bias/variance theory, innovation process in machine learning and AI).&lt;/li&gt;
+  &lt;li&gt;Unsupervised learning (clustering, dimensionality reduction, recommender systems, deep learning).&lt;/li&gt;
+  &lt;li&gt;Best practices in Machine Learning (bias/variance theory, innovation process in machine learning and AI).&lt;/li&gt;
 &lt;/ul&gt;
-
 
 &lt;p&gt;Given that I was already very familiar with these topics, combined with an excellent presentation by
 instructor &lt;a href=&quot;https://www.coursera.org/instructor/andrewng&quot;&gt;Andrew Ng&lt;/a&gt;, it may not come as a surprise that I found the
@@ -203,44 +261,46 @@ annoyances of coding in Matlab.&lt;/p&gt;
 &lt;p&gt;It felt good to revisit all the topics in the course, which presented me once again with the wide
 variety of Machine Learning approaches and techniques. Perhaps in hindsight other specialized
 courses on Machine Learning on a more graduate level would have been more worthwhile. However, I
-don&#39;t regret my time spent on this course as it never hurts to go back to the basics once in a
+don’t regret my time spent on this course as it never hurts to go back to the basics once in a
 while.  Additionally, as this was my first online course, it was a great way to get started with
 Coursera and familiarize myself with this new educational format. And after finding out that it
 worked really well for me, I instantly signed up for a lot of other (more specialized) courses.&lt;/p&gt;
 
-&lt;h4&gt;Algorithms: Design and Analysis, Part 1&lt;/h4&gt;
+&lt;h4 id=&quot;algorithms-design-and-analysis-part-1&quot;&gt;Algorithms: Design and Analysis, Part 1&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;Stanford University // October-December 2014 // 6 weeks of study // 7 hours per week
-// &lt;a href=&quot;https://www.coursera.org/course/algo&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
+// &lt;a href=&quot;https://www.coursera.org/course/algo&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
 &lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Medium&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;After finishing the Machine Learning exercises in Matlab I wanted my next Coursera course to require
-a &quot;real&quot; and more interesting programming language, and at the time I was already reading up on two
+a “real” and more interesting programming language, and at the time I was already reading up on two
 other programming languages that I liked to put into practice: &lt;a href=&quot;http://julialang.org/&quot;&gt;Julia&lt;/a&gt; and &lt;a href=&quot;http://www.rust-lang.org/&quot;&gt;Rust&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;I was already aware of the &quot;Algorithms: Design and Analysis&quot; class, which two of my friends already
+&lt;p&gt;I was already aware of the “Algorithms: Design and Analysis” class, which two of my friends already
 completed and recommended, thereby making it interesting candidate as my next course. Having finished a similar
 course (in Java) during my study at Delft University I thought this course would be a walk in the park and a
 good playground for testing the waters with Julia and Rust. At the same time I was starting with the
-&quot;Bioinformatics Algorithms&quot; class, which also focused on implementing algorithms, but in the domain of biology
+“Bioinformatics Algorithms” class, which also focused on implementing algorithms, but in the domain of biology
 (more on Bioinformatics later). Both courses I started with Julia.&lt;/p&gt;
 
 &lt;p&gt;I can honestly say that I really like the Julia language, which was born out of its creators wish to
 have a programming language that is:&lt;/p&gt;
 
-&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;... open source, with a liberal license. We want the speed of C with the
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;… open source, with a liberal license. We want the speed of C with the
   dynamism of Ruby. We want a language that’s homoiconic, with true macros like Lisp, but with
   obvious, familiar mathematical notation like Matlab. We want something as usable for general
   programming as Python, as easy for statistics as R, as natural for string processing as Perl, as
   powerful for linear algebra as Matlab, as good at gluing programs together as the shell. Something
   that is dirt simple to learn, yet keeps the most serious hackers happy. We want it interactive and
-  we want it compiled.&lt;br/&gt;
-  (Blog:  &lt;a href=&quot;http://julialang.org/blog/2012/02/why-we-created-julia/&quot;&gt;Why we created Julia&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+  we want it compiled.&lt;br /&gt;
+  (Blog:  &lt;a href=&quot;http://julialang.org/blog/2012/02/why-we-created-julia/&quot;&gt;Why we created Julia&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;The first week&#39;s programming assignment, a counting algorithm piggy backing on merge-sort, I also
+&lt;p&gt;The first week’s programming assignment, a counting algorithm piggy backing on merge-sort, I also
 implemented in Rust after finishing the Julia version. The Rust implementation was a painful
 delivery, which was mostly me fighting the compiler and having a hard time finding clues on the web
-due to a lot of breaking changes in Rust&#39;s development towards the 1.0 release version. Add to that
+due to a lot of breaking changes in Rust’s development towards the 1.0 release version. Add to that
 the resulting performance being slower than with my Julia implementation, and I quickly decided to
 leave Rust alone or at least until the language would be more stable (1.0 alpha was released Jan
 2015).&lt;/p&gt;
@@ -259,33 +319,32 @@ quizzes were often very challenging. You simply cannot fly through this course w
 understanding of the introduced concepts, which are luckily very well presented by course instructor
 &lt;a href=&quot;https://www.coursera.org/instructor/~214&quot;&gt;Tim Roughgarden&lt;/a&gt;. All in all I can highly recommend this
 course for both expert and aspiring computer scientists for learning (or revisiting) several
-fundamental principles of algorithm design, and I&#39;m looking forward in participating in Part 2 of
+fundamental principles of algorithm design, and I’m looking forward in participating in Part 2 of
 this course later this year.&lt;/p&gt;
 
-&lt;h4&gt;Bioinformatics Algorithms, Part 1&lt;/h4&gt;
+&lt;h4 id=&quot;bioinformatics-algorithms-part-1&quot;&gt;Bioinformatics Algorithms, Part 1&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;UC San Diego // October 2014 - Feb 2015 // 10 weeks of study // 10 hours per week //
-&lt;a href=&quot;https://www.coursera.org/course/bioinformatics&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
+&lt;a href=&quot;https://www.coursera.org/course/bioinformatics&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
 &lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Medium/Hard&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;I always had a general interest in biology with genetics in particular, and if you combine this with
 my interest in algorithms and Data Science, you can see why I had a course in bioinformatics high on
-my wish list. Along came &quot;Bioinformatics Algorithms&quot; on Coursera and I could no longer resist
+my wish list. Along came “Bioinformatics Algorithms” on Coursera and I could no longer resist
 signing up and was eager to get started. The syllabus consists of chapters of the interactive text
 book
-&lt;a href=&quot;http://bioinformaticsalgorithms.com/&quot;&gt;&quot;Bioinformatics Algorithms: an Active Learning Approach&quot;&lt;/a&gt;:&lt;/p&gt;
+&lt;a href=&quot;http://bioinformaticsalgorithms.com/&quot;&gt;“Bioinformatics Algorithms: an Active Learning Approach”&lt;/a&gt;:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Where in the Genome Does DNA Replication Begin? (Algorithmic Warmup)&lt;/li&gt;
-&lt;li&gt;How Do We Sequence Antibiotics? (Brute Force Algorithms)&lt;/li&gt;
-&lt;li&gt;Which DNA Patterns Act As Cellular Clocks? (Randomized Algorithms)&lt;/li&gt;
-&lt;li&gt;How Do We Assemble Genomes? (Graph Algorithms)&lt;/li&gt;
-&lt;li&gt;How Do We Compare Biological Sequences? (Dynamic Programming Algorithms)&lt;/li&gt;
-&lt;li&gt;Are There Fragile Regions in the Human Genome? (Combinatorial Algorithms)&lt;/li&gt;
+  &lt;li&gt;Where in the Genome Does DNA Replication Begin? (Algorithmic Warmup)&lt;/li&gt;
+  &lt;li&gt;How Do We Sequence Antibiotics? (Brute Force Algorithms)&lt;/li&gt;
+  &lt;li&gt;Which DNA Patterns Act As Cellular Clocks? (Randomized Algorithms)&lt;/li&gt;
+  &lt;li&gt;How Do We Assemble Genomes? (Graph Algorithms)&lt;/li&gt;
+  &lt;li&gt;How Do We Compare Biological Sequences? (Dynamic Programming Algorithms)&lt;/li&gt;
+  &lt;li&gt;Are There Fragile Regions in the Human Genome? (Combinatorial Algorithms)&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;p&gt;In a way this was the &quot;Algorithms: Design and Analysis&quot; course all over again applied to the
+&lt;p&gt;In a way this was the “Algorithms: Design and Analysis” course all over again applied to the
 biological domain. The practical application of the algorithms really made this course stand out for
 me, and made all algorithms more tangible. The interactive book accompanied by the online lectures
 had great production value and introduced concepts and terminology very well.&lt;/p&gt;
@@ -302,19 +361,19 @@ extra mile and focused on scoring above 85% for an accomplishment with distincti
 hiding from the difficult parts. In the end I was very proud that I achieved my statement of
 accomplishment with distinction.&lt;/p&gt;
 
-&lt;p&gt;I&#39;m looking forward to part 2 of the course, which will start this month.&lt;/p&gt;
+&lt;p&gt;I’m looking forward to part 2 of the course, which will start this month.&lt;/p&gt;
 
-&lt;h4&gt;Learning How to Learn&lt;/h4&gt;
+&lt;h4 id=&quot;learning-how-to-learn&quot;&gt;Learning How to Learn&lt;/h4&gt;
 
-&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;UC San Diego // January 2015 // 4 weeks of study // 2 hours per week // &lt;a href=&quot;https://www.coursera.org/course/learning&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br/&gt;
+&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;UC San Diego // January 2015 // 4 weeks of study // 2 hours per week // &lt;a href=&quot;https://www.coursera.org/course/learning&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
 &lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Very easy&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;When you are spending your spare time following online courses and you notice there isn&#39;t enough
+&lt;p&gt;When you are spending your spare time following online courses and you notice there isn’t enough
 time in the week to follow all the courses you would like, you have to make choices. And it is not
 only the choices that are difficult, you also want the courses that you decide to follow to have a
 lasting impact and not be quickly forgotten when you are moving on to another course. This brings us
-to the topic of how you can learn to learn more effectively, which is what the course &quot;Learning how
-to learn&quot; has to offer.&lt;/p&gt;
+to the topic of how you can learn to learn more effectively, which is what the course “Learning how
+to learn” has to offer.&lt;/p&gt;
 
 &lt;p&gt;While the course is very easy and lacks real depth, it is still beneficial to at least watch the
 lectures and the interviews, as there might be some tips and tricks you can pick up that will
@@ -323,31 +382,29 @@ improve your learning capabilities and help you overcome procrastination when it
 &lt;p&gt;My key takeaway points are:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Recall: A great way to improve your understanding and ability to form strong memories is to pause
+  &lt;li&gt;Recall: A great way to improve your understanding and ability to form strong memories is to pause
 for a moment after you have read some text, look away, and forcing yourself to recall what you
 just read. Formulating your thoughts really helps, so talking and explaining to others is another
 big plus.&lt;/li&gt;
-&lt;li&gt;Focus on &quot;process&quot; not &quot;product&quot;.&lt;/li&gt;
-&lt;li&gt;Make to-do lists for next day.&lt;/li&gt;
-&lt;li&gt;Exercise really helps when you get stuck on some hard problem. Shifting you focus can make your
+  &lt;li&gt;Focus on “process” not “product”.&lt;/li&gt;
+  &lt;li&gt;Make to-do lists for next day.&lt;/li&gt;
+  &lt;li&gt;Exercise really helps when you get stuck on some hard problem. Shifting you focus can make your
 subconscious and diffuse mode of thinking work for you in the background.&lt;/li&gt;
-&lt;li&gt;Skim through an article or paper to get a sense of of the context to help structuring new knowledge.&lt;/li&gt;
+  &lt;li&gt;Skim through an article or paper to get a sense of of the context to help structuring new knowledge.&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;h3&gt;What&#39;s next?&lt;/h3&gt;
+&lt;h3 id=&quot;whats-next&quot;&gt;What’s next?&lt;/h3&gt;
 
 &lt;p&gt;In 2015 I want at least take the following courses, of which the first two are continuations of
 two courses I already completed:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/algo2&quot;&gt;Algorithms: Design and Analysis, Part 2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/bioinformatics2&quot;&gt;Bioinformatics Algorithms, Part 2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/pgm&quot;&gt;Probabilistic Graphical Models&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/algo2&quot;&gt;Algorithms: Design and Analysis, Part 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/bioinformatics2&quot;&gt;Bioinformatics Algorithms, Part 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.coursera.org/course/pgm&quot;&gt;Probabilistic Graphical Models&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;p&gt;Additionally I&#39;m looking forward to follow more courses specialized in the field of bioinformatics
+&lt;p&gt;Additionally I’m looking forward to follow more courses specialized in the field of bioinformatics
 (e.g. genetics, bio-medicine, evolution, neuroscience) and Data Science (mining datasets, pattern
 discovery, advanced statistics)&lt;/p&gt;
 
@@ -356,21 +413,21 @@ discovery, advanced statistics)&lt;/p&gt;
 already completed 2 out of 7 weeks, but discontinued the course due to time constraints of other
 overlapping courses.&lt;/p&gt;
 
-&lt;h3&gt;Tips&lt;/h3&gt;
+&lt;h3 id=&quot;tips&quot;&gt;Tips&lt;/h3&gt;
 
 &lt;p&gt;I want to conclude with two tips for when you are going to embark on your own Coursera journey:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Do no take too many courses at once. It might seem sometimes that you could easily squeeze in
+  &lt;li&gt;Do no take too many courses at once. It might seem sometimes that you could easily squeeze in
 another course, but they often take more time than you anticipate. Additionally if you end up
 stalling in one or more courses, you might get demotivated and stop all-together.&lt;/li&gt;
-&lt;li&gt;Find yourself some friends who are already following online courses or talk them into joining
+  &lt;li&gt;Find yourself some friends who are already following online courses or talk them into joining
 you. Having a study group of like-minded individuals will really help you stay on course and make
 the ride less lonely and a lot more fun.&lt;/li&gt;
 &lt;/ul&gt;
 
-
 &lt;p&gt;Good luck with our own online education!&lt;/p&gt;
+
 </content>
  </entry>
  
@@ -381,15 +438,15 @@ the ride less lonely and a lot more fun.&lt;/li&gt;
    <id>http://beatletech.com/2015/02/09/bottlenose-series-b</id>
    <content type="html">&lt;p&gt;One and a half years after securing our
 &lt;a href=&quot;http://beatletech.com/2013/07/30/bottlenose-secures-four-million/&quot;&gt;$3.6 Million&lt;/a&gt;
-series A investment round to bring &#39;Trendfluence&#39; to the enterprise, we are now
+series A investment round to bring ‘Trendfluence’ to the enterprise, we are now
 proud at &lt;a href=&quot;http://bottlenose.com&quot;&gt;Bottlenose&lt;/a&gt; to have raised (and
 continue to raise) our series B round with a staggering amount of $13.4
 Million, bringing the total raised funds north of $17 Million.&lt;/p&gt;
 
 &lt;p&gt;Back in December we already disclosed that KPMG International took a
-&lt;a href=&quot;http://www.prnewswire.com/news-releases/kpmg-capital-takes-equity-stake-in-bottlenose-a-pioneer-in-real-time-trend-intelligence-300005792.html&quot;&gt;&quot;substantial equity share&quot;&lt;/a&gt; in Bottlenose, but did not yet reveal the
+&lt;a href=&quot;http://www.prnewswire.com/news-releases/kpmg-capital-takes-equity-stake-in-bottlenose-a-pioneer-in-real-time-trend-intelligence-300005792.html&quot;&gt;“substantial equity share”&lt;/a&gt; in Bottlenose, but did not yet reveal the
 size of the investment nor names of other investors that were ready to
-follow KPMG Capital&#39;s lead. Today Techcrunch reported on our Series B
+follow KPMG Capital’s lead. Today Techcrunch reported on our Series B
 round, listing our additional investors and describing our growing
 capabilities in enterprise (real-time) stream data analytics. The
 series B round is still open and we plan to raise significant venture
@@ -398,6 +455,7 @@ debt on top of the $13.4 million.&lt;/p&gt;
 &lt;p&gt;At Bottlenose we have exciting times ahead of us.&lt;/p&gt;
 
 &lt;p&gt;You can read the full story on &lt;a href=&quot;http://techcrunch.com/2015/02/09/bottlenose-series-b/&quot;&gt;Techcrunch&lt;/a&gt;.&lt;/p&gt;
+
 </content>
  </entry>
  
@@ -407,22 +465,21 @@ debt on top of the $13.4 million.&lt;/p&gt;
    <updated>2015-02-03T00:00:00+01:00</updated>
    <id>http://beatletech.com/2015/02/03/my-system-to-win-big</id>
    <content type="html">&lt;p&gt;Back in January 2014 I read a book by Scott Adams (of Dilbert fame) titled:
-&lt;a href=&quot;https://www.goodreads.com/book/show/17859574-how-to-fail-at-almost-everything-and-still-win-big&quot;&gt;&quot;How to Fail at Almost Everything and Still Win Big&quot;&lt;/a&gt;.
+&lt;a href=&quot;https://www.goodreads.com/book/show/17859574-how-to-fail-at-almost-everything-and-still-win-big&quot;&gt;“How to Fail at Almost Everything and Still Win Big”&lt;/a&gt;.
 The book was brought to my attention when I was reading up on some interesting research and ideas on
 passion and discipline (&lt;a href=&quot;https://www.youtube.com/watch?v=qwOdU02SE0w&quot;&gt;Carl Newport&lt;/a&gt; comes to mind,
-explaining why following your passion is bad career advice). Reading Adam&#39;s book definitely struck a
+explaining why following your passion is bad career advice). Reading Adam’s book definitely struck a
 chord with me and even motivated me to change my work flow and long-held believes on what to focus on
 in life. Two things stood out for me:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Passion is bullshit. It is only after you have put in the work and are lucky enough in having
+  &lt;li&gt;Passion is bullshit. It is only after you have put in the work and are lucky enough in having
 success that passion comes, not before.&lt;/li&gt;
-&lt;li&gt;Goals are for losers. Systems are for winners.&lt;/li&gt;
+  &lt;li&gt;Goals are for losers. Systems are for winners.&lt;/li&gt;
 &lt;/ul&gt;
 
-
 &lt;p&gt;Before reading the book I have often asked myself questions like: What is my greatest passion and am I working
-every day on the things I&#39;m most passionate about? What kind of startup or company would fit my passion? I
+every day on the things I’m most passionate about? What kind of startup or company would fit my passion? I
 often had a hard time trying to find the perfect answer to these questions, which resulted in
 inertia to get started and in some cases I was setting myself up for ever higher and greater goals.&lt;/p&gt;
 
@@ -430,18 +487,17 @@ inertia to get started and in some cases I was setting myself up for ever higher
 system approach can be summarized as follows:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Create habits and reserve your will-power for learning new habits.&lt;/li&gt;
-&lt;li&gt;Reduce daily decisions to routine.&lt;/li&gt;
-&lt;li&gt;Avoid setting (high) goals, instead have a system that will keep you going&lt;/li&gt;
-&lt;li&gt;Keeping up your personal energy, which is your primary metric&lt;/li&gt;
-&lt;li&gt;Simplicity is key&lt;/li&gt;
-&lt;li&gt;A system will keep you going, also in moments of failure&lt;/li&gt;
+  &lt;li&gt;Create habits and reserve your will-power for learning new habits.&lt;/li&gt;
+  &lt;li&gt;Reduce daily decisions to routine.&lt;/li&gt;
+  &lt;li&gt;Avoid setting (high) goals, instead have a system that will keep you going&lt;/li&gt;
+  &lt;li&gt;Keeping up your personal energy, which is your primary metric&lt;/li&gt;
+  &lt;li&gt;Simplicity is key&lt;/li&gt;
+  &lt;li&gt;A system will keep you going, also in moments of failure&lt;/li&gt;
 &lt;/ul&gt;
-
 
 &lt;p&gt;One of the key points here is the creation of (good) habits and the discipline to carry it out. A
 recent blog post titled:
-&lt;a href=&quot;http://www.wisdomination.com/screw-motivation-what-you-need-is-discipline/&quot;&gt;&quot;Screw motivation, what you need is discipline&quot;&lt;/a&gt;
+&lt;a href=&quot;http://www.wisdomination.com/screw-motivation-what-you-need-is-discipline/&quot;&gt;“Screw motivation, what you need is discipline”&lt;/a&gt;
 argues for the same point. It basically boils down to growing habits and not let yourself be driven by your emotional state.
 So stop waiting until you feel good (enough) to start a particular task and get into the habit of allocating
 time to just do stuff to get things done. Focus on the process (your system) and not the product
@@ -451,126 +507,106 @@ time to just do stuff to get things done. Focus on the process (your system) and
 on his way (due any moment now), you have to get even more organized and disciplined to get things
 done. The way in which I manage this is what I want to present to you
 next by outlining my system along several dimensions that Scott describes in his book. I have been adhering to this system for a full year and besides some
-minor changes and occasional missteps I&#39;m still following through and it has definitely made a
+minor changes and occasional missteps I’m still following through and it has definitely made a
 hugely positive impact on my life and productivity.&lt;/p&gt;
 
 &lt;p&gt;Now without further ado, My System to Win Big:&lt;/p&gt;
 
-&lt;h4&gt;Exercise&lt;/h4&gt;
-
+&lt;h4 id=&quot;exercise&quot;&gt;Exercise&lt;/h4&gt;
 &lt;p&gt;One or more of the following activities I do daily for at least 30 to 60 minutes&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Running&lt;/li&gt;
-&lt;li&gt;Sprinting&lt;/li&gt;
-&lt;li&gt;Push-ups / Sit-ups / Plank / Triceps-dips / 7-minute workout cycles (Honestly this is the one I
+  &lt;li&gt;Running&lt;/li&gt;
+  &lt;li&gt;Sprinting&lt;/li&gt;
+  &lt;li&gt;Push-ups / Sit-ups / Plank / Triceps-dips / 7-minute workout cycles (Honestly this is the one I
 want to become more of a routine several days a week.)&lt;/li&gt;
-&lt;li&gt;Walking&lt;/li&gt;
-&lt;li&gt;Cycling&lt;/li&gt;
+  &lt;li&gt;Walking&lt;/li&gt;
+  &lt;li&gt;Cycling&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;h4&gt;Sports&lt;/h4&gt;
-
+&lt;h4 id=&quot;sports&quot;&gt;Sports&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;Football (Soccer)&lt;/li&gt;
-&lt;li&gt;Kickboxing&lt;/li&gt;
+  &lt;li&gt;Football (Soccer)&lt;/li&gt;
+  &lt;li&gt;Kickboxing&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;h4&gt;Sleep&lt;/h4&gt;
-
+&lt;h4 id=&quot;sleep&quot;&gt;Sleep&lt;/h4&gt;
 &lt;p&gt;Needless to say you need a good amount of sleep.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Go to bed before 00:00 (Yes, this one is hard if you do remote work for US companies from Europe)&lt;/li&gt;
-&lt;li&gt;sleep 8 hours&lt;/li&gt;
+  &lt;li&gt;Go to bed before 00:00 (Yes, this one is hard if you do remote work for US companies from Europe)&lt;/li&gt;
+  &lt;li&gt;sleep 8 hours&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;h4&gt;Flexible schedule&lt;/h4&gt;
-
+&lt;h4 id=&quot;flexible-schedule&quot;&gt;Flexible schedule&lt;/h4&gt;
 &lt;p&gt;Being flexible here means being in charge of your own schedule. Making a fixed planning and schedule for
 things you want to do is highly recommended for young parents, as long as you are the one who chooses
 to make time for it.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Plan holidays/time-off&lt;/li&gt;
-&lt;li&gt;Plan fixed slots for daily exercise and sports&lt;/li&gt;
-&lt;li&gt;Plan stuff that makes you want to get out of bed for it&lt;/li&gt;
+  &lt;li&gt;Plan holidays/time-off&lt;/li&gt;
+  &lt;li&gt;Plan fixed slots for daily exercise and sports&lt;/li&gt;
+  &lt;li&gt;Plan stuff that makes you want to get out of bed for it&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;h4&gt;Diet&lt;/h4&gt;
-
-&lt;p&gt;I&#39;m a big proponent of the Paleo lifestyle, and try to avoid as much processed foods as possible and
+&lt;h4 id=&quot;diet&quot;&gt;Diet&lt;/h4&gt;
+&lt;p&gt;I’m a big proponent of the Paleo lifestyle, and try to avoid as much processed foods as possible and
 keeping it real.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Only occasionally bread/rice/potatoes&lt;/li&gt;
-&lt;li&gt;No Candy/Cookies/Chips&lt;/li&gt;
-&lt;li&gt;No Sodas&lt;/li&gt;
-&lt;li&gt;No Coffee&lt;/li&gt;
-&lt;li&gt;Occasionally alcohol (celebrations)&lt;/li&gt;
-&lt;li&gt;Meal skipping is good&lt;/li&gt;
-&lt;li&gt;Fasting once in a while is great (irregular intervals)&lt;/li&gt;
-&lt;li&gt;Snacks: nuts and fruits&lt;/li&gt;
-&lt;li&gt;Eating more vegetables by improving seasoning&lt;/li&gt;
-&lt;li&gt;Starches like Oatmeal&lt;/li&gt;
+  &lt;li&gt;Only occasionally bread/rice/potatoes&lt;/li&gt;
+  &lt;li&gt;No Candy/Cookies/Chips&lt;/li&gt;
+  &lt;li&gt;No Sodas&lt;/li&gt;
+  &lt;li&gt;No Coffee&lt;/li&gt;
+  &lt;li&gt;Occasionally alcohol (celebrations)&lt;/li&gt;
+  &lt;li&gt;Meal skipping is good&lt;/li&gt;
+  &lt;li&gt;Fasting once in a while is great (irregular intervals)&lt;/li&gt;
+  &lt;li&gt;Snacks: nuts and fruits&lt;/li&gt;
+  &lt;li&gt;Eating more vegetables by improving seasoning&lt;/li&gt;
+  &lt;li&gt;Starches like Oatmeal&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;h4&gt;Steadily improving / Skills&lt;/h4&gt;
-
+&lt;h4 id=&quot;steadily-improving--skills&quot;&gt;Steadily improving / Skills&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;Programming (Python, Clojure, Julia, Euler, Math)&lt;/li&gt;
-&lt;li&gt;Book reading / knowledge gathering&lt;/li&gt;
-&lt;li&gt;Blogging (on side-projects / programming)&lt;/li&gt;
-&lt;li&gt;Practicing playing the Piano (still a noob here)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.coursera.com&quot;&gt;Coursera courses&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Programming (Python, Clojure, Julia, Euler, Math)&lt;/li&gt;
+  &lt;li&gt;Book reading / knowledge gathering&lt;/li&gt;
+  &lt;li&gt;Blogging (on side-projects / programming)&lt;/li&gt;
+  &lt;li&gt;Practicing playing the Piano (still a noob here)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.coursera.com&quot;&gt;Coursera courses&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;h4&gt;Imagine an incredible future&lt;/h4&gt;
-
+&lt;h4 id=&quot;imagine-an-incredible-future&quot;&gt;Imagine an incredible future&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;related: stay optimistic and opportunistic&lt;/li&gt;
+  &lt;li&gt;related: stay optimistic and opportunistic&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;h4&gt;Help others&lt;/h4&gt;
-
+&lt;h4 id=&quot;help-others&quot;&gt;Help others&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;Be there for my kids and wife&lt;/li&gt;
-&lt;li&gt;Offer free advice and guidance for start-ups and companies&lt;/li&gt;
-&lt;li&gt;Engage at meetups and help people out&lt;/li&gt;
+  &lt;li&gt;Be there for my kids and wife&lt;/li&gt;
+  &lt;li&gt;Offer free advice and guidance for start-ups and companies&lt;/li&gt;
+  &lt;li&gt;Engage at meetups and help people out&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;h4&gt;Show gratitude&lt;/h4&gt;
-
+&lt;h4 id=&quot;show-gratitude&quot;&gt;Show gratitude&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;Value what you already have&lt;/li&gt;
-&lt;li&gt;Enjoy the moment&lt;/li&gt;
+  &lt;li&gt;Value what you already have&lt;/li&gt;
+  &lt;li&gt;Enjoy the moment&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;h4&gt;Have a healthy dose of Stoicism&lt;/h4&gt;
-
+&lt;h4 id=&quot;have-a-healthy-dose-of-stoicism&quot;&gt;Have a healthy dose of Stoicism&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;Avoid the pursuit of materialistic goals and don&#39;t get attached to stuff&lt;/li&gt;
+  &lt;li&gt;Avoid the pursuit of materialistic goals and don’t get attached to stuff&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;h3&gt;Final words&lt;/h3&gt;
+&lt;h3 id=&quot;final-words&quot;&gt;Final words&lt;/h3&gt;
 
 &lt;p&gt;My system helped me become more productive and happier overall, which
 may not yet be the fame and fortune that Scott Adams achieved, but it is
-still a big win to me, and I&#39;m ready when any big opportunity arises
+still a big win to me, and I’m ready when any big opportunity arises
 in the future to take it head on.&lt;/p&gt;
 
-&lt;p&gt;Of course my system isn&#39;t perfect. Of course my system is tailored to suit me and can be different for you.
-Of course I&#39;m still failing every so often, but at least I have my system to hold on to and to
+&lt;p&gt;Of course my system isn’t perfect. Of course my system is tailored to suit me and can be different for you.
+Of course I’m still failing every so often, but at least I have my system to hold on to and to
 remind me how I want things to go. Get your self into the habit of working on what matters to you
 and with a little bit of luck and serendipity you can win big too!&lt;/p&gt;
 </content>
@@ -585,7 +621,7 @@ and with a little bit of luck and serendipity you can win big too!&lt;/p&gt;
 
 &lt;p&gt;We have launched a new website and wrote an &lt;a href=&quot;http://br-ai-n.com/2014/09/03/introducing-brain/&quot;&gt;introductory post&lt;/a&gt; with more details on our goals and progress. So check out &lt;a href=&quot;http://br-ai-n.com&quot;&gt;br-ai-n.com&lt;/a&gt; and stay tuned for future posts!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://br-ai-n.com/images/screenshot-brAIn-v0.0.2.png&quot; alt=&quot;Skylines.net&quot; height=&quot;485&quot; width=&quot;800&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/beatletech/screenshot-brAIn-v0.0.2.png&quot; alt=&quot;br-ai-n.com&quot; height=&quot;485&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -601,10 +637,10 @@ building a website for her freelancing GP (Huisarts) practices. The end result i
 &lt;p&gt;She basically wanted a simple landing page with just enough info to get potential employers excited and be findable on the web, without explicitly creating
 an online presence by blogging and tweeting. We currently like the end result and hope others like it too. See below for a screenshot of the landing page, and follow &lt;a href=&quot;http://dokzorg.nl&quot; target=&quot;blank&quot;&gt;this link&lt;/a&gt; to check it out.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://beatletech.s3.amazonaws.com/dokzorg.png&quot; alt=&quot;Dokzorg.nl&quot; height=&quot;400&quot; width=&quot;720&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://beatletech.s3.amazonaws.com/dokzorg.png&quot; alt=&quot;Dokzorg.nl&quot; height=&quot;400&quot; width=&quot;720&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;And now after spending some time front-end developing this project,
-I&#39;m looking forward to dive back in the other back-end projects I have going for which I can happily ignore HTML and CSS..&lt;/p&gt;
+I’m looking forward to dive back in the other back-end projects I have going for which I can happily ignore HTML and CSS..&lt;/p&gt;
 </content>
  </entry>
  
@@ -614,18 +650,18 @@ I&#39;m looking forward to dive back in the other back-end projects I have going
    <updated>2013-07-30T00:00:00+02:00</updated>
    <id>http://beatletech.com/2013/07/30/bottlenose-secures-four-million</id>
    <content type="html">&lt;p&gt;Bottlenose just secured a $3.6 Million series A round to bring
-&#39;Trendfluence&#39; to the Enterprise. With Bottlenose enterprise, while
+‘Trendfluence’ to the Enterprise. With Bottlenose enterprise, while
 currently in private beta, we already work with several large brands and
 agencies (Pepsi, FleishmanHillard, Razorfish, and DigitasLBi) that
 leverage Bottlenose Enterprise for tracking live and emerging trends
 and events, directing advertising and marketing initiatives, engaging
 customer communities and gathering industry intelligence.&lt;/p&gt;
 
-&lt;p&gt;For the actual press release please check out &lt;a href=&quot;&quot; title=&quot;http://www.novaspivack.com/business/bottlenose-series-a-to-bring-trendfluence-to-the-enterprise&quot;&gt;Nova
-Spivack&#39;s blog&lt;/a&gt;
-(Bottlenose CEO), or the Techcrunch &lt;a href=&quot;&quot; title=&quot;http://techcrunch.com/2013/07/30/social-media-dashboard-bottlenose-raises-3-6m/&quot;&gt;article&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For the actual press release please check out &lt;a href=&quot;&amp;quot;http://www.novaspivack.com/business/bottlenose-series-a-to-bring-trendfluence-to-the-enterprise&amp;quot;&quot;&gt;Nova
+Spivack’s blog&lt;/a&gt;
+(Bottlenose CEO), or the Techcrunch &lt;a href=&quot;&amp;quot;http://techcrunch.com/2013/07/30/social-media-dashboard-bottlenose-raises-3-6m/&amp;quot;&quot;&gt;article&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;If we can keep current momentum at &lt;a href=&quot;&quot; title=&quot;http://bottlenose.com&quot;&gt;Bottlenose&lt;/a&gt;, then we have a bright
+&lt;p&gt;If we can keep current momentum at &lt;a href=&quot;&amp;quot;http://bottlenose.com&amp;quot;&quot;&gt;Bottlenose&lt;/a&gt;, then we have a bright
 future ahead of us.&lt;/p&gt;
 </content>
  </entry>
@@ -648,17 +684,14 @@ my current job as Chief architect at &lt;a href=&quot;http://bottlenose.com&quot
 &lt;p&gt;We plan to have the Node meetup bi-monthly on the last Thursday of the
 month, so the next meetup will be May 31th at 7:00PM. We
 have some interesting speakers lined up so I hope to see you all at our
-next or future meetups. You can follow any announcement on &lt;a
-href=&quot;http://www.meetup.com/amsnode/&quot;&gt;meetup.com&lt;/a&gt; of follow &lt;a href=&quot;http://twitter.com/amsnode&quot;&gt;us&lt;/a&gt; on Twitter.&lt;/p&gt;
+next or future meetups. You can follow any announcement on &lt;a href=&quot;http://www.meetup.com/amsnode/&quot;&gt;meetup.com&lt;/a&gt; of follow &lt;a href=&quot;http://twitter.com/amsnode&quot;&gt;us&lt;/a&gt; on Twitter.&lt;/p&gt;
 
 &lt;div style=&quot;width:800px;text-align:center&quot; id=&quot;__ss_12232685&quot;&gt; &lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/beatlevic/when-to-use-node-lessons-learned&quot; title=&quot;When to use Node? Lessons learned&quot; target=&quot;_blank&quot;&gt;When to use Node? Lessons learned&lt;/a&gt;&lt;/strong&gt; &lt;iframe src=&quot;http://www.slideshare.net/slideshow/embed_code/12232685&quot; width=&quot;425&quot; height=&quot;355&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt; &lt;div style=&quot;padding:5px 0 12px&quot;&gt; View more &lt;a href=&quot;http://www.slideshare.net/&quot; target=&quot;_blank&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/beatlevic&quot; target=&quot;_blank&quot;&gt;beatlevic&lt;/a&gt; &lt;/div&gt; &lt;/div&gt;
-
 
 &lt;p&gt;Node.js = #winning&lt;/p&gt;
 
 &lt;p&gt;And for those of you who love Clojure or like to know more about it,
-check out the &lt;a
-href=&quot;http://www.meetup.com/The-Amsterdam-Clojure-Meetup-Group/&quot;&gt;
+check out the &lt;a href=&quot;http://www.meetup.com/The-Amsterdam-Clojure-Meetup-Group/&quot;&gt;
 Amsterdam Clojure meetup.&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
@@ -668,8 +701,7 @@ Amsterdam Clojure meetup.&lt;/a&gt;&lt;/p&gt;
    <link href="http://beatletech.com/2012/01/04/bottlenose-2012"/>
    <updated>2012-01-04T00:00:00+01:00</updated>
    <id>http://beatletech.com/2012/01/04/bottlenose-2012</id>
-   <content type="html">&lt;p&gt;The past couple of months I have been busy working for &lt;a
-href=&quot;http://bottlenose.com&quot;&gt;Bottlenose&lt;/a&gt;, for which I did some work
+   <content type="html">&lt;p&gt;The past couple of months I have been busy working for &lt;a href=&quot;http://bottlenose.com&quot;&gt;Bottlenose&lt;/a&gt;, for which I did some work
 before (earlier in 2011). As I wrote about Bottlenose in a previous
 post, it is a really cool (American) tech startup partly based in the
 Netherlands that is building a new social assistance application that
@@ -681,12 +713,11 @@ streams so you can engage more intelligently.&lt;/p&gt;
 tackle to create a smart and intelligent client. Challenges involving:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Natural Language Processing (NLP)&lt;/li&gt;
-&lt;li&gt;Interest and Topic extraction/clustering&lt;/li&gt;
-&lt;li&gt;Interest (machine) learning&lt;/li&gt;
-&lt;li&gt;High concurrency, handling millions of users&lt;/li&gt;
+  &lt;li&gt;Natural Language Processing (NLP)&lt;/li&gt;
+  &lt;li&gt;Interest and Topic extraction/clustering&lt;/li&gt;
+  &lt;li&gt;Interest (machine) learning&lt;/li&gt;
+  &lt;li&gt;High concurrency, handling millions of users&lt;/li&gt;
 &lt;/ul&gt;
-
 
 &lt;p&gt;Most of 2011 Bottlenose operated in stealth mode, until we were ready
 in December 2011 to launch the Beta version to the public. The launch
@@ -695,8 +726,7 @@ was a great success and we got loads of positive &lt;a href=&quot;http://press.b
 &lt;p&gt;This year I will continue to work for Bottlenose as their chief architect and allround
 (Node.js) developer. I love to see where we will get with Bottlenose in 2012.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/beatletech/bottlenose-beta.png&quot;
-alt=&quot;Bottlenose.com&quot; height=&quot;128&quot; width=&quot;315&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/beatletech/bottlenose-beta.png&quot; alt=&quot;Bottlenose.com&quot; height=&quot;128&quot; width=&quot;315&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Bottlenose = Node.js = #winning&lt;/p&gt;
 </content>
@@ -709,17 +739,14 @@ alt=&quot;Bottlenose.com&quot; height=&quot;128&quot; width=&quot;315&quot;&gt;&
    <id>http://beatletech.com/2011/07/28/malmberg-e-publishing-platform</id>
    <content type="html">&lt;p&gt;The past couple of months have been very busy. First off I was still working partime
 for &lt;a href=&quot;http://skylines.net&quot;&gt;Skylines&lt;/a&gt; with which we made it
-into &lt;a href=&quot;http://disrupt.techcrunch.com/&quot;&gt;Techcrunch&lt;/a&gt; &lt;a
-href=&quot;http://www.dutchdailynews.com/skylines-nyc/&quot;&gt;Disrupt&lt;/a&gt; NY as a
+into &lt;a href=&quot;http://disrupt.techcrunch.com/&quot;&gt;Techcrunch&lt;/a&gt; &lt;a href=&quot;http://www.dutchdailynews.com/skylines-nyc/&quot;&gt;Disrupt&lt;/a&gt; NY as a
 finalist. Skylines was actually the first Dutch startup ever to become a
 finalist of this highly rated conference competition. Great stuff,
 showing that Amsterdam can be a great place too when it comes to
 bootstrapping your global startup.&lt;/p&gt;
 
-&lt;p&gt;Next, starting in April, I was hired as a Rails developer by &lt;a
-href=&quot;http://www.ciber.com/application-development/&quot;&gt;Ciber&lt;/a&gt; on a scrum
-project for their client &lt;a
-href=&quot;http://www.malmberg.nl/Voortgezet-onderwijs/ePack-ICT/Nieuwe-generatie-methodes/Introductie.htm&quot;&gt;Malmberg&lt;/a&gt;,
+&lt;p&gt;Next, starting in April, I was hired as a Rails developer by &lt;a href=&quot;http://www.ciber.com/application-development/&quot;&gt;Ciber&lt;/a&gt; on a scrum
+project for their client &lt;a href=&quot;http://www.malmberg.nl/Voortgezet-onderwijs/ePack-ICT/Nieuwe-generatie-methodes/Introductie.htm&quot;&gt;Malmberg&lt;/a&gt;,
 an educational publisher, to work on the next iteration of their
 e-publishing platform. The work consisted of a redesign of the old
 platform, and developing a Rails 3 application on top of the existing
@@ -730,22 +757,20 @@ where students have easy access to all of this. The system is actually
 pretty smart in assigning followup courses based on your test scores,
 but still gives teachers total control.&lt;/p&gt;
 
-&lt;p&gt;Unfortunately I can&#39;t show a link to the product or demo, as the
+&lt;p&gt;Unfortunately I can’t show a link to the product or demo, as the
 application is currently being tested by the client, and will be rolled
 out for the new students in september. However I can say that I like
 the end product.&lt;/p&gt;
 
 &lt;p&gt;I strongly believe we will see a lot more development in this
-area of online learning platforms. Looking for instance at the &lt;a
-href=&quot;http://www.khanacademy.org/&quot;&gt;Khan Academy&lt;/a&gt; or &lt;a
-href=&quot;http://studyflow.com&quot;&gt;Studyflow&lt;/a&gt; we can see that the
+area of online learning platforms. Looking for instance at the &lt;a href=&quot;http://www.khanacademy.org/&quot;&gt;Khan Academy&lt;/a&gt; or &lt;a href=&quot;http://studyflow.com&quot;&gt;Studyflow&lt;/a&gt; we can see that the
 landscape is changing. Also a word from my teacher friends tells me that the
 Dutch curriculum on both primary and high schools is already filled with more and
 more computer courses, that provide custom tailored education for each
 individual youngster.&lt;/p&gt;
 
 &lt;p&gt;I enjoyed my work at Ciber, working with a great team of skilled
-developers, and I don&#39;t rule out that I in the foreseeable future will
+developers, and I don’t rule out that I in the foreseeable future will
 be working on next generation learning platforms again.&lt;/p&gt;
 </content>
  </entry>
@@ -755,19 +780,16 @@ be working on next generation learning platforms again.&lt;/p&gt;
    <link href="http://beatletech.com/2011/04/26/bottlenose-closed-beta"/>
    <updated>2011-04-26T00:00:00+02:00</updated>
    <id>http://beatletech.com/2011/04/26/bottlenose-closed-beta</id>
-   <content type="html">&lt;p&gt;I guess most of you have heared about &quot;stealth&quot; startup &lt;a
-href=&quot;http://bottleno.se&quot;&gt;Bottlenose&lt;/a&gt;, which already got some great pre
-release write-ups on &lt;a
-href=&quot;http://techcrunch.com/2011/04/05/bottlenose/&quot;&gt;Techcrunch&lt;/a&gt; and &lt;a
-href=&quot;http://mashable.com/2011/04/05/bottlenose/&quot;&gt;Mashable&lt;/a&gt;.&lt;/p&gt;
+   <content type="html">&lt;p&gt;I guess most of you have heared about “stealth” startup &lt;a href=&quot;http://bottleno.se&quot;&gt;Bottlenose&lt;/a&gt;, which already got some great pre
+release write-ups on &lt;a href=&quot;http://techcrunch.com/2011/04/05/bottlenose/&quot;&gt;Techcrunch&lt;/a&gt; and &lt;a href=&quot;http://mashable.com/2011/04/05/bottlenose/&quot;&gt;Mashable&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;In case you haven&#39;t, Bottlenose describes itself as &quot;a smarter way to surf the Stream. It&#39;s a new
+&lt;p&gt;In case you haven’t, Bottlenose describes itself as “a smarter way to surf the Stream. It’s a new
 personalization tool that helps the important information find you in
 social networks like Twitter and Facebook. Use Bottlenose to track
 your interests, visualize trends, and curate knowledge with your
-friends.&quot; (Bottleno.se)&lt;/p&gt;
+friends.” (Bottleno.se)&lt;/p&gt;
 
-&lt;p&gt;The Netherlands doesn&#39;t feature that many high tech startups, so I was
+&lt;p&gt;The Netherlands doesn’t feature that many high tech startups, so I was
 happy to work together with cofounder &lt;a href=&quot;dominiek.com&quot;&gt;Dominiek
 ter Heide&lt;/a&gt; this month (who helped us out last year with our YC company &lt;a href=&quot;newcope.com&quot;&gt;Newcope&lt;/a&gt;).
 Armed with Node.js my goal is to, where possible, make the tool even smarter than it already is.
@@ -776,13 +798,11 @@ pushing the boundaries forward. And besides being a cool high tech product
 to work on, I also believe Bottlenose is a must needed solution for an
 information overload problem that is getting bigger each day.&lt;/p&gt;
 
-&lt;p&gt;Bottlenose is currently in alpha, but you can sign up now on &lt;a
-href=&quot;http://bottleno.se&quot;&gt;Bottleno.se&lt;/a&gt;, and hopefully be one
+&lt;p&gt;Bottlenose is currently in alpha, but you can sign up now on &lt;a href=&quot;http://bottleno.se&quot;&gt;Bottleno.se&lt;/a&gt;, and hopefully be one
 of the lucky ones for the closed beta to have early access to a tool that will enrich your
 twitter and facebook experience.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://beatletech.s3.amazonaws.com/bottlenose.png&quot;
-alt=&quot;Bottleno.se&quot; height=&quot;157&quot; width=&quot;523&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://beatletech.s3.amazonaws.com/bottlenose.png&quot; alt=&quot;Bottleno.se&quot; height=&quot;157&quot; width=&quot;523&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Bottlenose = Node.js = #winning&lt;/p&gt;
 </content>
@@ -804,7 +824,7 @@ next 1.1 version, which will feature some great additional
 options. In the meantime please try out the app, and follow your
 interests in a realtime image stream.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://beatletech.s3.amazonaws.com/skylines.png&quot; alt=&quot;Skylines.net&quot; height=&quot;485&quot; width=&quot;467&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://beatletech.s3.amazonaws.com/skylines.png&quot; alt=&quot;Skylines.net&quot; height=&quot;485&quot; width=&quot;467&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Just checkout &lt;a href=&quot;http://skylines.net&quot;&gt;skylines.net&lt;/a&gt; and download
 the app from the app store.&lt;/p&gt;
@@ -816,13 +836,13 @@ the app from the app store.&lt;/p&gt;
    <link href="http://beatletech.com/2011/01/03/beatletech-generated-with-jekyll"/>
    <updated>2011-01-03T00:00:00+01:00</updated>
    <id>http://beatletech.com/2011/01/03/beatletech-generated-with-jekyll</id>
-   <content type="html">&lt;p&gt;When I started with the creation of BeatleTech.com and blog, I didn&#39;t
+   <content type="html">&lt;p&gt;When I started with the creation of BeatleTech.com and blog, I didn’t
 want to rely on Wordpress (or others) as I wanted more flexibility and
-control, and I definitely didn&#39;t want to separate the blog from the main site,
+control, and I definitely didn’t want to separate the blog from the main site,
 i.e. linking to a blog on Posterous.&lt;/p&gt;
 
 &lt;p&gt;So my initial plan was to build the site in clojure, given a nice
-online clojure blog example, Brian Carper&#39;s &lt;a href=&quot;https://github.com/briancarper/cow-blog&quot;&gt;Cow-blog&lt;/a&gt;.
+online clojure blog example, Brian Carper’s &lt;a href=&quot;https://github.com/briancarper/cow-blog&quot;&gt;Cow-blog&lt;/a&gt;.
 However, shortly after having started, my friend Jeff Rose introduced
 me to &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt;, which is
 a blog-aware, static site generator in Ruby. It allows for templating,
@@ -837,6 +857,7 @@ on &lt;a href=&quot;https://github.com/beatlevic/BeatleTech&quot;&gt;Github&lt;/
 &lt;p&gt;So if you are looking for a way to create your website-blog and
 (just like me) already paid for webhosting, which sadly only allows you to do some php
 wizardry, then rest assured as Jekyll can save your day.&lt;/p&gt;
+
 </content>
  </entry>
  
@@ -845,8 +866,7 @@ wizardry, then rest assured as Jekyll can save your day.&lt;/p&gt;
    <link href="http://beatletech.com/2010/12/23/cake-swank"/>
    <updated>2010-12-23T00:00:00+01:00</updated>
    <id>http://beatletech.com/2010/12/23/cake-swank</id>
-   <content type="html">&lt;p&gt;So far I have been using &lt;a
-href=&quot;https://github.com/technomancy/leiningen&quot;&gt;leiningen&lt;/a&gt; as my
+   <content type="html">&lt;p&gt;So far I have been using &lt;a href=&quot;https://github.com/technomancy/leiningen&quot;&gt;leiningen&lt;/a&gt; as my
 standard build tool for Clojure, and together with a very nice Emacs
 package
 called &lt;a href=&quot;http://blog.remvee.net/2010/08/19/elein_el_leiningen_functions_for_emacs&quot;&gt;elein&lt;/a&gt;
@@ -864,48 +884,47 @@ persistent JVM (missing the whole purpose). So instead of doing that I
 got the advice to just keep swank running, and only reload the
 classpath. This resulted in me implementing the following elisp functions.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;clojure&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;defun&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;cake-project-root&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;&amp;quot;Look for project.clj file to find project root.&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cwd&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;default-directory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;found&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;and &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;not &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;&amp;gt; max &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;file-exists-p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;concat &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cwd&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;project.clj&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;found&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;cwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setq&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;cwd&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;concat &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cwd&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;../&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;max &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;- max &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;and &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;found&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;expand-file-name&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-clojure&quot; data-lang=&quot;clojure&quot;&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;defun&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cake-project-root&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Look for project.clj file to find project root.&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cwd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;default-directory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;not&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;file-exists-p&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cwd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;project.clj&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cwd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cwd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;../&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;expand-file-name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;defmacro &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cake-in-project-root&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;&amp;quot;Wrap BODY to make `default-directory&amp;#39; the project root.&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dir&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;gensym&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;,&lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cake-project-root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-       &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;,&lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt;
-         &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;default-directory&lt;/span&gt; ,&lt;span class=&quot;nv&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; ,&lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-         &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;error&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;No cake project root found&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))))&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;defmacro&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cake-in-project-root&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Wrap BODY to make 'default-directory' the project root.&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;gensym&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;,dir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cake-project-root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+       &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;,dir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;default-directory&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;,dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;,body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;No cake project root found&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;defun&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;cake-swank&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;&amp;quot;Connect or reconnect to swank while reloading cake class path files.&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;interactive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-connected-p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-disconnect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;buffer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;get-buffer-create&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;*cake-swank*&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;flet&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;display-buffer&lt;/span&gt;
-             &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;buffer-or-name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;optional&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;not-this-window&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;bury-buffer&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cake-in-project-root&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;shell-command&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;cake -r&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-connect&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;127.0.0.1&amp;quot;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;4005&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;defun&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cake-swank&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Connect or reconnect to swank while reloading cake class path files.&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;interactive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-connected-p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-disconnect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;get-buffer-create&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;*cake-swank*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;flet&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;display-buffer&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+             &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;buffer-or-name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;not-this-window&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;bury-buffer&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cake-in-project-root&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;shell-command&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;cake -r&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-connect&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;127.0.0.1&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;4005&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;In order for this to work one needs to get the latest cake master
 version, so you can reload class path files (cake -r). Additionally one has
 to turn on swank autostart for cake. This can be done by adding the
-line &quot;swank.autostart = localhost:4005&quot; to your .cake/config file.&lt;/p&gt;
+line “swank.autostart = localhost:4005” to your .cake/config file.&lt;/p&gt;
 
 &lt;p&gt;So now you can easily switch to cake, keeping reswank in your toolset.&lt;/p&gt;
 
 &lt;p&gt;Tip: If you find yourself always getting the following mini-buffer
-message when connecting with slime: &quot;Versions differ: nil (slime)
-vs. 20100404 (swank). Continue? (y or n)&quot;, then all you should do is
+message when connecting with slime: “Versions differ: nil (slime)
+vs. 20100404 (swank). Continue? (y or n)”, then all you should do is
 removing the slime.elc file in your .emacs.d/elpa/slime-X folder, and
 consider it history.&lt;/p&gt;
 </content>
@@ -927,8 +946,9 @@ cognitive science, human perception and AI, but all in due time.&lt;/p&gt;
 
 &lt;p&gt;If you are in need for an architect, developer or advisor, then know that
 BeatleTech is there for you, and Beatle is available for hire!&lt;/p&gt;
+
 </content>
  </entry>
  
- 
+
 </feed>

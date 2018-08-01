@@ -11,7 +11,7 @@ topics: [ 'blogging', 'css', 'design', 'javascript', 'personal', 'projects', 'ra
 
 <div id="main" class="grid_9 alpha">
   <!-- limit:1 -->
-  {% for post in site.posts %}
+  {% for post in site.posts limit: 8 %}
   <div class="post blog">
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <p class="publishdate">{{ post.date | date: "%A, %d %B  %Y"}}  <em> <a href="http://www.google.com/search?q={{ post.topics }}+site%3Abeatletech.com/blog">{{ post.topics }}</a> </em> </p>
@@ -25,10 +25,14 @@ topics: [ 'blogging', 'css', 'design', 'javascript', 'personal', 'projects', 'ra
         </span>
       </div>
       <div class="comments">
-	<span style="font-size: 100%;"><a href="{{ post.url }}/#disqus_thread">View Comments</a> </span>
+	<span style="font-size: 100%;"><a href="{{ post.url }}#disqus_thread">View Comments</a> </span>
       </div>
     </p>
   </div>
   {% endfor %}
+
+  <div class="post blog">
+    <h2><a href="archive">More...</a></h2>
+  </div>
 
 </div> <!-- end main -->

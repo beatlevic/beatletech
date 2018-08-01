@@ -1,9 +1,9 @@
 ---
-layout: nil
+layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
+
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
@@ -13,7 +13,7 @@ layout: nil
    <name>Coen Stevens</name>
  </author>
 
- {% for post in site.posts | limit: 20 %}
+ {% for post in site.posts limit: 20 %}
  <entry>
    <title>{{ post.title | strip_html }}</title>
    <link href="http://beatletech.com{{ post.url }}"/>
@@ -22,5 +22,5 @@ layout: nil
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
- 
+
 </feed>

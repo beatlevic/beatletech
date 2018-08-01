@@ -1,0 +1,61 @@
+<p>So far I have been using <a href="https://github.com/technomancy/leiningen">leiningen</a> as my
+standard build tool for Clojure, and together with a very nice Emacs
+package
+called <a href="http://blog.remvee.net/2010/08/19/elein_el_leiningen_functions_for_emacs">elein</a>
+I was able to run leiningen tasks from within emacs. The functions I use
+ most often are elein-swank and elein-reswank to (re)connect with slime.</p>
+
+<p>Now this is all great, but lately an alternative build tool has catched my
+eyes and is called <a href="https://github.com/ninjudd/cake">cake</a>. It features a
+persistent JVM, which speeds up startup time tremendeously, and has an
+easier way for setting up tasks similar to ruby rake
+tasks. Now in order to make my swanking and reswanking work in emacs
+with cake I thought of reusing the elein-swank code, but as it turns
+out, in order to kill swank I had to kill cake and thereby killing the
+persistent JVM (missing the whole purpose). So instead of doing that I
+got the advice to just keep swank running, and only reload the
+classpath. This resulted in me implementing the following elisp functions.</p>
+
+<figure class="highlight"><pre><code class="language-clojure" data-lang="clojure"><span class="p">(</span><span class="nf">defun</span><span class="w"> </span><span class="n">cake-project-root</span><span class="w"> </span><span class="p">()</span><span class="w">
+  </span><span class="s">"Look for project.clj file to find project root."</span><span class="w">
+  </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nf">cwd</span><span class="w"> </span><span class="n">default-directory</span><span class="p">)</span><span class="w">
+        </span><span class="p">(</span><span class="nf">found</span><span class="w"> </span><span class="n">nil</span><span class="p">)</span><span class="w">
+        </span><span class="p">(</span><span class="nb">max</span><span class="w"> </span><span class="mi">10</span><span class="p">))</span><span class="w">
+    </span><span class="p">(</span><span class="nf">while</span><span class="w"> </span><span class="p">(</span><span class="nb">and</span><span class="w"> </span><span class="p">(</span><span class="nb">not</span><span class="w"> </span><span class="n">found</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">&gt;</span><span class="w"> </span><span class="nb">max</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w">
+      </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">file-exists-p</span><span class="w"> </span><span class="p">(</span><span class="nb">concat</span><span class="w"> </span><span class="n">cwd</span><span class="w"> </span><span class="s">"project.clj"</span><span class="p">))</span><span class="w">
+        </span><span class="p">(</span><span class="nf">setq</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="n">cwd</span><span class="p">)</span><span class="w">
+        </span><span class="p">(</span><span class="nf">setq</span><span class="w"> </span><span class="n">cwd</span><span class="w"> </span><span class="p">(</span><span class="nb">concat</span><span class="w"> </span><span class="n">cwd</span><span class="w"> </span><span class="s">"../"</span><span class="p">)</span><span class="w"> </span><span class="nb">max</span><span class="w"> </span><span class="p">(</span><span class="nb">-</span><span class="w"> </span><span class="nb">max</span><span class="w"> </span><span class="mi">1</span><span class="p">))))</span><span class="w">
+    </span><span class="p">(</span><span class="nb">and</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="p">(</span><span class="nf">expand-file-name</span><span class="w"> </span><span class="n">found</span><span class="p">))))</span><span class="w">
+
+</span><span class="p">(</span><span class="k">defmacro</span><span class="w"> </span><span class="n">cake-in-project-root</span><span class="w"> </span><span class="p">(</span><span class="nf">body</span><span class="p">)</span><span class="w">
+  </span><span class="s">"Wrap BODY to make 'default-directory' the project root."</span><span class="w">
+  </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nf">dir</span><span class="w"> </span><span class="p">(</span><span class="nb">gensym</span><span class="p">)))</span><span class="w">
+    </span><span class="o">`</span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nf">,dir</span><span class="w"> </span><span class="p">(</span><span class="nf">cake-project-root</span><span class="p">)))</span><span class="w">
+       </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="n">,dir</span><span class="w">
+         </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nf">default-directory</span><span class="w"> </span><span class="n">,dir</span><span class="p">))</span><span class="w"> </span><span class="n">,body</span><span class="p">)</span><span class="w">
+         </span><span class="p">(</span><span class="nf">error</span><span class="w"> </span><span class="s">"No cake project root found"</span><span class="p">)))))</span><span class="w">
+
+</span><span class="p">(</span><span class="nf">defun</span><span class="w"> </span><span class="n">cake-swank</span><span class="w"> </span><span class="p">()</span><span class="w">
+  </span><span class="s">"Connect or reconnect to swank while reloading cake class path files."</span><span class="w">
+  </span><span class="p">(</span><span class="nf">interactive</span><span class="p">)</span><span class="w">
+  </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nf">slime-connected-p</span><span class="p">)</span><span class="w">
+      </span><span class="p">(</span><span class="nf">slime-disconnect</span><span class="p">))</span><span class="w">
+  </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nf">buffer</span><span class="w"> </span><span class="p">(</span><span class="nf">get-buffer-create</span><span class="w"> </span><span class="s">"*cake-swank*"</span><span class="p">)))</span><span class="w">
+    </span><span class="p">(</span><span class="nf">flet</span><span class="w"> </span><span class="p">((</span><span class="nf">display-buffer</span><span class="w">
+             </span><span class="p">(</span><span class="nf">buffer-or-name</span><span class="w"> </span><span class="o">&amp;</span><span class="n">optional</span><span class="w"> </span><span class="n">not-this-window</span><span class="w"> </span><span class="n">frame</span><span class="p">)</span><span class="w"> </span><span class="n">nil</span><span class="p">))</span><span class="w">
+      </span><span class="p">(</span><span class="nf">bury-buffer</span><span class="w"> </span><span class="n">buffer</span><span class="p">)</span><span class="w">
+      </span><span class="p">(</span><span class="nf">cake-in-project-root</span><span class="w"> </span><span class="p">(</span><span class="nf">shell-command</span><span class="w"> </span><span class="s">"cake -r"</span><span class="w"> </span><span class="n">buffer</span><span class="p">)))</span><span class="w">
+    </span><span class="p">(</span><span class="nf">slime-connect</span><span class="w"> </span><span class="s">"127.0.0.1"</span><span class="w"> </span><span class="s">"4005"</span><span class="p">)))</span></code></pre></figure>
+
+<p>In order for this to work one needs to get the latest cake master
+version, so you can reload class path files (cake -r). Additionally one has
+to turn on swank autostart for cake. This can be done by adding the
+line “swank.autostart = localhost:4005” to your .cake/config file.</p>
+
+<p>So now you can easily switch to cake, keeping reswank in your toolset.</p>
+
+<p>Tip: If you find yourself always getting the following mini-buffer
+message when connecting with slime: “Versions differ: nil (slime)
+vs. 20100404 (swank). Continue? (y or n)”, then all you should do is
+removing the slime.elc file in your .emacs.d/elpa/slime-X folder, and
+consider it history.</p>

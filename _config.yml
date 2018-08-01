@@ -1,6 +1,6 @@
-markdown: rdiscount
+markdown: kramdown
 permalink: /:year/:month/:day/:title
 lsi: true
-highlighter: pygments
+highlighter: rouge
 
 exclude: [ README.markdown, todo.org, deploy.sh ]
