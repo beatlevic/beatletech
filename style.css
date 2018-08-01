@@ -69,15 +69,16 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 /* End reset */
 
 body {
-	/*background: #fff; /*#eee url(images/bg.png) repeat;*/
-	color: #333333;
-	/* font: 14px/24px Georgia, 'Times New Roman', Times, serif; */
-  /* font: 13px 'Helvetica Neue', Verdana, Arial, Helvetica, sans-serif; */
-  font: 300 90%/1.5 Oxygen, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 400;
-  background-image:url('images/escher8.jpg');
-  /* background:url('images/gradient.jpg') repeat-x; */
-  /* background-color:black; */
+    /*background: #fff; /*#eee url(images/bg.png) repeat;*/
+    color: #333333;
+    /* font: 14px/24px Georgia, 'Times New Roman', Times, serif; */
+    /* font: 13px 'Helvetica Neue', Verdana, Arial, Helvetica, sans-serif; */
+    font: 300 90%/1.5 Oxygen, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    background-image:url('images/escher8.jpg');
+    /* background:url('images/gradient.jpg') repeat-x; */
+    /* background-color:black; */
+    overflow-y: scroll;
 }
 
 /* HTML5 */
