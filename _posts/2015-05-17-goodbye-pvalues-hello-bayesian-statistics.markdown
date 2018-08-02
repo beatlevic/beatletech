@@ -13,7 +13,7 @@ published: true
 
 In statistics there is the old and ongoing debate of Frequentism versus Bayesianism, which has been humorously depicted in the following popular XKCD cartoon \[[1](http://www.xkcd.com/1132/)\]:
 
-<img src="http://imgs.xkcd.com/comics/frequentists_vs_bayesians.png" alt="Frequentism vs Bayesianism" width="468" heigth="709" style="margin-left:100px">
+<img src="https://imgs.xkcd.com/comics/frequentists_vs_bayesians.png" alt="Frequentism vs Bayesianism" width="468" heigth="709" style="margin-left:100px">
 
 In this cartoon we see the Frequentist statistician believing that the odds (p-value) of the
 neutrino detector lying are below the (arbitrary) significance level of 0.05, saying that it is

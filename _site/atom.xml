@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2018-08-02T21:18:44+02:00</updated>
+ <updated>2018-08-02T21:35:08+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -114,7 +114,7 @@ Convolutional Neural Networks. May the fun and challenge begin.&lt;/p&gt;
 
 &lt;p&gt;In statistics there is the old and ongoing debate of Frequentism versus Bayesianism, which has been humorously depicted in the following popular XKCD cartoon [&lt;a href=&quot;http://www.xkcd.com/1132/&quot;&gt;1&lt;/a&gt;]:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://imgs.xkcd.com/comics/frequentists_vs_bayesians.png&quot; alt=&quot;Frequentism vs Bayesianism&quot; width=&quot;468&quot; heigth=&quot;709&quot; style=&quot;margin-left:100px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://imgs.xkcd.com/comics/frequentists_vs_bayesians.png&quot; alt=&quot;Frequentism vs Bayesianism&quot; width=&quot;468&quot; heigth=&quot;709&quot; style=&quot;margin-left:100px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In this cartoon we see the Frequentist statistician believing that the odds (p-value) of the
 neutrino detector lying are below the (arbitrary) significance level of 0.05, saying that it is
