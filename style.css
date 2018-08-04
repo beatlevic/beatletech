@@ -166,6 +166,7 @@ h6 { font-size: 16px; }
 
 #header h1,
 .post h2,
+.setup h2,
 #freelancer,
 h3, h4 {
 	font-family: 'ChunkFive Regular', Arial, Helvetica, sans-serif; /* Chunkfive is called via @font-face */
@@ -348,6 +349,7 @@ blockquote p { margin: 0; }
     margin-left: 20px;
 }
 
+
 .post .highlight {
     padding-right: 20px;
     line-height: 1.5em;
@@ -366,7 +368,12 @@ blockquote p { margin: 0; }
 
 .post img.thumbnail + p { margin-top: 25px; } /* First p after the thumbnail */
 
-.post h2 {
+.setup li {
+    line-height: 160%;
+    margin-top:12px;
+}
+
+.post h2, .setup h2 {
 	color: #78a7d6;/*#6b96c1;/* #333; */
 	display: block;
 	font-size: 24px;
