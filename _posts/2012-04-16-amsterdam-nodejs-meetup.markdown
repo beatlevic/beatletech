@@ -23,7 +23,7 @@ have some interesting speakers lined up so I hope to see you all at our
 next or future meetups. You can follow any announcement on <a
 href="http://www.meetup.com/amsnode/">meetup.com</a> of follow <a href="http://twitter.com/amsnode">us</a> on Twitter.
 
-<div style="width:800px;text-align:center" id="__ss_12232685"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/beatlevic/when-to-use-node-lessons-learned" title="When to use Node? Lessons learned" target="_blank">When to use Node? Lessons learned</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/12232685" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> <div style="padding:5px 0 12px"> View more <a href="http://www.slideshare.net/" target="_blank">presentations</a> from <a href="http://www.slideshare.net/beatlevic" target="_blank">beatlevic</a> </div> </div>
+<div style="width:800px;text-align:center" id="__ss_12232685"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/beatlevic/when-to-use-node-lessons-learned" title="When to use Node? Lessons learned" target="_blank">When to use Node? Lessons learned</a></strong> <iframe src="https://www.slideshare.net/slideshow/embed_code/12232685" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> <div style="padding:5px 0 12px"> View more <a href="http://www.slideshare.net/" target="_blank">presentations</a> from <a href="http://www.slideshare.net/beatlevic" target="_blank">beatlevic</a> </div> </div>
 
 Node.js = #winning
 

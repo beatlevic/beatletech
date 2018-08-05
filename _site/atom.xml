@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2018-08-06T00:53:36+02:00</updated>
+ <updated>2018-08-06T01:05:52+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -637,7 +637,7 @@ building a website for her freelancing GP (Huisarts) practices. The end result i
 &lt;p&gt;She basically wanted a simple landing page with just enough info to get potential employers excited and be findable on the web, without explicitly creating
 an online presence by blogging and tweeting. We currently like the end result and hope others like it too. See below for a screenshot of the landing page, and follow &lt;a href=&quot;http://dokzorg.nl&quot; target=&quot;blank&quot;&gt;this link&lt;/a&gt; to check it out.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://beatletech.s3.amazonaws.com/dokzorg.png&quot; alt=&quot;Dokzorg.nl&quot; height=&quot;400&quot; width=&quot;720&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://beatletech.s3.amazonaws.com/dokzorg.png&quot; alt=&quot;Dokzorg.nl&quot; height=&quot;400&quot; width=&quot;720&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;And now after spending some time front-end developing this project,
 I’m looking forward to dive back in the other back-end projects I have going for which I can happily ignore HTML and CSS..&lt;/p&gt;
@@ -686,7 +686,7 @@ month, so the next meetup will be May 31th at 7:00PM. We
 have some interesting speakers lined up so I hope to see you all at our
 next or future meetups. You can follow any announcement on &lt;a href=&quot;http://www.meetup.com/amsnode/&quot;&gt;meetup.com&lt;/a&gt; of follow &lt;a href=&quot;http://twitter.com/amsnode&quot;&gt;us&lt;/a&gt; on Twitter.&lt;/p&gt;
 
-&lt;div style=&quot;width:800px;text-align:center&quot; id=&quot;__ss_12232685&quot;&gt; &lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/beatlevic/when-to-use-node-lessons-learned&quot; title=&quot;When to use Node? Lessons learned&quot; target=&quot;_blank&quot;&gt;When to use Node? Lessons learned&lt;/a&gt;&lt;/strong&gt; &lt;iframe src=&quot;http://www.slideshare.net/slideshow/embed_code/12232685&quot; width=&quot;425&quot; height=&quot;355&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt; &lt;div style=&quot;padding:5px 0 12px&quot;&gt; View more &lt;a href=&quot;http://www.slideshare.net/&quot; target=&quot;_blank&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/beatlevic&quot; target=&quot;_blank&quot;&gt;beatlevic&lt;/a&gt; &lt;/div&gt; &lt;/div&gt;
+&lt;div style=&quot;width:800px;text-align:center&quot; id=&quot;__ss_12232685&quot;&gt; &lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/beatlevic/when-to-use-node-lessons-learned&quot; title=&quot;When to use Node? Lessons learned&quot; target=&quot;_blank&quot;&gt;When to use Node? Lessons learned&lt;/a&gt;&lt;/strong&gt; &lt;iframe src=&quot;https://www.slideshare.net/slideshow/embed_code/12232685&quot; width=&quot;425&quot; height=&quot;355&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt; &lt;div style=&quot;padding:5px 0 12px&quot;&gt; View more &lt;a href=&quot;http://www.slideshare.net/&quot; target=&quot;_blank&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/beatlevic&quot; target=&quot;_blank&quot;&gt;beatlevic&lt;/a&gt; &lt;/div&gt; &lt;/div&gt;
 
 &lt;p&gt;Node.js = #winning&lt;/p&gt;
 
@@ -802,7 +802,7 @@ information overload problem that is getting bigger each day.&lt;/p&gt;
 of the lucky ones for the closed beta to have early access to a tool that will enrich your
 twitter and facebook experience.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://beatletech.s3.amazonaws.com/bottlenose.png&quot; alt=&quot;Bottleno.se&quot; height=&quot;157&quot; width=&quot;523&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://beatletech.s3.amazonaws.com/bottlenose.png&quot; alt=&quot;Bottleno.se&quot; height=&quot;157&quot; width=&quot;523&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Bottlenose = Node.js = #winning&lt;/p&gt;
 </content>
@@ -824,7 +824,7 @@ next 1.1 version, which will feature some great additional
 options. In the meantime please try out the app, and follow your
 interests in a realtime image stream.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://beatletech.s3.amazonaws.com/skylines.png&quot; alt=&quot;Skylines.net&quot; height=&quot;485&quot; width=&quot;467&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://beatletech.s3.amazonaws.com/skylines.png&quot; alt=&quot;Skylines.net&quot; height=&quot;485&quot; width=&quot;467&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Just checkout &lt;a href=&quot;http://skylines.net&quot;&gt;skylines.net&lt;/a&gt; and download
 the app from the app store.&lt;/p&gt;
