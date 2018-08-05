@@ -132,12 +132,19 @@
     <lastmod>2018-08-06</lastmod>
     <changefreq>weekly</changefreq>
   </url>
+    <url>
+    <loc>http://beatletech.com/setup.html</loc>
+    <lastmod>2018-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
   <url>
     <loc>http://beatletech.com/blog.html</loc>
-    <lastmod>weekly</lastmod>
+    <lastmod>2018-08-06</lastmod>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>http://beatletech.com/archive.html</loc>
-    <lastmod>weekly</lastmod>
+    <lastmod>2018-08-06</lastmod>
+    <changefreq>weekly</changefreq>
   </url>
 </urlset>
