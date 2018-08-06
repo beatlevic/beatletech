@@ -8,16 +8,16 @@ category: [work]
 published: true
 ---
 
-Last week I finished my job as Lead Data Engineer at the [Persgroep](https://persgroep.nl) in Amsterdam, where
-I worked for the past year. I had a great time crafting ETL pipelines, writing Scala and Python for Spark (AWS EMR),
-scheduling tasks (DAGs) with Airflow, and scaling with Redshift (Minus some boring, but important GDPR work).
-But most of all I liked the (Kanban) team, which grew during my time from just 3 members to 15, and I enjoyed coaching
-and helping out the new recruits, as well as providing technical support and architectural advise to other teams.
+Last week I finished my job as Lead Data Engineer at the [Persgroep](https://persgroep.nl) in Amsterdam, where 
+I worked for the past year. I had a great time crafting ETL pipelines, writing Scala and Python for Spark (AWS 
+EMR), scheduling tasks (DAGs) with Airflow, and scaling with Redshift (Minus some boring, but important GDPR
+work). But most of all I liked the (Kanban) team, which grew during my time from just 3 members to 15, and I
+enjoyed coaching and helping out the new recruits, as well as providing technical support and architectural advise to other teams.
 
 So why leave my esteemed colleagues, when everything is fine and dandy? Can Christian van Thillo really do
-without me? (Better known by insiders as Christiaan van de Thillo). Well, I have this tendency to shake things up once
-in a while, and I felt the need to explore new startup opportunities. So here we are, I cleared my schedule
-for the next half a year, and will be diving into Strong-AI, Genomics, Crypto and Healthcare to find
+without me? (Better known by insiders as Christiaan van de Thillo). Well, I have this tendency to shake things
+up once in a while, and I felt the need to explore new startup opportunities. So here we are, I cleared my
+schedule for the next half a year, and will be diving into Strong-AI, Genomics, Crypto and Healthcare to find
 interesting (and doable) business angles. First I like to explore the latest research and follow a couple of
 Coursera courses, while simultaneously hack on some neural nets for crypto value predictions. In other words,
 playing around until I hit something concrete and tangible. I have a couple of friends that also have
