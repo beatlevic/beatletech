@@ -18,7 +18,7 @@ next 1.1 version, which will feature some great additional
 options. In the meantime please try out the app, and follow your
 interests in a realtime image stream.
 
-<img src="https://beatletech.s3.amazonaws.com/skylines.png" alt="Skylines.net" height="485" width="467">
+<img src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/skylines.png" alt="Skylines.net" height="485" width="467">
 
 Just checkout <a href="http://skylines.net">skylines.net</a> and download
 the app from the app store.

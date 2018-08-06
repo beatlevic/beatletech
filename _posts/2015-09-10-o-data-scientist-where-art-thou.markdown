@@ -20,7 +20,7 @@ The reason why Data Scientists are scarce is twofold. First off, the aforementio
 
 Secondly, and somewhat problematic, is the required skill set for a Data Scientist. Why problematic? Well, this is expressed clearly in the by now classic illustration of the Data Science skill set, the Data Science Venn Diagram \[[5](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram)\]:
 
-<img src="https://s3.amazonaws.com/beatletech/Data_Science_VD.png" alt="Data Science Venn Diagram"
+<img src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/Data_Science_VD.png" alt="Data Science Venn Diagram"
 style="margin-left:100px">
 
 The three main skills (indicated by the primary colors) are hacking skills, math and stats knowledge, and substantive expertise. What this implies is that you need to be a programmer and statistician, while also having a lot of experience in these fields and in the relevant problem domain and business context. Given that each of these skills on their own already poses a challenge when you want to find a great candidate, then searching for all of them combined in one person can send you on a wild goose chase.

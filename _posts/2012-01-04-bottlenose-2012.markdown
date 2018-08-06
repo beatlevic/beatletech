@@ -31,7 +31,7 @@ was a great success and we got loads of positive <a href="http://press.bottlenos
 This year I will continue to work for Bottlenose as their chief architect and allround
 (Node.js) developer. I love to see where we will get with Bottlenose in 2012.
 
-<img src="https://s3.amazonaws.com/beatletech/bottlenose-beta.png"
+<img src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/bottlenose-beta.png"
 alt="Bottlenose.com" height="128" width="315">
 
 Bottlenose = Node.js = #winning

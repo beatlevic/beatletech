@@ -33,7 +33,7 @@ href="http://bottleno.se">Bottleno.se</a>, and hopefully be one
 of the lucky ones for the closed beta to have early access to a tool that will enrich your
 twitter and facebook experience.
 
-<img src="https://beatletech.s3.amazonaws.com/bottlenose.png"
+<img src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/bottlenose.png"
 alt="Bottleno.se" height="157" width="523">
 
 Bottlenose = Node.js = #winning

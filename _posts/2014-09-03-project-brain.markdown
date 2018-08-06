@@ -11,4 +11,4 @@ After years of talking and thinking about creating our own Artificial Intelligen
 
 We have launched a new website and wrote an [introductory post](http://br-ai-n.com/2014/09/03/introducing-brain/) with more details on our goals and progress. So check out [br-ai-n.com](http://br-ai-n.com) and stay tuned for future posts!
 
-<img src="https://s3.amazonaws.com/beatletech/screenshot-brAIn-v0.0.2.png" alt="br-ai-n.com" height="485" width="800">
+<img src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/screenshot-brAIn-v0.0.2.png" alt="br-ai-n.com" height="485" width="800">
