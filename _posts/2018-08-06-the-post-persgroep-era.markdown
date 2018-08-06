@@ -3,7 +3,7 @@ layout: post
 title: The post-Persgroep era
 meta_description: The post-Persgroep era
 meta_keywords: post, beatletech, https, setup, persgroep, startup, AI
-tags: [work, development]
+tags: [startup, machine learning, AI]
 category: [work]
 published: true
 ---
