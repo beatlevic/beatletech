@@ -5,7 +5,7 @@ layout: null
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for post in site.posts %}
   <url>
-    <loc>http://beatletech.com/{{ post.url }}</loc>
+    <loc>https://beatletech.com{{ post.url }}</loc>
     {% if post.updated %}
     <lastmod>{{ post.updated | date: "%Y-%m-%d" }}</lastmod>
     {% else %}
@@ -14,22 +14,22 @@ layout: null
   </url>
   {% endfor %}
   <url>
-    <loc>http://beatletech.com</loc>
+    <loc>https://beatletech.com</loc>
     <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
     <changefreq>weekly</changefreq>
   </url>
     <url>
-    <loc>http://beatletech.com/setup.html</loc>
+    <loc>https://beatletech.com/setup.html</loc>
     <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://beatletech.com/blog.html</loc>
+    <loc>https://beatletech.com/blog.html</loc>
     <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://beatletech.com/archive.html</loc>
+    <loc>https://beatletech.com/archive.html</loc>
     <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
     <changefreq>weekly</changefreq>
   </url>
