@@ -24,14 +24,15 @@ topics: [ 'setup', 'hardware', 'software', 'office', 'projects', 'random', 'star
   <div class="blog setup">
     <h2>Hardware</h2>
     <p class="publishdate">
-      Last update: August 2018
+      Last update: <s>August 2018</s> July 2020
       <ul class="clearfix">
         <li><b>MacBook Pro (13-inch, 2018, i7 2.7GHz quad-core, 1TB SSD, 16GB RAM)</b><br>
           Primary development device. I tried last year's (2017) model, but didn't like the noise of the
           keyboard. The 2018 model with the 3rd version of the Butterfly keyboard is nice and quiet. I'm also
           happy they finally put a quad-core CPU in the 13 inch  model, but the Touchbar is still an
           annoyance. Luckily I work 95% of the time with an external
-          keyboard. - <a href="https://www.apple.com/nl/shop/buy-mac/macbook-pro/13%E2%80%91inch-spacegrijs-2,3%E2%80%91ghz-quad%E2%80%91core-512gb#">Apple</a>
+          keyboard. I'm still on Mojave and will skip Catalina to give Big Sur a try after the `.1` release
+          - <a href="https://www.apple.com/nl/shop/buy-mac/macbook-pro/13%E2%80%91inch-spacegrijs-2,3%E2%80%91ghz-quad%E2%80%91core-512gb#">Apple</a>
         </li>
         <li><b>MacBook Pro (13-inch, 2013, i7 2.8GHz, 1TB SSD, 16GB RAM)</b><br>
           Backup development device. Still happy with its performance. However it could not support an
@@ -146,15 +147,30 @@ topics: [ 'setup', 'hardware', 'software', 'office', 'projects', 'random', 'star
     <p class="publishdate">All the software I install when setting up
     a new Laptop, and which I use on a daily basis.
       <ul class="clearfix">
-        <li><b>Emacs</b><br>
+        <li><b>VS Code</b><br>
+          Primary Editor. I used Emacs for the past 10 years, but moved to VS Code with Emacs key bindings.
+          It works really great with Node.js development. You can find all the extensions that I use here:
+          <a href="https://gist.github.com/beatlevic/61a0f271fa9537afc87551fda2a364ed">Settings Sync</a>
+          On remote servers I switch to VIM.
+        </li>
+        <li><s>
+          <b>Emacs</b><br>
           Primary Editor. I'm using Emacs for the past 10 years, and while I have tried other IDEs like Text Mate,
           Sublime Text and IntelliJ, I keep coming back to Emacs and keep iterating  on my .emacs.d settings
           (<a href="https://github.com/beatlevic/dot-emacs">Source</a>). On remote servers I switch to VIM.
+        </s></li>
+        <li><b>Kitty terminal emulator</b><br>
+          Upgraded from iTerm 2, I just love the speed and (GPU) rendering.
+          I use it together with <a href="https://fishshell.com/">Fish Shell</a>. And of course the unofficial package manager for
+          MacOS: <a href="https://brew.sh/">Brew</a>, which makes any package just one install command away (e.g. "brew
+          install htop").
         </li>
-        <li><b>iTerm 2</b><br>
+        <li><s>
+          <b>iTerm 2</b><br>
           With <a href="https://fishshell.com/">Fish Shell</a>. And of course the unofficial package manager for
           MacOS: <a href="https://brew.sh/">Brew</a>, which makes any package just one install command away (e.g. "brew
           install htop").
+        </s>
         </li>
         <li><b>Google Chrome</b><br>
           I got used to its developer tools and like the overall speed of the browser. I'm already giving all
@@ -193,18 +209,30 @@ topics: [ 'setup', 'hardware', 'software', 'office', 'projects', 'random', 'star
           Keeps your Macbook awake. <a href="https://caffeine.en.softonic.com/mac">Caffeine</a> is especially
           handy when giving presentations.
         </li>
-        <li><b>Apptivate</b><br>
+        <li><b>Quicksilver</b><br>
+          MacOS doesn't allow you to natively add shortcuts to open/switch applications, so I
+          use <a href="https://qsapp.com/">Quicksilver</a> for that. I have my primary applications
+          linked to CMD-1 (Emacs), CMD-2 (iTerm 2), CMD-3 (Chrome) and CMD-4 (Slack).
+          I keep these applications at Full screen, but all in one single space to avoid the slow space
+          switching animation.
+        </li>
+        <li><s><b>Apptivate</b><br>
           MacOS doesn't allow you to natively add shortcuts to open/switch applications, so I
           use <a href="http://www.apptivateapp.com/">Apptivate</a> for that. I have my primary applications
           linked to CMD-1 (Emacs), CMD-2 (iTerm 2), CMD-3 (Chrome) and CMD-4 (Slack).
           I keep these applications at Full screen, but all in one single space to avoid the slow space
           switching animation.
+        </s></li>
+        <li><b>Aerial - Apple TV Aerial Views Screen Saver</b><br>
+          I used to use Google plus screensaver photos, but Google plus shut down. Luckily I found this beautiful screensaver,
+          which you can easily install with `brew cask install aerial`.
+          I linked CMD-0 to start the screensaver and lock my machine (Created a service with Automator).
         </li>
-        <li><b>Google plus screensaver photos</b><br>
+        <li><s><b>Google plus screensaver photos</b><br>
           Locking my screen gives me a <a href="https://plus.google.com/featuredphotos">screensaver</a> that
           shows beautiful photos from all over the world. I linked CMD-0 to start the screensaver and lock my
           machine (Created a service with Automator).
-        </li>
+        </s></li>
         <li><b>BetterSnapTool</b><br>
           For keyboard shortcuts to Maximize windows, or fill the right/left/top/bottom half of the screen I
           use <a href="https://itunes.apple.com/us/app/bettersnaptool/id417375580?mt=12">BetterSnapTool</a>
