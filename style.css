@@ -48,7 +48,7 @@
 .container_16 .grid_8 { width: 460px; }
 
 .container_12 .grid_9,
-.container_16 .grid_12 { width: 840px; }
+.container_16 .grid_12 { width: 860px; }
 
 .container_12 .grid_12,
 .container_16 .grid_16 { width: 940px; }
@@ -357,8 +357,8 @@ p {
 
 h1 { font-size: 32px; }
 h2 { font-size: 24px; line-height: 24px; }
-h3 { font-size: 24px; letter-spacing: -1px; }
-h4 { font-size: 18px; }
+h3 { font-size: 22px; letter-spacing: 0px; }
+h4 { font-size: 20px; }
 h5 { font-size: 17px; }
 h6 { font-size: 16px; }
 
@@ -615,7 +615,10 @@ blockquote p { margin: 0; }
 	text-shadow: none;
 }
 
-.post h3 { margin: 20px 0 10px -15px; }
+.post h3 {
+	margin: 20px 0 10px -15px;
+	color: #78a7d6
+}
 .post h4 { margin: 10px 0px 10px -15px; }
 
 /* Post meta */
@@ -698,7 +701,7 @@ h4:hover {
 
 .postlink { width: 230px;
             border-bottom: 1px solid #BBB;
-            padding: 2px 0px;}}
+            padding: 2px 0px;}
 
 .postlink a { color: #78a7d6;
               padding: 2px 0px;}
@@ -901,6 +904,11 @@ background: none;
   clear: both;
 }
 
+.highlighter-rouge {
+	background: #cdcdcd;
+	padding: 2px 2px;
+	font-weight: bold;
+}
 
 pre code {
     background: none;
