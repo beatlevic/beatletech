@@ -44,6 +44,6 @@ Host beatletunnel
 
 ### Autossh + Tmux
 
-{% highlight bash linenos %}
-autossh beatletunnel -t "tmux -u new -As main"
+{% highlight bash %}
+$ autossh beatletunnel -t "tmux -u new -As main"
 {% endhighlight %}
