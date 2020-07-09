@@ -513,6 +513,10 @@ blockquote p { margin: 0; }
 		min-width: 150px;
 	}
 
+.index li {
+	line-height: 15px
+}
+
 /* Post */
 .post {
 	min-height: 30px;
