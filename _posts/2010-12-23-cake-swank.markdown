@@ -26,7 +26,7 @@ persistent JVM (missing the whole purpose). So instead of doing that I
 got the advice to just keep swank running, and only reload the
 classpath. This resulted in me implementing the following elisp functions.
 
-{% highlight clojure %}
+{% highlight clojure linenos %}
 
 (defun cake-project-root ()
   "Look for project.clj file to find project root."

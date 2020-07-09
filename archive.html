@@ -4,23 +4,63 @@ location: archive
 menu: archive
 title: BeatleTech | Coen Stevens | Big Data &amp; Machine Learning Engineer | Archive
 meta_keywords: Big Data, Data Engineer, Data science, web developer, beatlevic, Coen Stevens, hacker, architect, freelancer, ruby, clojure, javascript, machine learning
-topics: [ 'blogging', 'css', 'design', 'javascript', 'personal', 'projects', 'random', 'startups', 'web-development']
+topics:
+  [
+    "blogging",
+    "css",
+    "design",
+    "javascript",
+    "personal",
+    "projects",
+    "random",
+    "startups",
+    "web-development",
+  ]
 ---
 
 {% assign hide_extended = true %}
 
 <div id="main" class="grid_9 alpha">
   <!-- limit:1 -->
-  <div class="post blog">
-    <p style="float:right"><a href="http://beatletech.com/atom.xml"><img src="images/feed.png" border="0"/></a></p>
-  <ul>
-  {% for post in site.posts %}
+  <div class="post blog archive">
+    <p style="float: right;">
+      <a href="http://beatletech.com/atom.xml"><img src="images/feed.png" /></a>
+    </p>
+    <ul>
+      {% for post in site.posts %}
 
-    <li class="publishdate"> <span class="publishdate" style="font-family: Consolas, monaco, monospace;">{{ post.date | date: "%d %b %Y"}}</span> <em> <a href="{{ post.url}}">{{ post.title }}</a>
-      </em>
-    </li>
+      <li class="publishdate">
+        <span
+          class="publishdate"
+          style="font-family: Consolas, monaco, monospace;"
+          >{{ post.date | date: "%d %b %Y"}}</span
+        >
+        <em> <a href="{{ post.url}}">{{ post.title }}</a> </em>
+      </li>
 
-  {% endfor %}
-  </ul>
+      {% endfor %}
+    </ul>
   </div>
-</div> <!-- end main -->
+  <div class="post blog archive">
+    <h3>Tags</h3>
+    {% assign sortedTags = site.tags | sort %} {% for tag in sortedTags %}
+    <a id="{{ tag[0] }}" onclick="dropDown('tag-{{ tag[0] }}')"
+      >{{ tag[0] }}
+    </a>
+    <ul style="display: none;" id="tag-{{ tag[0] }}">
+      <h4>{{ tag[0] }}</h4>
+      {% for post in tag[1] %}
+      <li>
+        <span
+          class="publishdate"
+          style="font-family: Consolas, monaco, monospace;"
+          >{{ post.date | date: "%d %b %Y"}}</span
+        ><a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+    <br /><br />
+  </div>
+</div>
+<!-- end main -->

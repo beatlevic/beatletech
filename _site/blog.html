@@ -78,16 +78,11 @@
 
       <div class='clear_both tags'>
         <span>
-          tags:
-          
-          <a href='http://www.google.com/search?q=startup+site:beatltetech.com'>startup</a>, 
-          
-          <a href='http://www.google.com/search?q=machine learning+site:beatltetech.com'>machine learning</a>, 
-          
-          <a href='http://www.google.com/search?q=AI+site:beatltetech.com'>AI</a>, 
-          
-          <a href='http://www.google.com/search?q=Rekall.ai+site:beatltetech.com'>Rekall.ai</a>
-          
+          tags: 
+          <a href="../../../archive#startup">startup</a>,  
+          <a href="../../../archive#machine learning">machine learning</a>,  
+          <a href="../../../archive#AI">AI</a>,  
+          <a href="../../../archive#Rekall.ai">Rekall.ai</a> 
         </span>
       </div>
       <div class="comments">
@@ -138,14 +133,10 @@ this blog post. Next up, research and play time!</p>
 
       <div class='clear_both tags'>
         <span>
-          tags:
-          
-          <a href='http://www.google.com/search?q=startup+site:beatltetech.com'>startup</a>, 
-          
-          <a href='http://www.google.com/search?q=machine learning+site:beatltetech.com'>machine learning</a>, 
-          
-          <a href='http://www.google.com/search?q=AI+site:beatltetech.com'>AI</a>
-          
+          tags: 
+          <a href="../../../archive#startup">startup</a>,  
+          <a href="../../../archive#machine learning">machine learning</a>,  
+          <a href="../../../archive#AI">AI</a> 
         </span>
       </div>
       <div class="comments">
@@ -163,12 +154,9 @@ Dr. Mark Voortman check out <a href="http://markets.financialcontent.com/mng-ba.
 
       <div class='clear_both tags'>
         <span>
-          tags:
-          
-          <a href='http://www.google.com/search?q=work+site:beatltetech.com'>work</a>, 
-          
-          <a href='http://www.google.com/search?q=development+site:beatltetech.com'>development</a>
-          
+          tags: 
+          <a href="../../../archive#work">work</a>,  
+          <a href="../../../archive#development">development</a> 
         </span>
       </div>
       <div class="comments">
@@ -223,12 +211,9 @@ any understanding of how they got there or what they have created”</em> [<a hr
 
       <div class='clear_both tags'>
         <span>
-          tags:
-          
-          <a href='http://www.google.com/search?q=work+site:beatltetech.com'>work</a>, 
-          
-          <a href='http://www.google.com/search?q=development+site:beatltetech.com'>development</a>
-          
+          tags: 
+          <a href="../../../archive#work">work</a>,  
+          <a href="../../../archive#development">development</a> 
         </span>
       </div>
       <div class="comments">
@@ -269,12 +254,9 @@ Convolutional Neural Networks. May the fun and challenge begin.</p>
 
       <div class='clear_both tags'>
         <span>
-          tags:
-          
-          <a href='http://www.google.com/search?q=work+site:beatltetech.com'>work</a>, 
-          
-          <a href='http://www.google.com/search?q=development+site:beatltetech.com'>development</a>
-          
+          tags: 
+          <a href="../../../archive#work">work</a>,  
+          <a href="../../../archive#development">development</a> 
         </span>
       </div>
       <div class="comments">
@@ -374,14 +356,10 @@ study”</em>
 
       <div class='clear_both tags'>
         <span>
-          tags:
-          
-          <a href='http://www.google.com/search?q=OThot+site:beatltetech.com'>OThot</a>, 
-          
-          <a href='http://www.google.com/search?q=statistics+site:beatltetech.com'>statistics</a>, 
-          
-          <a href='http://www.google.com/search?q=bayesianism+site:beatltetech.com'>bayesianism</a>
-          
+          tags: 
+          <a href="../../../archive#OThot">OThot</a>,  
+          <a href="../../../archive#statistics">statistics</a>,  
+          <a href="../../../archive#bayesianism">bayesianism</a> 
         </span>
       </div>
       <div class="comments">
@@ -622,14 +600,10 @@ the ride less lonely and a lot more fun.</li>
 
       <div class='clear_both tags'>
         <span>
-          tags:
-          
-          <a href='http://www.google.com/search?q=learning+site:beatltetech.com'>learning</a>, 
-          
-          <a href='http://www.google.com/search?q=Coursera+site:beatltetech.com'>Coursera</a>, 
-          
-          <a href='http://www.google.com/search?q=education+site:beatltetech.com'>education</a>
-          
+          tags: 
+          <a href="../../../archive#learning">learning</a>,  
+          <a href="../../../archive#Coursera">Coursera</a>,  
+          <a href="../../../archive#education">education</a> 
         </span>
       </div>
       <div class="comments">
@@ -664,12 +638,9 @@ debt on top of the $13.4 million.</p>
 
       <div class='clear_both tags'>
         <span>
-          tags:
-          
-          <a href='http://www.google.com/search?q=bottlenose+site:beatltetech.com'>bottlenose</a>, 
-          
-          <a href='http://www.google.com/search?q=funding+site:beatltetech.com'>funding</a>
-          
+          tags: 
+          <a href="../../../archive#bottlenose">bottlenose</a>,  
+          <a href="../../../archive#funding">funding</a> 
         </span>
       </div>
       <div class="comments">
@@ -722,6 +693,22 @@ debt on top of the $13.4 million.</p>
       })();
 
     </script>
+
+    <script>function dropDown(id) {
+        var el = document.getElementById(id)
+        var style = el.style.display;
+        console.log(el);
+        if (style == 'none') document.getElementById(id).style.display = "block"
+        else document.getElementById(id).style.display = "none"
+      }
+
+      var h = location.hash;
+      console.log(h);
+      if (h) dropDown('tag-'+h.slice(1));
+
+      </script>
+
+
 
   </body>
 </html>

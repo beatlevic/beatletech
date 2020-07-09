@@ -325,5 +325,21 @@ Github
 
     </script>
 
+    <script>function dropDown(id) {
+        var el = document.getElementById(id)
+        var style = el.style.display;
+        console.log(el);
+        if (style == 'none') document.getElementById(id).style.display = "block"
+        else document.getElementById(id).style.display = "none"
+      }
+
+      var h = location.hash;
+      console.log(h);
+      if (h) dropDown('tag-'+h.slice(1));
+
+      </script>
+
+
+
   </body>
 </html>

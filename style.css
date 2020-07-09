@@ -648,7 +648,7 @@ blockquote p { margin: 0; }
     -webkit-transition: opacity 0.15s ease-in-out;
     -moz-transition: opacity 0.15s ease-in-out;
     transition: opacity 0.15s ease-in-out;
-    margin-left: -15px;
+    margin-left: -10px;
 }
 
 h3 {
@@ -710,11 +710,15 @@ h4:hover {
                   padding: 2px 2px;}
 
 .post li {
-    line-height: 15px;
+    /* line-height: 15px; */
     padding: 4px 5px;
     p-webkit-transition: margin-left 0.3s linear;
     -moz-transition: margin-left 0.3s linear;
     transition: margin-left 0.3s linear;
+}
+
+.archive li {
+	line-height: 16px;
 }
 
 .post li a {
