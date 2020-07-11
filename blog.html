@@ -11,7 +11,7 @@ topics: [ 'blogging', 'css', 'design', 'javascript', 'personal', 'projects', 'ra
 
 <div id="main" class="grid_9 alpha">
   <!-- limit:1 -->
-  <div id="search-searchbar" style="margin-left:20px"></div>
+  <!-- <div id="search-searchbar" style="margin-left:20px"></div> -->
   <div class="post-list" id="search-hits" style="margin-left:20px"></div>
 
   {% for post in site.posts limit: 8 %}
@@ -35,5 +35,4 @@ topics: [ 'blogging', 'css', 'design', 'javascript', 'personal', 'projects', 'ra
   <div class="post blog">
     <h2><a href="archive">More...</a></h2>
   </div>
-  {% include algolia.html %}
-</div> <!-- end main -->
+  </div> <!-- end main -->

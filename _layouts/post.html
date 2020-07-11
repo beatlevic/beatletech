@@ -77,11 +77,22 @@
             <li><a href="../../../../Setup">Setup</a></li>
             <li class="current"><a href="../../../../blog">Blog</a></li>
             <li><a href="../../../../archive">Archive</a></li>
+            <li>
+              <div
+                id="search-searchbar"
+                style="margin-top: -4px; margin-bottom: -10px; width: 350px;"
+              ></div>
+            </li>
           </ul>
           <br class="clear" />
         </nav>
 
         <div id="main" class="grid_9 alpha">
+          <div
+            class="post-list"
+            id="search-hits"
+            style="margin-left: 20px;"
+          ></div>
           <article class="post blog">
             <h2>{{ page.title }}<em>{{ post.topics }}</em></h2>
 
@@ -128,7 +139,7 @@
       </div>
       <!-- end content -->
 
-      {% include footer.html %}
+      {% include footer.html %} {% include algolia.html %}
 
       <div class="clear"></div>
 
