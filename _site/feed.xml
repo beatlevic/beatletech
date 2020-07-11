@@ -1,22 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-
- <title>beatltetech.com</title>
- <link href="http://beatletech.com/atom.xml" rel="self"/>
- <link href="http://beatletech.com/"/>
- <updated>2020-07-11T19:32:59+02:00</updated>
- <id>http://beatletech.com/</id>
- <author>
-   <name>Coen Stevens</name>
- </author>
-
- 
- <entry>
-   <title>Chief Architect at Rekall.ai</title>
-   <link href="http://beatletech.com/2019/09/02/chief-architect-at-rekall-ai"/>
-   <updated>2019-09-02T00:00:00+02:00</updated>
-   <id>http://beatletech.com/2019/09/02/chief-architect-at-rekall-ai</id>
-   <content type="html">&lt;p&gt;For the past year I have been working as Tech Lead at &lt;a href=&quot;https://www.airfranceklm.com/en/group&quot;&gt;Air France - KLM&lt;/a&gt;, in the ODS (Operations Decision Support) department. My team was responsible for the on-premise Amsterdam Data Lake, developing ETL pipelines with Spark streaming jobs in Scala, including data modeling of the source system (events) and coordinating with the Data Science team.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-07-11T19:32:59+02:00</updated><id>/feed.xml</id><entry><title type="html">Chief Architect at Rekall.ai</title><link href="/2019/09/02/chief-architect-at-rekall-ai" rel="alternate" type="text/html" title="Chief Architect at Rekall.ai" /><published>2019-09-02T00:00:00+02:00</published><updated>2019-09-02T00:00:00+02:00</updated><id>/2019/09/02/chief-architect-at-rekall-ai</id><content type="html" xml:base="/2019/09/02/chief-architect-at-rekall-ai">&lt;p&gt;For the past year I have been working as Tech Lead at &lt;a href=&quot;https://www.airfranceklm.com/en/group&quot;&gt;Air France - KLM&lt;/a&gt;, in the ODS (Operations Decision Support) department. My team was responsible for the on-premise Amsterdam Data Lake, developing ETL pipelines with Spark streaming jobs in Scala, including data modeling of the source system (events) and coordinating with the Data Science team.&lt;/p&gt;
 
 &lt;p&gt;The on-premise Hadoop cluster was based on Hortonworks HDP, including Spark, HBase, Kafka and Hive. There was a lot of work involved in configuring and managing the on-premise cluster, and we would spend more time than we would like on infrastructure related issues. Based on my previous cloud experiences I started advocating for a push to Azure Cloud (as KLM already had Azure Active Directory and Office 365) for the Data Lake, and started working on the required Architecture design and proposal.&lt;/p&gt;
 
@@ -26,16 +8,7 @@
 
 &lt;p&gt;&lt;a href=&quot;http://rekall.ai&quot;&gt;
 &lt;img src=&quot;https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/logo-rekall.png&quot; alt=&quot;Rekall.ai&quot; title=&quot;Chief Architect&quot; width=&quot;80px&quot; height=&quot;80px&quot; style=&quot;margin-left:0px&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>The post-Persgroep era</title>
-   <link href="http://beatletech.com/2018/08/06/the-post-persgroep-era"/>
-   <updated>2018-08-06T00:00:00+02:00</updated>
-   <id>http://beatletech.com/2018/08/06/the-post-persgroep-era</id>
-   <content type="html">&lt;p&gt;Last week I finished my job as Lead Data Engineer at the &lt;a href=&quot;https://persgroep.nl&quot;&gt;Persgroep&lt;/a&gt; in Amsterdam, where 
+&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="[&quot;work&quot;]" /><category term="startup" /><category term="machine learning" /><category term="AI" /><category term="Rekall.ai" /><summary type="html">For the past year I have been working as Tech Lead at Air France - KLM, in the ODS (Operations Decision Support) department. My team was responsible for the on-premise Amsterdam Data Lake, developing ETL pipelines with Spark streaming jobs in Scala, including data modeling of the source system (events) and coordinating with the Data Science team.</summary></entry><entry><title type="html">The post-Persgroep era</title><link href="/2018/08/06/the-post-persgroep-era" rel="alternate" type="text/html" title="The post-Persgroep era" /><published>2018-08-06T00:00:00+02:00</published><updated>2018-08-06T00:00:00+02:00</updated><id>/2018/08/06/the-post-persgroep-era</id><content type="html" xml:base="/2018/08/06/the-post-persgroep-era">&lt;p&gt;Last week I finished my job as Lead Data Engineer at the &lt;a href=&quot;https://persgroep.nl&quot;&gt;Persgroep&lt;/a&gt; in Amsterdam, where 
 I worked for the past year. I had a great time crafting ETL pipelines, writing Scala and Python for Spark (AWS 
 EMR), scheduling tasks (DAGs) with Airflow, and scaling with Redshift (Minus some boring, but important GDPR
 work). But most of all I liked the (Kanban) team, which grew during my time from just 3 members to 15, and I
@@ -69,28 +42,9 @@ work setup, so it was only logical to also write about it. You can find it
 (&lt;a href=&quot;https://github.com/beatlevic/beatletech&quot;&gt;source&lt;/a&gt;), I’m concluding my stint on BeatleTech improvements with
 this blog post. Next up, research and play time!&lt;/p&gt;
 
-&lt;p&gt;Wish me luck.&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>Othot raises $1.7 Million</title>
-   <link href="http://beatletech.com/2016/05/02/othot-raises-capital"/>
-   <updated>2016-05-02T00:00:00+02:00</updated>
-   <id>http://beatletech.com/2016/05/02/othot-raises-capital</id>
-   <content type="html">&lt;p&gt;Great news for Othot as they just secured $1.7 Million in their first
+&lt;p&gt;Wish me luck.&lt;/p&gt;</content><author><name></name></author><category term="[&quot;work&quot;]" /><category term="startup" /><category term="machine learning" /><category term="AI" /><summary type="html">Last week I finished my job as Lead Data Engineer at the Persgroep in Amsterdam, where I worked for the past year. I had a great time crafting ETL pipelines, writing Scala and Python for Spark (AWS EMR), scheduling tasks (DAGs) with Airflow, and scaling with Redshift (Minus some boring, but important GDPR work). But most of all I liked the (Kanban) team, which grew during my time from just 3 members to 15, and I enjoyed coaching and helping out the new recruits, as well as providing technical support and architectural advise to other teams.</summary></entry><entry><title type="html">Othot raises $1.7 Million</title><link href="/2016/05/02/othot-raises-capital" rel="alternate" type="text/html" title="Othot raises $1.7 Million" /><published>2016-05-02T00:00:00+02:00</published><updated>2016-05-02T00:00:00+02:00</updated><id>/2016/05/02/othot-raises-capital</id><content type="html" xml:base="/2016/05/02/othot-raises-capital">&lt;p&gt;Great news for Othot as they just secured $1.7 Million in their first
 round of outside financing. For more details and a shoutout for
-Dr. Mark Voortman check out &lt;a href=&quot;http://markets.financialcontent.com/mng-ba.mercurynews/news/read?GUID=32015429&quot;&gt;MercuryNews&lt;/a&gt;.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>O Data Scientist, Where Art Thou?</title>
-   <link href="http://beatletech.com/2015/09/10/o-data-scientist-where-art-thou"/>
-   <updated>2015-09-10T00:00:00+02:00</updated>
-   <id>http://beatletech.com/2015/09/10/o-data-scientist-where-art-thou</id>
-   <content type="html">&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note: This is a repost of my original blog post at
+Dr. Mark Voortman check out &lt;a href=&quot;http://markets.financialcontent.com/mng-ba.mercurynews/news/read?GUID=32015429&quot;&gt;MercuryNews&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="[&quot;work&quot;]" /><category term="work" /><category term="development" /><summary type="html">Great news for Othot as they just secured $1.7 Million in their first round of outside financing. For more details and a shoutout for Dr. Mark Voortman check out MercuryNews.</summary></entry><entry><title type="html">O Data Scientist, Where Art Thou?</title><link href="/2015/09/10/o-data-scientist-where-art-thou" rel="alternate" type="text/html" title="O Data Scientist, Where Art Thou?" /><published>2015-09-10T00:00:00+02:00</published><updated>2015-09-10T00:00:00+02:00</updated><id>/2015/09/10/o-data-scientist-where-art-thou</id><content type="html" xml:base="/2015/09/10/o-data-scientist-where-art-thou">&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note: This is a repost of my original blog post at
    &lt;a href=&quot;http://www.othot.com/o-data-scientist-where-art-thou/&quot;&gt;OThot&lt;/a&gt;, where I also work as Senior Data Scientist.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;By now you have probably heard about the &lt;strong&gt;“Big Data”&lt;/strong&gt; hype in one form [&lt;a href=&quot;http://www.wired.com/insights/2014/04/big-data-big-hype/&quot;&gt;1&lt;/a&gt;] or another [&lt;a href=&quot;http://www.forbes.com/sites/larrymyler/2015/07/29/big-data-is-a-big-problem-thats-getting-bigger/&quot;&gt;2&lt;/a&gt;], or read about how other companies are achieving success harnessing their data [&lt;a href=&quot;http://www.forbes.com/sites/howardbaldwin/2015/06/08/whos-ready-for-some-big-data-success-stories/&quot;&gt;3&lt;/a&gt;]. With all the attention for Big Data and the accompanied field of Data Science to make sense of the data, it would be no surprise if you want your company to benefit as well from one or more Data Scientists generating actionable insights from your ever-growing sea of data.&lt;/p&gt;
@@ -128,17 +82,7 @@ any understanding of how they got there or what they have created”&lt;/em&gt; 
 
 &lt;p&gt;[5] The Data Science Venn Diagram: &lt;a href=&quot;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&quot;&gt;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;[6] How to actually learn data science: &lt;a href=&quot;https://www.dataquest.io/blog/how-to-actually-learn-data-science/&quot;&gt;https://www.dataquest.io/blog/how-to-actually-learn-data-science/&lt;/a&gt;&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>New Job at ThinkTopic</title>
-   <link href="http://beatletech.com/2015/06/01/new-job-at-thinktopic"/>
-   <updated>2015-06-01T00:00:00+02:00</updated>
-   <id>http://beatletech.com/2015/06/01/new-job-at-thinktopic</id>
-   <content type="html">&lt;p&gt;Two months ago a good friend of mine (&lt;a href=&quot;https://www.linkedin.com/in/rosejn&quot;&gt;Jeff Rose&lt;/a&gt;), who is a
+&lt;p&gt;[6] How to actually learn data science: &lt;a href=&quot;https://www.dataquest.io/blog/how-to-actually-learn-data-science/&quot;&gt;https://www.dataquest.io/blog/how-to-actually-learn-data-science/&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="[&quot;work&quot;]" /><category term="work" /><category term="development" /><summary type="html">Note: This is a repost of my original blog post at OThot, where I also work as Senior Data Scientist.</summary></entry><entry><title type="html">New Job at ThinkTopic</title><link href="/2015/06/01/new-job-at-thinktopic" rel="alternate" type="text/html" title="New Job at ThinkTopic" /><published>2015-06-01T00:00:00+02:00</published><updated>2015-06-01T00:00:00+02:00</updated><id>/2015/06/01/new-job-at-thinktopic</id><content type="html" xml:base="/2015/06/01/new-job-at-thinktopic">&lt;p&gt;Two months ago a good friend of mine (&lt;a href=&quot;https://www.linkedin.com/in/rosejn&quot;&gt;Jeff Rose&lt;/a&gt;), who is a
 former &lt;a href=&quot;http://deepmind.com/&quot;&gt;DeepMind&lt;/a&gt; engineer (acquired by Google), presented me with an
 opportunity to come work at &lt;a href=&quot;http://thinktopic.com&quot;&gt;ThinkTopic&lt;/a&gt; to build intelligent tools for a big
 publisher that involves image search, collaborative filtering, an intelligent catalog, and much more
@@ -162,17 +106,7 @@ going cold turkey on my former colleagues (only switching rooms).&lt;/p&gt;
 &lt;p&gt;I’m excited to go on this new ThinkTopic adventure, which for today means diving back into
 Convolutional Neural Networks. May the fun and challenge begin.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/thinktopic-logo.png&quot; alt=&quot;ThinkTopic&quot; width=&quot;646&quot; height=&quot;195&quot; style=&quot;margin-left:60px&quot; /&gt;&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>Goodbye P-values, Hello Bayesian Statistics!</title>
-   <link href="http://beatletech.com/2015/05/17/goodbye-pvalues-hello-bayesian-statistics"/>
-   <updated>2015-05-17T00:00:00+02:00</updated>
-   <id>http://beatletech.com/2015/05/17/goodbye-pvalues-hello-bayesian-statistics</id>
-   <content type="html">&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note: This is a repost of my original blog post at
+&lt;p&gt;&lt;img src=&quot;https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/thinktopic-logo.png&quot; alt=&quot;ThinkTopic&quot; width=&quot;646&quot; height=&quot;195&quot; style=&quot;margin-left:60px&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="[&quot;work&quot;]" /><category term="work" /><category term="development" /><summary type="html">Two months ago a good friend of mine (Jeff Rose), who is a former DeepMind engineer (acquired by Google), presented me with an opportunity to come work at ThinkTopic to build intelligent tools for a big publisher that involves image search, collaborative filtering, an intelligent catalog, and much more by applying Deep Learning techniques for learning in Neural Networks. Additionally most development work would be done in Clojure (a Lisp dialect on the JVM), which for me really is the icing on the cake, being a longtime Clojure and functional programming fan.</summary></entry><entry><title type="html">Goodbye P-values, Hello Bayesian Statistics!</title><link href="/2015/05/17/goodbye-pvalues-hello-bayesian-statistics" rel="alternate" type="text/html" title="Goodbye P-values, Hello Bayesian Statistics!" /><published>2015-05-17T00:00:00+02:00</published><updated>2015-05-17T00:00:00+02:00</updated><id>/2015/05/17/goodbye-pvalues-hello-bayesian-statistics</id><content type="html" xml:base="/2015/05/17/goodbye-pvalues-hello-bayesian-statistics">&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note: This is a repost of my original blog post at
    &lt;a href=&quot;http://www.othot.com/goodbye-p-values-hello-bayesian-statistics/&quot;&gt;OThot&lt;/a&gt;, where I also work as Senior Data Scientist.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;In statistics there is the old and ongoing debate of Frequentism versus Bayesianism, which has been humorously depicted in the following popular XKCD cartoon [&lt;a href=&quot;http://www.xkcd.com/1132/&quot;&gt;1&lt;/a&gt;]:&lt;/p&gt;
@@ -255,17 +189,7 @@ study”&lt;/em&gt;
 
 &lt;p&gt;[6] Scientists Perturbed by Loss of Stat Tools to Sift Research Fudge from Fact &lt;a href=&quot;http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact&quot;&gt;http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;[7] What Do Searching For a Plane and a Doctor’s Diagnosis Have in Common? &lt;a href=&quot;http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common&quot;&gt;http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common&lt;/a&gt;&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>My recent Coursera journey</title>
-   <link href="http://beatletech.com/2015/02/11/coursera-courses"/>
-   <updated>2015-02-11T00:00:00+01:00</updated>
-   <id>http://beatletech.com/2015/02/11/coursera-courses</id>
-   <content type="html">&lt;p&gt;In the past couple of months I managed to complete 4 online courses on
+&lt;p&gt;[7] What Do Searching For a Plane and a Doctor’s Diagnosis Have in Common? &lt;a href=&quot;http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common&quot;&gt;http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="[&quot;statistics&quot;]" /><category term="OThot" /><category term="statistics" /><category term="bayesianism" /><summary type="html">Note: This is a repost of my original blog post at OThot, where I also work as Senior Data Scientist.</summary></entry><entry><title type="html">My recent Coursera journey</title><link href="/2015/02/11/coursera-courses" rel="alternate" type="text/html" title="My recent Coursera journey" /><published>2015-02-11T00:00:00+01:00</published><updated>2015-02-11T00:00:00+01:00</updated><id>/2015/02/11/coursera-courses</id><content type="html" xml:base="/2015/02/11/coursera-courses">&lt;p&gt;In the past couple of months I managed to complete 4 online courses on
 &lt;a href=&quot;http://coursera.com&quot;&gt;Coursera&lt;/a&gt;, which is an education platform that partners with top universities
 to offer free &lt;a href=&quot;http://en.wikipedia.org/wiki/Massive_open_online_course&quot;&gt;MOOCs&lt;/a&gt; (Massive open online
 courses). In this post I like to present you my experiences with these courses and my plans for any
@@ -489,17 +413,7 @@ you. Having a study group of like-minded individuals will really help you stay o
 the ride less lonely and a lot more fun.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Good luck with our own online education!&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>Bottlenose scores $13.4 Million</title>
-   <link href="http://beatletech.com/2015/02/09/bottlenose-series-b"/>
-   <updated>2015-02-09T00:00:00+01:00</updated>
-   <id>http://beatletech.com/2015/02/09/bottlenose-series-b</id>
-   <content type="html">&lt;p&gt;One and a half years after securing our
+&lt;p&gt;Good luck with our own online education!&lt;/p&gt;</content><author><name></name></author><category term="[&quot;education&quot;]" /><category term="learning" /><category term="Coursera" /><category term="education" /><summary type="html">In the past couple of months I managed to complete 4 online courses on Coursera, which is an education platform that partners with top universities to offer free MOOCs (Massive open online courses). In this post I like to present you my experiences with these courses and my plans for any future courses.</summary></entry><entry><title type="html">Bottlenose scores $13.4 Million</title><link href="/2015/02/09/bottlenose-series-b" rel="alternate" type="text/html" title="Bottlenose scores $13.4 Million" /><published>2015-02-09T00:00:00+01:00</published><updated>2015-02-09T00:00:00+01:00</updated><id>/2015/02/09/bottlenose-series-b</id><content type="html" xml:base="/2015/02/09/bottlenose-series-b">&lt;p&gt;One and a half years after securing our
 &lt;a href=&quot;http://beatletech.com/2013/07/30/bottlenose-secures-four-million/&quot;&gt;$3.6 Million&lt;/a&gt;
 series A investment round to bring ‘Trendfluence’ to the enterprise, we are now
 proud at &lt;a href=&quot;http://bottlenose.com&quot;&gt;Bottlenose&lt;/a&gt; to have raised (and
@@ -517,17 +431,7 @@ debt on top of the $13.4 million.&lt;/p&gt;
 
 &lt;p&gt;At Bottlenose we have exciting times ahead of us.&lt;/p&gt;
 
-&lt;p&gt;You can read the full story on &lt;a href=&quot;http://techcrunch.com/2015/02/09/bottlenose-series-b/&quot;&gt;Techcrunch&lt;/a&gt;.&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>My System to Win Big</title>
-   <link href="http://beatletech.com/2015/02/03/my-system-to-win-big"/>
-   <updated>2015-02-03T00:00:00+01:00</updated>
-   <id>http://beatletech.com/2015/02/03/my-system-to-win-big</id>
-   <content type="html">&lt;p&gt;Back in January 2014 I read a book by Scott Adams (of Dilbert fame) titled:
+&lt;p&gt;You can read the full story on &lt;a href=&quot;http://techcrunch.com/2015/02/09/bottlenose-series-b/&quot;&gt;Techcrunch&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="[&quot;work&quot;]" /><category term="bottlenose" /><category term="funding" /><summary type="html">One and a half years after securing our $3.6 Million series A investment round to bring ‘Trendfluence’ to the enterprise, we are now proud at Bottlenose to have raised (and continue to raise) our series B round with a staggering amount of $13.4 Million, bringing the total raised funds north of $17 Million.</summary></entry><entry><title type="html">My System to Win Big</title><link href="/2015/02/03/my-system-to-win-big" rel="alternate" type="text/html" title="My System to Win Big" /><published>2015-02-03T00:00:00+01:00</published><updated>2015-02-03T00:00:00+01:00</updated><id>/2015/02/03/my-system-to-win-big</id><content type="html" xml:base="/2015/02/03/my-system-to-win-big">&lt;p&gt;Back in January 2014 I read a book by Scott Adams (of Dilbert fame) titled:
 &lt;a href=&quot;https://www.goodreads.com/book/show/17859574-how-to-fail-at-almost-everything-and-still-win-big&quot;&gt;“How to Fail at Almost Everything and Still Win Big”&lt;/a&gt;.
 The book was brought to my attention when I was reading up on some interesting research and ideas on
 passion and discipline (&lt;a href=&quot;https://www.youtube.com/watch?v=qwOdU02SE0w&quot;&gt;Carl Newport&lt;/a&gt; comes to mind,
@@ -671,378 +575,8 @@ in the future to take it head on.&lt;/p&gt;
 &lt;p&gt;Of course my system isn’t perfect. Of course my system is tailored to suit me and can be different for you.
 Of course I’m still failing every so often, but at least I have my system to hold on to and to
 remind me how I want things to go. Get your self into the habit of working on what matters to you
-and with a little bit of luck and serendipity you can win big too!&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Project brAIn</title>
-   <link href="http://beatletech.com/2014/09/03/project-brain"/>
-   <updated>2014-09-03T00:00:00+02:00</updated>
-   <id>http://beatletech.com/2014/09/03/project-brain</id>
-   <content type="html">&lt;p&gt;After years of talking and thinking about creating our own Artificial Intelligence (AI), &lt;a href=&quot;http://linkedin.com/in/markvoortman&quot;&gt;Mark Voortman&lt;/a&gt; and I finaly decided a couple of months ago to actually start working on it. So project brAIn was born. With brAIn we have the modest goal to build an AI that will change the world as we know it. Using Deep Learning techniques we are building towards some cool applications.&lt;/p&gt;
+and with a little bit of luck and serendipity you can win big too!&lt;/p&gt;</content><author><name></name></author><category term="[&quot;lifestyle&quot;]" /><category term="lifestyle" /><category term="paleo" /><category term="books" /><summary type="html">Back in January 2014 I read a book by Scott Adams (of Dilbert fame) titled: “How to Fail at Almost Everything and Still Win Big”. The book was brought to my attention when I was reading up on some interesting research and ideas on passion and discipline (Carl Newport comes to mind, explaining why following your passion is bad career advice). Reading Adam’s book definitely struck a chord with me and even motivated me to change my work flow and long-held believes on what to focus on in life. Two things stood out for me:</summary></entry><entry><title type="html">Project brAIn</title><link href="/2014/09/03/project-brain" rel="alternate" type="text/html" title="Project brAIn" /><published>2014-09-03T00:00:00+02:00</published><updated>2014-09-03T00:00:00+02:00</updated><id>/2014/09/03/project-brain</id><content type="html" xml:base="/2014/09/03/project-brain">&lt;p&gt;After years of talking and thinking about creating our own Artificial Intelligence (AI), &lt;a href=&quot;http://linkedin.com/in/markvoortman&quot;&gt;Mark Voortman&lt;/a&gt; and I finaly decided a couple of months ago to actually start working on it. So project brAIn was born. With brAIn we have the modest goal to build an AI that will change the world as we know it. Using Deep Learning techniques we are building towards some cool applications.&lt;/p&gt;
 
 &lt;p&gt;We have launched a new website and wrote an &lt;a href=&quot;http://br-ai-n.com/2014/09/03/introducing-brain/&quot;&gt;introductory post&lt;/a&gt; with more details on our goals and progress. So check out &lt;a href=&quot;http://br-ai-n.com&quot;&gt;br-ai-n.com&lt;/a&gt; and stay tuned for future posts!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/screenshot-brAIn-v0.0.2.png&quot; alt=&quot;br-ai-n.com&quot; height=&quot;485&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Dokzorg.nl live!</title>
-   <link href="http://beatletech.com/2013/10/12/dokzorg-live"/>
-   <updated>2013-10-12T00:00:00+02:00</updated>
-   <id>http://beatletech.com/2013/10/12/dokzorg-live</id>
-   <content type="html">&lt;p&gt;A couple of weeks ago I ordered two dedicated machines at Hetzner for myself to develop and run some side projects on a Node.js/MongoDb/Elasticsearch stack.
-While these are work in progress, I also finished moving BeatleTech.com to my new server (previously hosted by TransIp) and decided to help out my spouse by
-building a website for her freelancing GP (Huisarts) practices. The end result is here today, as &lt;a href=&quot;http://dokzorg.nl&quot; target=&quot;blank&quot;&gt;Dokzorg.nl&lt;/a&gt; is live as of now.&lt;/p&gt;
-
-&lt;p&gt;She basically wanted a simple landing page with just enough info to get potential employers excited and be findable on the web, without explicitly creating
-an online presence by blogging and tweeting. We currently like the end result and hope others like it too. See below for a screenshot of the landing page, and follow &lt;a href=&quot;http://dokzorg.nl&quot; target=&quot;blank&quot;&gt;this link&lt;/a&gt; to check it out.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/dokzorg.png&quot; alt=&quot;Dokzorg.nl&quot; height=&quot;400&quot; width=&quot;720&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;And now after spending some time front-end developing this project,
-I’m looking forward to dive back in the other back-end projects I have going for which I can happily ignore HTML and CSS..&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Bottlenose secures $3.6 Million</title>
-   <link href="http://beatletech.com/2013/07/30/bottlenose-secures-four-million"/>
-   <updated>2013-07-30T00:00:00+02:00</updated>
-   <id>http://beatletech.com/2013/07/30/bottlenose-secures-four-million</id>
-   <content type="html">&lt;p&gt;Bottlenose just secured a $3.6 Million series A round to bring
-‘Trendfluence’ to the Enterprise. With Bottlenose enterprise, while
-currently in private beta, we already work with several large brands and
-agencies (Pepsi, FleishmanHillard, Razorfish, and DigitasLBi) that
-leverage Bottlenose Enterprise for tracking live and emerging trends
-and events, directing advertising and marketing initiatives, engaging
-customer communities and gathering industry intelligence.&lt;/p&gt;
-
-&lt;p&gt;For the actual press release please check out &lt;a href=&quot;&amp;quot;http://www.novaspivack.com/business/bottlenose-series-a-to-bring-trendfluence-to-the-enterprise&amp;quot;&quot;&gt;Nova
-Spivack’s blog&lt;/a&gt;
-(Bottlenose CEO), or the Techcrunch &lt;a href=&quot;&amp;quot;http://techcrunch.com/2013/07/30/social-media-dashboard-bottlenose-raises-3-6m/&amp;quot;&quot;&gt;article&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;If we can keep current momentum at &lt;a href=&quot;&amp;quot;http://bottlenose.com&amp;quot;&quot;&gt;Bottlenose&lt;/a&gt;, then we have a bright
-future ahead of us.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Amsterdam Node meetup group</title>
-   <link href="http://beatletech.com/2012/04/16/amsterdam-nodejs-meetup"/>
-   <updated>2012-04-16T00:00:00+02:00</updated>
-   <id>http://beatletech.com/2012/04/16/amsterdam-nodejs-meetup</id>
-   <content type="html">&lt;p&gt;We (me and &lt;a href=&quot;http://dominiek.com/&quot;&gt;Dominiek ter Heide&lt;/a&gt;) started a new &lt;a href=&quot;http://www.meetup.com/amsnode/&quot;&gt;meetup group&lt;/a&gt; in Amsterdam
-for anyone interested in Node.js. We had our first meetup 2 weeks ago,
-where Dominiek gave a great introduction to Node, the guys from
-Rockstart startup &lt;a href=&quot;http://beta.wercker.com/&quot;&gt;Wercker&lt;/a&gt;
-(Continuous deployment made easy) gave a nice overview of all the Node
-modules they use, and I gave a talk on when to use
-Node and my lessons learned while using Node in my previously Y
-combinator funded startup &lt;a href=&quot;http://newcope.com&quot;&gt;Newcope&lt;/a&gt; and in
-my current job as Chief architect at &lt;a href=&quot;http://bottlenose.com&quot;&gt;Bottlenose&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;We plan to have the Node meetup bi-monthly on the last Thursday of the
-month, so the next meetup will be May 31th at 7:00PM. We
-have some interesting speakers lined up so I hope to see you all at our
-next or future meetups. You can follow any announcement on &lt;a href=&quot;http://www.meetup.com/amsnode/&quot;&gt;meetup.com&lt;/a&gt; of follow &lt;a href=&quot;http://twitter.com/amsnode&quot;&gt;us&lt;/a&gt; on Twitter.&lt;/p&gt;
-
-&lt;div style=&quot;width:800px;text-align:center&quot; id=&quot;__ss_12232685&quot;&gt; &lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/beatlevic/when-to-use-node-lessons-learned&quot; title=&quot;When to use Node? Lessons learned&quot; target=&quot;_blank&quot;&gt;When to use Node? Lessons learned&lt;/a&gt;&lt;/strong&gt; &lt;iframe src=&quot;https://www.slideshare.net/slideshow/embed_code/12232685&quot; width=&quot;425&quot; height=&quot;355&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt; &lt;div style=&quot;padding:5px 0 12px&quot;&gt; View more &lt;a href=&quot;http://www.slideshare.net/&quot; target=&quot;_blank&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/beatlevic&quot; target=&quot;_blank&quot;&gt;beatlevic&lt;/a&gt; &lt;/div&gt; &lt;/div&gt;
-
-&lt;p&gt;Node.js = #winning&lt;/p&gt;
-
-&lt;p&gt;And for those of you who love Clojure or like to know more about it,
-check out the &lt;a href=&quot;http://www.meetup.com/The-Amsterdam-Clojure-Meetup-Group/&quot;&gt;
-Amsterdam Clojure meetup.&lt;/a&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Bottlenose 2012</title>
-   <link href="http://beatletech.com/2012/01/04/bottlenose-2012"/>
-   <updated>2012-01-04T00:00:00+01:00</updated>
-   <id>http://beatletech.com/2012/01/04/bottlenose-2012</id>
-   <content type="html">&lt;p&gt;The past couple of months I have been busy working for &lt;a href=&quot;http://bottlenose.com&quot;&gt;Bottlenose&lt;/a&gt;, for which I did some work
-before (earlier in 2011). As I wrote about Bottlenose in a previous
-post, it is a really cool (American) tech startup partly based in the
-Netherlands that is building a new social assistance application that
-helps you make sense of all your social activity streams. It helps
-navigate the depths of your networks and keep up with your social
-streams so you can engage more intelligently.&lt;/p&gt;
-
-&lt;p&gt;I really enjoy working on all the technical challenges that we need to
-tackle to create a smart and intelligent client. Challenges involving:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Natural Language Processing (NLP)&lt;/li&gt;
-  &lt;li&gt;Interest and Topic extraction/clustering&lt;/li&gt;
-  &lt;li&gt;Interest (machine) learning&lt;/li&gt;
-  &lt;li&gt;High concurrency, handling millions of users&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Most of 2011 Bottlenose operated in stealth mode, until we were ready
-in December 2011 to launch the Beta version to the public. The launch
-was a great success and we got loads of positive &lt;a href=&quot;http://press.bottlenose.com/news&quot;&gt;media coverage&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This year I will continue to work for Bottlenose as their chief architect and allround
-(Node.js) developer. I love to see where we will get with Bottlenose in 2012.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/bottlenose-beta.png&quot; alt=&quot;Bottlenose.com&quot; height=&quot;128&quot; width=&quot;315&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Bottlenose = Node.js = #winning&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Malmberg: E-Publishing platform</title>
-   <link href="http://beatletech.com/2011/07/28/malmberg-e-publishing-platform"/>
-   <updated>2011-07-28T00:00:00+02:00</updated>
-   <id>http://beatletech.com/2011/07/28/malmberg-e-publishing-platform</id>
-   <content type="html">&lt;p&gt;The past couple of months have been very busy. First off I was still working partime
-for &lt;a href=&quot;http://skylines.net&quot;&gt;Skylines&lt;/a&gt; with which we made it
-into &lt;a href=&quot;http://disrupt.techcrunch.com/&quot;&gt;Techcrunch&lt;/a&gt; &lt;a href=&quot;http://www.dutchdailynews.com/skylines-nyc/&quot;&gt;Disrupt&lt;/a&gt; NY as a
-finalist. Skylines was actually the first Dutch startup ever to become a
-finalist of this highly rated conference competition. Great stuff,
-showing that Amsterdam can be a great place too when it comes to
-bootstrapping your global startup.&lt;/p&gt;
-
-&lt;p&gt;Next, starting in April, I was hired as a Rails developer by &lt;a href=&quot;http://www.ciber.com/application-development/&quot;&gt;Ciber&lt;/a&gt; on a scrum
-project for their client &lt;a href=&quot;http://www.malmberg.nl/Voortgezet-onderwijs/ePack-ICT/Nieuwe-generatie-methodes/Introductie.htm&quot;&gt;Malmberg&lt;/a&gt;,
-an educational publisher, to work on the next iteration of their
-e-publishing platform. The work consisted of a redesign of the old
-platform, and developing a Rails 3 application on top of the existing
-data models and MSSQL database (Rails 3 actually works perfectly fine with
-other sql dbs besides Mysql and Postgres). The application allows for
-teachers to manage their online courses, materials, exams and results,
-where students have easy access to all of this. The system is actually
-pretty smart in assigning followup courses based on your test scores,
-but still gives teachers total control.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately I can’t show a link to the product or demo, as the
-application is currently being tested by the client, and will be rolled
-out for the new students in september. However I can say that I like
-the end product.&lt;/p&gt;
-
-&lt;p&gt;I strongly believe we will see a lot more development in this
-area of online learning platforms. Looking for instance at the &lt;a href=&quot;http://www.khanacademy.org/&quot;&gt;Khan Academy&lt;/a&gt; or &lt;a href=&quot;http://studyflow.com&quot;&gt;Studyflow&lt;/a&gt; we can see that the
-landscape is changing. Also a word from my teacher friends tells me that the
-Dutch curriculum on both primary and high schools is already filled with more and
-more computer courses, that provide custom tailored education for each
-individual youngster.&lt;/p&gt;
-
-&lt;p&gt;I enjoyed my work at Ciber, working with a great team of skilled
-developers, and I don’t rule out that I in the foreseeable future will
-be working on next generation learning platforms again.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Bottlenose closed Beta</title>
-   <link href="http://beatletech.com/2011/04/26/bottlenose-closed-beta"/>
-   <updated>2011-04-26T00:00:00+02:00</updated>
-   <id>http://beatletech.com/2011/04/26/bottlenose-closed-beta</id>
-   <content type="html">&lt;p&gt;I guess most of you have heared about “stealth” startup &lt;a href=&quot;http://bottleno.se&quot;&gt;Bottlenose&lt;/a&gt;, which already got some great pre
-release write-ups on &lt;a href=&quot;http://techcrunch.com/2011/04/05/bottlenose/&quot;&gt;Techcrunch&lt;/a&gt; and &lt;a href=&quot;http://mashable.com/2011/04/05/bottlenose/&quot;&gt;Mashable&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In case you haven’t, Bottlenose describes itself as “a smarter way to surf the Stream. It’s a new
-personalization tool that helps the important information find you in
-social networks like Twitter and Facebook. Use Bottlenose to track
-your interests, visualize trends, and curate knowledge with your
-friends.” (Bottleno.se)&lt;/p&gt;
-
-&lt;p&gt;The Netherlands doesn’t feature that many high tech startups, so I was
-happy to work together with cofounder &lt;a href=&quot;dominiek.com&quot;&gt;Dominiek
-ter Heide&lt;/a&gt; this month (who helped us out last year with our YC company &lt;a href=&quot;newcope.com&quot;&gt;Newcope&lt;/a&gt;).
-Armed with Node.js my goal is to, where possible, make the tool even smarter than it already is.
-For this challenge it helps a lot to be part of a highly skilled javascript team, who are
-pushing the boundaries forward. And besides being a cool high tech product
-to work on, I also believe Bottlenose is a must needed solution for an
-information overload problem that is getting bigger each day.&lt;/p&gt;
-
-&lt;p&gt;Bottlenose is currently in alpha, but you can sign up now on &lt;a href=&quot;http://bottleno.se&quot;&gt;Bottleno.se&lt;/a&gt;, and hopefully be one
-of the lucky ones for the closed beta to have early access to a tool that will enrich your
-twitter and facebook experience.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/bottlenose.png&quot; alt=&quot;Bottleno.se&quot; height=&quot;157&quot; width=&quot;523&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Bottlenose = Node.js = #winning&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Skylines 1.0</title>
-   <link href="http://beatletech.com/2011/03/27/skylines-1-0"/>
-   <updated>2011-03-27T00:00:00+01:00</updated>
-   <id>http://beatletech.com/2011/03/27/skylines-1-0</id>
-   <content type="html">&lt;p&gt;Skylines is a really cool iPhone app that helps you follow what you
-like, based on realtime pictures, and for the last couple of weeks I
-have been working with the skylines team to create a solid and scalable
-backend.&lt;/p&gt;
-
-&lt;p&gt;Last week at the SXSW conference we had our 1.0 soft launch and the app is
-now available in the app store. We are currently working hard on the
-next 1.1 version, which will feature some great additional
-options. In the meantime please try out the app, and follow your
-interests in a realtime image stream.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/skylines.png&quot; alt=&quot;Skylines.net&quot; height=&quot;485&quot; width=&quot;467&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Just checkout &lt;a href=&quot;http://skylines.net&quot;&gt;skylines.net&lt;/a&gt; and download
-the app from the app store.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>BeatleTech generated with Jekyll</title>
-   <link href="http://beatletech.com/2011/01/03/beatletech-generated-with-jekyll"/>
-   <updated>2011-01-03T00:00:00+01:00</updated>
-   <id>http://beatletech.com/2011/01/03/beatletech-generated-with-jekyll</id>
-   <content type="html">&lt;p&gt;When I started with the creation of BeatleTech.com and blog, I didn’t
-want to rely on Wordpress (or others) as I wanted more flexibility and
-control, and I definitely didn’t want to separate the blog from the main site,
-i.e. linking to a blog on Posterous.&lt;/p&gt;
-
-&lt;p&gt;So my initial plan was to build the site in clojure, given a nice
-online clojure blog example, Brian Carper’s &lt;a href=&quot;https://github.com/briancarper/cow-blog&quot;&gt;Cow-blog&lt;/a&gt;.
-However, shortly after having started, my friend Jeff Rose introduced
-me to &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt;, which is
-a blog-aware, static site generator in Ruby. It allows for templating,
-and uses Disqus for showing a dynamic javascript blog. Generating a static
-site allowed me to copy all the html files to my Transip webhosting
-server, and thereby keeping it extremely low cost. Running a clojure
-site on Google App Engine could have been a good alterative, but I
-liked giving Jekyll a try. It turned out to be very easy and already has tons of
-examples online to check out. I also put the source code of BeatleTech
-on &lt;a href=&quot;https://github.com/beatlevic/BeatleTech&quot;&gt;Github&lt;/a&gt; for sharing, and hope it could be of any use for you.&lt;/p&gt;
-
-&lt;p&gt;So if you are looking for a way to create your website-blog and
-(just like me) already paid for webhosting, which sadly only allows you to do some php
-wizardry, then rest assured as Jekyll can save your day.&lt;/p&gt;
-
-</content>
- </entry>
- 
- <entry>
-   <title>Cake and Emacs: cake-swank</title>
-   <link href="http://beatletech.com/2010/12/23/cake-swank"/>
-   <updated>2010-12-23T00:00:00+01:00</updated>
-   <id>http://beatletech.com/2010/12/23/cake-swank</id>
-   <content type="html">&lt;p&gt;So far I have been using &lt;a href=&quot;https://github.com/technomancy/leiningen&quot;&gt;leiningen&lt;/a&gt; as my
-standard build tool for Clojure, and together with a very nice Emacs
-package
-called &lt;a href=&quot;http://blog.remvee.net/2010/08/19/elein_el_leiningen_functions_for_emacs&quot;&gt;elein&lt;/a&gt;
-I was able to run leiningen tasks from within emacs. The functions I use
- most often are elein-swank and elein-reswank to (re)connect with slime.&lt;/p&gt;
-
-&lt;p&gt;Now this is all great, but lately an alternative build tool has catched my
-eyes and is called &lt;a href=&quot;https://github.com/ninjudd/cake&quot;&gt;cake&lt;/a&gt;. It features a
-persistent JVM, which speeds up startup time tremendeously, and has an
-easier way for setting up tasks similar to ruby rake
-tasks. Now in order to make my swanking and reswanking work in emacs
-with cake I thought of reusing the elein-swank code, but as it turns
-out, in order to kill swank I had to kill cake and thereby killing the
-persistent JVM (missing the whole purpose). So instead of doing that I
-got the advice to just keep swank running, and only reload the
-classpath. This resulted in me implementing the following elisp functions.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-clojure&quot; data-lang=&quot;clojure&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;defun&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cake-project-root&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Look for project.clj file to find project root.&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cwd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;default-directory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;not&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;file-exists-p&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cwd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;project.clj&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cwd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cwd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;../&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;expand-file-name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;defmacro&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cake-in-project-root&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Wrap BODY to make 'default-directory' the project root.&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;gensym&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;,dir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cake-project-root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-       &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;,dir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;default-directory&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;,dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;,body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;No cake project root found&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;defun&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cake-swank&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Connect or reconnect to swank while reloading cake class path files.&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;interactive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-connected-p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-disconnect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;get-buffer-create&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;*cake-swank*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;flet&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;display-buffer&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;buffer-or-name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;not-this-window&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;bury-buffer&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cake-in-project-root&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;shell-command&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;cake -r&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;slime-connect&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;127.0.0.1&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;4005&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;In order for this to work one needs to get the latest cake master
-version, so you can reload class path files (cake -r). Additionally one has
-to turn on swank autostart for cake. This can be done by adding the
-line “swank.autostart = localhost:4005” to your .cake/config file.&lt;/p&gt;
-
-&lt;p&gt;So now you can easily switch to cake, keeping reswank in your toolset.&lt;/p&gt;
-
-&lt;p&gt;Tip: If you find yourself always getting the following mini-buffer
-message when connecting with slime: “Versions differ: nil (slime)
-vs. 20100404 (swank). Continue? (y or n)”, then all you should do is
-removing the slime.elc file in your .emacs.d/elpa/slime-X folder, and
-consider it history.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>BeatleTech online</title>
-   <link href="http://beatletech.com/2010/12/19/beatletech-online"/>
-   <updated>2010-12-19T00:00:00+01:00</updated>
-   <id>http://beatletech.com/2010/12/19/beatletech-online</id>
-   <content type="html">&lt;p&gt;With BeatleTech life and kicking, I found it about time to add some blogging
-functionality, and to start writing about my ongoing work, research and
-serendipity events.&lt;/p&gt;
-
-&lt;p&gt;In my ongoing work you will find me blogging about my emacs journey,
-my clojure lessons, rails mambo, and basically any other technology I
-will be working with. Further more in my research I will cover topics in
-cognitive science, human perception and AI, but all in due time.&lt;/p&gt;
-
-&lt;p&gt;If you are in need for an architect, developer or advisor, then know that
-BeatleTech is there for you, and Beatle is available for hire!&lt;/p&gt;
-
-</content>
- </entry>
- 
-
-</feed>
+&lt;p&gt;&lt;img src=&quot;https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/screenshot-brAIn-v0.0.2.png&quot; alt=&quot;br-ai-n.com&quot; height=&quot;485&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="[&quot;development&quot;]" /><category term="brAIn" /><category term="development" /><category term="AI" /><category term="deep-learning" /><summary type="html">After years of talking and thinking about creating our own Artificial Intelligence (AI), Mark Voortman and I finaly decided a couple of months ago to actually start working on it. So project brAIn was born. With brAIn we have the modest goal to build an AI that will change the world as we know it. Using Deep Learning techniques we are building towards some cool applications.</summary></entry></feed>
