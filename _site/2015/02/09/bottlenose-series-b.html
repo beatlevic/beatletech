@@ -88,11 +88,15 @@
         </nav>
 
         <div id="main" class="grid_9 alpha">
-          <div
-            class="post-list"
-            id="search-hits"
-            style="margin-left: 20px;"
-          ></div>
+          <div id="search-hits-wrapper">
+            <h3>Search results</h3>
+            <div
+              class="post-list"
+              id="search-hits"
+              style="margin-left: 20px;"
+            ></div>
+            <hr />
+          </div>
           <article class="post blog">
             <h2>Bottlenose scores $13.4 Million<em></em></h2>
 
@@ -223,7 +227,7 @@ debt on top of the $13.4 million.</p>
     apiKey: "2b61f303d605176b556cb377d5ef3acd",
     indexName: "prod_beatletech",
     searchFunction: function (helper) {
-      var searchResults = document.getElementById("search-hits");
+      var searchResults = document.getElementById("search-hits-wrapper");
       if (helper.state.query === "") {
         searchResults.style.display = "none";
         return;
@@ -257,9 +261,9 @@ debt on top of the $13.4 million.</p>
     return `
     <div class="post-item">
       <h2><a class="post-link" href="${url}">${title}</a></h2>
-      <span class="publishdate">${date}</span>
+      <div class="publishdate" style="margin-left:0px; margin-bottom:10px">${date}</div>
       <!-- {#breadcrumbs}}<a href="${url}" class="post-breadcrumbs">${breadcrumbs}</a> -->
-      <div class="post-snippet">${content}</div>
+      <div class="post-snippet" style="margin-left: 20px">${content}</div>
     </div>
   `;
   };

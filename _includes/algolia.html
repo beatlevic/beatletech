@@ -17,7 +17,7 @@
     apiKey: "{{ site.algolia.search_only_api_key }}",
     indexName: "{{ site.algolia.index_name }}",
     searchFunction: function (helper) {
-      var searchResults = document.getElementById("search-hits");
+      var searchResults = document.getElementById("search-hits-wrapper");
       if (helper.state.query === "") {
         searchResults.style.display = "none";
         return;
@@ -51,9 +51,9 @@
     return `
     <div class="post-item">
       <h2><a class="post-link" href="${url}">${title}</a></h2>
-      <span class="publishdate">${date}</span>
+      <div class="publishdate" style="margin-left:0px; margin-bottom:10px">${date}</div>
       <!-- {#breadcrumbs}}<a href="${url}" class="post-breadcrumbs">${breadcrumbs}</a>{{/breadcrumbs}} -->
-      <div class="post-snippet">${content}</div>
+      <div class="post-snippet" style="margin-left: 20px">${content}</div>
     </div>
   `;
   };
