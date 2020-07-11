@@ -11,10 +11,13 @@ topics: [ 'blogging', 'css', 'design', 'javascript', 'personal', 'projects', 'ra
 
 <div id="main" class="grid_9 alpha">
   <!-- limit:1 -->
+  <div id="search-searchbar" style="margin-left:20px"></div>
+  <div class="post-list" id="search-hits" style="margin-left:20px"></div>
+
   {% for post in site.posts limit: 8 %}
   <div class="post blog">
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    <p class="publishdate">{{ post.date | date: "%A, %d %B  %Y"}}  <em> <a href="http://www.google.com/search?q={{ post.topics }}+site%3Abeatletech.com/blog">{{ post.topics }}</a> </em> </p>
+    <p class="publishdate">{{ post.date | date: "%A, %d %B  %Y"}} </p>
     <p>{{ post.content }}
       <div class='clear_both tags'>
         <span>
@@ -32,5 +35,5 @@ topics: [ 'blogging', 'css', 'design', 'javascript', 'personal', 'projects', 'ra
   <div class="post blog">
     <h2><a href="archive">More...</a></h2>
   </div>
-
+  {% include algolia.html %}
 </div> <!-- end main -->

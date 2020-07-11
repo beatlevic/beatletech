@@ -46,7 +46,7 @@
       <div id="content">
 
         <nav>
-          <ul id="menu" class="clearfix">
+          <ul id="menu" class="clearfix no-margin">
             <li ><a href="/">Home</a></li>
             <li ><a href="setup">Setup</a></li>
             <li class="current"><a href="blog">Blog</a></li>
@@ -60,10 +60,13 @@
 
 <div id="main" class="grid_9 alpha">
   <!-- limit:1 -->
+  <div id="search-searchbar" style="margin-left:20px"></div>
+  <div class="post-list" id="search-hits" style="margin-left:20px"></div>
+
   
   <div class="post blog">
     <h2><a href="/2019/09/02/chief-architect-at-rekall-ai">Chief Architect at Rekall.ai</a></h2>
-    <p class="publishdate">Monday, 02 September  2019  <em> <a href="http://www.google.com/search?q=+site%3Abeatletech.com/blog"></a> </em> </p>
+    <p class="publishdate">Monday, 02 September  2019 </p>
     <p><p>For the past year I have been working as Tech Lead at <a href="https://www.airfranceklm.com/en/group">Air France - KLM</a>, in the ODS (Operations Decision Support) department. My team was responsible for the on-premise Amsterdam Data Lake, developing ETL pipelines with Spark streaming jobs in Scala, including data modeling of the source system (events) and coordinating with the Data Science team.</p>
 
 <p>The on-premise Hadoop cluster was based on Hortonworks HDP, including Spark, HBase, Kafka and Hive. There was a lot of work involved in configuring and managing the on-premise cluster, and we would spend more time than we would like on infrastructure related issues. Based on my previous cloud experiences I started advocating for a push to Azure Cloud (as KLM already had Azure Active Directory and Office 365) for the Data Lake, and started working on the required Architecture design and proposal.</p>
@@ -93,7 +96,7 @@
   
   <div class="post blog">
     <h2><a href="/2018/08/06/the-post-persgroep-era">The post-Persgroep era</a></h2>
-    <p class="publishdate">Monday, 06 August  2018  <em> <a href="http://www.google.com/search?q=+site%3Abeatletech.com/blog"></a> </em> </p>
+    <p class="publishdate">Monday, 06 August  2018 </p>
     <p><p>Last week I finished my job as Lead Data Engineer at the <a href="https://persgroep.nl">Persgroep</a> in Amsterdam, where 
 I worked for the past year. I had a great time crafting ETL pipelines, writing Scala and Python for Spark (AWS 
 EMR), scheduling tasks (DAGs) with Airflow, and scaling with Redshift (Minus some boring, but important GDPR
@@ -147,7 +150,7 @@ this blog post. Next up, research and play time!</p>
   
   <div class="post blog">
     <h2><a href="/2016/05/02/othot-raises-capital">Othot raises $1.7 Million</a></h2>
-    <p class="publishdate">Monday, 02 May  2016  <em> <a href="http://www.google.com/search?q=+site%3Abeatletech.com/blog"></a> </em> </p>
+    <p class="publishdate">Monday, 02 May  2016 </p>
     <p><p>Great news for Othot as they just secured $1.7 Million in their first
 round of outside financing. For more details and a shoutout for
 Dr. Mark Voortman check out <a href="http://markets.financialcontent.com/mng-ba.mercurynews/news/read?GUID=32015429">MercuryNews</a>.</p>
@@ -167,7 +170,7 @@ Dr. Mark Voortman check out <a href="http://markets.financialcontent.com/mng-ba.
   
   <div class="post blog">
     <h2><a href="/2015/09/10/o-data-scientist-where-art-thou">O Data Scientist, Where Art Thou?</a></h2>
-    <p class="publishdate">Thursday, 10 September  2015  <em> <a href="http://www.google.com/search?q=+site%3Abeatletech.com/blog"></a> </em> </p>
+    <p class="publishdate">Thursday, 10 September  2015 </p>
     <p><p><strong><em>Note: This is a repost of my original blog post at
    <a href="http://www.othot.com/o-data-scientist-where-art-thou/">OThot</a>, where I also work as Senior Data Scientist.</em></strong></p>
 
@@ -224,7 +227,7 @@ any understanding of how they got there or what they have created”</em> [<a hr
   
   <div class="post blog">
     <h2><a href="/2015/06/01/new-job-at-thinktopic">New Job at ThinkTopic</a></h2>
-    <p class="publishdate">Monday, 01 June  2015  <em> <a href="http://www.google.com/search?q=+site%3Abeatletech.com/blog"></a> </em> </p>
+    <p class="publishdate">Monday, 01 June  2015 </p>
     <p><p>Two months ago a good friend of mine (<a href="https://www.linkedin.com/in/rosejn">Jeff Rose</a>), who is a
 former <a href="http://deepmind.com/">DeepMind</a> engineer (acquired by Google), presented me with an
 opportunity to come work at <a href="http://thinktopic.com">ThinkTopic</a> to build intelligent tools for a big
@@ -267,7 +270,7 @@ Convolutional Neural Networks. May the fun and challenge begin.</p>
   
   <div class="post blog">
     <h2><a href="/2015/05/17/goodbye-pvalues-hello-bayesian-statistics">Goodbye P-values, Hello Bayesian Statistics!</a></h2>
-    <p class="publishdate">Sunday, 17 May  2015  <em> <a href="http://www.google.com/search?q=+site%3Abeatletech.com/blog"></a> </em> </p>
+    <p class="publishdate">Sunday, 17 May  2015 </p>
     <p><p><strong><em>Note: This is a repost of my original blog post at
    <a href="http://www.othot.com/goodbye-p-values-hello-bayesian-statistics/">OThot</a>, where I also work as Senior Data Scientist.</em></strong></p>
 
@@ -370,7 +373,7 @@ study”</em>
   
   <div class="post blog">
     <h2><a href="/2015/02/11/coursera-courses">My recent Coursera journey</a></h2>
-    <p class="publishdate">Wednesday, 11 February  2015  <em> <a href="http://www.google.com/search?q=+site%3Abeatletech.com/blog"></a> </em> </p>
+    <p class="publishdate">Wednesday, 11 February  2015 </p>
     <p><p>In the past couple of months I managed to complete 4 online courses on
 <a href="http://coursera.com">Coursera</a>, which is an education platform that partners with top universities
 to offer free <a href="http://en.wikipedia.org/wiki/Massive_open_online_course">MOOCs</a> (Massive open online
@@ -614,7 +617,7 @@ the ride less lonely and a lot more fun.</li>
   
   <div class="post blog">
     <h2><a href="/2015/02/09/bottlenose-series-b">Bottlenose scores $13.4 Million</a></h2>
-    <p class="publishdate">Monday, 09 February  2015  <em> <a href="http://www.google.com/search?q=+site%3Abeatletech.com/blog"></a> </em> </p>
+    <p class="publishdate">Monday, 09 February  2015 </p>
     <p><p>One and a half years after securing our
 <a href="http://beatletech.com/2013/07/30/bottlenose-secures-four-million/">$3.6 Million</a>
 series A investment round to bring ‘Trendfluence’ to the enterprise, we are now
@@ -653,6 +656,120 @@ debt on top of the $13.4 million.</p>
   <div class="post blog">
     <h2><a href="archive">More...</a></h2>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch-theme-algolia.min.css"
+/>
+
+<script>
+  const search = instantsearch({
+    appId: "K4MUG7LHCA",
+    apiKey: "2b61f303d605176b556cb377d5ef3acd",
+    indexName: "prod_beatletech",
+    searchFunction: function (helper) {
+      var searchResults = document.getElementById("search-hits");
+      if (helper.state.query === "") {
+        searchResults.style.display = "none";
+        return;
+      }
+      helper.search();
+      searchResults.style.display = "block";
+    },
+  });
+
+  const hitTemplate = function (hit) {
+    let date = "";
+    if (hit.date) {
+      date = moment.unix(hit.date).format("MMM D, YYYY");
+    }
+
+    let url = `${hit.url}#${hit.anchor}`;
+
+    const title = hit._highlightResult.title.value;
+
+    let breadcrumbs = "";
+    if (hit._highlightResult.headings) {
+      breadcrumbs = hit._highlightResult.headings
+        .map((match) => {
+          return `<span class="post-breadcrumb">${match.value}</span>`;
+        })
+        .join(" > ");
+    }
+
+    const content = hit._highlightResult.html.value;
+
+    return `
+    <div class="post-item">
+      <h2><a class="post-link" href="${url}">${title}</a></h2>
+      <span class="publishdate">${date}</span>
+      <!-- {#breadcrumbs}}<a href="${url}" class="post-breadcrumbs">${breadcrumbs}</a> -->
+      <div class="post-snippet">${content}</div>
+    </div>
+  `;
+  };
+
+  search.addWidget(
+    instantsearch.widgets.searchBox({
+      container: "#search-searchbar",
+      placeholder: "Search into posts...",
+      poweredBy: false, // This is required if you're on the free Community plan
+    })
+  );
+
+  search.addWidget(
+    instantsearch.widgets.hits({
+      container: "#search-hits",
+      templates: {
+        item: hitTemplate,
+      },
+    })
+  );
+
+  search.start();
+</script>
+
+<style>
+  .ais-search-box {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .post-item {
+    margin-bottom: 30px;
+  }
+  .post-link .ais-Highlight {
+    color: #111;
+    font-style: normal;
+    text-decoration: underline;
+  }
+  .post-breadcrumbs {
+    color: #424242;
+    display: block;
+  }
+  .post-breadcrumb {
+    font-size: 18px;
+    color: #424242;
+  }
+  .post-breadcrumb .ais-Highlight {
+    font-weight: bold;
+    font-style: normal;
+  }
+  .post-snippet .ais-Highlight {
+    color: #2a7ae2;
+    font-style: normal;
+    font-weight: bold;
+  }
+  .post-snippet img {
+    display: none;
+  }
+</style>
 
 </div> <!-- end main -->
 
