@@ -13,3 +13,5 @@ algolia:
     - blog.html
     - setup.html
     - archive.html
+    - index.html
+    - not-found-404.html
