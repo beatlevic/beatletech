@@ -701,7 +701,8 @@ h4:hover {
 
 /* .latest li a:hover { color: #fff; } */
 
-.posttr { border: collapse; }
+.posttr { border: collapse; font-size: 112% }
+
 
 .date { width: 90px;
         border-bottom: 1px solid #BBB;
@@ -713,7 +714,7 @@ h4:hover {
             padding: 2px 0px;}
 
 .postlink a { color: #78a7d6;
-              padding: 2px 0px;}
+              padding: 2px 2px;}
 
 .postlink a:hover { color: #fff;
                   padding: 2px 2px;}
