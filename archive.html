@@ -32,21 +32,32 @@ topics:
     <p style="float: right;">
       <a href="http://beatletech.com/atom.xml"><img src="images/feed.png" /></a>
     </p>
-    <h3>Archive</h3>
-    <ul>
-      {% for post in site.posts %}
+    <h2>Archive</h2>
+  {% for post in site.posts  %}
+    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 
+    {% if forloop.first %}
+    <h4 id="{{ this_year }}-ref">{{this_year}}</h4>
+    <ul>
+    {% endif %}
       <li class="publishdate">
         <span
           class="publishdate"
           style="font-family: Consolas, monaco, monospace;"
-          >{{ post.date | date: "%d %b %Y"}}</span
-        >
+          >{{ post.date | date: "%d %b %Y"}}</span>
         <em> <a href="{{ post.url}}">{{ post.title }}</a> </em>
       </li>
-
-      {% endfor %}
+    {% if forloop.last %}
     </ul>
+    {% else %}
+      {% if this_year != next_year %}
+        </ul>
+        <h4 id="{{ next_year }}-ref">{{next_year}}</h2>
+        <ul>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
   </div>
   <div class="post blog archive">
     <h3>Tags</h3>
