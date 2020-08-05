@@ -4,7 +4,7 @@ title: Docker Build using remote Linux Docker host on MacOS
 meta_description: Docker Build using remote Linux Docker host on MacOS
 meta_keywords: post, beatletech, docker, remote
 tags: [startup, docker, remote, hetzner]
-category: [work]
+category: [development]
 published: true
 ---
 

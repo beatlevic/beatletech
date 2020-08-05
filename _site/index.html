@@ -83,11 +83,12 @@
     <h2 style="margin-top:30px">Specializations</h2>
     <p>
       <ul>
-        <li><a href="index.html#ml">Machine Learning / Deep Learning <span style="color:#8a8a8a">( Recommender systems | CNNs )</span></a></li>
-        <li><a href="index.html#stats">Statistics &amp; Analytics <span style="color:#8a8a8a">( Scipy | Numpy | Scikit-learn | R )</span></a></li>
-        <li><a href="index.html#scalable">Big Data & Scalable architectures <span style="color:#8a8a8a">( Scala | Spark | Kafka | Redshift )</span></a></li>
+        <li><a href="index.html#ml">Machine Learning / AI <span style="color:#8a8a8a">( Trend detection | CNNs )</span></a></li>
+        <li><a href="index.html#stats">Statistics &amp; Analytics <span style="color:#8a8a8a">( Scipy | Numpy | Scikit-learn )</span></a></li>
+        <li><a href="index.html#scalable">Big Data & Scalable architectures <span style="color:#8a8a8a">( Spark | Kafka | Redshift )</span></a></li>
         <li><a href="index.html#nosql">NoSQL databases <span style="color:#8a8a8a">( Elasticsearch | Cassandra | MongoDB )</a></li>
         <li><a href="index.html#web">Web Development <span style="color:#8a8a8a">( Node.js | Clojure | Ruby on Rails | Python )</a></li>
+        <li><a href="index.html#web">Cloud and Kubernetes <span style="color:#8a8a8a">( AWS | GCP/GKE | Azure )</a></li>
       </ul>
     </p>
   </article>
@@ -234,13 +235,18 @@
 </aside>
 
   <aside class="widget">
-  <h3>Technology Skills</h3>
+  <h3>Technology Stacks</h3>
   <ul>
-    <li><a href="index.html#nodejs">Programming: Scala | Python | Node | Clj | RoR</a></li>
-    <li><a href="index.html#nosql">NoSQL: Elasticsearch | MongoDb | Cassandra</a></li>
-    <li><a href="index.html#bigdata">BigData: Spark | Redshift | Airflow </a></li>
+    <li>
+      <a href="index.html#nodejs">GKE | Node.js | React | Bedrock | ES</a>
+    </li>
+    <li>
+      <a href="index.html#nodejs">AWS | Scala | Spark | Redshift | Airflow </a>
+    </li>
+    <li><a href="index.html#nosql"> Python | Scikit-learn | Fast.ai</a></li>
   </ul>
-</aside> <!-- end widget -->
+</aside>
+<!-- end widget -->
 
   <aside class="widget">
   <h3>Links</h3>
@@ -384,7 +390,7 @@ Github
     instantsearch.widgets.searchBox({
       container: "#search-searchbar",
       placeholder: "Search into posts...",
-      poweredBy: false, // This is required if you're on the free Community plan
+      poweredBy: false,
       showLoadingIndicator: true,
       queryHook(query, refine) {
         clearTimeout(timerId);

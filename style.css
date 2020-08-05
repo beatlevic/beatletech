@@ -531,7 +531,7 @@ blockquote p { margin: 0; }
 
 .post p {
 	line-height: 1.6em;
-	font-size: 105%;
+	font-size: 112%;
     text-align: left;
 }
 
@@ -568,9 +568,13 @@ blockquote p { margin: 0; }
 
 .post img.thumbnail + p { margin-top: 25px; } /* First p after the thumbnail */
 
+.setup {
+	font-size: 110%;
+}
+
 .setup li {
     line-height: 160%;
-    margin-top:12px;
+	margin-top:12px;
 }
 
 .post h2, .setup h2 {
@@ -616,8 +620,7 @@ blockquote p { margin: 0; }
 /*     margin-left: 30px; */
 /* } */
 
-.post h2 a:hover,
-.post h2:hover {
+.post h2 a:hover {
 	background: none;
 	opacity: 0.7;
 	text-decoration: none;
@@ -669,12 +672,12 @@ h3 {
 }
 
 
-h3:hover {
+/* h3:hover {
 	background: none;
 	opacity: 0.7;
 	text-decoration: none;
 	text-shadow: none;
-}
+} */
 
 h4 {
     color: #92949f;
@@ -684,12 +687,12 @@ h4 {
     margin-left: 10px;
 }
 
-h4:hover {
+/* h4:hover {
 	background: none;
 	opacity: 0.7;
 	text-decoration: none;
 	text-shadow: none;
-}
+} */
 
 
 /* .latest ul { list-style-type: none } */
@@ -714,21 +717,27 @@ h4:hover {
             padding: 2px 0px;}
 
 .postlink a { color: #78a7d6;
-              padding: 2px 2px;}
+			  padding: 2px 2px;
+			  font-size: 110%}
 
 .postlink a:hover { color: #fff;
-                  padding: 2px 2px;}
+                  padding: 2px 2px; }
 
 .post li {
-    /* line-height: 15px; */
+    line-height: 18px;
     padding: 4px 5px;
-    p-webkit-transition: margin-left 0.3s linear;
+    -webkit-transition: margin-left 0.3s linear;
     -moz-transition: margin-left 0.3s linear;
-    transition: margin-left 0.3s linear;
+	transition: margin-left 0.3s linear;
+	font-size: 110%;
 }
 
 .archive li {
 	line-height: 16px;
+}
+
+.archive a {
+	font-size: 110%;
 }
 
 .post li a {
@@ -758,6 +767,7 @@ h4:hover {
 	-webkit-transition: margin-left 0.3s linear;
 	-moz-transition: margin-left 0.3s linear;
 	transition: margin-left 0.3s linear;
+	font-size: 112%;
 }
 
 .widget li a:hover {
