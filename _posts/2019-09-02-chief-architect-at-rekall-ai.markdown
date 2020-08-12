@@ -5,6 +5,7 @@ meta_description: Chief Architect at Rekall.ai
 meta_keywords: post, beatletech, Rekall.ai, startup, AI
 tags: [startup, machine learning, AI, Rekall.ai]
 category: [work]
+image: logo-rekall.png
 published: true
 ---
 

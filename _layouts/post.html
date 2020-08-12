@@ -42,6 +42,13 @@
       content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: 'https://beatletech.com' }}"
     />
 
+    {% if page.image %}
+    <meta
+      property="og:image"
+      content="{{ site.url }}/images/{{ page.image }}"
+    />
+    {% endif %}
+
     <!--[if lt IE 9]>
       <script
         src="https://html5shiv.googlecode.com/svn/trunk/html5.js"

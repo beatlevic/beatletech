@@ -5,11 +5,12 @@ meta_description: The post-Persgroep era
 meta_keywords: post, beatletech, https, setup, persgroep, startup, AI
 tags: [startup, machine learning, AI]
 category: [work]
+image: DPN-Logo-Staand-Secundair-300dpi-web.png
 published: true
 ---
 
-Last week I finished my job as Lead Data Engineer at the [Persgroep](https://persgroep.nl) in Amsterdam, where 
-I worked for the past year. I had a great time crafting ETL pipelines, writing Scala and Python for Spark (AWS 
+Last week I finished my job as Lead Data Engineer at the [Persgroep](https://persgroep.nl) in Amsterdam, where
+I worked for the past year. I had a great time crafting ETL pipelines, writing Scala and Python for Spark (AWS
 EMR), scheduling tasks (DAGs) with Airflow, and scaling with Redshift (Minus some boring, but important GDPR
 work). But most of all I liked the (Kanban) team, which grew during my time from just 3 members to 15, and I
 enjoyed coaching and helping out the new recruits, as well as providing technical support and architectural advise to other teams.
@@ -43,4 +44,3 @@ Finally after cleaning up my HTML, upgrading Jekyll, minimizing assets and movin
 this blog post. Next up, research and play time!
 
 Wish me luck.
-

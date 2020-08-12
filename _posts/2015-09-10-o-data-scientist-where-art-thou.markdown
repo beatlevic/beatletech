@@ -5,6 +5,7 @@ meta_description: O Data Scientist, Where Art Thou?
 meta_keywords: post, OThot, Data Science
 tags: [work, development]
 category: [work]
+image: frequentists_vs_bayesians.png
 published: true
 ---
 
@@ -49,4 +50,3 @@ We believe there might be a better alternative to growing your own in-house Data
 [5] The Data Science Venn Diagram: [http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram)
 
 [6] How to actually learn data science: [https://www.dataquest.io/blog/how-to-actually-learn-data-science/](https://www.dataquest.io/blog/how-to-actually-learn-data-science/)
-
