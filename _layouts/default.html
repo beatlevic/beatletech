@@ -68,7 +68,6 @@
     </div> <!-- end wrapper -->
 
     <script type="text/javascript">
-
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-20231246-1']);
       _gaq.push(['_trackPageview']);
@@ -78,10 +77,10 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
     </script>
 
-    <script>function dropDown(id) {
+    <script type="text/javascript">
+      function dropDown(id) {
         var el = document.getElementById(id)
         var style = el.style.display;
         console.log(el);
@@ -92,20 +91,18 @@
       var h = location.hash;
       console.log(h);
       if (h) dropDown('tag-'+h.slice(1));
-
     </script>
 
-    <script>
-     function onHover() {
-      var el = document.getElementById("headshot")
-      el.src = "images/jc-small.png"
-     }
+    <script type="text/javascript">
+      function onHover() {
+        var el = document.getElementById("headshot")
+        el.src = "images/jc-small.png"
+      }
 
-     function offHover() {
-      var el = document.getElementById("headshot")
-      el.src = "https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/headshot.png"
-     }
-
+      function offHover() {
+        var el = document.getElementById("headshot")
+        el.src = "https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/headshot.png"
+      }
     </script>
 
   </body>
