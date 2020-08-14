@@ -582,7 +582,7 @@ blockquote p { margin: 0; }
 	display: block;
 	font-size: 24px;
 	margin-left: -15px;
-  margin-top: 10px;
+    margin-top: 10px;
 	letter-spacing: -1px;
 	-webkit-transition: opacity 0.15s ease-in-out;
 	-moz-transition: opacity 0.15s ease-in-out;
@@ -608,12 +608,12 @@ blockquote p { margin: 0; }
 }
 
 .blog {
-	  border-bottom: 1px solid #cacaca;
+	border-bottom: 1px solid #cacaca;
     margin-bottom: 30px;
 }
 
 .grid_8 h2 {
-	margin-left: 10px;
+	margin-left: -1px;
 }
 
 /* .blog h2 { */
@@ -628,10 +628,10 @@ blockquote p { margin: 0; }
 }
 
 .post h3 {
-	margin: 20px 0 10px -15px;
+	margin: 20px 0 10px -1px;
 	color: #78a7d6
 }
-.post h4 { margin: 10px 0px 10px -15px; }
+.post h4 { margin: 10px 0px 10px -1px; }
 
 /* Post meta */
 	.postmeta {
@@ -646,8 +646,8 @@ blockquote p { margin: 0; }
 /* Sidebar */
 
 .widget {
-	  overflow: hidden;
-	  padding-top: 5px;
+	overflow: hidden;
+	padding-top: 5px;
     font-size: 13px;
 }
 

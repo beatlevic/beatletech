@@ -5,6 +5,7 @@ meta_description: Frequentism vs Bayesianism with Bayesian statistics winning
 meta_keywords: post, Frequentism, Bayesianism, inferences, data analysis, statistics, p-values, OThot
 tags: [OThot, statistics, bayesianism]
 category: [statistics]
+image: https://imgs.xkcd.com/comics/frequentists_vs_bayesians.png
 published: true
 ---
 
@@ -13,7 +14,7 @@ published: true
 
 In statistics there is the old and ongoing debate of Frequentism versus Bayesianism, which has been humorously depicted in the following popular XKCD cartoon \[[1](http://www.xkcd.com/1132/)\]:
 
-<img src="https://imgs.xkcd.com/comics/frequentists_vs_bayesians.png" alt="Frequentism vs Bayesianism" width="468" heigth="709" style="margin-left:100px">
+<img src="https://imgs.xkcd.com/comics/frequentists_vs_bayesians.png" alt="Frequentism vs Bayesianism" width="468" heigth="709" style="margin-left:150px">
 
 In this cartoon we see the Frequentist statistician believing that the odds (p-value) of the
 neutrino detector lying are below the (arbitrary) significance level of 0.05, saying that it is
@@ -31,8 +32,8 @@ The popular blogging site **"Pythonic Perambulations"** has a great series of te
 a practical introduction to Frequentism and Bayesianism \[[2](http://jakevdp.github.io/blog/2014/03/11/frequentism-and-bayesianism-a-practical-intro/)\], which are highly recommended. In this
 series Jake Vanderplas explains with great clarity the differences, which are summarized as follows:
 
-- Frequentists and Bayesians disagree about the definition of probability 
-- Frequentism considers probabilities to be objective and related to frequencies of real or hypothetical events 
+- Frequentists and Bayesians disagree about the definition of probability
+- Frequentism considers probabilities to be objective and related to frequencies of real or hypothetical events
 - Bayesianism considers probabilities to be subjective and measures degrees of knowledge or belief
 
 As a result he explains: *"[..] frequentists consider model parameters to be fixed and data to be
@@ -69,7 +70,7 @@ data in hypothetical study replications, not a statement about actual conclusion
 study"*
 \[[6](http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact)\]
 
-Needless to say, but at [OThot](http://www.othot.com) we are big proponents of the Bayesian approach for statistical inferences. In a previous blog post by Mark Voortman \[[7](http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common)\], we already started talking and explaining the Bayesian approach and you can safely bet to expect more of that. 
+Needless to say, but at [OThot](http://www.othot.com) we are big proponents of the Bayesian approach for statistical inferences. In a previous blog post by Mark Voortman \[[7](http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common)\], we already started talking and explaining the Bayesian approach and you can safely bet to expect more of that.
 
 #### Sources
 
@@ -88,4 +89,3 @@ Needless to say, but at [OThot](http://www.othot.com) we are big proponents of t
 [6] Scientists Perturbed by Loss of Stat Tools to Sift Research Fudge from Fact [http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact](http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact)
 
 [7] What Do Searching For a Plane and a Doctor’s Diagnosis Have in Common? [http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common](http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common)
-

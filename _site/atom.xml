@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2020-08-05T14:53:52+02:00</updated>
+ <updated>2020-08-14T15:36:27+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -35,8 +35,8 @@
    <link href="http://beatletech.com/2018/08/06/the-post-persgroep-era"/>
    <updated>2018-08-06T00:00:00+02:00</updated>
    <id>http://beatletech.com/2018/08/06/the-post-persgroep-era</id>
-   <content type="html">&lt;p&gt;Last week I finished my job as Lead Data Engineer at the &lt;a href=&quot;https://persgroep.nl&quot;&gt;Persgroep&lt;/a&gt; in Amsterdam, where 
-I worked for the past year. I had a great time crafting ETL pipelines, writing Scala and Python for Spark (AWS 
+   <content type="html">&lt;p&gt;Last week I finished my job as Lead Data Engineer at the &lt;a href=&quot;https://persgroep.nl&quot;&gt;Persgroep&lt;/a&gt; in Amsterdam, where
+I worked for the past year. I had a great time crafting ETL pipelines, writing Scala and Python for Spark (AWS
 EMR), scheduling tasks (DAGs) with Airflow, and scaling with Redshift (Minus some boring, but important GDPR
 work). But most of all I liked the (Kanban) team, which grew during my time from just 3 members to 15, and I
 enjoyed coaching and helping out the new recruits, as well as providing technical support and architectural advise to other teams.&lt;/p&gt;
@@ -70,7 +70,6 @@ work setup, so it was only logical to also write about it. You can find it
 this blog post. Next up, research and play time!&lt;/p&gt;
 
 &lt;p&gt;Wish me luck.&lt;/p&gt;
-
 </content>
  </entry>
  
@@ -101,7 +100,7 @@ Dr. Mark Voortman check out &lt;a href=&quot;http://markets.financialcontent.com
 
 &lt;p&gt;Secondly, and somewhat problematic, is the required skill set for a Data Scientist. Why problematic? Well, this is expressed clearly in the by now classic illustration of the Data Science skill set, the Data Science Venn Diagram [&lt;a href=&quot;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&quot;&gt;5&lt;/a&gt;]:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/Data_Science_VD.png&quot; alt=&quot;Data Science Venn Diagram&quot; style=&quot;margin-left:100px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/Data_Science_VD.png&quot; alt=&quot;Data Science Venn Diagram&quot; style=&quot;margin-left:140px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The three main skills (indicated by the primary colors) are hacking skills, math and stats knowledge, and substantive expertise. What this implies is that you need to be a programmer and statistician, while also having a lot of experience in these fields and in the relevant problem domain and business context. Given that each of these skills on their own already poses a challenge when you want to find a great candidate, then searching for all of them combined in one person can send you on a wild goose chase.&lt;/p&gt;
 
@@ -129,7 +128,6 @@ any understanding of how they got there or what they have created”&lt;/em&gt; 
 &lt;p&gt;[5] The Data Science Venn Diagram: &lt;a href=&quot;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&quot;&gt;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;[6] How to actually learn data science: &lt;a href=&quot;https://www.dataquest.io/blog/how-to-actually-learn-data-science/&quot;&gt;https://www.dataquest.io/blog/how-to-actually-learn-data-science/&lt;/a&gt;&lt;/p&gt;
-
 </content>
  </entry>
  
@@ -177,7 +175,7 @@ Convolutional Neural Networks. May the fun and challenge begin.&lt;/p&gt;
 
 &lt;p&gt;In statistics there is the old and ongoing debate of Frequentism versus Bayesianism, which has been humorously depicted in the following popular XKCD cartoon [&lt;a href=&quot;http://www.xkcd.com/1132/&quot;&gt;1&lt;/a&gt;]:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://imgs.xkcd.com/comics/frequentists_vs_bayesians.png&quot; alt=&quot;Frequentism vs Bayesianism&quot; width=&quot;468&quot; heigth=&quot;709&quot; style=&quot;margin-left:100px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://imgs.xkcd.com/comics/frequentists_vs_bayesians.png&quot; alt=&quot;Frequentism vs Bayesianism&quot; width=&quot;468&quot; heigth=&quot;709&quot; style=&quot;margin-left:150px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In this cartoon we see the Frequentist statistician believing that the odds (p-value) of the
 neutrino detector lying are below the (arbitrary) significance level of 0.05, saying that it is
@@ -256,7 +254,6 @@ study”&lt;/em&gt;
 &lt;p&gt;[6] Scientists Perturbed by Loss of Stat Tools to Sift Research Fudge from Fact &lt;a href=&quot;http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact&quot;&gt;http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;[7] What Do Searching For a Plane and a Doctor’s Diagnosis Have in Common? &lt;a href=&quot;http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common&quot;&gt;http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common&lt;/a&gt;&lt;/p&gt;
-
 </content>
  </entry>
  

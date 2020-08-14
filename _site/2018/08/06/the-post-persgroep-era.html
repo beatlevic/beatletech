@@ -34,13 +34,20 @@
 
     <meta
       property="og:description"
-      content="Last week I finished my job as Lead Data Engineer at the Persgroep in Amsterdam, where I worked for the past year. I had a great time crafting ETL pipelines,..."
+      content="Last week I finished my job as Lead Data Engineer at the Persgroep in Amsterdam, whereI worked for the past year. I had a great time crafting ETL pipelines, ..."
     />
 
     <meta
       property="og:url"
       content="https://beatletech.com/2018/08/06/the-post-persgroep-era"
     />
+
+    
+    <meta
+      property="og:image"
+      content="https://beatletech.com/images/DPN-Logo-Staand-Secundair-300dpi-web.png"
+    />
+    
 
     <!--[if lt IE 9]>
       <script
@@ -72,7 +79,7 @@
 
       <div id="content">
         <nav>
-          <ul id="menu" class="clearfix">
+          <ul id="menu" class="clearfix no-margin">
             <li><a href="/">About</a></li>
             <li><a href="../../../../Setup">Setup</a></li>
             <li class="current"><a href="../../../../blog">Blog</a></li>
@@ -88,7 +95,7 @@
         </nav>
 
         <div id="main" class="grid_9 alpha">
-          <div id="search-hits-wrapper">
+          <div id="search-hits-wrapper" style="display: none;">
             <h3>Search results</h3>
             <a
               href="https://www.algolia.com/?utm_source=instantsearch.js&amp;utm_medium=website&amp;utm_content=instantsearchjs.netlify.app&amp;utm_campaign=poweredby"
@@ -133,8 +140,8 @@
 
             <p class="publishdate">Monday, 06 August 2018.</p>
 
-            <p>Last week I finished my job as Lead Data Engineer at the <a href="https://persgroep.nl">Persgroep</a> in Amsterdam, where 
-I worked for the past year. I had a great time crafting ETL pipelines, writing Scala and Python for Spark (AWS 
+            <p>Last week I finished my job as Lead Data Engineer at the <a href="https://persgroep.nl">Persgroep</a> in Amsterdam, where
+I worked for the past year. I had a great time crafting ETL pipelines, writing Scala and Python for Spark (AWS
 EMR), scheduling tasks (DAGs) with Airflow, and scaling with Redshift (Minus some boring, but important GDPR
 work). But most of all I liked the (Kanban) team, which grew during my time from just 3 members to 15, and I
 enjoyed coaching and helping out the new recruits, as well as providing technical support and architectural advise to other teams.</p>
@@ -168,7 +175,6 @@ work setup, so it was only logical to also write about it. You can find it
 this blog post. Next up, research and play time!</p>
 
 <p>Wish me luck.</p>
-
 
 
             <div
@@ -426,6 +432,19 @@ this blog post. Next up, research and play time!</p>
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(ga, s);
       })();
+    </script>
+
+    <script type="text/javascript">
+      function onHover() {
+        var el = document.getElementById("headshot");
+        el.src = "images/jc-small.png";
+      }
+
+      function offHover() {
+        var el = document.getElementById("headshot");
+        el.src =
+          "https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/headshot.png";
+      }
     </script>
   </body>
 </html>
