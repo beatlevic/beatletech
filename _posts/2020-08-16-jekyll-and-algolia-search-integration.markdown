@@ -117,3 +117,5 @@ I am using the slightly older v2 of instantsearch.js, so at some point I will wa
 If my search query volume increases above the free 10k a month, then I'm happy to pay for this service. I do have one feature request for the Algolia team for the paid service, which is adding a monthly payment limit with alerting, to make sure you won't get any surprise overcharge bill.
 
 Anyway, so far a big thumbs up for Algolia. 👍
+
+[HN Discussion](https://news.ycombinator.com/item?id=24181472)

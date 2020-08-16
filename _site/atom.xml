@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2020-08-16T21:38:10+02:00</updated>
+ <updated>2020-08-16T23:45:23+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -166,6 +166,8 @@
 &lt;p&gt;If my search query volume increases above the free 10k a month, then I’m happy to pay for this service. I do have one feature request for the Algolia team for the paid service, which is adding a monthly payment limit with alerting, to make sure you won’t get any surprise overcharge bill.&lt;/p&gt;
 
 &lt;p&gt;Anyway, so far a big thumbs up for Algolia. 👍&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=24181472&quot;&gt;HN Discussion&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
