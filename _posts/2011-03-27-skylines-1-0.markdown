@@ -3,8 +3,8 @@ layout: post
 title: "Skylines 1.0"
 meta_description: Skylines
 meta_keywords: post, development, work, freelancing, php, skylines, iphone
-tags: [freelancing, work, development]
-category: [development]
+tags: [skylines, php, freelancing]
+category: [client]
 ---
 
 Skylines is a really cool iPhone app that helps you follow what you

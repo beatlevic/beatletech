@@ -3,8 +3,8 @@ layout: post
 title: New Job at ThinkTopic
 meta_description: Started my new job at ThinkTopic as Deep Learning Software Engineer
 meta_keywords: post, ThinkTopic, work, Deep learning, Bottlenose
-tags: [work, development]
-category: [work]
+tags: [thinktopic, clojure, deep-learning]
+category: [client]
 published: true
 ---
 
@@ -34,4 +34,3 @@ Convolutional Neural Networks. May the fun and challenge begin.
 
 <img src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/thinktopic-logo.png" alt="ThinkTopic" width="646"
 height="195" style="margin-left:60px">
-

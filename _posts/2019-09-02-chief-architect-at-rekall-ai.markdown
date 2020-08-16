@@ -3,8 +3,8 @@ layout: post
 title: Chief Architect at Rekall.ai
 meta_description: Chief Architect at Rekall.ai
 meta_keywords: post, beatletech, Rekall.ai, startup, AI
-tags: [startup, machine learning, AI, Rekall.ai]
-category: [work]
+tags: [startup, machine learning, AI, rekall.ai]
+category: [client]
 image: logo-rekall.png
 published: true
 ---

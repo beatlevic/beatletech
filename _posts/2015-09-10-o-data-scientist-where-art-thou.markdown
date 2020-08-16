@@ -2,9 +2,9 @@
 layout: post
 title: O Data Scientist, Where Art Thou?
 meta_description: O Data Scientist, Where Art Thou?
-meta_keywords: post, OThot, Data Science
-tags: [work, development]
-category: [work]
+meta_keywords: post, Othot, Data Science
+tags: [othot, statistics, data science]
+category: [client]
 image: frequentists_vs_bayesians.png
 published: true
 ---

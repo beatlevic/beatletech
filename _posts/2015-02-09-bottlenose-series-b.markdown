@@ -4,7 +4,7 @@ title: "Bottlenose scores $13.4 Million"
 meta_description: Bottlenose raised $13.4 Million in series B round
 meta_keywords: post, bottlenose, funding
 tags: [bottlenose, funding]
-category: [work]
+category: [client]
 ---
 
 One and a half years after securing our
@@ -26,4 +26,3 @@ debt on top of the $13.4 million.
 At Bottlenose we have exciting times ahead of us.
 
 You can read the full story on [Techcrunch](http://techcrunch.com/2015/02/09/bottlenose-series-b/).
-

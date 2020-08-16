@@ -4,7 +4,7 @@ title: "Amsterdam Node meetup group"
 meta_description: Presenting at the Amsterdam Node.js meetup group that I'm organizing
 meta_keywords: post, node.js, javascript, presentation, meetup
 tags: [presentation, node.js, javascript]
-category: [development]
+category: [presentation]
 ---
 
 We (me and <a href="http://dominiek.com/">Dominiek ter Heide</a>) started a new <a href="http://www.meetup.com/amsnode/">meetup group</a> in Amsterdam

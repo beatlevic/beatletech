@@ -49,13 +49,12 @@
             <li ><a href="setup">Setup</a></li>
             <li ><a href="blog">Blog</a></li>
             <li ><a href="archive">Archive</a></li>
-            <li><div id="search-searchbar" style="margin-top: -4px; margin-bottom: -10px; width: 350px"></div></li>
+            <li><div id="search-searchbar" style="margin-top: -4px; margin-bottom: -10px; width: 265px"></div></li>
+            <li><a href="#" style="background-color: rgb(250, 181, 122); color:white;" data-token="baaf08be55251183cc067366a8b25400" onclick="mjOpenPopin(event, this)">Subscribe!</a></li>
           </ul>
-
 
           <br class="clear" />
         </nav>
-
 
         <h2>Oops!</h2>
 
@@ -102,12 +101,11 @@
     indexName: "prod_beatletech",
     searchFunction: function (helper) {
       var searchResults = document.getElementById("search-hits-wrapper");
-      if (helper.state.query === "") {
-        searchResults.style.display = "none";
+      if (helper.state.query === "" && searchResults.style.display === "none") {
         return;
       }
+      searchResults.style.display = helper.state.query ? "block" : "none";
       helper.search();
-      searchResults.style.display = "block";
     },
   });
 
@@ -207,6 +205,10 @@
 </style>
 
     </div> <!-- end wrapper -->
+
+    <data id="mj-w-res-data" data-token="baaf08be55251183cc067366a8b25400" class="mj-w-data" data-apikey="5MN5" data-w-id="EIl" data-lang="en_US" data-base="https://app.mailjet.com" data-width="640" data-height="328.253" data-statics="statics"></data>
+
+    <script type="text/javascript" src="https://app.mailjet.com/statics/js/widget.modal.js"></script>
 
     <script type="text/javascript">
       var _gaq = _gaq || [];

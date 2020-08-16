@@ -2,8 +2,8 @@
 layout: post
 title: "My System to Win Big"
 meta_description: My system inspired by how to fail at almost everything and still win big (Scott Adams)
-meta_keywords: post, lifestyle
-tags: [lifestyle, paleo, books]
+meta_keywords: post, lifestyle, Scott Adams, Dilbert
+tags: [lifestyle, paleo, Scott Adams]
 category: [lifestyle]
 ---
 

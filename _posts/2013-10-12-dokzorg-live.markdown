@@ -3,7 +3,7 @@ layout: post
 title: "Dokzorg.nl live!"
 meta_description: Dokzorg
 meta_keywords: post, development, html5, dokzorg, femke, stevens van langen
-tags: [work, development]
+tags: [dokzorg]
 category: [development]
 ---
 

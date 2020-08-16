@@ -3,7 +3,7 @@ layout: post
 title: "Bottlenose closed Beta"
 meta_description: Bottlenose closed Beta
 meta_keywords: post, development, work, freelancing, node, bottlenose, twitter, node.js
-tags: [freelancing, work, node.js, startup]
+tags: [bottlenose, node.js, startup]
 category: [development]
 ---
 

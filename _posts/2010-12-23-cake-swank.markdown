@@ -3,8 +3,8 @@ layout: post
 title: "Cake and Emacs: cake-swank"
 meta_description: Connect or reconnect to swank while reloading cake class path files with cake -r
 meta_keywords: post, emacs, cake, swank, clojure, lisp, linux
-tags: [cake, emacs, clojure, leiningen, linux]
-category: [emacs]
+tags: [emacs, clojure]
+category: [development]
 ---
 
 So far I have been using <a

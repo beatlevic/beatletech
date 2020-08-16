@@ -3,7 +3,7 @@ layout: post
 title: "Bottlenose 2012"
 meta_description: Joining forces with bottlenose in 2012
 meta_keywords: post, development, work, freelancing, node, node.js, javascript, bottlenose
-tags: [freelancing, work, development, node.js, javascript]
+tags: [bottlenose, freelancing, node.js, javascript]
 category: [development]
 ---
 

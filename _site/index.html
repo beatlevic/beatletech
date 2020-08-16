@@ -12,7 +12,7 @@
     <meta name="description" content="Freelance company BeatleTech by Coen Stevens" />
 
     
-    <meta name="keywords" content="Software architect, Tech lead, Big Data, Data Engineer, Data science, Data engineer, data scientist, machine alearning, web development, freelancer, beatlevic, programmer, Coen Stevens, entrepreneur, hacker, scientist, software architect, python, ruby, clojure, javascript, nodejs, node.js, scala, spark" />
+    <meta name="keywords" content="Software architect, Tech lead, Big Data, Data Engineer, Data science, Data engineer, data scientist, machine alearning, web development, freelancer, beatlevic, programmer, Coen Stevens, entrepreneur, hacker, scientist, software architect, python, ruby, clojure, javascript, nodejs, node.js, scala, sparky" />
     
 
     <meta name="author" content="Coen Stevens" />
@@ -51,13 +51,12 @@
             <li ><a href="setup">Setup</a></li>
             <li ><a href="blog">Blog</a></li>
             <li ><a href="archive">Archive</a></li>
-            <li><div id="search-searchbar" style="margin-top: -4px; margin-bottom: -10px; width: 350px"></div></li>
+            <li><div id="search-searchbar" style="margin-top: -4px; margin-bottom: -10px; width: 265px"></div></li>
+            <li><a href="#" style="background-color: rgb(250, 181, 122); color:white;" data-token="baaf08be55251183cc067366a8b25400" onclick="mjOpenPopin(event, this)">Subscribe!</a></li>
           </ul>
-
 
           <br class="clear" />
         </nav>
-
 
         <!-- <div id="search-searchbar" style="margin-left: 30px; margin-right: 50px"></div> -->
 <div id="search-hits-wrapper" style="display:none">
@@ -163,10 +162,10 @@
   <article class="post">
     <h2 style="margin-top:30px">Contact</h2>
     <div class="column"
-         style="padding-left:10px;padding-bottom:10px;float:right;margin-top:-40px;margin-right:20px"><a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/">
+         style="padding-left:10px;padding-bottom:10px;float:right;margin-top:-40px;margin-right:0px"><a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/">
         <img src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/AWS-CSAA.png" alt="AWS" width="110px" heigth="110px" /></a></div>
     <p>
-      Email: <a href="mailto:beatlevic@gmail.com">beatlevic@gmail.com</a> or <a href="mailto:coen@rekall.ai">coen@rekall.ai</a>
+      Email: <a href="mailto:beatlevic@gmail.com">beatlevic@gmail.com</a> or <a href="mailto:coen@beatletech.com">coen@beatletech.com</a>
     </p>
     <p>
       Work location: Amsterdam area &amp; Remote
@@ -190,6 +189,11 @@
   <table>
     <tbody>
 
+      
+      <tr class="posttr">
+        <td class="date">16 Aug 2020</td>
+        <td class="postlink"><a href="/2020/08/16/jekyll-and-algolia-search-integration">Jekyll and Algolia search integration</a></td>
+      </tr>
       
       <tr class="posttr">
         <td class="date">02 Sep 2019</td>
@@ -224,11 +228,6 @@
       <tr class="posttr">
         <td class="date">11 Feb 2015</td>
         <td class="postlink"><a href="/2015/02/11/coursera-courses">My recent Coursera journey</a></td>
-      </tr>
-      
-      <tr class="posttr">
-        <td class="date">09 Feb 2015</td>
-        <td class="postlink"><a href="/2015/02/09/bottlenose-series-b">Bottlenose scores $13.4 Million</a></td>
       </tr>
       
     </tbody>
@@ -461,12 +460,11 @@
     indexName: "prod_beatletech",
     searchFunction: function (helper) {
       var searchResults = document.getElementById("search-hits-wrapper");
-      if (helper.state.query === "") {
-        searchResults.style.display = "none";
+      if (helper.state.query === "" && searchResults.style.display === "none") {
         return;
       }
+      searchResults.style.display = helper.state.query ? "block" : "none";
       helper.search();
-      searchResults.style.display = "block";
     },
   });
 
@@ -566,6 +564,10 @@
 </style>
 
     </div> <!-- end wrapper -->
+
+    <data id="mj-w-res-data" data-token="baaf08be55251183cc067366a8b25400" class="mj-w-data" data-apikey="5MN5" data-w-id="EIl" data-lang="en_US" data-base="https://app.mailjet.com" data-width="640" data-height="328.253" data-statics="statics"></data>
+
+    <script type="text/javascript" src="https://app.mailjet.com/statics/js/widget.modal.js"></script>
 
     <script type="text/javascript">
       var _gaq = _gaq || [];

@@ -6,7 +6,7 @@
     <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>BeatleTech | Coen Stevens | Project brAIn</title>
+    <title>BeatleTech | Coen Stevens | Jekyll and Algolia search integration</title>
 
     <meta
       name="description"
@@ -14,7 +14,7 @@
     />
 
     
-    <meta name="keywords" content="post, development, deep learning, AI, machine learning" />
+    <meta name="keywords" content="post, development, javascript, Jekyll, Algolia" />
     
 
     <meta name="author" content="Coen Stevens" />
@@ -29,19 +29,24 @@
 
     <meta
       property="og:title"
-      content="Project brAIn"
+      content="Jekyll and Algolia search integration"
     />
 
     <meta
       property="og:description"
-      content="After years of talking and thinking about creating our own Artificial Intelligence (AI), Mark Voortman and I finaly decided a couple of months ago to actuall..."
+      content=""
     />
 
     <meta
       property="og:url"
-      content="https://beatletech.com/2014/09/03/project-brain"
+      content="https://beatletech.com/2020/08/16/jekyll-and-algolia-search-integration"
     />
 
+    
+    <meta
+      property="og:image"
+      content="https://beatletech.com/images/jekyll-and-algolia.png"
+    />
     
 
     <!--[if lt IE 9]>
@@ -143,15 +148,160 @@
             <hr />
           </div>
           <article class="post blog">
-            <h2>Project brAIn<em></em></h2>
+            <h2>Jekyll and Algolia search integration<em></em></h2>
 
-            <p class="publishdate">Wednesday, 03 September 2014.</p>
+            <p class="publishdate">Sunday, 16 August 2020.</p>
 
-            <p>After years of talking and thinking about creating our own Artificial Intelligence (AI), <a href="http://linkedin.com/in/markvoortman">Mark Voortman</a> and I finaly decided a couple of months ago to actually start working on it. So project brAIn was born. With brAIn we have the modest goal to build an AI that will change the world as we know it. Using Deep Learning techniques we are building towards some cool applications.</p>
+            <p><img src="https://beatletech.com/images/jekyll-and-algolia.png" alt="Algolia" width="98%" title="Jekyll and Algolia" style="margin-left:0px" /></p>
 
-<p>We have launched a new website and wrote an <a href="http://br-ai-n.com/2014/09/03/introducing-brain/">introductory post</a> with more details on our goals and progress. So check out <a href="http://br-ai-n.com">br-ai-n.com</a> and stay tuned for future posts!</p>
+<p>Recently I decided to add search functionality to my <a href="https://beatletech.com">BeatleTech</a> site (indeed, the one you are visiting right now). Not because I needed my readers to filter through the overwhelming number of articles I have written here (which I have not), but simply because I thought it would be a cool feature that would bring some nice interactivity to the site and to spark my ambition to write more blog posts going forward.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/screenshot-brAIn-v0.0.2.png" alt="br-ai-n.com" height="485" width="800" /></p>
+<p>In this article I will explain <strong>why</strong> I picked <a href="https://www.algolia.com/">Algolia Search</a> and <strong>how</strong> it was integrated with this <a href="https://jekyllrb.com/">Jekyll</a> generated static site, including some interesting improvements.</p>
+
+<h3 id="why-algolia-search">Why Algolia Search?</h3>
+
+<p>While tinkering a bit with the design and layout of this site during a rainy day at a Dutch campsite, I was looking for an easy Jekyll plugin to bring search to my website. Although I have a lot of experience in working directly with <a href="https://www.elastic.co/">Elasticsearch</a>, I didn’t want to go down a route of building and deploying everything from scratch. While certainly a nice exercise, this would definitely take too much time and maintenance down the line, which wouldn’t be worth it (yet) looking at the traffic statistics. So, like I said, looking for something easy and quick to get up and running within a day.</p>
+
+<p>After some Google search queries, I quickly stumbled upon some people recommending Algolia at the <a href="https://talk.jekyllrb.com/t/how-to-add-a-search-bar/606/7">Jekyll talk</a> discussion board.</p>
+
+<p>Digging into Algolia, I found the following compelling reasons to integrate with Algolia Search:</p>
+<ul>
+  <li><strong>Known brand</strong>. It turns out I was already quite familiar (and satisfied) with Algolia Search as a consumer of <a href="https://hn.algolia.com/">Hacker News Search</a> which is powered by Algolia.</li>
+  <li><strong>Free tier</strong>. They recently (July 1st) introduced more <a href="https://blog.algolia.com/introducing-algolias-most-customer-friendly-pricing/">customer-friendly pricing</a> with a starting free tier as long as you would show the “Search by Algolia” next to your search results. Also with reasonable pricing when I need to scale up.</li>
+  <li><strong>Great documentation</strong>. Their <a href="https://community.algolia.com/jekyll-algolia/getting-started.html">Getting started</a> is clear, complete and up-to-date.</li>
+  <li><strong>Open source</strong>. <a href="https://github.com/algolia/jekyll-algolia">Jekykll Algolia Plugin</a> for indexing Jekyll posts</li>
+  <li><strong>UI Template</strong>. Template with UI component using <a href="https://community.algolia.com/instantsearch.js/">instantsearch.js</a></li>
+  <li><strong>Example project</strong>. Github project <a href="https://github.com/algolia/jekyll-algolia-example">jekyll-algolia-example</a></li>
+</ul>
+
+<h3 id="how-to-integrate-algolia-and-jekyll">How to integrate Algolia and Jekyll?</h3>
+
+<p>To integrate with Jeyll we first need to install and run the <a href="https://github.com/algolia/jekyll-algolia">jekyll-algolia-plugin</a> to push the content of our Jekyll website to our Algolia index. Secondly we need to update our HTML with templating and <a href="https://community.algolia.com/instantsearch.js/">Instantsearch.js</a>.</p>
+
+<h4 id="1-pushing-content-to-your-algolia-index">1. Pushing content to your Algolia index</h4>
+
+<p>This is a simple three step process, as lined out in the README of the <a href="https://github.com/algolia/jekyll-algolia">jekyll-algolia-plugin</a> repository. First add the jekyll-algolia gem to your Gemfile, after which you run <code class="language-plaintext highlighter-rouge">bundle install</code> to fetch all the dependencies:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre>  <span class="c1"># Gemfile</span>
+
+  <span class="n">group</span> <span class="ss">:jekyll_plugins</span> <span class="k">do</span>
+    <span class="n">gem</span> <span class="s1">'jekyll-algolia'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0'</span>
+  <span class="k">end</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Next, add your <code class="language-plaintext highlighter-rouge">application_id</code>, <code class="language-plaintext highlighter-rouge">index_name</code> and <code class="language-plaintext highlighter-rouge">search_only_api_key</code> to the Jekyll <code class="language-plaintext highlighter-rouge">_.config.yml</code> file:</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre>  <span class="c1"># _.config.yaml</span>
+
+  <span class="na">algolia</span><span class="pi">:</span>
+    <span class="na">application_id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">your_application_id'</span>
+    <span class="na">index_name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">your_indexname'</span>
+    <span class="na">search_only_api_key</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2b61f303d605176b556cb377d5ef3acd'</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Finally, get your private Algolia admin key (which you can find in your Algolia dashboard) and run the following to execute the indexing:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ ALGOLIA_API_KEY</span><span class="o">=</span><span class="s1">'your_admin_api_key'</span> bundle <span class="nb">exec </span>jekyll algolia</code></pre></figure>
+
+<h4 id="2-adding-instantsearchjs-to-the-front-end">2. Adding instantsearch.js to the front-end</h4>
+
+<p>For the front-end part I followed the excellent Algolia community <a href="https://community.algolia.com/jekyll-algolia/blog.html">tutorial</a>. Instead of repeating all the documented steps here, I’ll only highlight the relative changes I made.</p>
+
+<p>The integration consists of two parts:</p>
+<ul>
+  <li>A <code class="language-plaintext highlighter-rouge">search-hits-wrapper</code> div element where we load the search results. These results are located front and center under the navigation bar (pushing the rest of the content down).</li>
+  <li>The instantsearch.js dependency, template configuration and styling. All of which is located in the <code class="language-plaintext highlighter-rouge">_includes/algolia.html</code> file, which can be viewed in full in the <a href="https://github.com/beatlevic/beatletech/blob/master/_includes/algolia.html">source code</a> of this site.</li>
+</ul>
+
+<p>I made the following 4 changes compared to the community tutorial:</p>
+<ul>
+  <li><strong>Hide Search results by default (style=”display:none”) and don’t fire off an empty query that returns all articles.</strong> The default empty query returns all articles and to mitigate this I added a <code class="language-plaintext highlighter-rouge">searchFunction</code> to the instantsearch options:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="code"><pre>  <span class="kd">const</span> <span class="nx">search</span> <span class="o">=</span> <span class="nx">instantsearch</span><span class="p">({</span>
+    <span class="na">appId</span><span class="p">:</span> <span class="dl">"</span><span class="s2">K4MUG7LHCA</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2b61f303d605176b556cb377d5ef3acd</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// public read-only key</span>
+    <span class="na">indexName</span><span class="p">:</span> <span class="dl">"</span><span class="s2">prod_beatletech</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">searchFunction</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">helper</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">searchResults</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">search-hits-wrapper</span><span class="dl">"</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">helper</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">query</span> <span class="o">===</span> <span class="dl">""</span> <span class="o">&amp;&amp;</span> <span class="nx">searchResults</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">none</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nx">searchResults</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="nx">helper</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">query</span> <span class="p">?</span> <span class="dl">"</span><span class="s2">block</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">none</span><span class="dl">"</span><span class="p">;</span>
+      <span class="nx">helper</span><span class="p">.</span><span class="nx">search</span><span class="p">();</span>
+    <span class="p">},</span>
+  <span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<ul>
+  <li><strong>Don’t fire off a query on every keystroke.</strong> While the default of triggering a search query with every keystroke is great in terms of responsiveness, it will also help you burn quickly through your free 10k search requests. In order to trade off query responsiveness for less api requests, I added the following <code class="language-plaintext highlighter-rouge">queryHook</code> with a 500ms delay:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="code"><pre>  <span class="nx">search</span><span class="p">.</span><span class="nx">addWidget</span><span class="p">(</span>
+    <span class="nx">instantsearch</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">searchBox</span><span class="p">({</span>
+      <span class="na">container</span><span class="p">:</span> <span class="dl">"</span><span class="s2">#search-searchbar</span><span class="dl">"</span><span class="p">,</span>
+      <span class="na">placeholder</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Search into posts...</span><span class="dl">"</span><span class="p">,</span>
+      <span class="na">poweredBy</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="na">showLoadingIndicator</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nx">queryHook</span><span class="p">(</span><span class="nx">query</span><span class="p">,</span> <span class="nx">refine</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timerId</span><span class="p">);</span>
+        <span class="nx">timerId</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">refine</span><span class="p">(</span><span class="nx">query</span><span class="p">),</span> <span class="mi">500</span><span class="p">);</span>
+      <span class="p">},</span>
+    <span class="p">})</span>
+  <span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<ul>
+  <li><strong>Show “Search by Algolia” badge.</strong> If you want to make use of the free plan, they ask you in exchange that you display a “Search by Algolia” logo next to your search results. You can use the Instantsearch options Boolean flag <code class="language-plaintext highlighter-rouge">poweredBy</code> or if you want more flexibility, as I did, you can find different versions of their logo <a href="https://www.algolia.com/press/?section=brand-guidelines">here</a> and add it to the <code class="language-plaintext highlighter-rouge">search-hits-wrapper</code> div.</li>
+</ul>
+
+<h3 id="experience-so-far">Experience so far</h3>
+
+<p>I really liked the whole integration process, which was really smooth and not much work. I mean, I even went as far as to write all about it here. 🙂</p>
+
+<p>One additional benefit of Algolia, which I haven’t listed yet, is gaining statistics on your site’s search queries with weekly email updates and an interactive dashboard. Helping you figure out what your readers and followers are looking for.</p>
+
+<p>I am using the slightly older v2 of instantsearch.js, so at some point I will want to update to the latest version, which will decrease to javascript library size. Running <a href="https://developers.google.com/speed/pagespeed/insights/?hl=nl">PageSpeed Insights</a> is still get a very comfortable 96/100 score, so there is no immediate need, but less is more when it comes to JS dependencies.</p>
+
+<p>If my search query volume increases above the free 10k a month, then I’m happy to pay for this service. I do have one feature request for the Algolia team for the paid service, which is adding a monthly payment limit with alerting, to make sure you won’t get any surprise overcharge bill.</p>
+
+<p>Anyway, so far a big thumbs up for Algolia. 👍</p>
 
 
             <div
@@ -160,9 +310,9 @@
             <div class="clear_both tags">
               <span>
                 tags: 
-                <a href="../../../archive#brAIn">brAIn</a>,  
-                <a href="../../../archive#AI">AI</a>,  
-                <a href="../../../archive#deep-learning">deep-learning</a> 
+                <a href="../../../archive#javascript">javascript</a>,  
+                <a href="../../../archive#jekyll">jekyll</a>,  
+                <a href="../../../archive#algolia">algolia</a> 
               </span>
             </div>
             <div style="color: rgb(147, 147, 148);">
@@ -200,9 +350,9 @@
             
 
             <li>
-              04 Jan 2012 &raquo;
+              03 Feb 2015 &raquo;
 
-              <a href="/2012/01/04/bottlenose-2012">Bottlenose 2012</a>
+              <a href="/2015/02/03/my-system-to-win-big">My System to Win Big</a>
 
               <em>
                 <a
@@ -214,9 +364,9 @@
             
 
             <li>
-              16 Aug 2020 &raquo;
+              10 Sep 2015 &raquo;
 
-              <a href="/2020/08/16/jekyll-and-algolia-search-integration">Jekyll and Algolia search integration</a>
+              <a href="/2015/09/10/o-data-scientist-where-art-thou">O Data Scientist, Where Art Thou?</a>
 
               <em>
                 <a

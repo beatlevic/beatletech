@@ -61,12 +61,15 @@
       <header id="header" class="grid_12">
         <h1><a href="/">BeatleTech</a></h1>
         <img
+          id="headshot"
           src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/headshot.png"
           alt="It's only Hubris if you lose."
           title="It's only Hubris if you lose."
           height="155"
           width="200"
           class="thumbnail alignright"
+          onmouseover="onHover();"
+          onmouseout="offHover();"
         />
         <div id="freelancer">Coen JC Stevens</div>
       </header>
@@ -82,8 +85,17 @@
             <li>
               <div
                 id="search-searchbar"
-                style="margin-top: -4px; margin-bottom: -10px; width: 350px;"
+                style="margin-top: -4px; margin-bottom: -10px; width: 265px;"
               ></div>
+            </li>
+            <li>
+              <a
+                href="#"
+                style="background-color: rgb(250, 181, 122); color: white;"
+                data-token="baaf08be55251183cc067366a8b25400"
+                onclick="mjOpenPopin(event, this)"
+                >Subscribe!</a
+              >
             </li>
           </ul>
           <br class="clear" />
@@ -162,17 +174,27 @@ Convolutional Neural Networks. May the fun and challenge begin.</p>
 <p><img src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/thinktopic-logo.png" alt="ThinkTopic" width="646" height="195" style="margin-left:60px" /></p>
 
 
-
             <div
               style="display: block; vertical-align: baseline; height: 2px;"
             ></div>
             <div class="clear_both tags">
               <span>
                 tags: 
-                <a href="../../../archive#work">work</a>,  
-                <a href="../../../archive#development">development</a> 
+                <a href="../../../archive#thinktopic">thinktopic</a>,  
+                <a href="../../../archive#clojure">clojure</a>,  
+                <a href="../../../archive#deep-learning">deep-learning</a> 
               </span>
             </div>
+            <div style="color: rgb(147, 147, 148);">
+              If you like what you are reading here, consider hitting
+              <a
+                href="#"
+                data-token="baaf08be55251183cc067366a8b25400"
+                onclick="mjOpenPopin(event, this)"
+                >Subscribe!</a
+              >
+            </div>
+            <div class="clear"></div>
             <div class="sharethis-inline-share-buttons"></div>
           </article>
 
@@ -267,12 +289,11 @@ Convolutional Neural Networks. May the fun and challenge begin.</p>
     indexName: "prod_beatletech",
     searchFunction: function (helper) {
       var searchResults = document.getElementById("search-hits-wrapper");
-      if (helper.state.query === "") {
-        searchResults.style.display = "none";
+      if (helper.state.query === "" && searchResults.style.display === "none") {
         return;
       }
+      searchResults.style.display = helper.state.query ? "block" : "none";
       helper.search();
-      searchResults.style.display = "block";
     },
   });
 
@@ -399,6 +420,24 @@ Convolutional Neural Networks. May the fun and challenge begin.</p>
     </div>
     <!-- end wrapper -->
 
+    <data
+      id="mj-w-res-data"
+      data-token="baaf08be55251183cc067366a8b25400"
+      class="mj-w-data"
+      data-apikey="5MN5"
+      data-w-id="EIl"
+      data-lang="en_US"
+      data-base="https://app.mailjet.com"
+      data-width="640"
+      data-height="328.253"
+      data-statics="statics"
+    ></data>
+
+    <script
+      type="text/javascript"
+      src="https://app.mailjet.com/statics/js/widget.modal.js"
+    ></script>
+
     <script src="//platform-api.sharethis.com/js/sharethis.js#property=5b6357f2f3742d0012c8870b&product=inline-share-buttons"></script>
 
     <script type="text/javascript">
@@ -422,7 +461,7 @@ Convolutional Neural Networks. May the fun and challenge begin.</p>
     <script type="text/javascript">
       function onHover() {
         var el = document.getElementById("headshot");
-        el.src = "images/jc-small.png";
+        el.src = "../../../images/jc-small.png";
       }
 
       function offHover() {

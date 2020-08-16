@@ -14,7 +14,7 @@
     />
 
     
-    <meta name="keywords" content="post, Frequentism, Bayesianism, inferences, data analysis, statistics, p-values, OThot" />
+    <meta name="keywords" content="post, Frequentism, Bayesianism, inferences, data analysis, statistics, p-values, Othot" />
     
 
     <meta name="author" content="Coen Stevens" />
@@ -34,7 +34,7 @@
 
     <meta
       property="og:description"
-      content="Note: This is a repost of my original blog post at   OThot, where I also work as Senior Data Scientist."
+      content="Note: This is a repost of my original blog post at   Othot, where I also work as Senior Data Scientist."
     />
 
     <meta
@@ -66,12 +66,15 @@
       <header id="header" class="grid_12">
         <h1><a href="/">BeatleTech</a></h1>
         <img
+          id="headshot"
           src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/headshot.png"
           alt="It's only Hubris if you lose."
           title="It's only Hubris if you lose."
           height="155"
           width="200"
           class="thumbnail alignright"
+          onmouseover="onHover();"
+          onmouseout="offHover();"
         />
         <div id="freelancer">Coen JC Stevens</div>
       </header>
@@ -87,8 +90,17 @@
             <li>
               <div
                 id="search-searchbar"
-                style="margin-top: -4px; margin-bottom: -10px; width: 350px;"
+                style="margin-top: -4px; margin-bottom: -10px; width: 265px;"
               ></div>
+            </li>
+            <li>
+              <a
+                href="#"
+                style="background-color: rgb(250, 181, 122); color: white;"
+                data-token="baaf08be55251183cc067366a8b25400"
+                onclick="mjOpenPopin(event, this)"
+                >Subscribe!</a
+              >
             </li>
           </ul>
           <br class="clear" />
@@ -141,7 +153,7 @@
             <p class="publishdate">Sunday, 17 May 2015.</p>
 
             <p><strong><em>Note: This is a repost of my original blog post at
-   <a href="http://www.othot.com/goodbye-p-values-hello-bayesian-statistics/">OThot</a>, where I also work as Senior Data Scientist.</em></strong></p>
+   <a href="http://www.othot.com/goodbye-p-values-hello-bayesian-statistics/">Othot</a>, where I also work as Senior Data Scientist.</em></strong></p>
 
 <p>In statistics there is the old and ongoing debate of Frequentism versus Bayesianism, which has been humorously depicted in the following popular XKCD cartoon [<a href="http://www.xkcd.com/1132/">1</a>]:</p>
 
@@ -205,7 +217,7 @@ study”</em>
 [<a href="http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact">6</a>]</p>
 </blockquote>
 
-<p>Needless to say, but at <a href="http://www.othot.com">OThot</a> we are big proponents of the Bayesian approach for statistical inferences. In a previous blog post by Mark Voortman [<a href="http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common">7</a>], we already started talking and explaining the Bayesian approach and you can safely bet to expect more of that.</p>
+<p>Needless to say, but at <a href="http://www.othot.com">Othot</a> we are big proponents of the Bayesian approach for statistical inferences. In a previous blog post by Mark Voortman [<a href="http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common">7</a>], we already started talking and explaining the Bayesian approach and you can safely bet to expect more of that.</p>
 
 <h4 id="sources">Sources</h4>
 
@@ -232,11 +244,21 @@ study”</em>
             <div class="clear_both tags">
               <span>
                 tags: 
-                <a href="../../../archive#OThot">OThot</a>,  
+                <a href="../../../archive#othot">othot</a>,  
                 <a href="../../../archive#statistics">statistics</a>,  
                 <a href="../../../archive#bayesianism">bayesianism</a> 
               </span>
             </div>
+            <div style="color: rgb(147, 147, 148);">
+              If you like what you are reading here, consider hitting
+              <a
+                href="#"
+                data-token="baaf08be55251183cc067366a8b25400"
+                onclick="mjOpenPopin(event, this)"
+                >Subscribe!</a
+              >
+            </div>
+            <div class="clear"></div>
             <div class="sharethis-inline-share-buttons"></div>
           </article>
 
@@ -331,12 +353,11 @@ study”</em>
     indexName: "prod_beatletech",
     searchFunction: function (helper) {
       var searchResults = document.getElementById("search-hits-wrapper");
-      if (helper.state.query === "") {
-        searchResults.style.display = "none";
+      if (helper.state.query === "" && searchResults.style.display === "none") {
         return;
       }
+      searchResults.style.display = helper.state.query ? "block" : "none";
       helper.search();
-      searchResults.style.display = "block";
     },
   });
 
@@ -463,6 +484,24 @@ study”</em>
     </div>
     <!-- end wrapper -->
 
+    <data
+      id="mj-w-res-data"
+      data-token="baaf08be55251183cc067366a8b25400"
+      class="mj-w-data"
+      data-apikey="5MN5"
+      data-w-id="EIl"
+      data-lang="en_US"
+      data-base="https://app.mailjet.com"
+      data-width="640"
+      data-height="328.253"
+      data-statics="statics"
+    ></data>
+
+    <script
+      type="text/javascript"
+      src="https://app.mailjet.com/statics/js/widget.modal.js"
+    ></script>
+
     <script src="//platform-api.sharethis.com/js/sharethis.js#property=5b6357f2f3742d0012c8870b&product=inline-share-buttons"></script>
 
     <script type="text/javascript">
@@ -486,7 +525,7 @@ study”</em>
     <script type="text/javascript">
       function onHover() {
         var el = document.getElementById("headshot");
-        el.src = "images/jc-small.png";
+        el.src = "../../../images/jc-small.png";
       }
 
       function offHover() {

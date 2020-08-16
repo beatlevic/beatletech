@@ -4,7 +4,7 @@ title: "Bottlenose secures $3.6 Million"
 meta_description: Bottlenose secures series A round to bring trendfluence to the Enterprise
 meta_keywords: post, bottlenose, funding
 tags: [bottlenose, funding]
-category: [work]
+category: [client]
 ---
 
 Bottlenose just secured a $3.6 Million series A round to bring

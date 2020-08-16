@@ -4,12 +4,170 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2020-08-14T15:36:27+02:00</updated>
+ <updated>2020-08-16T21:38:10+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
  </author>
 
+ 
+ <entry>
+   <title>Jekyll and Algolia search integration</title>
+   <link href="http://beatletech.com/2020/08/16/jekyll-and-algolia-search-integration"/>
+   <updated>2020-08-16T00:00:00+02:00</updated>
+   <id>http://beatletech.com/2020/08/16/jekyll-and-algolia-search-integration</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;https://beatletech.com/images/jekyll-and-algolia.png&quot; alt=&quot;Algolia&quot; width=&quot;98%&quot; title=&quot;Jekyll and Algolia&quot; style=&quot;margin-left:0px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Recently I decided to add search functionality to my &lt;a href=&quot;https://beatletech.com&quot;&gt;BeatleTech&lt;/a&gt; site (indeed, the one you are visiting right now). Not because I needed my readers to filter through the overwhelming number of articles I have written here (which I have not), but simply because I thought it would be a cool feature that would bring some nice interactivity to the site and to spark my ambition to write more blog posts going forward.&lt;/p&gt;
+
+&lt;p&gt;In this article I will explain &lt;strong&gt;why&lt;/strong&gt; I picked &lt;a href=&quot;https://www.algolia.com/&quot;&gt;Algolia Search&lt;/a&gt; and &lt;strong&gt;how&lt;/strong&gt; it was integrated with this &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; generated static site, including some interesting improvements.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-algolia-search&quot;&gt;Why Algolia Search?&lt;/h3&gt;
+
+&lt;p&gt;While tinkering a bit with the design and layout of this site during a rainy day at a Dutch campsite, I was looking for an easy Jekyll plugin to bring search to my website. Although I have a lot of experience in working directly with &lt;a href=&quot;https://www.elastic.co/&quot;&gt;Elasticsearch&lt;/a&gt;, I didn’t want to go down a route of building and deploying everything from scratch. While certainly a nice exercise, this would definitely take too much time and maintenance down the line, which wouldn’t be worth it (yet) looking at the traffic statistics. So, like I said, looking for something easy and quick to get up and running within a day.&lt;/p&gt;
+
+&lt;p&gt;After some Google search queries, I quickly stumbled upon some people recommending Algolia at the &lt;a href=&quot;https://talk.jekyllrb.com/t/how-to-add-a-search-bar/606/7&quot;&gt;Jekyll talk&lt;/a&gt; discussion board.&lt;/p&gt;
+
+&lt;p&gt;Digging into Algolia, I found the following compelling reasons to integrate with Algolia Search:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Known brand&lt;/strong&gt;. It turns out I was already quite familiar (and satisfied) with Algolia Search as a consumer of &lt;a href=&quot;https://hn.algolia.com/&quot;&gt;Hacker News Search&lt;/a&gt; which is powered by Algolia.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Free tier&lt;/strong&gt;. They recently (July 1st) introduced more &lt;a href=&quot;https://blog.algolia.com/introducing-algolias-most-customer-friendly-pricing/&quot;&gt;customer-friendly pricing&lt;/a&gt; with a starting free tier as long as you would show the “Search by Algolia” next to your search results. Also with reasonable pricing when I need to scale up.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Great documentation&lt;/strong&gt;. Their &lt;a href=&quot;https://community.algolia.com/jekyll-algolia/getting-started.html&quot;&gt;Getting started&lt;/a&gt; is clear, complete and up-to-date.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Open source&lt;/strong&gt;. &lt;a href=&quot;https://github.com/algolia/jekyll-algolia&quot;&gt;Jekykll Algolia Plugin&lt;/a&gt; for indexing Jekyll posts&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;UI Template&lt;/strong&gt;. Template with UI component using &lt;a href=&quot;https://community.algolia.com/instantsearch.js/&quot;&gt;instantsearch.js&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Example project&lt;/strong&gt;. Github project &lt;a href=&quot;https://github.com/algolia/jekyll-algolia-example&quot;&gt;jekyll-algolia-example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-to-integrate-algolia-and-jekyll&quot;&gt;How to integrate Algolia and Jekyll?&lt;/h3&gt;
+
+&lt;p&gt;To integrate with Jeyll we first need to install and run the &lt;a href=&quot;https://github.com/algolia/jekyll-algolia&quot;&gt;jekyll-algolia-plugin&lt;/a&gt; to push the content of our Jekyll website to our Algolia index. Secondly we need to update our HTML with templating and &lt;a href=&quot;https://community.algolia.com/instantsearch.js/&quot;&gt;Instantsearch.js&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;1-pushing-content-to-your-algolia-index&quot;&gt;1. Pushing content to your Algolia index&lt;/h4&gt;
+
+&lt;p&gt;This is a simple three step process, as lined out in the README of the &lt;a href=&quot;https://github.com/algolia/jekyll-algolia&quot;&gt;jekyll-algolia-plugin&lt;/a&gt; repository. First add the jekyll-algolia gem to your Gemfile, after which you run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; to fetch all the dependencies:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;c1&quot;&gt;# Gemfile&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jekyll-algolia'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'~&amp;gt; 1.0'&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Next, add your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;application_id&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index_name&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;search_only_api_key&lt;/code&gt; to the Jekyll &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_.config.yml&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;c1&quot;&gt;# _.config.yaml&lt;/span&gt;
+
+  &lt;span class=&quot;na&quot;&gt;algolia&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;application_id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;your_application_id'&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;index_name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;your_indexname'&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;search_only_api_key&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;2b61f303d605176b556cb377d5ef3acd'&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Finally, get your private Algolia admin key (which you can find in your Algolia dashboard) and run the following to execute the indexing:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ ALGOLIA_API_KEY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'your_admin_api_key'&lt;/span&gt; bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll algolia&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;2-adding-instantsearchjs-to-the-front-end&quot;&gt;2. Adding instantsearch.js to the front-end&lt;/h4&gt;
+
+&lt;p&gt;For the front-end part I followed the excellent Algolia community &lt;a href=&quot;https://community.algolia.com/jekyll-algolia/blog.html&quot;&gt;tutorial&lt;/a&gt;. Instead of repeating all the documented steps here, I’ll only highlight the relative changes I made.&lt;/p&gt;
+
+&lt;p&gt;The integration consists of two parts:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;search-hits-wrapper&lt;/code&gt; div element where we load the search results. These results are located front and center under the navigation bar (pushing the rest of the content down).&lt;/li&gt;
+  &lt;li&gt;The instantsearch.js dependency, template configuration and styling. All of which is located in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_includes/algolia.html&lt;/code&gt; file, which can be viewed in full in the &lt;a href=&quot;https://github.com/beatlevic/beatletech/blob/master/_includes/algolia.html&quot;&gt;source code&lt;/a&gt; of this site.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I made the following 4 changes compared to the community tutorial:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Hide Search results by default (style=”display:none”) and don’t fire off an empty query that returns all articles.&lt;/strong&gt; The default empty query returns all articles and to mitigate this I added a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;searchFunction&lt;/code&gt; to the instantsearch options:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;search&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;instantsearch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;appId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;K4MUG7LHCA&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;apiKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;2b61f303d605176b556cb377d5ef3acd&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// public read-only key&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;indexName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;prod_beatletech&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;searchFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;helper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;searchResults&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;search-hits-wrapper&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;helper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;searchResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;display&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;searchResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;display&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;helper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;helper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Don’t fire off a query on every keystroke.&lt;/strong&gt; While the default of triggering a search query with every keystroke is great in terms of responsiveness, it will also help you burn quickly through your free 10k search requests. In order to trade off query responsiveness for less api requests, I added the following &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;queryHook&lt;/code&gt; with a 500ms delay:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;nx&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addWidget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;instantsearch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;widgets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;searchBox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;#search-searchbar&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Search into posts...&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;poweredBy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;showLoadingIndicator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;queryHook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;refine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;clearTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timerId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;timerId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;refine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Show “Search by Algolia” badge.&lt;/strong&gt; If you want to make use of the free plan, they ask you in exchange that you display a “Search by Algolia” logo next to your search results. You can use the Instantsearch options Boolean flag &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;poweredBy&lt;/code&gt; or if you want more flexibility, as I did, you can find different versions of their logo &lt;a href=&quot;https://www.algolia.com/press/?section=brand-guidelines&quot;&gt;here&lt;/a&gt; and add it to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;search-hits-wrapper&lt;/code&gt; div.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;experience-so-far&quot;&gt;Experience so far&lt;/h3&gt;
+
+&lt;p&gt;I really liked the whole integration process, which was really smooth and not much work. I mean, I even went as far as to write all about it here. 🙂&lt;/p&gt;
+
+&lt;p&gt;One additional benefit of Algolia, which I haven’t listed yet, is gaining statistics on your site’s search queries with weekly email updates and an interactive dashboard. Helping you figure out what your readers and followers are looking for.&lt;/p&gt;
+
+&lt;p&gt;I am using the slightly older v2 of instantsearch.js, so at some point I will want to update to the latest version, which will decrease to javascript library size. Running &lt;a href=&quot;https://developers.google.com/speed/pagespeed/insights/?hl=nl&quot;&gt;PageSpeed Insights&lt;/a&gt; is still get a very comfortable 96/100 score, so there is no immediate need, but less is more when it comes to JS dependencies.&lt;/p&gt;
+
+&lt;p&gt;If my search query volume increases above the free 10k a month, then I’m happy to pay for this service. I do have one feature request for the Algolia team for the paid service, which is adding a monthly payment limit with alerting, to make sure you won’t get any surprise overcharge bill.&lt;/p&gt;
+
+&lt;p&gt;Anyway, so far a big thumbs up for Algolia. 👍&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Chief Architect at Rekall.ai</title>
@@ -161,7 +319,6 @@ going cold turkey on my former colleagues (only switching rooms).&lt;/p&gt;
 Convolutional Neural Networks. May the fun and challenge begin.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/thinktopic-logo.png&quot; alt=&quot;ThinkTopic&quot; width=&quot;646&quot; height=&quot;195&quot; style=&quot;margin-left:60px&quot; /&gt;&lt;/p&gt;
-
 </content>
  </entry>
  
@@ -171,7 +328,7 @@ Convolutional Neural Networks. May the fun and challenge begin.&lt;/p&gt;
    <updated>2015-05-17T00:00:00+02:00</updated>
    <id>http://beatletech.com/2015/05/17/goodbye-pvalues-hello-bayesian-statistics</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;&lt;em&gt;Note: This is a repost of my original blog post at
-   &lt;a href=&quot;http://www.othot.com/goodbye-p-values-hello-bayesian-statistics/&quot;&gt;OThot&lt;/a&gt;, where I also work as Senior Data Scientist.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+   &lt;a href=&quot;http://www.othot.com/goodbye-p-values-hello-bayesian-statistics/&quot;&gt;Othot&lt;/a&gt;, where I also work as Senior Data Scientist.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;In statistics there is the old and ongoing debate of Frequentism versus Bayesianism, which has been humorously depicted in the following popular XKCD cartoon [&lt;a href=&quot;http://www.xkcd.com/1132/&quot;&gt;1&lt;/a&gt;]:&lt;/p&gt;
 
@@ -235,7 +392,7 @@ study”&lt;/em&gt;
 [&lt;a href=&quot;http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact&quot;&gt;6&lt;/a&gt;]&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Needless to say, but at &lt;a href=&quot;http://www.othot.com&quot;&gt;OThot&lt;/a&gt; we are big proponents of the Bayesian approach for statistical inferences. In a previous blog post by Mark Voortman [&lt;a href=&quot;http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common&quot;&gt;7&lt;/a&gt;], we already started talking and explaining the Bayesian approach and you can safely bet to expect more of that.&lt;/p&gt;
+&lt;p&gt;Needless to say, but at &lt;a href=&quot;http://www.othot.com&quot;&gt;Othot&lt;/a&gt; we are big proponents of the Bayesian approach for statistical inferences. In a previous blog post by Mark Voortman [&lt;a href=&quot;http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common&quot;&gt;7&lt;/a&gt;], we already started talking and explaining the Bayesian approach and you can safely bet to expect more of that.&lt;/p&gt;
 
 &lt;h4 id=&quot;sources&quot;&gt;Sources&lt;/h4&gt;
 
@@ -296,7 +453,7 @@ with it the discipline to follow through, I’m in a much better position to als
 &lt;h3 id=&quot;courses&quot;&gt;Courses&lt;/h3&gt;
 &lt;h4 id=&quot;machine-learning&quot;&gt;Machine Learning&lt;/h4&gt;
 
-&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;Stanford University // June-September 2014 // 12 weeks of study // 6 hours per week // &lt;a href=&quot;https://www.coursera.org/course/ml&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;Stanford University // June-September 2014 // 12 weeks of study // 6 hours per week // &lt;a href=&quot;https://www.coursera.org/course/ml&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;
 &lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Easy&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Half a year ago at &lt;a href=&quot;http://bottlenose.com&quot;&gt;Bottlenose&lt;/a&gt; I was shifting from primarily a Software
@@ -329,7 +486,7 @@ worked really well for me, I instantly signed up for a lot of other (more specia
 &lt;h4 id=&quot;algorithms-design-and-analysis-part-1&quot;&gt;Algorithms: Design and Analysis, Part 1&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;Stanford University // October-December 2014 // 6 weeks of study // 7 hours per week
-// &lt;a href=&quot;https://www.coursera.org/course/algo&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
+// &lt;a href=&quot;https://www.coursera.org/course/algo&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;
 &lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Medium&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;After finishing the Machine Learning exercises in Matlab I wanted my next Coursera course to require
@@ -353,7 +510,7 @@ have a programming language that is:&lt;/p&gt;
   programming as Python, as easy for statistics as R, as natural for string processing as Perl, as
   powerful for linear algebra as Matlab, as good at gluing programs together as the shell. Something
   that is dirt simple to learn, yet keeps the most serious hackers happy. We want it interactive and
-  we want it compiled.&lt;br /&gt;
+  we want it compiled.
   (Blog:  &lt;a href=&quot;http://julialang.org/blog/2012/02/why-we-created-julia/&quot;&gt;Why we created Julia&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -385,7 +542,7 @@ this course later this year.&lt;/p&gt;
 &lt;h4 id=&quot;bioinformatics-algorithms-part-1&quot;&gt;Bioinformatics Algorithms, Part 1&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;UC San Diego // October 2014 - Feb 2015 // 10 weeks of study // 10 hours per week //
-&lt;a href=&quot;https://www.coursera.org/course/bioinformatics&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.coursera.org/course/bioinformatics&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;
 &lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Medium/Hard&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;I always had a general interest in biology with genetics in particular, and if you combine this with
@@ -425,7 +582,7 @@ accomplishment with distinction.&lt;/p&gt;
 
 &lt;h4 id=&quot;learning-how-to-learn&quot;&gt;Learning How to Learn&lt;/h4&gt;
 
-&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;UC San Diego // January 2015 // 4 weeks of study // 2 hours per week // &lt;a href=&quot;https://www.coursera.org/course/learning&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt; &lt;em&gt;UC San Diego // January 2015 // 4 weeks of study // 2 hours per week // &lt;a href=&quot;https://www.coursera.org/course/learning&quot;&gt;Coursera link&lt;/a&gt;&lt;/em&gt;
 &lt;strong&gt;Difficulty:&lt;/strong&gt; &lt;em&gt;Very easy&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;When you are spending your spare time following online courses and you notice there isn’t enough
@@ -487,7 +644,6 @@ the ride less lonely and a lot more fun.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Good luck with our own online education!&lt;/p&gt;
-
 </content>
  </entry>
  
@@ -515,7 +671,6 @@ debt on top of the $13.4 million.&lt;/p&gt;
 &lt;p&gt;At Bottlenose we have exciting times ahead of us.&lt;/p&gt;
 
 &lt;p&gt;You can read the full story on &lt;a href=&quot;http://techcrunch.com/2015/02/09/bottlenose-series-b/&quot;&gt;Techcrunch&lt;/a&gt;.&lt;/p&gt;
-
 </content>
  </entry>
  
@@ -917,7 +1072,6 @@ on &lt;a href=&quot;https://github.com/beatlevic/BeatleTech&quot;&gt;Github&lt;/
 &lt;p&gt;So if you are looking for a way to create your website-blog and
 (just like me) already paid for webhosting, which sadly only allows you to do some php
 wizardry, then rest assured as Jekyll can save your day.&lt;/p&gt;
-
 </content>
  </entry>
  
@@ -1018,26 +1172,6 @@ message when connecting with slime: “Versions differ: nil (slime)
 vs. 20100404 (swank). Continue? (y or n)”, then all you should do is
 removing the slime.elc file in your .emacs.d/elpa/slime-X folder, and
 consider it history.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>BeatleTech online</title>
-   <link href="http://beatletech.com/2010/12/19/beatletech-online"/>
-   <updated>2010-12-19T00:00:00+01:00</updated>
-   <id>http://beatletech.com/2010/12/19/beatletech-online</id>
-   <content type="html">&lt;p&gt;With BeatleTech life and kicking, I found it about time to add some blogging
-functionality, and to start writing about my ongoing work, research and
-serendipity events.&lt;/p&gt;
-
-&lt;p&gt;In my ongoing work you will find me blogging about my emacs journey,
-my clojure lessons, rails mambo, and basically any other technology I
-will be working with. Further more in my research I will cover topics in
-cognitive science, human perception and AI, but all in due time.&lt;/p&gt;
-
-&lt;p&gt;If you are in need for an architect, developer or advisor, then know that
-BeatleTech is there for you, and Beatle is available for hire!&lt;/p&gt;
-
 </content>
  </entry>
  

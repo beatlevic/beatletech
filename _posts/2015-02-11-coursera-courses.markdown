@@ -3,7 +3,7 @@ layout: post
 title: "My recent Coursera journey"
 meta_description: Four Cousera courses I have completed recently
 meta_keywords: post, courses, learning, machine learning, bioinformatics, algorithms, education
-tags: [learning, Coursera, education]
+tags: [learning, coursera, education]
 category: [education]
 published: true
 ---
@@ -40,7 +40,7 @@ In the subsequent sections I will describe each course and my experiences in mor
 ### Courses
 #### Machine Learning
 
-**Overview:** *Stanford University // June-September 2014 // 12 weeks of study // 6 hours per week // [Coursera link](https://www.coursera.org/course/ml)*  
+**Overview:** *Stanford University // June-September 2014 // 12 weeks of study // 6 hours per week // [Coursera link](https://www.coursera.org/course/ml)*
 **Difficulty:** *Easy*
 
 Half a year ago at [Bottlenose](http://bottlenose.com) I was shifting from primarily a Software
@@ -52,13 +52,13 @@ listed on the Coursera page):
 
 - Supervised learning (parametric/non-parametric algorithms, support vector machines, kernels,
 neural networks).
-- Unsupervised learning (clustering, dimensionality reduction, recommender systems, deep learning). 
+- Unsupervised learning (clustering, dimensionality reduction, recommender systems, deep learning).
 - Best practices in Machine Learning (bias/variance theory, innovation process in machine learning and AI).
 
 Given that I was already very familiar with these topics, combined with an excellent presentation by
 instructor [Andrew Ng](https://www.coursera.org/instructor/andrewng), it may not come as a surprise that I found the
 course easy to follow and the programming exercises not hard to implement with only the (frequent)
-annoyances of coding in Matlab. 
+annoyances of coding in Matlab.
 
 It felt good to revisit all the topics in the course, which presented me once again with the wide
 variety of Machine Learning approaches and techniques. Perhaps in hindsight other specialized
@@ -71,7 +71,7 @@ worked really well for me, I instantly signed up for a lot of other (more specia
 #### Algorithms: Design and Analysis, Part 1
 
 **Overview:** *Stanford University // October-December 2014 // 6 weeks of study // 7 hours per week
-// [Coursera link](https://www.coursera.org/course/algo)*  
+// [Coursera link](https://www.coursera.org/course/algo)*
 **Difficulty:** *Medium*
 
 After finishing the Machine Learning exercises in Matlab I wanted my next Coursera course to require
@@ -94,7 +94,7 @@ have a programming language that is:
   programming as Python, as easy for statistics as R, as natural for string processing as Perl, as
   powerful for linear algebra as Matlab, as good at gluing programs together as the shell. Something
   that is dirt simple to learn, yet keeps the most serious hackers happy. We want it interactive and
-  we want it compiled.  
+  we want it compiled.
   (Blog:  [Why we created Julia](http://julialang.org/blog/2012/02/why-we-created-julia/))*
 
 The first week's programming assignment, a counting algorithm piggy backing on merge-sort, I also
@@ -125,7 +125,7 @@ this course later this year.
 #### Bioinformatics Algorithms, Part 1
 
 **Overview:** *UC San Diego // October 2014 - Feb 2015 // 10 weeks of study // 10 hours per week //
-[Coursera link](https://www.coursera.org/course/bioinformatics)*  
+[Coursera link](https://www.coursera.org/course/bioinformatics)*
 **Difficulty:** *Medium/Hard*
 
 I always had a general interest in biology with genetics in particular, and if you combine this with
@@ -163,7 +163,7 @@ I'm looking forward to part 2 of the course, which will start this month.
 
 #### Learning How to Learn
 
-**Overview:** *UC San Diego // January 2015 // 4 weeks of study // 2 hours per week // [Coursera link](https://www.coursera.org/course/learning)*  
+**Overview:** *UC San Diego // January 2015 // 4 weeks of study // 2 hours per week // [Coursera link](https://www.coursera.org/course/learning)*
 **Difficulty:** *Very easy*
 
 When you are spending your spare time following online courses and you notice there isn't enough
@@ -219,5 +219,3 @@ I want to conclude with two tips for when you are going to embark on your own Co
   the ride less lonely and a lot more fun.
 
 Good luck with our own online education!
-
-

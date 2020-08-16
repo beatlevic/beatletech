@@ -3,7 +3,7 @@ layout: post
 title: "Project brAIn"
 meta_description: brAIn
 meta_keywords: post, development, deep learning, AI, machine learning
-tags: [brAIn, development, AI, deep-learning]
+tags: [brAIn, AI, deep-learning]
 category: [development]
 ---
 

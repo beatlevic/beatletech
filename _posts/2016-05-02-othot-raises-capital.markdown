@@ -2,9 +2,9 @@
 layout: post
 title: Othot raises $1.7 Million
 meta_description: Othot raises $1.7 Million
-meta_keywords: post, OThot, Data Science
-tags: [work, development]
-category: [work]
+meta_keywords: post, Othot, Data Science
+tags: [othot, funding]
+category: [client]
 image: othot-logo.jpg
 published: true
 ---

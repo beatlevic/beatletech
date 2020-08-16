@@ -4,7 +4,7 @@ title: The post-Persgroep era
 meta_description: The post-Persgroep era
 meta_keywords: post, beatletech, https, setup, persgroep, startup, AI
 tags: [startup, machine learning, AI]
-category: [work]
+category: [development]
 image: DPN-Logo-Staand-Secundair-300dpi-web.png
 published: true
 ---

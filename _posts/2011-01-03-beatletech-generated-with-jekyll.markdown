@@ -3,8 +3,8 @@ layout: post
 title: "BeatleTech generated with Jekyll"
 meta_description: BeatleTech is generated with jekyll and the source code can be found on github.
 meta_keywords: post, jekyll, ruby, html, generation, web-development, static, site, html5
-tags: [jekyll, web-development, github, clojure, ruby]
-category: [web-development]
+tags: [jekyll, clojure, ruby]
+category: [development]
 ---
 
 When I started with the creation of BeatleTech.com and blog, I didn't
@@ -28,6 +28,3 @@ on <a href="https://github.com/beatlevic/BeatleTech">Github</a> for sharing, and
 So if you are looking for a way to create your website-blog and
 (just like me) already paid for webhosting, which sadly only allows you to do some php
 wizardry, then rest assured as Jekyll can save your day.
-
-
-

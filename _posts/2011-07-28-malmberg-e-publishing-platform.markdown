@@ -3,8 +3,8 @@ layout: post
 title: "Malmberg: E-Publishing platform"
 meta_description: Malmberg publishing platform
 meta_keywords: post, development, work, freelancing, ruby, rails3, ciber, malmberg
-tags: [freelancing, work, development, ruby, rails3]
-category: [development]
+tags: [freelancing, ruby, rails]
+category: [client]
 ---
 
 The past couple of months have been very busy. First off I was still working partime

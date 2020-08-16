@@ -2,15 +2,15 @@
 layout: post
 title: Goodbye P-values, Hello Bayesian Statistics!
 meta_description: Frequentism vs Bayesianism with Bayesian statistics winning
-meta_keywords: post, Frequentism, Bayesianism, inferences, data analysis, statistics, p-values, OThot
-tags: [OThot, statistics, bayesianism]
-category: [statistics]
+meta_keywords: post, Frequentism, Bayesianism, inferences, data analysis, statistics, p-values, Othot
+tags: [othot, statistics, bayesianism]
+category: [client]
 image: https://imgs.xkcd.com/comics/frequentists_vs_bayesians.png
 published: true
 ---
 
 ***Note: This is a repost of my original blog post at
-   [OThot](http://www.othot.com/goodbye-p-values-hello-bayesian-statistics/), where I also work as Senior Data Scientist.***
+   [Othot](http://www.othot.com/goodbye-p-values-hello-bayesian-statistics/), where I also work as Senior Data Scientist.***
 
 In statistics there is the old and ongoing debate of Frequentism versus Bayesianism, which has been humorously depicted in the following popular XKCD cartoon \[[1](http://www.xkcd.com/1132/)\]:
 
@@ -70,7 +70,7 @@ data in hypothetical study replications, not a statement about actual conclusion
 study"*
 \[[6](http://www.scientificamerican.com/article/scientists-perturbed-by-loss-of-stat-tools-to-sift-research-fudge-from-fact)\]
 
-Needless to say, but at [OThot](http://www.othot.com) we are big proponents of the Bayesian approach for statistical inferences. In a previous blog post by Mark Voortman \[[7](http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common)\], we already started talking and explaining the Bayesian approach and you can safely bet to expect more of that.
+Needless to say, but at [Othot](http://www.othot.com) we are big proponents of the Bayesian approach for statistical inferences. In a previous blog post by Mark Voortman \[[7](http://www.othot.com/what-do-searching-for-a-plane-and-a-doctors-diagnosis-have-in-common)\], we already started talking and explaining the Bayesian approach and you can safely bet to expect more of that.
 
 #### Sources
 

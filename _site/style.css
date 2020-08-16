@@ -293,12 +293,16 @@ a {
 	-webkit-transition: all .1s linear;
 	-moz-transition: all .1s linear;
 	transition: all .1s linear;
-        padding: 2px 1px;
+    padding: 2px 1px;
 }
 
 .blog a {
 	color: #6b96c1;
 	text-decoration: none;
+}
+
+.blog li a {
+	padding: 0px;
 }
 
 .column a {
@@ -724,6 +728,11 @@ h4 {
                   padding: 2px 2px; }
 
 .post li {
+    padding: 4px 5px;
+	font-size: 110%;
+}
+
+.index li {
     line-height: 18px;
     padding: 4px 5px;
     -webkit-transition: margin-left 0.3s linear;
@@ -740,7 +749,7 @@ h4 {
 	font-size: 110%;
 }
 
-.post li a {
+.index li a {
 	color: #333333;
 	padding: 4px 5px;
 	-webkit-transition: margin-left 0.3s linear;
@@ -748,7 +757,7 @@ h4 {
 	transition: margin-left 0.3s linear;
 }
 
-.post li a:hover {
+.index li a:hover {
 	color: #fff;
 	margin-left: 10px;
 	-webkit-border-radius: 5px;
