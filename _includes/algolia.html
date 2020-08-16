@@ -18,12 +18,11 @@
     indexName: "{{ site.algolia.index_name }}",
     searchFunction: function (helper) {
       var searchResults = document.getElementById("search-hits-wrapper");
-      if (helper.state.query === "") {
-        searchResults.style.display = "none";
+      if (helper.state.query === "" && searchResults.style.display === "none") {
         return;
       }
+      searchResults.style.display = helper.state.query ? "block" : "none";
       helper.search();
-      searchResults.style.display = "block";
     },
   });
 
