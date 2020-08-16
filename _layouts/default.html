@@ -51,13 +51,12 @@
             <li {% if page.menu == 'setup' %}class="current"{% endif %}><a href="setup">Setup</a></li>
             <li {% if page.menu == 'blog' %}class="current"{% endif %}><a href="blog">Blog</a></li>
             <li {% if page.menu == 'archive' %}class="current"{% endif %}><a href="archive">Archive</a></li>
-            <li><div id="search-searchbar" style="margin-top: -4px; margin-bottom: -10px; width: 350px"></div></li>
+            <li><div id="search-searchbar" style="margin-top: -4px; margin-bottom: -10px; width: 265px"></div></li>
+            <li><a href="#" style="background-color: rgb(250, 181, 122); color:white;" data-token="baaf08be55251183cc067366a8b25400" onclick="mjOpenPopin(event, this)">Subscribe!</a></li>
           </ul>
-
 
           <br class="clear" />
         </nav>
-
 
         {{ content }}
 
@@ -66,6 +65,10 @@
       {% include footer.html %}
       {% include algolia.html %}
     </div> <!-- end wrapper -->
+
+    <data id="mj-w-res-data" data-token="baaf08be55251183cc067366a8b25400" class="mj-w-data" data-apikey="5MN5" data-w-id="EIl" data-lang="en_US" data-base="https://app.mailjet.com" data-width="640" data-height="328.253" data-statics="statics"></data>
+
+    <script type="text/javascript" src="https://app.mailjet.com/statics/js/widget.modal.js"></script>
 
     <script type="text/javascript">
       var _gaq = _gaq || [];
