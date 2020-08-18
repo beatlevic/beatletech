@@ -97,7 +97,7 @@
               <a
                 href="#"
                 style="background-color: rgb(250, 181, 122); color: white;"
-                data-token="baaf08be55251183cc067366a8b25400"
+                data-token="3c500cdbb042fff8c045dd8ba7175b16"
                 onclick="mjOpenPopin(event, this)"
                 >Subscribe!</a
               >
@@ -224,7 +224,7 @@
   <li>The instantsearch.js dependency, template configuration and styling. All of which is located in the <code class="language-plaintext highlighter-rouge">_includes/algolia.html</code> file, which can be viewed in full in the <a href="https://github.com/beatlevic/beatletech/blob/master/_includes/algolia.html">source code</a> of this site.</li>
 </ul>
 
-<p>I made the following 4 changes compared to the community tutorial:</p>
+<p>I made the following changes compared to the community tutorial:</p>
 <ul>
   <li><strong>Hide Search results by default (style=”display:none”) and don’t fire off an empty query that returns all articles.</strong> The default empty query returns all articles and to mitigate this I added a <code class="language-plaintext highlighter-rouge">searchFunction</code> to the instantsearch options:</li>
 </ul>
@@ -273,11 +273,13 @@
 10
 11
 12
+13
 </pre></td><td class="code"><pre>  <span class="nx">search</span><span class="p">.</span><span class="nx">addWidget</span><span class="p">(</span>
     <span class="nx">instantsearch</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">searchBox</span><span class="p">({</span>
       <span class="na">container</span><span class="p">:</span> <span class="dl">"</span><span class="s2">#search-searchbar</span><span class="dl">"</span><span class="p">,</span>
       <span class="na">placeholder</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Search into posts...</span><span class="dl">"</span><span class="p">,</span>
       <span class="na">poweredBy</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="na">autofocus</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
       <span class="na">showLoadingIndicator</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
       <span class="nx">queryHook</span><span class="p">(</span><span class="nx">query</span><span class="p">,</span> <span class="nx">refine</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timerId</span><span class="p">);</span>
@@ -288,7 +290,8 @@
 </pre></td></tr></tbody></table></code></pre></figure>
 
 <ul>
-  <li><strong>Show “Search by Algolia” badge.</strong> If you want to make use of the free plan, they ask you in exchange that you display a “Search by Algolia” logo next to your search results. You can use the Instantsearch options Boolean flag <code class="language-plaintext highlighter-rouge">poweredBy</code> or if you want more flexibility, as I did, you can find different versions of their logo <a href="https://www.algolia.com/press/?section=brand-guidelines">here</a> and add it to the <code class="language-plaintext highlighter-rouge">search-hits-wrapper</code> div.</li>
+  <li><strong>Show “Search by Algolia” badge.</strong> If you want to make use of the free plan, they ask you in exchange that you display a “Search by Algolia” logo next to your search results. You can use the Instantsearch searchBox options Boolean flag <code class="language-plaintext highlighter-rouge">poweredBy</code> or if you want more flexibility, as I did, you can find different versions of their logo <a href="https://www.algolia.com/press/?section=brand-guidelines">here</a> and add it to the <code class="language-plaintext highlighter-rouge">search-hits-wrapper</code> div.</li>
+  <li><strong>Turn off autofocus</strong>. Add and set the searchBox option <code class="language-plaintext highlighter-rouge">autofocus</code> to <code class="language-plaintext highlighter-rouge">false</code> if you don’t want the input search to autofocus. While I at first liked the autofocus, because the user can immediately type their search query, it turns out on mobile devices you automatically zoom in on the search input field. So I recommend turning it off.</li>
 </ul>
 
 <h3 id="experience-so-far">Experience so far</h3>
@@ -321,7 +324,7 @@
               If you like what you are reading here, consider hitting
               <a
                 href="#"
-                data-token="baaf08be55251183cc067366a8b25400"
+                data-token="3c500cdbb042fff8c045dd8ba7175b16"
                 onclick="mjOpenPopin(event, this)"
                 >Subscribe!</a
               >
@@ -467,6 +470,7 @@
       container: "#search-searchbar",
       placeholder: "Search into posts...",
       poweredBy: false,
+      autofocus: false,
       showLoadingIndicator: true,
       queryHook(query, refine) {
         clearTimeout(timerId);
@@ -554,7 +558,7 @@
 
     <data
       id="mj-w-res-data"
-      data-token="baaf08be55251183cc067366a8b25400"
+      data-token="3c500cdbb042fff8c045dd8ba7175b16"
       class="mj-w-data"
       data-apikey="5MN5"
       data-w-id="EIl"

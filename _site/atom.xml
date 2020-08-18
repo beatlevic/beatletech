@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2020-08-16T23:45:23+02:00</updated>
+ <updated>2020-08-18T09:50:29+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -88,7 +88,7 @@
   &lt;li&gt;The instantsearch.js dependency, template configuration and styling. All of which is located in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_includes/algolia.html&lt;/code&gt; file, which can be viewed in full in the &lt;a href=&quot;https://github.com/beatlevic/beatletech/blob/master/_includes/algolia.html&quot;&gt;source code&lt;/a&gt; of this site.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I made the following 4 changes compared to the community tutorial:&lt;/p&gt;
+&lt;p&gt;I made the following changes compared to the community tutorial:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Hide Search results by default (style=”display:none”) and don’t fire off an empty query that returns all articles.&lt;/strong&gt; The default empty query returns all articles and to mitigate this I added a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;searchFunction&lt;/code&gt; to the instantsearch options:&lt;/li&gt;
 &lt;/ul&gt;
@@ -137,11 +137,13 @@
 10
 11
 12
+13
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;nx&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addWidget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;instantsearch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;widgets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;searchBox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;#search-searchbar&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Search into posts...&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;poweredBy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;autofocus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;showLoadingIndicator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
       &lt;span class=&quot;nx&quot;&gt;queryHook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;refine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;nx&quot;&gt;clearTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timerId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -152,7 +154,8 @@
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Show “Search by Algolia” badge.&lt;/strong&gt; If you want to make use of the free plan, they ask you in exchange that you display a “Search by Algolia” logo next to your search results. You can use the Instantsearch options Boolean flag &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;poweredBy&lt;/code&gt; or if you want more flexibility, as I did, you can find different versions of their logo &lt;a href=&quot;https://www.algolia.com/press/?section=brand-guidelines&quot;&gt;here&lt;/a&gt; and add it to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;search-hits-wrapper&lt;/code&gt; div.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Show “Search by Algolia” badge.&lt;/strong&gt; If you want to make use of the free plan, they ask you in exchange that you display a “Search by Algolia” logo next to your search results. You can use the Instantsearch searchBox options Boolean flag &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;poweredBy&lt;/code&gt; or if you want more flexibility, as I did, you can find different versions of their logo &lt;a href=&quot;https://www.algolia.com/press/?section=brand-guidelines&quot;&gt;here&lt;/a&gt; and add it to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;search-hits-wrapper&lt;/code&gt; div.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Turn off autofocus&lt;/strong&gt;. Add and set the searchBox option &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;autofocus&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;false&lt;/code&gt; if you don’t want the input search to autofocus. While I at first liked the autofocus, because the user can immediately type their search query, it turns out on mobile devices you automatically zoom in on the search input field. So I recommend turning it off.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;experience-so-far&quot;&gt;Experience so far&lt;/h3&gt;

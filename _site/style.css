@@ -347,7 +347,7 @@ a:hover {
 }
 
 .blog strong {
-  color: #92949f;
+  color: #50515a;
 }
 
 p, dl, hr, h1, h2, h3, h4, h5, h6,
@@ -684,7 +684,7 @@ h3 {
 } */
 
 h4 {
-    color: #92949f;
+    color: #757680;
     -webkit-transition: opacity 0.15s ease-in-out;
     -moz-transition: opacity 0.15s ease-in-out;
     transition: opacity 0.15s ease-in-out;
@@ -729,7 +729,8 @@ h4 {
 
 .post li {
     padding: 4px 5px;
-	font-size: 110%;
+	font-size: 112%;
+	line-height: 1.6em;
 }
 
 .index li {
@@ -938,7 +939,7 @@ background: none;
 }
 
 .highlighter-rouge {
-	background: #cdcdcd;
+	background: #e9e9e9;
 	padding: 2px 2px;
 	font-weight: bold;
 }
