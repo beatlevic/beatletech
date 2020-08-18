@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2020-08-18T20:53:56+02:00</updated>
+ <updated>2020-08-18T20:56:07+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -16,7 +16,7 @@
    <link href="http://beatletech.com/2020/08/16/jekyll-and-algolia-search-integration"/>
    <updated>2020-08-16T00:00:00+02:00</updated>
    <id>http://beatletech.com/2020/08/16/jekyll-and-algolia-search-integration</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/jekyll-and-algolia.png&quot; alt=&quot;Algolia&quot; width=&quot;98%&quot; title=&quot;Jekyll and Algolia&quot; style=&quot;margin-left:0px&quot; /&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;img src=&quot;https://beatletech.com/images/jekyll-and-algolia.png&quot; alt=&quot;Algolia&quot; width=&quot;98%&quot; title=&quot;Jekyll and Algolia&quot; style=&quot;margin-left:0px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Recently I decided to add search functionality to my &lt;a href=&quot;https://beatletech.com&quot;&gt;BeatleTech&lt;/a&gt; site (indeed, the one you are visiting right now). Not because I needed my readers to filter through the overwhelming number of articles I have written here (which I have not), but simply because I thought it would be a cool feature that would bring some nice interactivity to the site and to spark my ambition to write more blog posts going forward.&lt;/p&gt;
 
