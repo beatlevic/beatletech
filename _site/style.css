@@ -48,7 +48,7 @@
 .container_16 .grid_8 { width: 460px; }
 
 .container_12 .grid_9,
-.container_16 .grid_12 { width: 860px; }
+.container_16 .grid_12 { width: 900px; }
 
 .container_12 .grid_12,
 .container_16 .grid_16 { width: 940px; }
@@ -313,7 +313,7 @@ a {
 .column a:hover {
 	color: #6b96c1;
 	text-decoration: none;
-  background: #fff;
+    background: #fff;
 }
 
 .widget a:hover,
@@ -330,7 +330,7 @@ a {
 a:hover {
 	color: #fff;
 	background: #78a8d8;
-  Padding: 2px 1px;
+    padding: 2px 1px;
 	text-decoration: none;
 	/*text-shadow: #6b96c1 1px 1px 1px; /* #F71570 */
 	-webkit-border-radius: 3px;
@@ -340,8 +340,8 @@ a:hover {
 
 .blog h4 a:hover {
 	color: #6b96c1;
-  background: #fff;
-  Padding: 0px;
+    background: #fff;
+    padding: 0px;
 	text-decoration: none;
 	/*text-shadow: #6b96c1 1px 1px 1px; /* #F71570 */
 }
@@ -458,8 +458,8 @@ blockquote p { margin: 0; }
 	border: solid 1px #cacaca;
 	/* border-left: none; border-right: none; */
 	float: left;
-	width: 920px;
-	padding: 40px 10px 0 20px;
+	width: 940px;
+	padding: 40px 20px 0 20px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
 	/* -webkit-box-shadow: 2px 3px 3px #cccccc; */ /* Box shadows slow down the entire page!!! */
@@ -540,7 +540,8 @@ blockquote p { margin: 0; }
 }
 
 .blog {
-    margin-left: 40px;
+	margin-left: 40px;
+	margin-right: 10px;
 }
 
 /* .blog .publishdate { */
