@@ -37,6 +37,7 @@ To integrate with Jeyll we first need to install and run the [jekyll-algolia-plu
 #### 1. Pushing content to your Algolia index
 
 This is a simple three step process, as lined out in the README of the [jekyll-algolia-plugin](https://github.com/algolia/jekyll-algolia) repository. First add the jekyll-algolia gem to your Gemfile, after which you run `bundle install` to fetch all the dependencies:
+
 {% highlight ruby linenos %}
   # Gemfile
 
@@ -46,6 +47,7 @@ This is a simple three step process, as lined out in the README of the [jekyll-a
 {% endhighlight %}
 
 Next, add your `application_id`, `index_name` and `search_only_api_key` to the Jekyll `_.config.yml` file:
+
 {% highlight yaml linenos %}
   # _.config.yaml
 
@@ -68,9 +70,8 @@ The integration consists of two parts:
 - A `search-hits-wrapper` div element where we load the search results. These results are located front and center under the navigation bar (pushing the rest of the content down).
 - The instantsearch.js dependency, template configuration and styling. All of which is located in the `_includes/algolia.html` file, which can be viewed in full in the [source code](https://github.com/beatlevic/beatletech/blob/master/_includes/algolia.html) of this site.
 
-I made the following 4 changes compared to the community tutorial:
+I made the following changes compared to the community tutorial:
 - **Hide Search results by default (style="display:none") and don't fire off an empty query that returns all articles.** The default empty query returns all articles and to mitigate this I added a `searchFunction` to the instantsearch options:
-
 {% highlight javascript linenos %}
   const search = instantsearch({
     appId: "{{ site.algolia.application_id }}",
@@ -86,15 +87,14 @@ I made the following 4 changes compared to the community tutorial:
     },
   });
 {% endhighlight %}
-
 - **Don't fire off a query on every keystroke.** While the default of triggering a search query with every keystroke is great in terms of responsiveness, it will also help you burn quickly through your free 10k search requests. In order to trade off query responsiveness for less api requests, I added the following `queryHook` with a 500ms delay:
-
 {% highlight javascript linenos %}
   search.addWidget(
     instantsearch.widgets.searchBox({
       container: "#search-searchbar",
       placeholder: "Search into posts...",
       poweredBy: false,
+      autofocus: false,
       showLoadingIndicator: true,
       queryHook(query, refine) {
         clearTimeout(timerId);
@@ -103,8 +103,8 @@ I made the following 4 changes compared to the community tutorial:
     })
   );
 {% endhighlight %}
-
-- **Show "Search by Algolia" badge.** If you want to make use of the free plan, they ask you in exchange that you display a "Search by Algolia" logo next to your search results. You can use the Instantsearch options Boolean flag `poweredBy` or if you want more flexibility, as I did, you can find different versions of their logo [here](https://www.algolia.com/press/?section=brand-guidelines) and add it to the `search-hits-wrapper` div.
+- **Show "Search by Algolia" badge.** If you want to make use of the free plan, they ask you in exchange that you display a "Search by Algolia" logo next to your search results. You can use the Instantsearch searchBox options Boolean flag `poweredBy` or if you want more flexibility, as I did, you can find different versions of their logo [here](https://www.algolia.com/press/?section=brand-guidelines) and add it to the `search-hits-wrapper` div.
+- **Turn off autofocus**. Add and set the searchBox option `autofocus` to `false` if you don't want the input search to autofocus. While I at first liked the autofocus, because the user can immediately type their search query, it turns out on mobile devices you automatically zoom in on the search input field. So I recommend turning it off.
 
 ### Experience so far
 
