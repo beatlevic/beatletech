@@ -59,7 +59,7 @@ Next, add your `application_id`, `index_name` and `search_only_api_key` to the J
 
 Finally, get your private Algolia admin key (which you can find in your Algolia dashboard) and run the following to execute the indexing:
 {% highlight bash %}
-$ ALGOLIA_API_KEY='your_admin_api_key' bundle exec jekyll algolia
+  ALGOLIA_API_KEY='your_admin_api_key' bundle exec jekyll algolia
 {% endhighlight %}
 
 #### 2. Adding instantsearch.js to the front-end

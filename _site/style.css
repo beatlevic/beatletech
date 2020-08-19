@@ -351,8 +351,12 @@ a:hover {
 }
 
 p, dl, hr, h1, h2, h3, h4, h5, h6,
-ol, ul, pre, table, fieldset, blockquote, .widget {
+ol, ul, table, fieldset, blockquote, .widget {
 	margin-bottom: 15px;
+}
+
+pre {
+	margin-bottom: 0px;
 }
 
 p {
@@ -945,10 +949,16 @@ background: none;
 	font-weight: bold;
 }
 
+pre {
+    font-family: Monaco, "Courier New", monospace;
+	font-size: 96%;
+}
+
 pre code {
     background: none;
 	color: rgb(236, 235, 235);
-	/* font-family: Monaco, "Courier New", monospace; */
+	font-family: Monaco, "Courier New", monospace;
+	font-size: 90%;
     /* font: 300 100%/1.5 Oxygen, "Helvetica Neue", Arial, sans-serif; */
 	/* font-weight: 400;
 	font-size: 1.0em;
@@ -961,10 +971,10 @@ pre .lineno {
 
 .rouge-table {
 	margin-top: 5px;
-	margin-bottom: 0px
+	margin-bottom: 0px;
 }
 
-.highlight pre { background-color: #272822; padding: 3px 0px 3px 5px; }
+.highlight pre { background-color: #272822; padding: 5px 0px 5px 5px; }
 .highlight .hll { background-color: #272822; }
 .highlight .c { color: #75715e } /* Comment */
 .highlight .err { color: #960050; background-color: #1e0010 } /* Error */
