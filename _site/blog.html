@@ -72,6 +72,180 @@
 
   
   <div class="post blog">
+    <h2><a href="/2020/10/26/docker-on-macos-without-noisy-fans">Docker on macOS without noisy fans</a></h2>
+    <p class="publishdate">Monday, 26 October  2020 </p>
+    <p><p><img src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/docker_logo.png" alt="Docker" width="30%" title="Docker" style="margin-left:250px" /></p>
+
+<h3 id="tldr"><strong>TL;DR</strong></h3>
+
+<ul>
+  <li>Running Docker on macOS results in noisy CPU fans and low performance (build times)</li>
+  <li>Apple Silicon probably not the answer</li>
+  <li>The solution is using remote Linux Docker host (with <a href="#1-install-docker-engine-on-remote-host">setup</a> instructions)</li>
+</ul>
+
+<h3 id="noisy-cpu-fans">Noisy CPU fans</h3>
+
+<p>As a developer I’m a big fan of Apple hardware and software ever since I got my first Macbook back in 2008. MacOS is a UNIX operating system running on X86 hardware (changing to ARM soon, but more on that later) that makes developing for Linux production servers a smooth experience utilizing the same UNIX tooling. While my development stack changed over the years and nowadays includes Docker, Kubernetes and <a href="https://bedrock.io">bedrock.io</a>, macOS still continues to serve me well. It is providing these new CLI tools and templates on a stable OS with little to no issues, a nice UI with great HIDPI scaling (rocking a LG 5K monitor over <a href="https://beatletech.com/setup">here</a>), and of course I’ve become so used to the interface that switching back to Windows or Linux Desktop would mess up my optimized workflows and habits.</p>
+
+<p>One thing, however, that could use improvements is Docker Desktop (<a href="https://docs.docker.com/docker-for-mac/">for mac</a>), to increase Docker container performance, speed up docker build times and reduce CPU usage when running “idle”. The reason for being slow and performance hungry is succinctly explained in <a href="https://stackoverflow.com/questions/55951014/docker-in-macos-is-very-slow">this</a> Stackoverflow answer:</p>
+
+<blockquote>
+  <p>Docker needs a plain Linux kernel to run. Unfortunately, Mac OS and Windows cannot provide this. Therefore, there is a client on Mac OS to run Docker. In addition to this, there is an abstraction layer between Mac OS kernel and applications (Docker containers) and the filesystems are not the same.</p>
+</blockquote>
+
+<p>In other words, there is a lot of extra (hyper)virtualization and filesystem overhead going on. Of course a relative performance hit (compared to running on Linux directly) is something I could live with, but my main annoyance presents itself loudly when I’m building (and deploying) a lot of Docker images: it spins up my Macbook pro CPU fans to audible levels, something in stark contrast to the absolute silence at which my laptop runs almost everything else (I guess I’m spoiled).</p>
+
+<p>While you could argue that you should not build and push Docker images to staging or production from your local development machine and just incorporate it in your CI/CD pipeline, I prefer having this manual control, which is also nicely supported by the <a href="https://bedrock.io">bedrock.io</a> build and deploy commands. This point probably warrants a whole dedicated blog post, but if you are like me, and also run a lot of docker build commands locally, then you will be interested in the solution I found to my <strong>main problem: the lack of macOS docker performance (long build times) and noisy CPU fans</strong>.</p>
+
+<h3 id="apple-silicon-is-not-the-solution">Apple Silicon is not the solution</h3>
+
+<p>With myself being an Apple enthusiast, you can image why I’m excited about the upcoming transition from Intel CPUs to Apple Silicon, which is planned to make its debut in their Macbook Pro and iMac lineup later this year (<a href="https://9to5mac.com/2020/10/09/apple-silicon-november-bloomberg/">Rumors</a> point to a November event). So at first I thought that the answer to the lackluster Docker performance on the Mac would simply be waiting for the new ARM hardware release and buying a new Macbook Pro. However, this might not hold true as Apple Silicon will be an ARM SoC, which is a different architecture than X86_64. And X86_64 is still my deployment target for the foreseeable future. In other words, I still need to build X86_64 images and this will require emulation and virtualization that <a href="http://www.ml-illustrated.com/2020/06/25/ARM-Macs-virtualization-different-take.html">some</a> are expecting to have a 2x to 5x performance hit.</p>
+
+<p>It is also worth noting that Craig Federighi, Apple’s senior vice president of Software Engineering, said the following during an interview after the initial WWDC Apple Silicon announcement:</p>
+
+<blockquote>
+  <p>“Virtualization on the new Macs won’t support X86 at all” (<a href="https://www.jeffgeerling.com/blog/2020/what-does-apple-silicon-mean-raspberry-pi-and-arm64">source</a>)</p>
+</blockquote>
+
+<p>Craig even explicitly called out Docker containers being built for ARM, and being able to run them on ARM instances in AWS, but what about building your X86 images? I know you can build for multi-arch including ARM now with docker desktop (<a href="https://www.docker.com/blog/multi-arch-images/">post</a>), but what will the performance hit be for Apple Silicon?</p>
+
+<p>All in all, upcoming Apple Silicon doesn’t seem like an immediate win for my specific problem with Docker performance. Also, I like to skip 1st gen hardware and wait on the sidelines a bit longer before I migrate my production workflows to new hardware running on ARM.</p>
+
+<p>Luckily I did find a solution that serves me right away and might also help with the transition to Apple Silicon in the future. <strong>Docker remote to the rescue!</strong></p>
+
+<h3 id="remote-docker-host-solution">Remote Docker host Solution</h3>
+
+<p>Instead of beefing up my local development machine now or with upcoming Apple ARM hardware, I looked into off-loading all the Docker activities onto a remote machine, and as it turns out, it is trivially easy to setup access to a remote docker host. I kinda knew about this, back when I was using Docker Swarm and connecting to different machines, but I somehow never thought about this as a setup for my “local” docker environment.</p>
+
+<p>Needless to say, but one does not setup remote access without a remote machine, so I’m assuming you have a remote Linux machine running somewhere. I personally use and recommend dedicated or cloud servers from <a href="https://www.hetzner.com/">Hetzner</a>, that is if you are located in Europe. I’m using the <a href="https://www.hetzner.com/dedicated-rootserver/ax51-nvme">AX51-NVMe</a> Dedicated Root Server (Ryzen 7 3700X CPU, 64GB RAM, 1TB NVMe SSD), which seems comically cheap at only 59 Euros a month. Anyway, let’s get rolling.</p>
+
+<h4 id="1-install-docker-engine-on-remote-host">1. Install Docker Engine on remote host</h4>
+<p>First, let’s install Docker on your remote Linux server (I’m using the <a href="https://docs.docker.com/engine/install/ubuntu/">Ubunty install instructions</a>, but you can find instructions for other distros on that page as well):</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="c">## Update the apt package index and install packages to allow apt to use a repository over HTTPS:</span>
+ <span class="nv">$ </span><span class="nb">sudo </span>apt-get update
+
+ <span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="se">\</span>
+     apt-transport-https <span class="se">\</span>
+     ca-certificates <span class="se">\</span>
+     curl <span class="se">\</span>
+     gnupg-agent <span class="se">\</span>
+     software-properties-common
+
+ <span class="c">## Add Docker’s official GPG key:</span>
+ <span class="nv">$ </span>curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>apt-key add -
+
+ <span class="c">## Use the following command to set up the stable repository</span>
+ <span class="nv">$ </span><span class="nb">sudo </span>add-apt-repository <span class="se">\</span>
+    <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu </span><span class="se">\</span><span class="s2">
+    </span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2"> </span><span class="se">\</span><span class="s2">
+    stable"</span>
+
+ <span class="c">## Install docker engine</span>
+ <span class="nv">$ </span><span class="nb">sudo </span>apt-get update
+ <span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>docker-ce docker-ce-cli containerd.io</code></pre></figure>
+
+<h4 id="2-create-docker-context">2. Create Docker Context</h4>
+
+<p>Next up we need to access the remote Docker host and make it our default “local” engine. For this we leverage <strong>Docker Contexts</strong> in the following way. First we create a context that will hold the connection path (e.g. <code class="language-plaintext highlighter-rouge">ssh://coen@whatever.com</code>) to the remote docker host:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nv">$ </span>docker context create remote ‐‐docker <span class="nv">host</span><span class="o">=</span>ssh://coen@whatever.com
+ remote
+ Successfully created context “remote”
+
+ <span class="nv">$ </span>docker context <span class="nb">ls
+ </span>NAME       TYPE    DESCRIPTION              DOCKER ENDPOINT    KUBERNETES ENDPOINT    ORCHESTRATOR
+ default <span class="k">*</span>  moby    Current DOCKER_HOST...   unix:///var/run/docker.sock               swarm
+ remote     moby                             ssh://coen@whatever.com</code></pre></figure>
+
+<p>And the final step is to make <code class="language-plaintext highlighter-rouge">remote</code> your default context:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nv">$ </span>docker context use remote
+ remote
+ Current context is now “remote”</code></pre></figure>
+
+<h4 id="3-using-your-remote-docker-host">3. Using your remote Docker host</h4>
+
+<p>With the previous 2 steps you are ready to start enjoying a <strong>silent</strong> local development machine when you are building docker images with an increased speed in build time! Any time you now run <code class="language-plaintext highlighter-rouge">docker build</code>, all the relevant (and changed) files that are required for the build are copied from your local computer to the remote Docker host in the background, and the <code class="language-plaintext highlighter-rouge">docker build</code> starts the build of the image on the remote host. The resulting image is also located on the remote host, which you can list with <code class="language-plaintext highlighter-rouge">docker images</code>, as all docker commands use the default <code class="language-plaintext highlighter-rouge">remote</code> context.</p>
+
+<h3 id="benefits">Benefits</h3>
+
+<p>To show you an example of Docker build speed improvements, let’s have a look at the following time measurements for building the <code class="language-plaintext highlighter-rouge">web</code> service component, a React SPA build with Webpack, of <a href="https://github.com/bedrockio/bedrock-core/tree/master/services/web">bedrock</a> on a clean build:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  +---------+-------------------+--------------------+------------+---------------+
+  | Context | Yarn <span class="nb">install time</span> | Webpack build <span class="nb">time</span> | Total <span class="nb">time</span> | Relative <span class="nb">time</span> |
+  +---------+-------------------+--------------------+------------+---------------+
+  | Local   | 75.82s            | 82.05s             | 157.87s    | 296% <span class="o">(</span>~3x<span class="o">)</span>    |
+  +---------+-------------------+--------------------+------------+---------------+
+  | Remote  | 18.19s            | 35.11s             |  53.30s    | 100% <span class="o">(</span>1x<span class="o">)</span>     |
+  +---------+-------------------+--------------------+------------+---------------+</code></pre></figure>
+
+<p>Of course a 3x improvement doesn’t come as a surprise when you are basically comparing a Macbook Pro with 2 (virtual) CPUs allocated to Docker, versus an 8 core dedicated Linux machine (with hyperthreading and higher internet bandwidth) even though not everything runs multi-threaded. But it is a big improvement that you can quickly and easily get for yourself and reap the benefits, which quickly adds up over time. Not to mention the complete silence at which you gain the faster build times.</p>
+
+<p>As a bonus, you can now stop running Docker Desktop entirely, and no longer see a Docker process “idling” in the background that would otherwise still be using around 20% CPU all the time (doing nothing).</p>
+
+<p>Being able to build X86_64 images on a remote machine, incidentally also makes it more viable to migrate my development environment to Apple Silicon in the future, not depending on Apple ARM to build and run my X86_64 images.</p>
+
+<p>Finally, of course you can also <code class="language-plaintext highlighter-rouge">docker run</code> containers on your remote host. For example running MongoDB:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nv">$ </span>docker run <span class="nt">--name</span> mongo <span class="nt">-d</span> <span class="nt">-p</span> 27017:27017 <span class="nt">-v</span> /root/data:/data/db mongo:4.2.8
+ <span class="c"># Note: /root/data is located on your remote machine</span></code></pre></figure>
+
+<p>In order to access and use the running MongoDB container locally, make sure to SSH tunnel to your remote machine and forward the relevant ports. For this you can update your SSH config file: <code class="language-plaintext highlighter-rouge">.ssh/config</code>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre>Host coentunnel
+  HostName whatever.com
+  User coen
+  ForwardAgent <span class="nb">yes
+  </span>ServerAliveInterval 60
+  ServerAliveCountMax 10
+  LocalForward 27017 localhost:27017 <span class="c"># Mongo</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>A big word of <strong>caution</strong> here is to make sure you firewall your ports properly on your remote server, because Docker is known to <a href="https://github.com/docker/for-linux/issues/690">bypass ufw firewall rules</a>!!!</p>
+
+<h3 id="downsides">Downsides</h3>
+
+<p>Using a remote Docker host works really well for me, but there are a couple of downsides to this approach:</p>
+
+<p>The first one would be “added complexity &amp; dependency”, because now you have added an extra machine to your development environment that you need to keep up-to-date and secure. Especially if you also use it to <code class="language-plaintext highlighter-rouge">docker run</code> containers for local development.</p>
+
+<p>Secondly, if you use <code class="language-plaintext highlighter-rouge">docker-compose</code> for local development (often used to inject your live code changes), then you cannot map your local drive into the docker containers, as the mounted volumes will be pointing to folders on your remote machine. You can find more information about how to deploy on remote Docker hosts with docker-compose <a href="https://www.docker.com/blog/how-to-deploy-on-remote-docker-hosts-with-docker-compose/">here</a>.</p>
+
+<p>Last but not least, remote servers are not free, so there is an additional cost involved. However, as pointed out earlier, <a href="https://hetzner.com">Hetzner</a> is a very cheap server provider you can use, or you can start with any other small cloud instance (e.g. AWS, Google, etc). I guess that a lot of developers actually already run a Linux box somewhere (often for testing) that they can use as their remote docker host too.</p>
+
+<h3 id="wrap-up">Wrap up</h3>
+
+<p>As an Apple enthusiast, I don’t see myself switching to a local Linux development computer anytime soon, but I was kind of annoyed with the lack of macOS Docker performance and noisy CPU fans when building images.</p>
+
+<p>Having a hard time believing that the upcoming switch to Apple Silicon will alleviate this issue (still hope for the best, but prepare for the worst), I was happy that I found a solution by introducing a remote Docker host, which was trivially easy to setup and use with Docker Contexts. Sometimes a small change can have a big impact.</p>
+
+<p>IMHO the benefits I described in this article more than make up for the downsides. Hopefully this may benefit you too. If you have any suggestions for improvements, then please let me know!</p>
+
+      <div class='clear_both tags'>
+        <span>
+          tags: 
+          <a href="../../../archive#docker">docker</a>,  
+          <a href="../../../archive#hetzner">hetzner</a>,  
+          <a href="../../../archive#bedrock">bedrock</a>,  
+          <a href="../../../archive#apple-silicon">apple-silicon</a> 
+        </span>
+      </div>
+      <div class="comments">
+	<span style="font-size: 100%;"><a href="/2020/10/26/docker-on-macos-without-noisy-fans#disqus_thread">View Comments</a> </span>
+      </div>
+    </p>
+  </div>
+  
+  <div class="post blog">
     <h2><a href="/2020/08/16/jekyll-and-algolia-search-integration">Jekyll and Algolia search integration</a></h2>
     <p class="publishdate">Sunday, 16 August  2020 </p>
     <p><p><img src="https://beatletech.com/images/jekyll-and-algolia.png" alt="Algolia" width="98%" title="Jekyll and Algolia" style="margin-left:0px" /></p>
@@ -545,249 +719,6 @@ study”</em>
       </div>
       <div class="comments">
 	<span style="font-size: 100%;"><a href="/2015/05/17/goodbye-pvalues-hello-bayesian-statistics#disqus_thread">View Comments</a> </span>
-      </div>
-    </p>
-  </div>
-  
-  <div class="post blog">
-    <h2><a href="/2015/02/11/coursera-courses">My recent Coursera journey</a></h2>
-    <p class="publishdate">Wednesday, 11 February  2015 </p>
-    <p><p>In the past couple of months I managed to complete 4 online courses on
-<a href="http://coursera.com">Coursera</a>, which is an education platform that partners with top universities
-to offer free <a href="http://en.wikipedia.org/wiki/Massive_open_online_course">MOOCs</a> (Massive open online
-courses). In this post I like to present you my experiences with these courses and my plans for any
-future courses.</p>
-
-<p>The reason for me to start following online courses has to do with what I already pointed out in my
-previous blog post “<a href="http://beatletech.com/2015/02/03/my-system-to-win-big">My System to Win Big</a>”. I want to
-keep on improving myself and acquire more knowledge in domains of my interest. Part of it is
-revisiting knowledge I’m “supposed” to know to gain an even better understanding, and the other part
-is exploring new uncharted territories. I also wanted to follow courses where I would have to
-practice and hone my programming skills.</p>
-
-<p>But why follow online courses with a rigid schedule and deadlines if you can simply study books or solve some tough problems on
-<a href="https://projecteuler.net/">Project Euler</a> at your own pace? Well, for me as it turns out, having a fixed
-course schedule releases me of the burden of planning and serves as a nice stick to finish on time,
-which made it easier to get into the habit of spending evening hours on education. This way I didn’t
-have to spend my will-power every time to get started, and now that I have grown this study habit and
-with it the discipline to follow through, I’m in a much better position to also study at my own pace.</p>
-
-<p>The courses for which I have received statements of accomplishment are in chronological order:</p>
-
-<ul>
-  <li><a href="https://www.coursera.org/course/ml">Machine Learning</a></li>
-  <li><a href="https://www.coursera.org/course/algo">Algorithms: Design and Analysis, Part 1</a></li>
-  <li><a href="https://www.coursera.org/course/bioinformatics">Bioinformatics Algorithms, Part 1</a></li>
-  <li><a href="https://www.coursera.org/course/learning">Learning How to Learn</a></li>
-</ul>
-
-<p>In the subsequent sections I will describe each course and my experiences in more detail.</p>
-
-<h3 id="courses">Courses</h3>
-<h4 id="machine-learning">Machine Learning</h4>
-
-<p><strong>Overview:</strong> <em>Stanford University // June-September 2014 // 12 weeks of study // 6 hours per week // <a href="https://www.coursera.org/course/ml">Coursera link</a></em>
-<strong>Difficulty:</strong> <em>Easy</em></p>
-
-<p>Half a year ago at <a href="http://bottlenose.com">Bottlenose</a> I was shifting from primarily a Software
-Architect role to more of a Data Scientist role, and therefore spending more time on Machine
-Learning problems. So I thought it was valuable to refresh my knowledge in this particular
-domain. Besides reading up on some study books I decided to enroll in the Stanford Machine Learning
-course, which presented a nice overview with some basic programming exercises. Topics included (as
-listed on the Coursera page):</p>
-
-<ul>
-  <li>Supervised learning (parametric/non-parametric algorithms, support vector machines, kernels,
-neural networks).</li>
-  <li>Unsupervised learning (clustering, dimensionality reduction, recommender systems, deep learning).</li>
-  <li>Best practices in Machine Learning (bias/variance theory, innovation process in machine learning and AI).</li>
-</ul>
-
-<p>Given that I was already very familiar with these topics, combined with an excellent presentation by
-instructor <a href="https://www.coursera.org/instructor/andrewng">Andrew Ng</a>, it may not come as a surprise that I found the
-course easy to follow and the programming exercises not hard to implement with only the (frequent)
-annoyances of coding in Matlab.</p>
-
-<p>It felt good to revisit all the topics in the course, which presented me once again with the wide
-variety of Machine Learning approaches and techniques. Perhaps in hindsight other specialized
-courses on Machine Learning on a more graduate level would have been more worthwhile. However, I
-don’t regret my time spent on this course as it never hurts to go back to the basics once in a
-while.  Additionally, as this was my first online course, it was a great way to get started with
-Coursera and familiarize myself with this new educational format. And after finding out that it
-worked really well for me, I instantly signed up for a lot of other (more specialized) courses.</p>
-
-<h4 id="algorithms-design-and-analysis-part-1">Algorithms: Design and Analysis, Part 1</h4>
-
-<p><strong>Overview:</strong> <em>Stanford University // October-December 2014 // 6 weeks of study // 7 hours per week
-// <a href="https://www.coursera.org/course/algo">Coursera link</a></em>
-<strong>Difficulty:</strong> <em>Medium</em></p>
-
-<p>After finishing the Machine Learning exercises in Matlab I wanted my next Coursera course to require
-a “real” and more interesting programming language, and at the time I was already reading up on two
-other programming languages that I liked to put into practice: <a href="http://julialang.org/">Julia</a> and <a href="http://www.rust-lang.org/">Rust</a>.</p>
-
-<p>I was already aware of the “Algorithms: Design and Analysis” class, which two of my friends already
-completed and recommended, thereby making it interesting candidate as my next course. Having finished a similar
-course (in Java) during my study at Delft University I thought this course would be a walk in the park and a
-good playground for testing the waters with Julia and Rust. At the same time I was starting with the
-“Bioinformatics Algorithms” class, which also focused on implementing algorithms, but in the domain of biology
-(more on Bioinformatics later). Both courses I started with Julia.</p>
-
-<p>I can honestly say that I really like the Julia language, which was born out of its creators wish to
-have a programming language that is:</p>
-
-<blockquote>
-  <p><em>… open source, with a liberal license. We want the speed of C with the
-  dynamism of Ruby. We want a language that’s homoiconic, with true macros like Lisp, but with
-  obvious, familiar mathematical notation like Matlab. We want something as usable for general
-  programming as Python, as easy for statistics as R, as natural for string processing as Perl, as
-  powerful for linear algebra as Matlab, as good at gluing programs together as the shell. Something
-  that is dirt simple to learn, yet keeps the most serious hackers happy. We want it interactive and
-  we want it compiled.
-  (Blog:  <a href="http://julialang.org/blog/2012/02/why-we-created-julia/">Why we created Julia</a>)</em></p>
-</blockquote>
-
-<p>The first week’s programming assignment, a counting algorithm piggy backing on merge-sort, I also
-implemented in Rust after finishing the Julia version. The Rust implementation was a painful
-delivery, which was mostly me fighting the compiler and having a hard time finding clues on the web
-due to a lot of breaking changes in Rust’s development towards the 1.0 release version. Add to that
-the resulting performance being slower than with my Julia implementation, and I quickly decided to
-leave Rust alone or at least until the language would be more stable (1.0 alpha was released Jan
-2015).</p>
-
-<p>While I was getting the hang of Julia, I also started exploring possibilities to introduce the
-language at <a href="http://bottlenose.com">Bottlenose</a>, but found the language too immature just yet (at
-version 0.3), especially compared with Python and its vast amount of available (scientific)
-packages. It would have been interesting to complete the entire course in Julia, but I deemed it
-more valuable to switch to Python along the way and perhaps revisit Julia again in a couple of
-years from now.</p>
-
-<p>Let me now turn to the actual course contents after this (quite long)
-Julia-Rust-experience-intermezzo. When I mentioned that I believed this course to be an easy ride, I
-was actually quite mistaken. The lectures had a lot of technical and mathematical depth, and the
-quizzes were often very challenging. You simply cannot fly through this course without a good
-understanding of the introduced concepts, which are luckily very well presented by course instructor
-<a href="https://www.coursera.org/instructor/~214">Tim Roughgarden</a>. All in all I can highly recommend this
-course for both expert and aspiring computer scientists for learning (or revisiting) several
-fundamental principles of algorithm design, and I’m looking forward in participating in Part 2 of
-this course later this year.</p>
-
-<h4 id="bioinformatics-algorithms-part-1">Bioinformatics Algorithms, Part 1</h4>
-
-<p><strong>Overview:</strong> <em>UC San Diego // October 2014 - Feb 2015 // 10 weeks of study // 10 hours per week //
-<a href="https://www.coursera.org/course/bioinformatics">Coursera link</a></em>
-<strong>Difficulty:</strong> <em>Medium/Hard</em></p>
-
-<p>I always had a general interest in biology with genetics in particular, and if you combine this with
-my interest in algorithms and Data Science, you can see why I had a course in bioinformatics high on
-my wish list. Along came “Bioinformatics Algorithms” on Coursera and I could no longer resist
-signing up and was eager to get started. The syllabus consists of chapters of the interactive text
-book
-<a href="http://bioinformaticsalgorithms.com/">“Bioinformatics Algorithms: an Active Learning Approach”</a>:</p>
-
-<ul>
-  <li>Where in the Genome Does DNA Replication Begin? (Algorithmic Warmup)</li>
-  <li>How Do We Sequence Antibiotics? (Brute Force Algorithms)</li>
-  <li>Which DNA Patterns Act As Cellular Clocks? (Randomized Algorithms)</li>
-  <li>How Do We Assemble Genomes? (Graph Algorithms)</li>
-  <li>How Do We Compare Biological Sequences? (Dynamic Programming Algorithms)</li>
-  <li>Are There Fragile Regions in the Human Genome? (Combinatorial Algorithms)</li>
-</ul>
-
-<p>In a way this was the “Algorithms: Design and Analysis” course all over again applied to the
-biological domain. The practical application of the algorithms really made this course stand out for
-me, and made all algorithms more tangible. The interactive book accompanied by the online lectures
-had great production value and introduced concepts and terminology very well.</p>
-
-<p>The programming assignments throughout the book were the real meat of the course, and it is where
-you will spend most (90%) of your time. Where most exercises were not too hard, there was still a
-big chunk of problems that were very challenging. Sometimes due to the automated solution checker
-that would be a bit too strict in the solutions it would accept (and no feedback on why you were
-wrong), but mostly it were just hard problems to solve. Once you worked your way through the chapter
-and finished all the exercises, the corresponding quiz was easy to pass.</p>
-
-<p>To get a statement of accomplishment you needed to score 70%, which is definitely doable. I went the
-extra mile and focused on scoring above 85% for an accomplishment with distinction, which meant no
-hiding from the difficult parts. In the end I was very proud that I achieved my statement of
-accomplishment with distinction.</p>
-
-<p>I’m looking forward to part 2 of the course, which will start this month.</p>
-
-<h4 id="learning-how-to-learn">Learning How to Learn</h4>
-
-<p><strong>Overview:</strong> <em>UC San Diego // January 2015 // 4 weeks of study // 2 hours per week // <a href="https://www.coursera.org/course/learning">Coursera link</a></em>
-<strong>Difficulty:</strong> <em>Very easy</em></p>
-
-<p>When you are spending your spare time following online courses and you notice there isn’t enough
-time in the week to follow all the courses you would like, you have to make choices. And it is not
-only the choices that are difficult, you also want the courses that you decide to follow to have a
-lasting impact and not be quickly forgotten when you are moving on to another course. This brings us
-to the topic of how you can learn to learn more effectively, which is what the course “Learning how
-to learn” has to offer.</p>
-
-<p>While the course is very easy and lacks real depth, it is still beneficial to at least watch the
-lectures and the interviews, as there might be some tips and tricks you can pick up that will
-improve your learning capabilities and help you overcome procrastination when it hits you.</p>
-
-<p>My key takeaway points are:</p>
-
-<ul>
-  <li>Recall: A great way to improve your understanding and ability to form strong memories is to pause
-for a moment after you have read some text, look away, and forcing yourself to recall what you
-just read. Formulating your thoughts really helps, so talking and explaining to others is another
-big plus.</li>
-  <li>Focus on “process” not “product”.</li>
-  <li>Make to-do lists for next day.</li>
-  <li>Exercise really helps when you get stuck on some hard problem. Shifting you focus can make your
-subconscious and diffuse mode of thinking work for you in the background.</li>
-  <li>Skim through an article or paper to get a sense of of the context to help structuring new knowledge.</li>
-</ul>
-
-<h3 id="whats-next">What’s next?</h3>
-
-<p>In 2015 I want at least take the following courses, of which the first two are continuations of
-two courses I already completed:</p>
-
-<ul>
-  <li><a href="https://www.coursera.org/course/algo2">Algorithms: Design and Analysis, Part 2</a></li>
-  <li><a href="https://www.coursera.org/course/bioinformatics2">Bioinformatics Algorithms, Part 2</a></li>
-  <li><a href="https://www.coursera.org/course/pgm">Probabilistic Graphical Models</a></li>
-</ul>
-
-<p>Additionally I’m looking forward to follow more courses specialized in the field of bioinformatics
-(e.g. genetics, bio-medicine, evolution, neuroscience) and Data Science (mining datasets, pattern
-discovery, advanced statistics)</p>
-
-<p>I also want to finish
-<a href="https://www.coursera.org/course/linearprogramming">Linear and Integer Programming</a> of which I
-already completed 2 out of 7 weeks, but discontinued the course due to time constraints of other
-overlapping courses.</p>
-
-<h3 id="tips">Tips</h3>
-
-<p>I want to conclude with two tips for when you are going to embark on your own Coursera journey:</p>
-
-<ul>
-  <li>Do no take too many courses at once. It might seem sometimes that you could easily squeeze in
-another course, but they often take more time than you anticipate. Additionally if you end up
-stalling in one or more courses, you might get demotivated and stop all-together.</li>
-  <li>Find yourself some friends who are already following online courses or talk them into joining
-you. Having a study group of like-minded individuals will really help you stay on course and make
-the ride less lonely and a lot more fun.</li>
-</ul>
-
-<p>Good luck with our own online education!</p>
-
-      <div class='clear_both tags'>
-        <span>
-          tags: 
-          <a href="../../../archive#learning">learning</a>,  
-          <a href="../../../archive#coursera">coursera</a>,  
-          <a href="../../../archive#education">education</a> 
-        </span>
-      </div>
-      <div class="comments">
-	<span style="font-size: 100%;"><a href="/2015/02/11/coursera-courses#disqus_thread">View Comments</a> </span>
       </div>
     </p>
   </div>

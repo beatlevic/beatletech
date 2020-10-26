@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>BeatleTech | Coen Stevens | Docker on macOS without noisy fans</title>
+
+    <meta
+      name="description"
+      content="Freelance company BeatleTech by Coen Stevens"
+    />
+
+    
+    <meta name="keywords" content="post, beatletech, docker, remote, hetzner, bedrock, Apple Silicon" />
+    
+
+    <meta name="author" content="Coen Stevens" />
+
+    <link href="../../../../style.css" rel="stylesheet" type="text/css" />
+
+    <link
+      rel="shortcut icon"
+      href="../../../../favicon.ico"
+      type="image/x-icon"
+    />
+
+    <meta
+      property="og:title"
+      content="Docker on macOS without noisy fans"
+    />
+
+    <meta
+      property="og:description"
+      content=""
+    />
+
+    <meta
+      property="og:url"
+      content="https://beatletech.com/2020/10/26/docker-on-macos-without-noisy-fans"
+    />
+
+    
+    <meta property="og:image" content="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/docker_logo.png" />
+    
+
+    <!--[if lt IE 9]>
+      <script
+        src="https://html5shiv.googlecode.com/svn/trunk/html5.js"
+        type="text/javascript"
+      ></script>
+    <![endif]-->
+
+    <!--[if lte IE 7]>
+      <link href="../../../../css/ie.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+  </head>
+
+  <body>
+    <div id="wrapper" class="container_12">
+      <header id="header" class="grid_12">
+        <h1><a href="/">BeatleTech</a></h1>
+        <img
+          id="headshot"
+          src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/headshot.png"
+          alt="It's only Hubris if you lose."
+          title="It's only Hubris if you lose."
+          height="155"
+          width="200"
+          class="thumbnail alignright"
+          onmouseover="onHover();"
+          onmouseout="offHover();"
+        />
+        <div id="freelancer">Coen JC Stevens</div>
+      </header>
+      <!-- end header -->
+
+      <div id="content">
+        <nav>
+          <ul id="menu" class="clearfix no-margin">
+            <li><a href="/">About</a></li>
+            <li><a href="../../../../Setup">Setup</a></li>
+            <li class="current"><a href="../../../../blog">Blog</a></li>
+            <li><a href="../../../../archive">Archive</a></li>
+            <li>
+              <div
+                id="search-searchbar"
+                style="margin-top: -4px; margin-bottom: -10px; width: 265px"
+              ></div>
+            </li>
+            <li>
+              <a
+                href="#"
+                style="background-color: rgb(250, 181, 122); color: white"
+                data-token="3c500cdbb042fff8c045dd8ba7175b16"
+                onclick="mjOpenPopin(event, this)"
+                >Subscribe!</a
+              >
+            </li>
+          </ul>
+          <br class="clear" />
+        </nav>
+
+        <div id="main" class="grid_9 alpha">
+          <div id="search-hits-wrapper" style="display: none">
+            <h3>Search results</h3>
+            <a
+              href="https://www.algolia.com/?utm_source=instantsearch.js&amp;utm_medium=website&amp;utm_content=instantsearchjs.netlify.app&amp;utm_campaign=poweredby"
+              target="_blank"
+              class="ais-PoweredBy-link"
+              style="float: right; margin-right: 0px"
+              aria-label="Search by Algolia"
+              rel="noopener noreferrer"
+              ><svg
+                height="1.2em"
+                class="ais-PoweredBy-logo"
+                viewBox="0 0 168 24"
+                style="width: auto"
+              >
+                <path
+                  fill="#5D6494"
+                  d="M6.97 6.68V8.3a4.47 4.47 0 0 0-2.42-.67 2.2 2.2 0 0 0-1.38.4c-.34.26-.5.6-.5 1.02 0 .43.16.77.49 1.03.33.25.83.53 1.51.83a7.04 7.04 0 0 1 1.9 1.08c.34.24.58.54.73.89.15.34.23.74.23 1.18 0 .95-.33 1.7-1 2.24a4 4 0 0 1-2.6.81 5.71 5.71 0 0 1-2.94-.68v-1.71c.84.63 1.81.94 2.92.94.58 0 1.05-.14 1.39-.4.34-.28.5-.65.5-1.13 0-.29-.1-.55-.3-.8a2.2 2.2 0 0 0-.65-.53 23.03 23.03 0 0 0-1.64-.78 13.67 13.67 0 0 1-1.11-.64c-.12-.1-.28-.22-.46-.4a1.72 1.72 0 0 1-.39-.5 4.46 4.46 0 0 1-.22-.6c-.07-.23-.1-.48-.1-.75 0-.91.33-1.63 1-2.17a4 4 0 0 1 2.57-.8c.97 0 1.8.18 2.47.52zm7.47 5.7v-.3a2.26 2.26 0 0 0-.5-1.44c-.3-.35-.74-.53-1.32-.53-.53 0-.99.2-1.37.58-.38.39-.62.95-.72 1.68h3.91zm1 2.79v1.4c-.6.34-1.38.51-2.36.51a4.02 4.02 0 0 1-3-1.13 4.04 4.04 0 0 1-1.11-2.97c0-1.3.34-2.32 1.02-3.06a3.38 3.38 0 0 1 2.6-1.1c1.03 0 1.85.32 2.46.96.6.64.9 1.57.9 2.78 0 .33-.03.68-.09 1.04h-5.31c.1.7.4 1.24.89 1.61.49.38 1.1.56 1.85.56.86 0 1.58-.2 2.15-.6zm6.61-1.78h-1.21c-.6 0-1.05.12-1.35.36-.3.23-.46.53-.46.89 0 .37.12.66.36.88.23.2.57.32 1.02.32.5 0 .9-.15 1.2-.43.3-.28.44-.65.44-1.1v-.92zm-4.07-2.55V9.33a4.96 4.96 0 0 1 2.5-.55c2.1 0 3.17 1.03 3.17 3.08V17H22.1v-.96c-.42.68-1.15 1.02-2.19 1.02-.76 0-1.38-.22-1.84-.66-.46-.44-.7-1-.7-1.68 0-.78.3-1.38.88-1.81.59-.43 1.4-.65 2.46-.65h1.34v-.46c0-.55-.13-.97-.4-1.25-.26-.29-.7-.43-1.32-.43-.86 0-1.65.24-2.35.72zm9.34-1.93v1.42c.39-1 1.1-1.5 2.12-1.5.15 0 .31.02.5.05v1.53c-.23-.1-.48-.14-.76-.14-.54 0-.99.24-1.34.71a2.8 2.8 0 0 0-.52 1.71V17h-1.57V8.91h1.57zm5 4.09a3 3 0 0 0 .76 2.01c.47.53 1.14.8 2 .8.64 0 1.24-.18 1.8-.53v1.4c-.53.32-1.2.48-2 .48a3.98 3.98 0 0 1-4.17-4.18c0-1.16.38-2.15 1.14-2.98a4 4 0 0 1 3.1-1.23c.7 0 1.34.15 1.92.44v1.44a3.24 3.24 0 0 0-1.77-.5A2.65 2.65 0 0 0 32.33 13zm7.92-7.28v4.58c.46-1 1.3-1.5 2.5-1.5.8 0 1.42.24 1.9.73.48.5.72 1.17.72 2.05V17H43.8v-5.1c0-.56-.14-.99-.43-1.29-.28-.3-.65-.45-1.1-.45-.54 0-1 .2-1.42.6-.4.4-.61 1.02-.61 1.85V17h-1.56V5.72h1.56zM55.2 15.74c.6 0 1.1-.25 1.5-.76.4-.5.6-1.16.6-1.95 0-.92-.2-1.62-.6-2.12-.4-.5-.92-.74-1.55-.74-.56 0-1.05.22-1.5.67-.44.45-.66 1.13-.66 2.06 0 .96.22 1.67.64 2.14.43.47.95.7 1.57.7zM53 5.72v4.42a2.74 2.74 0 0 1 2.43-1.34c1.03 0 1.86.38 2.51 1.15.65.76.97 1.78.97 3.05 0 1.13-.3 2.1-.92 2.9-.62.81-1.47 1.21-2.54 1.21s-1.9-.45-2.46-1.34V17h-1.58V5.72H53zm9.9 11.1l-3.22-7.9h1.74l1 2.62 1.26 3.42c.1-.32.48-1.46 1.15-3.42l.91-2.63h1.66l-2.92 7.87c-.78 2.07-1.96 3.1-3.56 3.1-.28 0-.53-.02-.73-.07v-1.34c.17.04.35.06.54.06 1.03 0 1.76-.57 2.17-1.7z"
+                ></path>
+                <path
+                  fill="#5468FF"
+                  d="M78.99.94h16.6a2.97 2.97 0 0 1 2.96 2.96v16.6a2.97 2.97 0 0 1-2.97 2.96h-16.6a2.97 2.97 0 0 1-2.96-2.96V3.9A2.96 2.96 0 0 1 79 .94"
+                ></path>
+                <path
+                  fill="#FFF"
+                  d="M89.63 5.97v-.78a.98.98 0 0 0-.98-.97h-2.28a.98.98 0 0 0-.97.97V6c0 .09.08.15.17.13a7.13 7.13 0 0 1 3.9-.02c.08.02.16-.04.16-.13m-6.25 1L83 6.6a.98.98 0 0 0-1.38 0l-.46.46a.97.97 0 0 0 0 1.38l.38.39c.06.06.15.04.2-.02a7.49 7.49 0 0 1 1.63-1.62c.07-.04.08-.14.02-.2m4.16 2.45v3.34c0 .1.1.17.2.12l2.97-1.54c.06-.03.08-.12.05-.18a3.7 3.7 0 0 0-3.08-1.87c-.07 0-.14.06-.14.13m0 8.05a4.49 4.49 0 1 1 0-8.98 4.49 4.49 0 0 1 0 8.98m0-10.85a6.37 6.37 0 1 0 0 12.74 6.37 6.37 0 0 0 0-12.74"
+                ></path>
+                <path
+                  fill="#5468FF"
+                  d="M120.92 18.8c-4.38.02-4.38-3.54-4.38-4.1V1.36l2.67-.42v13.25c0 .32 0 2.36 1.71 2.37v2.24zm-10.84-2.18c.82 0 1.43-.04 1.85-.12v-2.72a5.48 5.48 0 0 0-1.57-.2c-.3 0-.6.02-.9.07-.3.04-.57.12-.81.24-.24.11-.44.28-.58.49a.93.93 0 0 0-.22.65c0 .63.22 1 .61 1.23.4.24.94.36 1.62.36zm-.23-9.7c.88 0 1.62.11 2.23.33.6.22 1.09.53 1.44.92.36.4.61.92.76 1.48.16.56.23 1.17.23 1.85v6.87c-.4.1-1.03.2-1.86.32-.84.12-1.78.18-2.82.18-.69 0-1.32-.07-1.9-.2a4 4 0 0 1-1.46-.63c-.4-.3-.72-.67-.96-1.13a4.3 4.3 0 0 1-.34-1.8c0-.66.13-1.08.39-1.53.26-.45.6-.82 1.04-1.1.45-.3.95-.5 1.54-.62a8.8 8.8 0 0 1 3.79.05v-.44c0-.3-.04-.6-.11-.87a1.78 1.78 0 0 0-1.1-1.22c-.31-.12-.7-.2-1.15-.2a9.75 9.75 0 0 0-2.95.46l-.33-2.19c.34-.12.84-.23 1.48-.35.65-.12 1.34-.18 2.08-.18zm52.84 9.63c.82 0 1.43-.05 1.85-.13V13.7a5.42 5.42 0 0 0-1.57-.2c-.3 0-.6.02-.9.07-.3.04-.57.12-.81.24-.24.12-.44.28-.58.5a.93.93 0 0 0-.22.65c0 .63.22.99.61 1.23.4.24.94.36 1.62.36zm-.23-9.7c.88 0 1.63.11 2.23.33.6.22 1.1.53 1.45.92.35.39.6.92.76 1.48.15.56.23 1.18.23 1.85v6.88c-.41.08-1.03.19-1.87.31-.83.12-1.77.18-2.81.18-.7 0-1.33-.06-1.9-.2a4 4 0 0 1-1.47-.63c-.4-.3-.72-.67-.95-1.13a4.3 4.3 0 0 1-.34-1.8c0-.66.13-1.08.38-1.53.26-.45.61-.82 1.05-1.1.44-.3.95-.5 1.53-.62a8.8 8.8 0 0 1 3.8.05v-.43c0-.31-.04-.6-.12-.88-.07-.28-.2-.52-.38-.73a1.78 1.78 0 0 0-.73-.5c-.3-.1-.68-.2-1.14-.2a9.85 9.85 0 0 0-2.95.47l-.32-2.19a11.63 11.63 0 0 1 3.55-.53zm-8.03-1.27a1.62 1.62 0 0 0 0-3.24 1.62 1.62 0 1 0 0 3.24zm1.35 13.22h-2.7V7.27l2.7-.42V18.8zm-4.72 0c-4.38.02-4.38-3.54-4.38-4.1l-.01-13.34 2.67-.42v13.25c0 .32 0 2.36 1.72 2.37v2.24zm-8.7-5.9a4.7 4.7 0 0 0-.74-2.79 2.4 2.4 0 0 0-2.07-1 2.4 2.4 0 0 0-2.06 1 4.7 4.7 0 0 0-.74 2.8c0 1.16.25 1.94.74 2.62a2.4 2.4 0 0 0 2.07 1.02c.88 0 1.57-.34 2.07-1.02.49-.68.73-1.46.73-2.63zm2.74 0a6.46 6.46 0 0 1-1.52 4.23c-.49.53-1.07.94-1.76 1.22-.68.29-1.73.45-2.26.45-.53 0-1.58-.15-2.25-.45a5.1 5.1 0 0 1-2.88-3.13 7.3 7.3 0 0 1-.01-4.84 5.13 5.13 0 0 1 2.9-3.1 5.67 5.67 0 0 1 2.22-.42c.81 0 1.56.14 2.24.42.69.29 1.28.69 1.75 1.22.49.52.87 1.15 1.14 1.89a7 7 0 0 1 .43 2.5zm-20.14 0c0 1.11.25 2.36.74 2.88.5.52 1.13.78 1.91.78a4.07 4.07 0 0 0 2.12-.6V9.33c-.19-.04-.99-.2-1.76-.23a2.67 2.67 0 0 0-2.23 1 4.73 4.73 0 0 0-.78 2.8zm7.44 5.27c0 1.82-.46 3.16-1.4 4-.94.85-2.37 1.27-4.3 1.27-.7 0-2.17-.13-3.34-.4l.43-2.11c.98.2 2.27.26 2.95.26 1.08 0 1.84-.22 2.3-.66.46-.43.68-1.08.68-1.94v-.44a5.2 5.2 0 0 1-2.54.6 5.6 5.6 0 0 1-2.01-.36 4.2 4.2 0 0 1-2.58-2.71 9.88 9.88 0 0 1 .02-5.35 4.92 4.92 0 0 1 2.93-2.96 6.6 6.6 0 0 1 2.43-.46 19.64 19.64 0 0 1 4.43.66v10.6z"
+                ></path>
+              </svg>
+            </a>
+            <div
+              class="post-list"
+              id="search-hits"
+              style="margin-left: 20px"
+            ></div>
+            <hr />
+          </div>
+          <article class="post blog">
+            <h2>Docker on macOS without noisy fans<em></em></h2>
+
+            <p class="publishdate">Monday, 26 October 2020.</p>
+
+            <p><img src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/docker_logo.png" alt="Docker" width="30%" title="Docker" style="margin-left:250px" /></p>
+
+<h3 id="tldr"><strong>TL;DR</strong></h3>
+
+<ul>
+  <li>Running Docker on macOS results in noisy CPU fans and low performance (build times)</li>
+  <li>Apple Silicon probably not the answer</li>
+  <li>The solution is using remote Linux Docker host (with <a href="#1-install-docker-engine-on-remote-host">setup</a> instructions)</li>
+</ul>
+
+<h3 id="noisy-cpu-fans">Noisy CPU fans</h3>
+
+<p>As a developer I’m a big fan of Apple hardware and software ever since I got my first Macbook back in 2008. MacOS is a UNIX operating system running on X86 hardware (changing to ARM soon, but more on that later) that makes developing for Linux production servers a smooth experience utilizing the same UNIX tooling. While my development stack changed over the years and nowadays includes Docker, Kubernetes and <a href="https://bedrock.io">bedrock.io</a>, macOS still continues to serve me well. It is providing these new CLI tools and templates on a stable OS with little to no issues, a nice UI with great HIDPI scaling (rocking a LG 5K monitor over <a href="https://beatletech.com/setup">here</a>), and of course I’ve become so used to the interface that switching back to Windows or Linux Desktop would mess up my optimized workflows and habits.</p>
+
+<p>One thing, however, that could use improvements is Docker Desktop (<a href="https://docs.docker.com/docker-for-mac/">for mac</a>), to increase Docker container performance, speed up docker build times and reduce CPU usage when running “idle”. The reason for being slow and performance hungry is succinctly explained in <a href="https://stackoverflow.com/questions/55951014/docker-in-macos-is-very-slow">this</a> Stackoverflow answer:</p>
+
+<blockquote>
+  <p>Docker needs a plain Linux kernel to run. Unfortunately, Mac OS and Windows cannot provide this. Therefore, there is a client on Mac OS to run Docker. In addition to this, there is an abstraction layer between Mac OS kernel and applications (Docker containers) and the filesystems are not the same.</p>
+</blockquote>
+
+<p>In other words, there is a lot of extra (hyper)virtualization and filesystem overhead going on. Of course a relative performance hit (compared to running on Linux directly) is something I could live with, but my main annoyance presents itself loudly when I’m building (and deploying) a lot of Docker images: it spins up my Macbook pro CPU fans to audible levels, something in stark contrast to the absolute silence at which my laptop runs almost everything else (I guess I’m spoiled).</p>
+
+<p>While you could argue that you should not build and push Docker images to staging or production from your local development machine and just incorporate it in your CI/CD pipeline, I prefer having this manual control, which is also nicely supported by the <a href="https://bedrock.io">bedrock.io</a> build and deploy commands. This point probably warrants a whole dedicated blog post, but if you are like me, and also run a lot of docker build commands locally, then you will be interested in the solution I found to my <strong>main problem: the lack of macOS docker performance (long build times) and noisy CPU fans</strong>.</p>
+
+<h3 id="apple-silicon-is-not-the-solution">Apple Silicon is not the solution</h3>
+
+<p>With myself being an Apple enthusiast, you can image why I’m excited about the upcoming transition from Intel CPUs to Apple Silicon, which is planned to make its debut in their Macbook Pro and iMac lineup later this year (<a href="https://9to5mac.com/2020/10/09/apple-silicon-november-bloomberg/">Rumors</a> point to a November event). So at first I thought that the answer to the lackluster Docker performance on the Mac would simply be waiting for the new ARM hardware release and buying a new Macbook Pro. However, this might not hold true as Apple Silicon will be an ARM SoC, which is a different architecture than X86_64. And X86_64 is still my deployment target for the foreseeable future. In other words, I still need to build X86_64 images and this will require emulation and virtualization that <a href="http://www.ml-illustrated.com/2020/06/25/ARM-Macs-virtualization-different-take.html">some</a> are expecting to have a 2x to 5x performance hit.</p>
+
+<p>It is also worth noting that Craig Federighi, Apple’s senior vice president of Software Engineering, said the following during an interview after the initial WWDC Apple Silicon announcement:</p>
+
+<blockquote>
+  <p>“Virtualization on the new Macs won’t support X86 at all” (<a href="https://www.jeffgeerling.com/blog/2020/what-does-apple-silicon-mean-raspberry-pi-and-arm64">source</a>)</p>
+</blockquote>
+
+<p>Craig even explicitly called out Docker containers being built for ARM, and being able to run them on ARM instances in AWS, but what about building your X86 images? I know you can build for multi-arch including ARM now with docker desktop (<a href="https://www.docker.com/blog/multi-arch-images/">post</a>), but what will the performance hit be for Apple Silicon?</p>
+
+<p>All in all, upcoming Apple Silicon doesn’t seem like an immediate win for my specific problem with Docker performance. Also, I like to skip 1st gen hardware and wait on the sidelines a bit longer before I migrate my production workflows to new hardware running on ARM.</p>
+
+<p>Luckily I did find a solution that serves me right away and might also help with the transition to Apple Silicon in the future. <strong>Docker remote to the rescue!</strong></p>
+
+<h3 id="remote-docker-host-solution">Remote Docker host Solution</h3>
+
+<p>Instead of beefing up my local development machine now or with upcoming Apple ARM hardware, I looked into off-loading all the Docker activities onto a remote machine, and as it turns out, it is trivially easy to setup access to a remote docker host. I kinda knew about this, back when I was using Docker Swarm and connecting to different machines, but I somehow never thought about this as a setup for my “local” docker environment.</p>
+
+<p>Needless to say, but one does not setup remote access without a remote machine, so I’m assuming you have a remote Linux machine running somewhere. I personally use and recommend dedicated or cloud servers from <a href="https://www.hetzner.com/">Hetzner</a>, that is if you are located in Europe. I’m using the <a href="https://www.hetzner.com/dedicated-rootserver/ax51-nvme">AX51-NVMe</a> Dedicated Root Server (Ryzen 7 3700X CPU, 64GB RAM, 1TB NVMe SSD), which seems comically cheap at only 59 Euros a month. Anyway, let’s get rolling.</p>
+
+<h4 id="1-install-docker-engine-on-remote-host">1. Install Docker Engine on remote host</h4>
+<p>First, let’s install Docker on your remote Linux server (I’m using the <a href="https://docs.docker.com/engine/install/ubuntu/">Ubunty install instructions</a>, but you can find instructions for other distros on that page as well):</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="c">## Update the apt package index and install packages to allow apt to use a repository over HTTPS:</span>
+ <span class="nv">$ </span><span class="nb">sudo </span>apt-get update
+
+ <span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="se">\</span>
+     apt-transport-https <span class="se">\</span>
+     ca-certificates <span class="se">\</span>
+     curl <span class="se">\</span>
+     gnupg-agent <span class="se">\</span>
+     software-properties-common
+
+ <span class="c">## Add Docker’s official GPG key:</span>
+ <span class="nv">$ </span>curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg | <span class="nb">sudo </span>apt-key add -
+
+ <span class="c">## Use the following command to set up the stable repository</span>
+ <span class="nv">$ </span><span class="nb">sudo </span>add-apt-repository <span class="se">\</span>
+    <span class="s2">"deb [arch=amd64] https://download.docker.com/linux/ubuntu </span><span class="se">\</span><span class="s2">
+    </span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2"> </span><span class="se">\</span><span class="s2">
+    stable"</span>
+
+ <span class="c">## Install docker engine</span>
+ <span class="nv">$ </span><span class="nb">sudo </span>apt-get update
+ <span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>docker-ce docker-ce-cli containerd.io</code></pre></figure>
+
+<h4 id="2-create-docker-context">2. Create Docker Context</h4>
+
+<p>Next up we need to access the remote Docker host and make it our default “local” engine. For this we leverage <strong>Docker Contexts</strong> in the following way. First we create a context that will hold the connection path (e.g. <code class="language-plaintext highlighter-rouge">ssh://coen@whatever.com</code>) to the remote docker host:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nv">$ </span>docker context create remote ‐‐docker <span class="nv">host</span><span class="o">=</span>ssh://coen@whatever.com
+ remote
+ Successfully created context “remote”
+
+ <span class="nv">$ </span>docker context <span class="nb">ls
+ </span>NAME       TYPE    DESCRIPTION              DOCKER ENDPOINT    KUBERNETES ENDPOINT    ORCHESTRATOR
+ default <span class="k">*</span>  moby    Current DOCKER_HOST...   unix:///var/run/docker.sock               swarm
+ remote     moby                             ssh://coen@whatever.com</code></pre></figure>
+
+<p>And the final step is to make <code class="language-plaintext highlighter-rouge">remote</code> your default context:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nv">$ </span>docker context use remote
+ remote
+ Current context is now “remote”</code></pre></figure>
+
+<h4 id="3-using-your-remote-docker-host">3. Using your remote Docker host</h4>
+
+<p>With the previous 2 steps you are ready to start enjoying a <strong>silent</strong> local development machine when you are building docker images with an increased speed in build time! Any time you now run <code class="language-plaintext highlighter-rouge">docker build</code>, all the relevant (and changed) files that are required for the build are copied from your local computer to the remote Docker host in the background, and the <code class="language-plaintext highlighter-rouge">docker build</code> starts the build of the image on the remote host. The resulting image is also located on the remote host, which you can list with <code class="language-plaintext highlighter-rouge">docker images</code>, as all docker commands use the default <code class="language-plaintext highlighter-rouge">remote</code> context.</p>
+
+<h3 id="benefits">Benefits</h3>
+
+<p>To show you an example of Docker build speed improvements, let’s have a look at the following time measurements for building the <code class="language-plaintext highlighter-rouge">web</code> service component, a React SPA build with Webpack, of <a href="https://github.com/bedrockio/bedrock-core/tree/master/services/web">bedrock</a> on a clean build:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  +---------+-------------------+--------------------+------------+---------------+
+  | Context | Yarn <span class="nb">install time</span> | Webpack build <span class="nb">time</span> | Total <span class="nb">time</span> | Relative <span class="nb">time</span> |
+  +---------+-------------------+--------------------+------------+---------------+
+  | Local   | 75.82s            | 82.05s             | 157.87s    | 296% <span class="o">(</span>~3x<span class="o">)</span>    |
+  +---------+-------------------+--------------------+------------+---------------+
+  | Remote  | 18.19s            | 35.11s             |  53.30s    | 100% <span class="o">(</span>1x<span class="o">)</span>     |
+  +---------+-------------------+--------------------+------------+---------------+</code></pre></figure>
+
+<p>Of course a 3x improvement doesn’t come as a surprise when you are basically comparing a Macbook Pro with 2 (virtual) CPUs allocated to Docker, versus an 8 core dedicated Linux machine (with hyperthreading and higher internet bandwidth) even though not everything runs multi-threaded. But it is a big improvement that you can quickly and easily get for yourself and reap the benefits, which quickly adds up over time. Not to mention the complete silence at which you gain the faster build times.</p>
+
+<p>As a bonus, you can now stop running Docker Desktop entirely, and no longer see a Docker process “idling” in the background that would otherwise still be using around 20% CPU all the time (doing nothing).</p>
+
+<p>Being able to build X86_64 images on a remote machine, incidentally also makes it more viable to migrate my development environment to Apple Silicon in the future, not depending on Apple ARM to build and run my X86_64 images.</p>
+
+<p>Finally, of course you can also <code class="language-plaintext highlighter-rouge">docker run</code> containers on your remote host. For example running MongoDB:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nv">$ </span>docker run <span class="nt">--name</span> mongo <span class="nt">-d</span> <span class="nt">-p</span> 27017:27017 <span class="nt">-v</span> /root/data:/data/db mongo:4.2.8
+ <span class="c"># Note: /root/data is located on your remote machine</span></code></pre></figure>
+
+<p>In order to access and use the running MongoDB container locally, make sure to SSH tunnel to your remote machine and forward the relevant ports. For this you can update your SSH config file: <code class="language-plaintext highlighter-rouge">.ssh/config</code>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre>Host coentunnel
+  HostName whatever.com
+  User coen
+  ForwardAgent <span class="nb">yes
+  </span>ServerAliveInterval 60
+  ServerAliveCountMax 10
+  LocalForward 27017 localhost:27017 <span class="c"># Mongo</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>A big word of <strong>caution</strong> here is to make sure you firewall your ports properly on your remote server, because Docker is known to <a href="https://github.com/docker/for-linux/issues/690">bypass ufw firewall rules</a>!!!</p>
+
+<h3 id="downsides">Downsides</h3>
+
+<p>Using a remote Docker host works really well for me, but there are a couple of downsides to this approach:</p>
+
+<p>The first one would be “added complexity &amp; dependency”, because now you have added an extra machine to your development environment that you need to keep up-to-date and secure. Especially if you also use it to <code class="language-plaintext highlighter-rouge">docker run</code> containers for local development.</p>
+
+<p>Secondly, if you use <code class="language-plaintext highlighter-rouge">docker-compose</code> for local development (often used to inject your live code changes), then you cannot map your local drive into the docker containers, as the mounted volumes will be pointing to folders on your remote machine. You can find more information about how to deploy on remote Docker hosts with docker-compose <a href="https://www.docker.com/blog/how-to-deploy-on-remote-docker-hosts-with-docker-compose/">here</a>.</p>
+
+<p>Last but not least, remote servers are not free, so there is an additional cost involved. However, as pointed out earlier, <a href="https://hetzner.com">Hetzner</a> is a very cheap server provider you can use, or you can start with any other small cloud instance (e.g. AWS, Google, etc). I guess that a lot of developers actually already run a Linux box somewhere (often for testing) that they can use as their remote docker host too.</p>
+
+<h3 id="wrap-up">Wrap up</h3>
+
+<p>As an Apple enthusiast, I don’t see myself switching to a local Linux development computer anytime soon, but I was kind of annoyed with the lack of macOS Docker performance and noisy CPU fans when building images.</p>
+
+<p>Having a hard time believing that the upcoming switch to Apple Silicon will alleviate this issue (still hope for the best, but prepare for the worst), I was happy that I found a solution by introducing a remote Docker host, which was trivially easy to setup and use with Docker Contexts. Sometimes a small change can have a big impact.</p>
+
+<p>IMHO the benefits I described in this article more than make up for the downsides. Hopefully this may benefit you too. If you have any suggestions for improvements, then please let me know!</p>
+
+
+            <div
+              style="display: block; vertical-align: baseline; height: 2px"
+            ></div>
+            <div class="clear_both tags">
+              <span>
+                tags: 
+                <a href="../../../archive#docker">docker</a>,  
+                <a href="../../../archive#hetzner">hetzner</a>,  
+                <a href="../../../archive#bedrock">bedrock</a>,  
+                <a href="../../../archive#apple-silicon">apple-silicon</a> 
+              </span>
+            </div>
+            <div style="color: rgb(147, 147, 148)">
+              If you like what you are reading here, consider hitting
+              <a
+                href="#"
+                data-token="3c500cdbb042fff8c045dd8ba7175b16"
+                onclick="mjOpenPopin(event, this)"
+                >Subscribe!</a
+              >
+            </div>
+            <div class="clear"></div>
+            <div class="sharethis-inline-share-buttons"></div>
+          </article>
+
+          <div id="disqus_thread"></div>
+
+          <h3>Possibly related posts</h3>
+
+          <ul class="">
+            
+
+            <li>
+              11 Feb 2015 &raquo;
+
+              <a href="/2015/02/11/coursera-courses">My recent Coursera journey</a>
+
+              <em>
+                <a
+                  href="https://www.google.com/search?q=+site%3Abeatletech.com"
+                  ></a
+                >
+              </em>
+            </li>
+            
+
+            <li>
+              16 Aug 2020 &raquo;
+
+              <a href="/2020/08/16/jekyll-and-algolia-search-integration">Jekyll and Algolia search integration</a>
+
+              <em>
+                <a
+                  href="https://www.google.com/search?q=+site%3Abeatletech.com"
+                  ></a
+                >
+              </em>
+            </li>
+            
+
+            <li>
+              03 Feb 2015 &raquo;
+
+              <a href="/2015/02/03/my-system-to-win-big">My System to Win Big</a>
+
+              <em>
+                <a
+                  href="https://www.google.com/search?q=+site%3Abeatletech.com"
+                  ></a
+                >
+              </em>
+            </li>
+            
+          </ul>
+        </div>
+        <!-- end main -->
+      </div>
+      <!-- end content -->
+
+      <footer id="footer" class="grid_12">
+  <p>
+    Copyright &copy; 2010-2020
+    <a
+      href="https://beatletech.com"
+      title="BeatleTech by Coen
+    Stevens"
+      >BeatleTech - Coen Stevens</a
+    >
+    - Built with <a href="https://jekyllrb.com/">Jekyll</a> (<a
+      href="https://github.com/beatlevic/beatletech"
+      >source</a
+    >)
+  </p>
+</footer>
+
+<div class="clear"></div>
+ <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch-theme-algolia.min.css"
+/>
+
+<script>
+  const search = instantsearch({
+    appId: "K4MUG7LHCA",
+    apiKey: "2b61f303d605176b556cb377d5ef3acd",
+    indexName: "prod_beatletech",
+    searchFunction: function (helper) {
+      var searchResults = document.getElementById("search-hits-wrapper");
+      if (helper.state.query === "" && searchResults.style.display === "none") {
+        return;
+      }
+      searchResults.style.display = helper.state.query ? "block" : "none";
+      helper.search();
+    },
+  });
+
+  const hitTemplate = function (hit) {
+    let date = "";
+    if (hit.date) {
+      date = moment.unix(hit.date).format("MMM D, YYYY");
+    }
+
+    let url = `${hit.url}#${hit.anchor}`;
+
+    const title = hit._highlightResult.title.value;
+
+    let breadcrumbs = "";
+    if (hit._highlightResult.headings) {
+      breadcrumbs = hit._highlightResult.headings
+        .map((match) => {
+          return `<span class="post-breadcrumb">${match.value}</span>`;
+        })
+        .join(" > ");
+    }
+
+    const content = hit._highlightResult.html.value;
+
+    return `
+    <div class="post-item">
+      <h2><a class="post-link" href="${url}">${title}</a></h2>
+      <div class="publishdate" style="margin-left:0px; margin-bottom:10px">${date}</div>
+      <!-- {#breadcrumbs}}<a href="${url}" class="post-breadcrumbs">${breadcrumbs}</a> -->
+      <div class="post-snippet" style="margin-left: 20px">${content}</div>
+    </div>
+  `;
+  };
+
+  let timerId;
+
+  search.addWidget(
+    instantsearch.widgets.searchBox({
+      container: "#search-searchbar",
+      placeholder: "Search into posts...",
+      poweredBy: false,
+      autofocus: false,
+      showLoadingIndicator: true,
+      queryHook(query, refine) {
+        clearTimeout(timerId);
+        timerId = setTimeout(() => refine(query), 500);
+      },
+    })
+  );
+
+  search.addWidget(
+    instantsearch.widgets.hits({
+      container: "#search-hits",
+      templates: {
+        item: hitTemplate,
+      },
+    })
+  );
+
+  search.start();
+</script>
+
+<style>
+  .ais-search-box {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .post-item {
+    margin-bottom: 30px;
+  }
+  .post-link .ais-Highlight {
+    color: #111;
+    font-style: normal;
+    text-decoration: underline;
+  }
+  .post-breadcrumbs {
+    color: #424242;
+    display: block;
+  }
+  .post-breadcrumb {
+    font-size: 18px;
+    color: #424242;
+  }
+  .post-breadcrumb .ais-Highlight {
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: underline;
+  }
+  .post-snippet .ais-Highlight {
+    color: #2a7ae2;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .post-snippet img {
+    display: none;
+  }
+</style>
+
+
+      <div class="clear"></div>
+
+      <!-- <script type="text/javascript" src="../../../../js/sweet-justice.min.js"></script> -->
+      <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = "beatletech"; // required: replace example with your forum shortname
+        //var disqus_developer = 1;
+
+        // The following are highly recommended additional parameters. Remove the slashes in front to use.
+        // var disqus_identifier = 'unique_dynamic_id_1234';
+        // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+          var dsq = document.createElement("script");
+          dsq.type = "text/javascript";
+          dsq.async = true;
+          dsq.src = "https://" + disqus_shortname + ".disqus.com/embed.js";
+          (
+            document.getElementsByTagName("head")[0] ||
+            document.getElementsByTagName("body")[0]
+          ).appendChild(dsq);
+        })();
+      </script>
+    </div>
+    <!-- end wrapper -->
+
+    <data
+      id="mj-w-res-data"
+      data-token="3c500cdbb042fff8c045dd8ba7175b16"
+      class="mj-w-data"
+      data-apikey="5MN5"
+      data-w-id="EIl"
+      data-lang="en_US"
+      data-base="https://app.mailjet.com"
+      data-width="640"
+      data-height="328.253"
+      data-statics="statics"
+    ></data>
+
+    <script
+      type="text/javascript"
+      src="https://app.mailjet.com/statics/js/widget.modal.js"
+    ></script>
+
+    <script src="//platform-api.sharethis.com/js/sharethis.js#property=5b6357f2f3742d0012c8870b&product=inline-share-buttons"></script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-20231246-1"]);
+      _gaq.push(["_trackPageview"]);
+
+      (function () {
+        var ga = document.createElement("script");
+        ga.type = "text/javascript";
+        ga.async = true;
+        ga.src =
+          ("https:" == document.location.protocol
+            ? "https://ssl"
+            : "http://www") + ".google-analytics.com/ga.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <script type="text/javascript">
+      function onHover() {
+        var el = document.getElementById("headshot");
+        el.src = "../../../images/jc-small.png";
+      }
+
+      function offHover() {
+        var el = document.getElementById("headshot");
+        el.src =
+          "https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/headshot.png";
+      }
+    </script>
+  </body>
+</html>

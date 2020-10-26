@@ -1,29 +1,38 @@
 ---
 layout: post
-title: "Docker on macOS using remote Linux Docker host"
+title: "Docker on macOS without noisy fans"
 meta_description: Docker on macOS using remote Linux Docker host
-meta_keywords: post, beatletech, docker, remote, hetzner, bedrock
-tags: [docker, hetzner, bedrock]
+meta_keywords: post, beatletech, docker, remote, hetzner, bedrock, Apple Silicon
+tags: [docker, hetzner, bedrock, apple-silicon]
 category: [development]
 image: docker_logo.png
-published: false
+image_s3: https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/docker_logo.png
+published: true
 ---
 
-<img src="{{site.url}}/images/docker_logo.png" alt="Docker" width="30%" title="Docker"  style="margin-left:250px">
+<img src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/docker_logo.png" alt="Docker" width="30%" title="Docker"  style="margin-left:250px">
 
-As a developer I'm a big fan of Apple hardware and software ever since I got my first Macbook back in 2008. MacOS is a UNIX operating system running on X86 hardware (changing to ARM soon, but more on that later) that makes developing for Linux production servers a smooth experience utilizing the same UNIX tooling. While my development stack changed over the years and nowadays includes Docker, Kubernetes and [bedrock.io](http://bedrock.io), MacOS still continues to serve me well. It is providing these new CLI tools and templates on a stable OS with little to no issues, a nice UI with great HIDPI scaling (rocking a LG 5K monitor over [here](https://beatletech.com/setup)), and of course I've become so used to the interface that switching back to Windows or Linux Desktop would mess up my optimized workflows and habits.
+### **TL;DR**
 
-One thing however that could use improvements is Docker Desktop ([for mac](https://docs.docker.com/docker-for-mac/)), to increase Docker container performance, speed up docker build times and reduce CPU usage when running "idle". The reason for being slow and performance hungry is succinctly explained in [this Stackoverflow answer](https://stackoverflow.com/questions/55951014/docker-in-macos-is-very-slow):
+- Running Docker on macOS results in noisy CPU fans and low performance (build times)
+- Apple Silicon probably not the answer
+- The solution is using remote Linux Docker host (with [setup](#1-install-docker-engine-on-remote-host) instructions)
+
+### Noisy CPU fans
+
+As a developer I'm a big fan of Apple hardware and software ever since I got my first Macbook back in 2008. MacOS is a UNIX operating system running on X86 hardware (changing to ARM soon, but more on that later) that makes developing for Linux production servers a smooth experience utilizing the same UNIX tooling. While my development stack changed over the years and nowadays includes Docker, Kubernetes and [bedrock.io](https://bedrock.io), macOS still continues to serve me well. It is providing these new CLI tools and templates on a stable OS with little to no issues, a nice UI with great HIDPI scaling (rocking a LG 5K monitor over [here](https://beatletech.com/setup)), and of course I've become so used to the interface that switching back to Windows or Linux Desktop would mess up my optimized workflows and habits.
+
+One thing, however, that could use improvements is Docker Desktop ([for mac](https://docs.docker.com/docker-for-mac/)), to increase Docker container performance, speed up docker build times and reduce CPU usage when running "idle". The reason for being slow and performance hungry is succinctly explained in [this](https://stackoverflow.com/questions/55951014/docker-in-macos-is-very-slow) Stackoverflow answer:
 
 > Docker needs a plain Linux kernel to run. Unfortunately, Mac OS and Windows cannot provide this. Therefore, there is a client on Mac OS to run Docker. In addition to this, there is an abstraction layer between Mac OS kernel and applications (Docker containers) and the filesystems are not the same.
 
 In other words, there is a lot of extra (hyper)virtualization and filesystem overhead going on. Of course a relative performance hit (compared to running on Linux directly) is something I could live with, but my main annoyance presents itself loudly when I'm building (and deploying) a lot of Docker images: it spins up my Macbook pro CPU fans to audible levels, something in stark contrast to the absolute silence at which my laptop runs almost everything else (I guess I'm spoiled).
 
-While you could argue that you should not build and push Docker images to staging or production from your local development machine and just incorporate it in your CI/CD pipeline, I prefer having this manual control, which is also nicely supported by the [bedrock.io](https://bedrock.io) build and deploy commands. This point probably warrants a whole dedicated blog post, but if you are like me, and also run a lot of docker build commands locally, then you will be interested in the solution I found to my **main problem: the lack of macOS docker performance and noisy CPU fans**.
+While you could argue that you should not build and push Docker images to staging or production from your local development machine and just incorporate it in your CI/CD pipeline, I prefer having this manual control, which is also nicely supported by the [bedrock.io](https://bedrock.io) build and deploy commands. This point probably warrants a whole dedicated blog post, but if you are like me, and also run a lot of docker build commands locally, then you will be interested in the solution I found to my **main problem: the lack of macOS docker performance (long build times) and noisy CPU fans**.
 
-### Apple Silicon
+### Apple Silicon is not the solution
 
-With myself being an Apple enthusiast, you can image why I'm excited about the upcoming transition from Intel CPUs to Apple Silicon, which is planned to make its debut in their Macbook Pro and iMac lineup later this year ([Rumors](https://9to5mac.com/2020/10/09/apple-silicon-november-bloomberg/) point to a November event). So at first I thought that the answer to the lackluster Docker performance on the Mac would simply be waiting for the new ARM hardware release and buying a new Macbook Pro. However, this might not hold true as Apple Silicon will be an ARM SoC, which is a different architecture than X86_64. And X86_64 is still my deployment target for the foreseeable future. In other words, I still need to build X86 images and this will requires emulation and virtualization that [some](http://www.ml-illustrated.com/2020/06/25/ARM-Macs-virtualization-different-take.html) are expecting to have a 2x to 5x performance hit.
+With myself being an Apple enthusiast, you can image why I'm excited about the upcoming transition from Intel CPUs to Apple Silicon, which is planned to make its debut in their Macbook Pro and iMac lineup later this year ([Rumors](https://9to5mac.com/2020/10/09/apple-silicon-november-bloomberg/) point to a November event). So at first I thought that the answer to the lackluster Docker performance on the Mac would simply be waiting for the new ARM hardware release and buying a new Macbook Pro. However, this might not hold true as Apple Silicon will be an ARM SoC, which is a different architecture than X86_64. And X86_64 is still my deployment target for the foreseeable future. In other words, I still need to build X86_64 images and this will require emulation and virtualization that [some](http://www.ml-illustrated.com/2020/06/25/ARM-Macs-virtualization-different-take.html) are expecting to have a 2x to 5x performance hit.
 
 It is also worth noting that Craig Federighi, Apple's senior vice president of Software Engineering, said the following during an interview after the initial WWDC Apple Silicon announcement:
 
@@ -42,7 +51,7 @@ Instead of beefing up my local development machine now or with upcoming Apple AR
 Needless to say, but one does not setup remote access without a remote machine, so I'm assuming you have a remote Linux machine running somewhere. I personally use and recommend dedicated or cloud servers from [Hetzner](https://www.hetzner.com/), that is if you are located in Europe. I'm using the [AX51-NVMe](https://www.hetzner.com/dedicated-rootserver/ax51-nvme) Dedicated Root Server (Ryzen 7 3700X CPU, 64GB RAM, 1TB NVMe SSD), which seems comically cheap at only 59 Euros a month. Anyway, let's get rolling.
 
 #### 1. Install Docker Engine on remote host
-First, let's install Docker on your remote Linux server (I'm using the [Ubunty install instructions](https://docs.docker.com/engine/install/ubuntu/), but there you can find instructions for other distros as well):
+First, let's install Docker on your remote Linux server (I'm using the [Ubunty install instructions](https://docs.docker.com/engine/install/ubuntu/), but you can find instructions for other distros on that page as well):
 
 {% highlight bash %}
  ## Update the apt package index and install packages to allow apt to use a repository over HTTPS:
@@ -94,11 +103,11 @@ And the final step is to make `remote` your default context:
 
 #### 3. Using your remote Docker host
 
-With the previous 2 steps you are ready to start enjoying a silent local development machine when you are building docker images and an increased speed in build time! Any time you now run `docker build`, all the relevant (and changed) files that are required for the build are copied from your local computer to the remote Docker host in the background, and the `docker build` starts the build of the image on the remote host. The resulting image is also located on the remote host, which you can list with `docker images`, as all docker commands use the default `remote` context.
+With the previous 2 steps you are ready to start enjoying a **silent** local development machine when you are building docker images with an increased speed in build time! Any time you now run `docker build`, all the relevant (and changed) files that are required for the build are copied from your local computer to the remote Docker host in the background, and the `docker build` starts the build of the image on the remote host. The resulting image is also located on the remote host, which you can list with `docker images`, as all docker commands use the default `remote` context.
 
 ### Benefits
 
-To show you an example of Docker build speed improvements, let's have a look at the following time measurements for building the `web` service component, a React SPA build with Webpack, of [bedrock](https://github.com/bedrockio/bedrock-core/tree/master/services/web) on a clean install:
+To show you an example of Docker build speed improvements, let's have a look at the following time measurements for building the `web` service component, a React SPA build with Webpack, of [bedrock](https://github.com/bedrockio/bedrock-core/tree/master/services/web) on a clean build:
 
 {% highlight bash %}
   +---------+-------------------+--------------------+------------+---------------+
@@ -110,7 +119,7 @@ To show you an example of Docker build speed improvements, let's have a look at 
   +---------+-------------------+--------------------+------------+---------------+
 {% endhighlight %}
 
-Of course a 3x improvement doesn't come as a surprise when you are basically comparing a Macbook Pro with 2 (virtual) CPUs allocated to Docker, versus an 8 core dedicated Linux machine (with hyperthreading and higher internet bandwidth) even though not everything runs multi-threaded. But it is a big improvement that you can quickly and easily get for yourself to reap the benefits, which quickly adds up over time. Not to mention the complete silence at which you gain the increased build times.
+Of course a 3x improvement doesn't come as a surprise when you are basically comparing a Macbook Pro with 2 (virtual) CPUs allocated to Docker, versus an 8 core dedicated Linux machine (with hyperthreading and higher internet bandwidth) even though not everything runs multi-threaded. But it is a big improvement that you can quickly and easily get for yourself and reap the benefits, which quickly adds up over time. Not to mention the complete silence at which you gain the faster build times.
 
 As a bonus, you can now stop running Docker Desktop entirely, and no longer see a Docker process "idling" in the background that would otherwise still be using around 20% CPU all the time (doing nothing).
 
@@ -145,12 +154,12 @@ The first one would be "added complexity & dependency", because now you have add
 
 Secondly, if you use `docker-compose` for local development (often used to inject your live code changes), then you cannot map your local drive into the docker containers, as the mounted volumes will be pointing to folders on your remote machine. You can find more information about how to deploy on remote Docker hosts with docker-compose [here](https://www.docker.com/blog/how-to-deploy-on-remote-docker-hosts-with-docker-compose/).
 
-Last but not least, remote servers are not free, so there is an additional cost involved. However, as pointed out earlier, [Hetzner](https://hetzner.com) is a very cheap server provider you can use, or you can start with any other small cloud (AWS, Google, etc) instance. I guess that most developers actually already run a Linux box somewhere (often for testing).
+Last but not least, remote servers are not free, so there is an additional cost involved. However, as pointed out earlier, [Hetzner](https://hetzner.com) is a very cheap server provider you can use, or you can start with any other small cloud instance (e.g. AWS, Google, etc). I guess that a lot of developers actually already run a Linux box somewhere (often for testing) that they can use as their remote docker host too.
 
 ### Wrap up
 
-As an Apple enthusiast, I don't see myself switch to a local Linux development computer anytime soon, but I was kind of annoyed with the lack of macOS Docker performance and noisy CPU fans when building images.
+As an Apple enthusiast, I don't see myself switching to a local Linux development computer anytime soon, but I was kind of annoyed with the lack of macOS Docker performance and noisy CPU fans when building images.
 
 Having a hard time believing that the upcoming switch to Apple Silicon will alleviate this issue (still hope for the best, but prepare for the worst), I was happy that I found a solution by introducing a remote Docker host, which was trivially easy to setup and use with Docker Contexts. Sometimes a small change can have a big impact.
 
-IMHO the benefits I described in this article more than make up for the downsides. Hopefully this may benefit you too, but if you have any other suggestions or improvements, then please let me know!
+IMHO the benefits I described in this article more than make up for the downsides. Hopefully this may benefit you too. If you have any suggestions for improvements, then please let me know!
