@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2020-10-26T14:26:48+01:00</updated>
+ <updated>2020-10-27T11:07:44+01:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -92,7 +92,7 @@
 
 &lt;p&gt;Next up we need to access the remote Docker host and make it our default “local” engine. For this we leverage &lt;strong&gt;Docker Contexts&lt;/strong&gt; in the following way. First we create a context that will hold the connection path (e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh://coen@whatever.com&lt;/code&gt;) to the remote docker host:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker context create remote ‐‐docker &lt;span class=&quot;nv&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ssh://coen@whatever.com
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;docker context create remote &lt;span class=&quot;nt&quot;&gt;--docker&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ssh://coen@whatever.com
  remote
  Successfully created context “remote”
 

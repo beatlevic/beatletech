@@ -83,7 +83,7 @@ First, let's install Docker on your remote Linux server (I'm using the [Ubunty i
 Next up we need to access the remote Docker host and make it our default "local" engine. For this we leverage **Docker Contexts** in the following way. First we create a context that will hold the connection path (e.g. `ssh://coen@whatever.com`) to the remote docker host:
 
 {% highlight bash %}
- $ docker context create remote ‐‐docker host=ssh://coen@whatever.com
+ $ docker context create remote --docker host=ssh://coen@whatever.com
  remote
  Successfully created context “remote”
 

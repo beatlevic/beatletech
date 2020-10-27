@@ -225,7 +225,7 @@
 
 <p>Next up we need to access the remote Docker host and make it our default “local” engine. For this we leverage <strong>Docker Contexts</strong> in the following way. First we create a context that will hold the connection path (e.g. <code class="language-plaintext highlighter-rouge">ssh://coen@whatever.com</code>) to the remote docker host:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nv">$ </span>docker context create remote ‐‐docker <span class="nv">host</span><span class="o">=</span>ssh://coen@whatever.com
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nv">$ </span>docker context create remote <span class="nt">--docker</span> <span class="nv">host</span><span class="o">=</span>ssh://coen@whatever.com
  remote
  Successfully created context “remote”
 
