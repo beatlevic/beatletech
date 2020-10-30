@@ -902,7 +902,7 @@ pre .lineno {
 	margin-bottom: 0px;
 }
 
-.highlight pre { background-color: #272822; padding: 5px 0px 5px 5px; }
+.highlight pre { background-color: #272822; padding: 5px 0px 5px 5px; overflow-x: auto; }
 .highlight .hll { background-color: #272822; }
 .highlight .c { color: #75715e } /* Comment */
 .highlight .err { color: #960050; background-color: #1e0010 } /* Error */
