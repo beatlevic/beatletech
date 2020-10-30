@@ -144,6 +144,10 @@
           </div>
           <article class="post blog">
             <h2>Skylines 1.0<em></em></h2>
+            <div
+              style="margin-bottom: 20px; float: right"
+              id="google_translate_element"
+            ></div>
 
             <p class="publishdate">Sunday, 27 March 2011.</p>
 
@@ -164,6 +168,7 @@ interests in a realtime image stream.</p>
 the app from the app store.</p>
 
 
+            <br />
             <div
               style="display: block; vertical-align: baseline; height: 2px"
             ></div>
@@ -185,7 +190,7 @@ the app from the app store.</p>
               >
             </div>
             <div class="clear"></div>
-            <div class="sharethis-inline-share-buttons"></div>
+            <!-- <div class="sharethis-inline-share-buttons"></div> -->
           </article>
 
           <div id="disqus_thread"></div>
@@ -429,7 +434,7 @@ the app from the app store.</p>
       src="https://app.mailjet.com/statics/js/widget.modal.js"
     ></script>
 
-    <script src="//platform-api.sharethis.com/js/sharethis.js#property=5b6357f2f3742d0012c8870b&product=inline-share-buttons"></script>
+    <!-- <script src="//platform-api.sharethis.com/js/sharethis.js#property=5b6357f2f3742d0012c8870b&product=inline-share-buttons"></script> -->
 
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -461,5 +466,24 @@ the app from the app store.</p>
           "https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/headshot.png";
       }
     </script>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,nl,de,es,fr,ru,tr,zh-CN",
+            defaultLanguage: "en",
+            multilanguagePage: true,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
   </body>
 </html>

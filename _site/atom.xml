@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2020-10-27T11:07:44+01:00</updated>
+ <updated>2020-10-30T22:52:11+01:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -65,7 +65,8 @@
 &lt;h4 id=&quot;1-install-docker-engine-on-remote-host&quot;&gt;1. Install Docker Engine on remote host&lt;/h4&gt;
 &lt;p&gt;First, let’s install Docker on your remote Linux server (I’m using the &lt;a href=&quot;https://docs.docker.com/engine/install/ubuntu/&quot;&gt;Ubunty install instructions&lt;/a&gt;, but you can find instructions for other distros on that page as well):&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;c&quot;&gt;## Update the apt package index and install packages to allow apt to use a repository over HTTPS:&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;c&quot;&gt;## Update the apt package index and install packages&lt;/span&gt;
+ &lt;span class=&quot;c&quot;&gt;## to allow apt to use a repository over HTTPS:&lt;/span&gt;
  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get update
 
  &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
@@ -443,17 +444,17 @@ any understanding of how they got there or what they have created”&lt;/em&gt; 
 
 &lt;h4 id=&quot;sources&quot;&gt;Sources&lt;/h4&gt;
 
-&lt;p&gt;[1] Big Data, Big Hype? &lt;a href=&quot;http://www.wired.com/insights/2014/04/big-data-big-hype/&quot;&gt;http://www.wired.com/insights/2014/04/big-data-big-hype/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[1] &lt;a href=&quot;http://www.wired.com/insights/2014/04/big-data-big-hype/&quot;&gt;Big Data, Big Hype?&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;[2] Big Data Is A Big Problem That’s Getting Bigger: &lt;a href=&quot;http://www.forbes.com/sites/larrymyler/2015/07/29/big-data-is-a-big-problem-thats-getting-bigger/&quot;&gt;http://www.forbes.com/sites/larrymyler/2015/07/29/big-data-is-a-big-problem-thats-getting-bigger/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[2] &lt;a href=&quot;http://www.forbes.com/sites/larrymyler/2015/07/29/big-data-is-a-big-problem-thats-getting-bigger/&quot;&gt;Big Data Is A Big Problem That’s Getting Bigger&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;[3] Who is ready for some big data success stories: &lt;a href=&quot;http://www.forbes.com/sites/howardbaldwin/2015/06/08/whos-ready-for-some-big-data-success-stories/&quot;&gt;http://www.forbes.com/sites/howardbaldwin/2015/06/08/whos-ready-for-some-big-data-success-stories/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[3] &lt;a href=&quot;http://www.forbes.com/sites/howardbaldwin/2015/06/08/whos-ready-for-some-big-data-success-stories/&quot;&gt;Who is ready for some big data success stories&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;[4] Growth of Data vs Growth of Data Analysts: &lt;a href=&quot;http://www.delphianalytics.net/wp-content/uploads/2013/04/GrowthOfDataVsDataAnalysts.png&quot;&gt;http://www.delphianalytics.net/wp-content/uploads/2013/04/GrowthOfDataVsDataAnalysts.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[4] &lt;a href=&quot;http://www.delphianalytics.net/wp-content/uploads/2013/04/GrowthOfDataVsDataAnalysts.png&quot;&gt;Growth of Data vs Growth of Data Analysts&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;[5] The Data Science Venn Diagram: &lt;a href=&quot;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&quot;&gt;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[5] &lt;a href=&quot;http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram&quot;&gt;The Data Science Venn Diagram&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;[6] How to actually learn data science: &lt;a href=&quot;https://www.dataquest.io/blog/how-to-actually-learn-data-science/&quot;&gt;https://www.dataquest.io/blog/how-to-actually-learn-data-science/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[6] &lt;a href=&quot;https://www.dataquest.io/blog/how-to-actually-learn-data-science/&quot;&gt;How to actually learn data science&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  

@@ -144,6 +144,10 @@
           </div>
           <article class="post blog">
             <h2>Dokzorg.nl live!<em></em></h2>
+            <div
+              style="margin-bottom: 20px; float: right"
+              id="google_translate_element"
+            ></div>
 
             <p class="publishdate">Saturday, 12 October 2013.</p>
 
@@ -160,6 +164,7 @@ an online presence by blogging and tweeting. We currently like the end result an
 I’m looking forward to dive back in the other back-end projects I have going for which I can happily ignore HTML and CSS..</p>
 
 
+            <br />
             <div
               style="display: block; vertical-align: baseline; height: 2px"
             ></div>
@@ -179,7 +184,7 @@ I’m looking forward to dive back in the other back-end projects I have going f
               >
             </div>
             <div class="clear"></div>
-            <div class="sharethis-inline-share-buttons"></div>
+            <!-- <div class="sharethis-inline-share-buttons"></div> -->
           </article>
 
           <div id="disqus_thread"></div>
@@ -423,7 +428,7 @@ I’m looking forward to dive back in the other back-end projects I have going f
       src="https://app.mailjet.com/statics/js/widget.modal.js"
     ></script>
 
-    <script src="//platform-api.sharethis.com/js/sharethis.js#property=5b6357f2f3742d0012c8870b&product=inline-share-buttons"></script>
+    <!-- <script src="//platform-api.sharethis.com/js/sharethis.js#property=5b6357f2f3742d0012c8870b&product=inline-share-buttons"></script> -->
 
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -455,5 +460,24 @@ I’m looking forward to dive back in the other back-end projects I have going f
           "https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/headshot.png";
       }
     </script>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,nl,de,es,fr,ru,tr,zh-CN",
+            defaultLanguage: "en",
+            multilanguagePage: true,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
   </body>
 </html>

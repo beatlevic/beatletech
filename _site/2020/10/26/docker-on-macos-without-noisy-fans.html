@@ -146,6 +146,10 @@
           </div>
           <article class="post blog">
             <h2>Docker on macOS without noisy fans<em></em></h2>
+            <div
+              style="margin-bottom: 20px; float: right"
+              id="google_translate_element"
+            ></div>
 
             <p class="publishdate">Monday, 26 October 2020.</p>
 
@@ -198,7 +202,8 @@
 <h4 id="1-install-docker-engine-on-remote-host">1. Install Docker Engine on remote host</h4>
 <p>First, let’s install Docker on your remote Linux server (I’m using the <a href="https://docs.docker.com/engine/install/ubuntu/">Ubunty install instructions</a>, but you can find instructions for other distros on that page as well):</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="c">## Update the apt package index and install packages to allow apt to use a repository over HTTPS:</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="c">## Update the apt package index and install packages</span>
+ <span class="c">## to allow apt to use a repository over HTTPS:</span>
  <span class="nv">$ </span><span class="nb">sudo </span>apt-get update
 
  <span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="se">\</span>
@@ -306,6 +311,7 @@
 <p>IMHO the benefits I described in this article more than make up for the downsides. Hopefully this may benefit you too. If you have any suggestions for improvements, then please let me know!</p>
 
 
+            <br />
             <div
               style="display: block; vertical-align: baseline; height: 2px"
             ></div>
@@ -328,7 +334,7 @@
               >
             </div>
             <div class="clear"></div>
-            <div class="sharethis-inline-share-buttons"></div>
+            <!-- <div class="sharethis-inline-share-buttons"></div> -->
           </article>
 
           <div id="disqus_thread"></div>
@@ -572,7 +578,7 @@
       src="https://app.mailjet.com/statics/js/widget.modal.js"
     ></script>
 
-    <script src="//platform-api.sharethis.com/js/sharethis.js#property=5b6357f2f3742d0012c8870b&product=inline-share-buttons"></script>
+    <!-- <script src="//platform-api.sharethis.com/js/sharethis.js#property=5b6357f2f3742d0012c8870b&product=inline-share-buttons"></script> -->
 
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -604,5 +610,24 @@
           "https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/headshot.png";
       }
     </script>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,nl,de,es,fr,ru,tr,zh-CN",
+            defaultLanguage: "en",
+            multilanguagePage: true,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
   </body>
 </html>

@@ -54,7 +54,8 @@ Needless to say, but one does not setup remote access without a remote machine, 
 First, let's install Docker on your remote Linux server (I'm using the [Ubunty install instructions](https://docs.docker.com/engine/install/ubuntu/), but you can find instructions for other distros on that page as well):
 
 {% highlight bash %}
- ## Update the apt package index and install packages to allow apt to use a repository over HTTPS:
+ ## Update the apt package index and install packages
+ ## to allow apt to use a repository over HTTPS:
  $ sudo apt-get update
 
  $ sudo apt-get install \

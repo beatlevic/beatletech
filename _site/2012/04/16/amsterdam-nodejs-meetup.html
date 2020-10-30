@@ -144,6 +144,10 @@
           </div>
           <article class="post blog">
             <h2>Amsterdam Node meetup group<em></em></h2>
+            <div
+              style="margin-bottom: 20px; float: right"
+              id="google_translate_element"
+            ></div>
 
             <p class="publishdate">Monday, 16 April 2012.</p>
 
@@ -171,6 +175,7 @@ check out the <a href="http://www.meetup.com/The-Amsterdam-Clojure-Meetup-Group/
 Amsterdam Clojure meetup.</a></p>
 
 
+            <br />
             <div
               style="display: block; vertical-align: baseline; height: 2px"
             ></div>
@@ -192,7 +197,7 @@ Amsterdam Clojure meetup.</a></p>
               >
             </div>
             <div class="clear"></div>
-            <div class="sharethis-inline-share-buttons"></div>
+            <!-- <div class="sharethis-inline-share-buttons"></div> -->
           </article>
 
           <div id="disqus_thread"></div>
@@ -436,7 +441,7 @@ Amsterdam Clojure meetup.</a></p>
       src="https://app.mailjet.com/statics/js/widget.modal.js"
     ></script>
 
-    <script src="//platform-api.sharethis.com/js/sharethis.js#property=5b6357f2f3742d0012c8870b&product=inline-share-buttons"></script>
+    <!-- <script src="//platform-api.sharethis.com/js/sharethis.js#property=5b6357f2f3742d0012c8870b&product=inline-share-buttons"></script> -->
 
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -468,5 +473,24 @@ Amsterdam Clojure meetup.</a></p>
           "https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/headshot.png";
       }
     </script>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,nl,de,es,fr,ru,tr,zh-CN",
+            defaultLanguage: "en",
+            multilanguagePage: true,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
   </body>
 </html>

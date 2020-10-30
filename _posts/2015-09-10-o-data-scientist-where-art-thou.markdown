@@ -39,14 +39,14 @@ We believe there might be a better alternative to growing your own in-house Data
 
 #### Sources
 
-[1] Big Data, Big Hype? [http://www.wired.com/insights/2014/04/big-data-big-hype/](http://www.wired.com/insights/2014/04/big-data-big-hype/)
+[1] [Big Data, Big Hype?](http://www.wired.com/insights/2014/04/big-data-big-hype/)
 
-[2] Big Data Is A Big Problem That’s Getting Bigger: [http://www.forbes.com/sites/larrymyler/2015/07/29/big-data-is-a-big-problem-thats-getting-bigger/](http://www.forbes.com/sites/larrymyler/2015/07/29/big-data-is-a-big-problem-thats-getting-bigger/)
+[2] [Big Data Is A Big Problem That’s Getting Bigger](http://www.forbes.com/sites/larrymyler/2015/07/29/big-data-is-a-big-problem-thats-getting-bigger/)
 
-[3] Who is ready for some big data success stories: [http://www.forbes.com/sites/howardbaldwin/2015/06/08/whos-ready-for-some-big-data-success-stories/](http://www.forbes.com/sites/howardbaldwin/2015/06/08/whos-ready-for-some-big-data-success-stories/)
+[3] [Who is ready for some big data success stories](http://www.forbes.com/sites/howardbaldwin/2015/06/08/whos-ready-for-some-big-data-success-stories/)
 
-[4] Growth of Data vs Growth of Data Analysts: [http://www.delphianalytics.net/wp-content/uploads/2013/04/GrowthOfDataVsDataAnalysts.png](http://www.delphianalytics.net/wp-content/uploads/2013/04/GrowthOfDataVsDataAnalysts.png)
+[4] [Growth of Data vs Growth of Data Analysts](http://www.delphianalytics.net/wp-content/uploads/2013/04/GrowthOfDataVsDataAnalysts.png)
 
-[5] The Data Science Venn Diagram: [http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram)
+[5] [The Data Science Venn Diagram](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram)
 
-[6] How to actually learn data science: [https://www.dataquest.io/blog/how-to-actually-learn-data-science/](https://www.dataquest.io/blog/how-to-actually-learn-data-science/)
+[6] [How to actually learn data science](https://www.dataquest.io/blog/how-to-actually-learn-data-science/)
