@@ -1,0 +1,126 @@
+<script
+  type="text/javascript"
+  src="https://www.gstatic.com/charts/loader.js"
+></script>
+<div
+  class="notranslate"
+  id="chart_div"
+  style="margin-bottom: 30px; margin-left: -40px; margin-right: -35px"
+></div>
+
+<script type="text/javascript">
+  google.charts.load("current", { packages: ["corechart", "line"] });
+  google.charts.setOnLoadCallback(drawBasic);
+
+  //https://developers.google.com/chart/interactive/docs/gallery/annotationchart
+  function drawBasic() {
+    var data = new google.visualization.DataTable();
+    data.addColumn("date", "Date");
+    data.addColumn("number", "Weight (KG)");
+    data.addColumn({ type: "string", role: "annotation" }); // annotation role col.
+    data.addColumn({ type: "string", role: "annotationText" }); // annotationText col.
+
+    data.addRows([
+      [new Date(2020, 4, 10), 98.5, undefined, undefined],
+      [new Date(2020, 4, 13), 97.9, "A", "Start - Intermittent Fasting"],
+      [new Date(2020, 4, 17), 96.9, undefined, undefined],
+      [new Date(2020, 4, 20), 95.9, undefined, undefined],
+      [new Date(2020, 4, 24), 95.9, undefined, undefined],
+      [new Date(2020, 4, 25), 94.6, undefined, undefined],
+      [new Date(2020, 4, 27), 94.9, undefined, undefined],
+      [new Date(2020, 4, 30), 94.5, "B", "Start - Water Fast"],
+      [new Date(2020, 4, 31), 94.0, undefined, undefined],
+      [new Date(2020, 5, 1), 93.4, undefined, undefined],
+      [new Date(2020, 5, 2), 92.9, undefined, undefined],
+      [new Date(2020, 5, 3), 91.4, "C", "End - Water Fast (5 days)"], // 5 days fasting
+      [new Date(2020, 5, 6), 91.9, undefined, undefined],
+      [new Date(2020, 5, 8), 92.2, undefined, undefined],
+      [new Date(2020, 5, 10), 91.4, undefined, undefined],
+      [new Date(2020, 5, 12), 90.4, undefined, undefined],
+      [new Date(2020, 5, 14), 89.8, undefined, undefined],
+      [new Date(2020, 5, 15), 89.5, undefined, undefined],
+      [new Date(2020, 5, 17), 89.2, undefined, undefined],
+      [new Date(2020, 5, 20), 90.0, undefined, undefined],
+      [new Date(2020, 5, 21), 90.0, "D", "Start - 2nd Water Fast"],
+      [new Date(2020, 5, 22), 89.3, undefined, undefined],
+      [new Date(2020, 5, 24), 88.3, undefined, undefined],
+      [new Date(2020, 5, 25), 87.6, "E", "End - 2nd Water Fast (4 days)"],
+      [new Date(2020, 5, 26), 87.7, "F", "Birthday (Goal: < 88KG)"],
+      [new Date(2020, 6, 1), 88.1, undefined, undefined],
+      [new Date(2020, 6, 5), 88.0, "G", "Start - Camping trip"],
+      [new Date(2020, 6, 20), 91.2, "H", "End - Camping trip (2 weeks)"],
+      [new Date(2020, 6, 21), 90.3, undefined, undefined],
+      [new Date(2020, 6, 28), 89.8, undefined, undefined],
+      [new Date(2020, 6, 30), 89.2, undefined, undefined],
+      [new Date(2020, 7, 3), 90.1, undefined, undefined],
+      [new Date(2020, 7, 4), 89.8, undefined, undefined],
+      [new Date(2020, 7, 6), 89.4, undefined, undefined],
+      [new Date(2020, 7, 10), 91.4, "I", "End - Camping weekend (3 days)"],
+      [new Date(2020, 7, 11), 90.6, undefined, undefined],
+      [new Date(2020, 7, 12), 89.7, undefined, undefined],
+      [new Date(2020, 7, 13), 89.8, "J", "3 months Intermittent Fasting"],
+      [new Date(2020, 7, 14), 89.7, undefined, undefined],
+      [new Date(2020, 7, 17), 88, undefined, undefined],
+      [new Date(2020, 7, 20), 89, undefined, undefined],
+      [new Date(2020, 7, 21), 88.9, undefined, undefined],
+      [new Date(2020, 7, 24), 89.3, undefined, undefined],
+      [new Date(2020, 7, 26), 89.8, undefined, undefined],
+      [new Date(2020, 7, 27), 89.6, undefined, undefined],
+      [new Date(2020, 7, 28), 88.2, undefined, undefined],
+      [new Date(2020, 7, 29), 89.0, undefined, undefined],
+      [new Date(2020, 7, 31), 88.6, undefined, undefined],
+      [new Date(2020, 8, 2), 89.8, undefined, undefined],
+      [new Date(2020, 8, 3), 88.9, undefined, undefined],
+      [new Date(2020, 8, 7), 88.4, undefined, undefined],
+      [new Date(2020, 8, 9), 89.1, undefined, undefined],
+      [new Date(2020, 8, 14), 88.6, undefined, undefined],
+      [new Date(2020, 8, 17), 90.0, undefined, undefined],
+      [new Date(2020, 8, 20), 90.1, undefined, undefined],
+      [new Date(2020, 8, 21), 90.2, undefined, undefined],
+      [new Date(2020, 8, 23), 89.3, undefined, undefined],
+      [new Date(2020, 8, 25), 89.9, undefined, undefined],
+      [new Date(2020, 8, 28), 89.6, undefined, undefined],
+      [new Date(2020, 8, 30), 89.2, undefined, undefined],
+      [new Date(2020, 9, 1), 89.3, undefined, undefined],
+      [new Date(2020, 9, 12), 90.3, undefined, undefined],
+      [new Date(2020, 9, 16), 89.2, undefined, undefined],
+      [new Date(2020, 9, 28), 90.3, undefined, undefined],
+      [new Date(2020, 9, 30), 90.5, undefined, undefined],
+      [new Date(2020, 10, 1), 90.8, undefined, undefined],
+      [new Date(2020, 10, 2), 91.3, "K", "Start - 3rd Water Fast"],
+      [new Date(2020, 10, 13), 89, undefined, undefined],
+    ]);
+
+    var options = {
+      max: 100,
+      min: 85,
+      // hAxis: {
+      //   format: 'M/d',
+      //   //title: 'Date'
+      // },
+      vAxis: {
+        title: "Weight (KG)",
+        maxValue: 100,
+      },
+      animation: {
+        duration: 2000,
+        easing: "out",
+        startup: true,
+      },
+      // trendlines: {
+      //   0: {
+      //     type: 'linear',
+      //     // title: 'Trend',
+      //     visibleInLegend: true,
+      //     showR2: true,
+      //   }
+      // } // Draw a trendline for data series 0.
+    };
+
+    var chart = new google.visualization.LineChart(
+      document.getElementById("chart_div")
+    );
+
+    chart.draw(data, options);
+  }
+</script>
