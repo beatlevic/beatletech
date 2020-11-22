@@ -873,7 +873,7 @@ background: none;
 
 .highlighter-rouge {
 	background: #e9e9e9;
-	padding: 2px 2px;
+	padding: 1px 3px;
 	font-weight: bold;
 }
 
@@ -891,6 +891,12 @@ pre code {
 	/* font-weight: 400;
 	font-size: 1.0em;
     line-height: 1.4em; */
+}
+
+.language-plaintext {
+	/* font: 300 90%/1.5 Oxygen, "Helvetica Neue", Arial, sans-serif;
+	font-weight: bold; */
+	font-size: 115%;
 }
 
 pre .lineno {

@@ -34,7 +34,7 @@
 
     <meta
       property="og:description"
-      content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"
+      content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"
     />
 
     <meta
@@ -280,7 +280,8 @@
     <script type="text/javascript">
       function onHover() {
         var el = document.getElementById("headshot");
-        el.src = "../../../images/jc-small.png";
+        el.src =
+          "https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/jc-small.png";
       }
 
       function offHover() {

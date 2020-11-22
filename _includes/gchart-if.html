@@ -16,7 +16,7 @@
   function drawBasic() {
     var data = new google.visualization.DataTable();
     data.addColumn("date", "Date");
-    data.addColumn("number", "Weight (KG)");
+    data.addColumn("number", "Weight (kg)");
     data.addColumn({ type: "string", role: "annotation" }); // annotation role col.
     data.addColumn({ type: "string", role: "annotationText" }); // annotationText col.
 
@@ -88,7 +88,15 @@
       [new Date(2020, 9, 30), 90.5, undefined, undefined],
       [new Date(2020, 10, 1), 90.8, undefined, undefined],
       [new Date(2020, 10, 2), 91.3, "K", "Start - 3rd Water Fast"],
-      [new Date(2020, 10, 13), 89, undefined, undefined],
+      [new Date(2020, 10, 3), 90.5, undefined, undefined],
+      [new Date(2020, 10, 4), 89.9, undefined, undefined],
+      [new Date(2020, 10, 5), 88.2, "L", "End - 3rd Water Fast (4 days)"],
+      [new Date(2020, 10, 6), 88.4, undefined, undefined],
+      [new Date(2020, 10, 7), 90.1, undefined, undefined],
+      [new Date(2020, 10, 8), 89.4, undefined, undefined],
+      [new Date(2020, 10, 9), 89.5, undefined, undefined],
+      [new Date(2020, 10, 10), 89.8, undefined, undefined],
+      [new Date(2020, 10, 13), 89.2, undefined, undefined],
     ]);
 
     var options = {
@@ -99,7 +107,7 @@
       //   //title: 'Date'
       // },
       vAxis: {
-        title: "Weight (KG)",
+        title: "Weight (kg)",
         maxValue: 100,
       },
       animation: {
