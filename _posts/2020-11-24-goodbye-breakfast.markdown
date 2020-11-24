@@ -149,6 +149,8 @@ I very much like to hear from you, about your experience with fasting or if this
 
 Breakfast is dead, long live intermittent fasting!
 
+[Reddit Discussion](https://www.reddit.com/r/fasting/comments/k02mz5/blog_goodbye_breakfast_6_months_of_intermittent/)
+
 
 ### References
 
