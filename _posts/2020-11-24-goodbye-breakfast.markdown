@@ -17,7 +17,7 @@ _**DISCLAIMER:** I'm not an MD, so please read this blog post only as an interes
 
 ---
 
-For 6 months I have been doing `intermittent fasting` (IF) by eating daily only during an 8 hour window: between noon and 8pm. On top of that I had three water-only fasts where I didn't eat anything for multiple days (4-5) in a row.
+For the past 6 months I have been doing `intermittent fasting` (IF) by eating daily only during an 8 hour window: between noon and 8pm. On top of that I had three water-only fasts where I didn't eat anything for multiple days (4-5) in a row.
 
 That's madness you might say! Why would you starve yourself? Breakfast is the most important meal of the day and you are skipping it!
 
