@@ -8,7 +8,7 @@ tags: [lifestyle, intermittent-fasting]
 category: [lifestyle]
 image: intermittent-fasting-mogwai-16-8-blue.png
 image_s3: https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/intermittent-fasting-mogwai-16-8-blue.png
-published: false
+published: true
 ---
 
 <img src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/intermittent-fasting-mogwai-16-8-blue.png" alt="Intermittent Fasting 16/8" width="70%" title="Intermittent Fasting 16/8"  style="margin-left:100px">
@@ -45,7 +45,7 @@ Without further ado, let's explore intermittent fasting and why it works.
 
 ### Intermittent Fasting
 
-People have been actively fasting, i.e., periods of consciously not eating, since ancient times ([4](https://thefastingmethod.com/fasting-a-history-part-i/)) and it has, unwillingly, been part of the eating pattern of our ancestors when food wasn't always around (e.g. hunting on an empty stomach), although strictly speaking you would call it starvation if you don't know when you will get your next meal. It just shows, that our bodies have been evolutionary adapted to handle feast and famine.
+People have been actively fasting, i.e., periods of consciously not eating, since ancient times ([4](https://thefastingmethod.com/fasting-a-history-part-i/)) and it has, unwillingly, been part of the eating pattern of our ancestors when food wasn't always around (e.g. hunting on an empty stomach), although strictly speaking you would call it starvation if you don't know when you will get your next meal. It just shows, that our bodies have been evolutionary adapted to handle feast and famine. It's being exposed to stress, variability, volatility and randomness (up to a point and not continuously), that makes us stronger (i.e., [antifragile](https://en.wikipedia.org/wiki/Antifragile)).
 
 Recently intermittent fasting has become a more popular form of fasting, which can be defined as **an eating pattern in which you cycle between periods of eating and fasting**, where you stretch each fasting period long enough to force your body into switching from burning glucose (sugar) and glycogen (stored sugar) to fat burning. This is what is called `metabolic flexibility`, where your body makes use of whatever fuel is available. As a bonus, it seems that ketosis (i.e., the metabolic state running on fat for fuel) is the main driver for fat burning in the abdomen region, belly fat!
 
@@ -89,11 +89,11 @@ In the following annotated graph you can view my weight over the course of the p
 
 #### First 2 weeks
 
-I started May 13th weighing **97.9 kg** (A). To keep track of my eating window I set two alarms, one at 12.30pm labeled 'lunch' and the other at 8pm 'no more eating'. For my exercise routine I started to play tennis on Monday mornings, and I tried to run 6-7km twice a week.
+I started May 13th weighing **97.9 kg** (A). To keep track of my eating window I set two alarms, one at 12.30pm labeled 'lunch' and the other at 8pm 'no more eating'. For my exercise routine I started to play tennis on Monday mornings, and I tried to run 6-7 km twice a week.
 
 I switched to a low-carb diet (Paleo): eating more meat, salads, fruits (primarily berries), vegetables and nuts. No longer eating bread, pasta, rice and oatmeal.
 
-After one week I already lost 2kg, and another 1kg after the second week. I found it very easy to stick to the 8 hour eating window and I was not experiencing hunger sensations in the morning or late evenings. Probably because I was already used to skipping breakfast quite often, and because a low-carb diet also helps lowering your insulin spikes and cravings for more sugar. With lower insulin levels, as a result of lower overall blood sugar, you are also quicker in switching to fat burning!
+After one week I already lost 2 kg, and another 1 kg after the second week. I found it very easy to stick to the 8 hour eating window and I was not experiencing hunger sensations in the morning or late evenings. Probably because I was already used to skipping breakfast quite often, and because a low-carb diet also helps lowering your insulin spikes and cravings for more sugar. With lower insulin levels, as a result of lower overall blood sugar, you are also quicker in switching to fat burning!
 
 #### Water-only Fasting
 
@@ -119,7 +119,7 @@ If you don't see yourself HIIT-ing, then know that walking is also a great exerc
 
 June 14th, almost two weeks before my self-imposed deadline, I already hit my <90 kg (200 lb) goal, weighing **89.8 kg**. Instead of calling it a day, I decided to move the goalposts and set a new target weight of <88 kg. In order to actually hit that target, I embarked on my second water-only fast (D-E) in the final week before my birthday. And lo and behold, June 26th (F), 6 weeks after I started this new lifestyle at a weight of 97.9 kg, I now weighed **87.7 kg** (193 lb). I lost over 10 kg (22 lb)!
 
-Not only did I lose a lot of weight, I'm also feeling stronger and more focused in general, and gained higher levels of energy throughout the day, e.g., I'm doing more chores around the house and in the weekends, writing more blog posts, no more after lunch dips, no more being tired in the evening, internal drive to do more push-ups and plank exercises, and the list goes on.
+Not only did I lose a lot of weight, I was also feeling stronger and more focused in general, and gained higher levels of energy throughout the day, e.g., I was doing more chores around the house, writing more blog posts, had no more after lunch dips, no more being tired in the evening or going to bed early and it was easier to do more push-ups and plank exercises. I also experienced more calm and tranquility in my mind, making it easier to escape thought loops. All in all, quite a list of improvements!
 
 #### Next 6 weeks
 

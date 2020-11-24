@@ -4,12 +4,310 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2020-11-22T13:33:42+01:00</updated>
+ <updated>2020-11-24T09:40:29+01:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
  </author>
 
+ 
+ <entry>
+   <title>Goodbye breakfast: 6 months of Intermittent Fasting</title>
+   <link href="http://beatletech.com/2020/11/24/goodbye-breakfast"/>
+   <updated>2020-11-24T00:00:00+01:00</updated>
+   <id>http://beatletech.com/2020/11/24/goodbye-breakfast</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/intermittent-fasting-mogwai-16-8-blue.png&quot; alt=&quot;Intermittent Fasting 16/8&quot; width=&quot;70%&quot; title=&quot;Intermittent Fasting 16/8&quot; style=&quot;margin-left:100px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;DISCLAIMER:&lt;/strong&gt; I’m not an MD, so please read this blog post only as an interesting starting point for your own research and always check with your own doctor or dietician if you want to try this at home. You are responsible for your own health.&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For 6 months I have been doing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;intermittent fasting&lt;/code&gt; (IF) by eating daily only during an 8 hour window: between noon and 8pm. On top of that I had three water-only fasts where I didn’t eat anything for multiple days (4-5) in a row.&lt;/p&gt;
+
+&lt;p&gt;That’s madness you might say! Why would you starve yourself? Breakfast is the most important meal of the day and you are skipping it!&lt;/p&gt;
+
+&lt;p&gt;Well, I currently believe that it would be madness NOT to fast, and have both scientific and 6 months of anecdotal evidence to back that up. When I was just a few weeks into intermittent fasting, I was already so positively surprised by the initial results that I wanted to tell everybody about my “discovery”, especially because I believed I could also explain why and how it works after reading into the physiology and research behind it. I decided to first see if I could stick with it for a couple of months and then write about my experiences. So here I am, 6 months later, ready to tell you all about my journey and “why” intermittent fasting is so interesting.&lt;/p&gt;
+
+&lt;h3 id=&quot;benefits&quot;&gt;Benefits&lt;/h3&gt;
+
+&lt;p&gt;Before we dive in, what’s in it for you? What kind of benefits are we talking about? There are the following immediate known and lasting benefits that I experienced:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Weight loss&lt;/li&gt;
+  &lt;li&gt;Higher levels of energy&lt;/li&gt;
+  &lt;li&gt;Feeling stronger (due to increase in human growth hormone)&lt;/li&gt;
+  &lt;li&gt;Better focus&lt;/li&gt;
+  &lt;li&gt;Decrease in hay fever symptoms (to be fair, I could have been lucky with a mild season)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And there are (potential) long term benefits (&lt;a href=&quot;https://www.nejm.org/doi/full/10.1056/nejmra1905136&quot;&gt;1&lt;/a&gt;, &lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3106288/&quot;&gt;2&lt;/a&gt;, &lt;a href=&quot;https://www.healthline.com/nutrition/10-health-benefits-of-intermittent-fasting&quot;&gt;3&lt;/a&gt;):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Cellular repair (Autopaghy)&lt;/li&gt;
+  &lt;li&gt;Decreased &lt;a href=&quot;https://www.webmd.com/diabetes/insulin-resistance-syndrome&quot;&gt;insulin resistance&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Decreased incidence of diseases, including cancers, obesity, neurological disorders and cardiovascular disease.&lt;/li&gt;
+  &lt;li&gt;Increased stress resistance&lt;/li&gt;
+  &lt;li&gt;Increased longevity and quality of life&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fasting sounds like a miracle drug doesn’t it? You don’t even have to pay money for it! That’s also probably why you won’t see any fasting ads on your timeline or tv commercials (e.g., “Stop buying our cornflakes and just skip breakfast now!”). It is essentially free and available for you to try out.&lt;/p&gt;
+
+&lt;p&gt;Without further ado, let’s explore intermittent fasting and why it works.&lt;/p&gt;
+
+&lt;h3 id=&quot;intermittent-fasting&quot;&gt;Intermittent Fasting&lt;/h3&gt;
+
+&lt;p&gt;People have been actively fasting, i.e., periods of consciously not eating, since ancient times (&lt;a href=&quot;https://thefastingmethod.com/fasting-a-history-part-i/&quot;&gt;4&lt;/a&gt;) and it has, unwillingly, been part of the eating pattern of our ancestors when food wasn’t always around (e.g. hunting on an empty stomach), although strictly speaking you would call it starvation if you don’t know when you will get your next meal. It just shows, that our bodies have been evolutionary adapted to handle feast and famine. It’s being exposed to stress, variability, volatility and randomness (up to a point and not continuously), that makes us stronger (i.e., &lt;a href=&quot;https://en.wikipedia.org/wiki/Antifragile&quot;&gt;antifragile&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Recently intermittent fasting has become a more popular form of fasting, which can be defined as &lt;strong&gt;an eating pattern in which you cycle between periods of eating and fasting&lt;/strong&gt;, where you stretch each fasting period long enough to force your body into switching from burning glucose (sugar) and glycogen (stored sugar) to fat burning. This is what is called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;metabolic flexibility&lt;/code&gt;, where your body makes use of whatever fuel is available. As a bonus, it seems that ketosis (i.e., the metabolic state running on fat for fuel) is the main driver for fat burning in the abdomen region, belly fat!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;So how long do you have to NOT eat to switch to fat burning?&lt;/strong&gt; Apparently, energy intake restriction for 10 to 14 hours results in depletion of liver glycogen stores (&lt;a href=&quot;https://www.nejm.org/doi/full/10.1056/nejmra1905136&quot;&gt;1&lt;/a&gt;, &lt;a href=&quot;https://www.semanticscholar.org/paper/Fuel-metabolism-in-starvation.-Cahill/a8bb8327226d35259e68ecd8edcc17a3a1380f4a&quot;&gt;5&lt;/a&gt;) after which fat, fatty acids, are freed to form &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ketones&lt;/code&gt; that are used to fuel your body (as opposed to glucose). The more &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fat adapted&lt;/code&gt; you are, the quicker your body will switch to fat burning, something you get more adapted to as a result of prolonged intermittent fasting.&lt;/p&gt;
+
+&lt;p&gt;Given the required minimum of 10 to 14 hours of fasting to start producing ketones, you have different patterns for intermittent fasting you could follow:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;16/8&lt;/strong&gt;: A daily window of 8 hours, often from noon to 8pm (so no breakfast), for eating and 16 hours of fasting (during the night and morning).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;5:2&lt;/strong&gt;: 5 days eating, 2 days fasting.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Alternate day&lt;/strong&gt;: Alternate days of eating and fasting&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;One Meal a Day (OMAD)&lt;/strong&gt;: Sticking to one meal a day, often dinner, and fast the rest of the day.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I chose &lt;strong&gt;16/8&lt;/strong&gt;, because it fits nicely with having kids that are not on a fasting schedule (nor should they ever be when they are young and still growing), having lunch and dinner together. I also like the consistency of following the same schedule every day, apart from sporadic multi-day periods of water-only fasts (more on that later).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Aren’t you also burning up your muscles during fasting?&lt;/strong&gt; Nope. Your body is naturally preserving your muscles by increasing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;human growth hormone&lt;/code&gt; (HGH), which also helps building muscles after the fasting period as HGH levels remain high.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;So all the benefits come from fat burning and the increase in human growth hormone?&lt;/strong&gt; Actually those account for only part of the benefits. The third and arguable the most interesting process during fasting is called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;autophagy&lt;/code&gt;, which literally translates to “self eating”, an apt description for the cellular repair and rejuvenation that will happen in your body.&lt;/p&gt;
+
+&lt;h4 id=&quot;autophagy&quot;&gt;Autophagy&lt;/h4&gt;
+
+&lt;p&gt;Your body continuously needs amino acids, the building blocks for new cells, and when you are not eating you are not taking in new amino acids (proteins). The body already recycles your old and damaged cells to harvest these building blocks, but during fasting has to work harder to get enough of this material. It does this by increasing your immune system in order to “scavenge” in all the nooks and crannies of your body for cells to break down. Cells that otherwise would be “good enough yet mediocre” are now also recycled.&lt;/p&gt;
+
+&lt;p&gt;This is the only process known to rejuvenate neural pathways when you are getting older, and you will be safeguarding and protecting yourself against neurological and auto-immune disorders (&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3106288/&quot;&gt;2&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;The importance of autophagy has also been clearly demonstrated by Japanese cell biologist Yoshinori Ohsumi, who won, in 2016, the Nobel Prize in Medicine for his research on this very topic, showing how autophagy helps slow down the aging process (&lt;a href=&quot;https://www.nobelprize.org/prizes/medicine/2016/press-release/&quot;&gt;6&lt;/a&gt;).&lt;/p&gt;
+
+&lt;h4 id=&quot;key-concepts&quot;&gt;Key concepts&lt;/h4&gt;
+
+&lt;p&gt;Now that we covered what intermittent fasting is, how it works and benefits you, by going over some of the key concepts: the metabolic switch to fat burning, the increase in human growth hormone and autophagy. I like to move on to sharing my experience of putting intermittent fasting into practice.&lt;/p&gt;
+
+&lt;h3 id=&quot;my-6-month-journey&quot;&gt;My 6 Month Journey&lt;/h3&gt;
+
+&lt;p&gt;During the first Coronavirus lockdown in April (in the Netherlands), I spent most of my time homeschooling my three kids and working for &lt;a href=&quot;https://rekall.ai&quot;&gt;rekall.ai&lt;/a&gt;, while neglecting sporting activities and not eating healthy consistently (e.g., more snacks). So when the kids were allowed to go back to school again in May, I stepped on the scale and found myself nearing 100 kg. This for me, being 1.98m tall (6’6”), meant I was being borderline overweight according to my &lt;a href=&quot;https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm&quot;&gt;BMI&lt;/a&gt; calculation (&amp;gt;25). I have never seen myself weigh more than 100 kg (220 lb) and didn’t want to see that happen, so it was time for action!&lt;/p&gt;
+
+&lt;p&gt;I set a weight goal to lose 8 kg in 6 weeks and weigh no more than 90 kg (200 lb) on my birthday (June 26th). In order to get there I wanted to follow a low-carb Paleo diet (&lt;a href=&quot;https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/paleo-diet/art-20111182&quot;&gt;Caveman diet&lt;/a&gt;), which I had followed 10 years prior with great &lt;a href=&quot;https://about.me/beatlevic&quot;&gt;results&lt;/a&gt;. Doing some online research and catching up on Youtube with low-carb and Keto diets, is when I stumbled upon intermittent fasting videos (&lt;a href=&quot;https://youtu.be/thZFIPOAGNQ&quot;&gt;7&lt;/a&gt;, &lt;a href=&quot;https://youtu.be/thgVz3837l0&quot;&gt;8&lt;/a&gt;, &lt;a href=&quot;https://youtu.be/LLVf3d0rqqY&quot;&gt;9&lt;/a&gt;). As you know by reading this far, the benefits of IF sounded amazing, so I decided, under the medical supervision of my wife, who is an actual MD, to go all in.&lt;/p&gt;
+
+&lt;h4 id=&quot;weight-loss-results&quot;&gt;Weight loss results&lt;/h4&gt;
+
+&lt;p&gt;In the following annotated graph you can view my weight over the course of the past 6 months. I’ll provide you with more context in the next sections.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://www.gstatic.com/charts/loader.js&quot;&gt;&lt;/script&gt;
+
+&lt;div class=&quot;notranslate&quot; id=&quot;chart_div&quot; style=&quot;margin-bottom: 30px; margin-left: -40px; margin-right: -35px&quot;&gt;&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+  google.charts.load(&quot;current&quot;, { packages: [&quot;corechart&quot;, &quot;line&quot;] });
+  google.charts.setOnLoadCallback(drawBasic);
+
+  //https://developers.google.com/chart/interactive/docs/gallery/annotationchart
+  function drawBasic() {
+    var data = new google.visualization.DataTable();
+    data.addColumn(&quot;date&quot;, &quot;Date&quot;);
+    data.addColumn(&quot;number&quot;, &quot;Weight (kg)&quot;);
+    data.addColumn({ type: &quot;string&quot;, role: &quot;annotation&quot; }); // annotation role col.
+    data.addColumn({ type: &quot;string&quot;, role: &quot;annotationText&quot; }); // annotationText col.
+
+    data.addRows([
+      [new Date(2020, 4, 10), 98.5, undefined, undefined],
+      [new Date(2020, 4, 13), 97.9, &quot;A&quot;, &quot;Start - Intermittent Fasting&quot;],
+      [new Date(2020, 4, 17), 96.9, undefined, undefined],
+      [new Date(2020, 4, 20), 95.9, undefined, undefined],
+      [new Date(2020, 4, 24), 95.9, undefined, undefined],
+      [new Date(2020, 4, 25), 94.6, undefined, undefined],
+      [new Date(2020, 4, 27), 94.9, undefined, undefined],
+      [new Date(2020, 4, 30), 94.5, &quot;B&quot;, &quot;Start - Water Fast&quot;],
+      [new Date(2020, 4, 31), 94.0, undefined, undefined],
+      [new Date(2020, 5, 1), 93.4, undefined, undefined],
+      [new Date(2020, 5, 2), 92.9, undefined, undefined],
+      [new Date(2020, 5, 3), 91.4, &quot;C&quot;, &quot;End - Water Fast (5 days)&quot;], // 5 days fasting
+      [new Date(2020, 5, 6), 91.9, undefined, undefined],
+      [new Date(2020, 5, 8), 92.2, undefined, undefined],
+      [new Date(2020, 5, 10), 91.4, undefined, undefined],
+      [new Date(2020, 5, 12), 90.4, undefined, undefined],
+      [new Date(2020, 5, 14), 89.8, undefined, undefined],
+      [new Date(2020, 5, 15), 89.5, undefined, undefined],
+      [new Date(2020, 5, 17), 89.2, undefined, undefined],
+      [new Date(2020, 5, 20), 90.0, undefined, undefined],
+      [new Date(2020, 5, 21), 90.0, &quot;D&quot;, &quot;Start - 2nd Water Fast&quot;],
+      [new Date(2020, 5, 22), 89.3, undefined, undefined],
+      [new Date(2020, 5, 24), 88.3, undefined, undefined],
+      [new Date(2020, 5, 25), 87.6, &quot;E&quot;, &quot;End - 2nd Water Fast (4 days)&quot;],
+      [new Date(2020, 5, 26), 87.7, &quot;F&quot;, &quot;Birthday (Goal: &lt; 88KG)&quot;],
+      [new Date(2020, 6, 1), 88.1, undefined, undefined],
+      [new Date(2020, 6, 5), 88.0, &quot;G&quot;, &quot;Start - Camping trip&quot;],
+      [new Date(2020, 6, 20), 91.2, &quot;H&quot;, &quot;End - Camping trip (2 weeks)&quot;],
+      [new Date(2020, 6, 21), 90.3, undefined, undefined],
+      [new Date(2020, 6, 28), 89.8, undefined, undefined],
+      [new Date(2020, 6, 30), 89.2, undefined, undefined],
+      [new Date(2020, 7, 3), 90.1, undefined, undefined],
+      [new Date(2020, 7, 4), 89.8, undefined, undefined],
+      [new Date(2020, 7, 6), 89.4, undefined, undefined],
+      [new Date(2020, 7, 10), 91.4, &quot;I&quot;, &quot;End - Camping weekend (3 days)&quot;],
+      [new Date(2020, 7, 11), 90.6, undefined, undefined],
+      [new Date(2020, 7, 12), 89.7, undefined, undefined],
+      [new Date(2020, 7, 13), 89.8, &quot;J&quot;, &quot;3 months Intermittent Fasting&quot;],
+      [new Date(2020, 7, 14), 89.7, undefined, undefined],
+      [new Date(2020, 7, 17), 88, undefined, undefined],
+      [new Date(2020, 7, 20), 89, undefined, undefined],
+      [new Date(2020, 7, 21), 88.9, undefined, undefined],
+      [new Date(2020, 7, 24), 89.3, undefined, undefined],
+      [new Date(2020, 7, 26), 89.8, undefined, undefined],
+      [new Date(2020, 7, 27), 89.6, undefined, undefined],
+      [new Date(2020, 7, 28), 88.2, undefined, undefined],
+      [new Date(2020, 7, 29), 89.0, undefined, undefined],
+      [new Date(2020, 7, 31), 88.6, undefined, undefined],
+      [new Date(2020, 8, 2), 89.8, undefined, undefined],
+      [new Date(2020, 8, 3), 88.9, undefined, undefined],
+      [new Date(2020, 8, 7), 88.4, undefined, undefined],
+      [new Date(2020, 8, 9), 89.1, undefined, undefined],
+      [new Date(2020, 8, 14), 88.6, undefined, undefined],
+      [new Date(2020, 8, 17), 90.0, undefined, undefined],
+      [new Date(2020, 8, 20), 90.1, undefined, undefined],
+      [new Date(2020, 8, 21), 90.2, undefined, undefined],
+      [new Date(2020, 8, 23), 89.3, undefined, undefined],
+      [new Date(2020, 8, 25), 89.9, undefined, undefined],
+      [new Date(2020, 8, 28), 89.6, undefined, undefined],
+      [new Date(2020, 8, 30), 89.2, undefined, undefined],
+      [new Date(2020, 9, 1), 89.3, undefined, undefined],
+      [new Date(2020, 9, 12), 90.3, undefined, undefined],
+      [new Date(2020, 9, 16), 89.2, undefined, undefined],
+      [new Date(2020, 9, 28), 90.3, undefined, undefined],
+      [new Date(2020, 9, 30), 90.5, undefined, undefined],
+      [new Date(2020, 10, 1), 90.8, undefined, undefined],
+      [new Date(2020, 10, 2), 91.3, &quot;K&quot;, &quot;Start - 3rd Water Fast&quot;],
+      [new Date(2020, 10, 3), 90.5, undefined, undefined],
+      [new Date(2020, 10, 4), 89.9, undefined, undefined],
+      [new Date(2020, 10, 5), 88.2, &quot;L&quot;, &quot;End - 3rd Water Fast (4 days)&quot;],
+      [new Date(2020, 10, 6), 88.4, undefined, undefined],
+      [new Date(2020, 10, 7), 90.1, undefined, undefined],
+      [new Date(2020, 10, 8), 89.4, undefined, undefined],
+      [new Date(2020, 10, 9), 89.5, undefined, undefined],
+      [new Date(2020, 10, 10), 89.8, undefined, undefined],
+      [new Date(2020, 10, 13), 89.2, undefined, undefined],
+      [new Date(2020, 10, 22), 89.6, undefined, undefined],
+    ]);
+
+    var options = {
+      max: 100,
+      min: 85,
+      // hAxis: {
+      //   format: 'M/d',
+      //   //title: 'Date'
+      // },
+      vAxis: {
+        title: &quot;Weight (kg)&quot;,
+        maxValue: 100,
+      },
+      animation: {
+        duration: 2000,
+        easing: &quot;out&quot;,
+        startup: true,
+      },
+      // trendlines: {
+      //   0: {
+      //     type: 'linear',
+      //     // title: 'Trend',
+      //     visibleInLegend: true,
+      //     showR2: true,
+      //   }
+      // } // Draw a trendline for data series 0.
+    };
+
+    var chart = new google.visualization.LineChart(
+      document.getElementById(&quot;chart_div&quot;)
+    );
+
+    chart.draw(data, options);
+  }
+&lt;/script&gt;
+
+&lt;h4 id=&quot;first-2-weeks&quot;&gt;First 2 weeks&lt;/h4&gt;
+
+&lt;p&gt;I started May 13th weighing &lt;strong&gt;97.9 kg&lt;/strong&gt; (A). To keep track of my eating window I set two alarms, one at 12.30pm labeled ‘lunch’ and the other at 8pm ‘no more eating’. For my exercise routine I started to play tennis on Monday mornings, and I tried to run 6-7 km twice a week.&lt;/p&gt;
+
+&lt;p&gt;I switched to a low-carb diet (Paleo): eating more meat, salads, fruits (primarily berries), vegetables and nuts. No longer eating bread, pasta, rice and oatmeal.&lt;/p&gt;
+
+&lt;p&gt;After one week I already lost 2 kg, and another 1 kg after the second week. I found it very easy to stick to the 8 hour eating window and I was not experiencing hunger sensations in the morning or late evenings. Probably because I was already used to skipping breakfast quite often, and because a low-carb diet also helps lowering your insulin spikes and cravings for more sugar. With lower insulin levels, as a result of lower overall blood sugar, you are also quicker in switching to fat burning!&lt;/p&gt;
+
+&lt;h4 id=&quot;water-only-fasting&quot;&gt;Water-only Fasting&lt;/h4&gt;
+
+&lt;p&gt;With this great start, I was feeling bullish about the changes and progression I had made, but I wanted to push fasting a bit harder. So I decided to try water-only fasting, i.e., eating nothing for a couple of days and only consuming water and some minerals (salt for electrolytes). In theory, your body should just switch to fat burning after 12 hours, increase your level of human growth hormone and increase your adrenaline and metabolism.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;So what about water-only fasting in practise?&lt;/strong&gt; If you would have asked me a year ago, I would have guessed you would continuously feel very hungry and tired. Now I can tell you from experience that it is nothing like that, and that I continued to have plenty of energy throughout the 5 days that I fasted (B-C). Yes, you will feel a bit hungry around the times you would normally eat, but that feeling passes quickly. I believe being on IF together with a low-carb diet for two weeks helped me adjust quickly to fasting over a longer time period.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Tip&lt;/em&gt;: Drink lots and lots of water to stay hydrated. It also helps suppress hunger feelings, giving you a feeling of satiety. Next to water, you are also allowed to drink calorie free beverages like tea and coffee, as those won’t break your fast.&lt;/p&gt;
+
+&lt;p&gt;I experienced it as quite a powerful and liberating feeling, that you can do without food for so long. Having said that, it is both a reminder how privileged and comfortable we are here in the West, as well as how being too comfortable can lead to diseases of affluence, with worldwide obesity having nearly tripled since 1975 up to 1.9 Billion overweight adults in &lt;a href=&quot;https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight&quot;&gt;2016&lt;/a&gt;. A little bit of fasting discomfort might go a long way in helping to reduce obesity.&lt;/p&gt;
+
+&lt;p&gt;It was also quite a joyful experience to eat again after 5 days. I broke my fast by eating a strawberry (see image below) that tasted delightful. You really start to appreciate food more with increased flavour sensations.&lt;/p&gt;
+
+&lt;p&gt;During the 5 day fast, I lost 3kg, of which I gained only 0.5kg back in the days after recovering from the fast. So at this point at 3 weeks in, I already lost a total of 6kg down to &lt;strong&gt;92 kg&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;hiit-workout&quot;&gt;HIIT Workout&lt;/h4&gt;
+
+&lt;p&gt;I continued reading more into intermittent fasting and found resources (e.g., &lt;a href=&quot;https://youtu.be/eQxJMtMvWLQ&quot;&gt;10&lt;/a&gt;) pointing out that it improves fat burning if you workout during your fasting window, and also that the best type of workout is High-intensity Interval Training (&lt;a href=&quot;https://en.wikipedia.org/wiki/High-intensity_interval_training&quot;&gt;HIIT&lt;/a&gt;). The reason why it works so well in combination with intermittent fasting, is that it also stimulates human growth hormone (HGH) secretion, which as we know by now, protects and grows your muscles. So I incorporated a 20 minute &lt;a href=&quot;https://youtu.be/cZnsLVArIt8&quot;&gt;brutal HIIT ladder workout&lt;/a&gt; once a week into my exercise schedule.&lt;/p&gt;
+
+&lt;p&gt;If you don’t see yourself HIIT-ing, then know that walking is also a great exercise for fat burning that complements intermittent fasting.&lt;/p&gt;
+
+&lt;h4 id=&quot;birthday-goal-after-6-weeks&quot;&gt;Birthday goal after 6 weeks&lt;/h4&gt;
+
+&lt;p&gt;June 14th, almost two weeks before my self-imposed deadline, I already hit my &amp;lt;90 kg (200 lb) goal, weighing &lt;strong&gt;89.8 kg&lt;/strong&gt;. Instead of calling it a day, I decided to move the goalposts and set a new target weight of &amp;lt;88 kg. In order to actually hit that target, I embarked on my second water-only fast (D-E) in the final week before my birthday. And lo and behold, June 26th (F), 6 weeks after I started this new lifestyle at a weight of 97.9 kg, I now weighed &lt;strong&gt;87.7 kg&lt;/strong&gt; (193 lb). I lost over 10 kg (22 lb)!&lt;/p&gt;
+
+&lt;p&gt;Not only did I lose a lot of weight, I was also feeling stronger and more focused in general, and gained higher levels of energy throughout the day, e.g., I was doing more chores around the house, writing more blog posts, had no more after lunch dips, no more being tired in the evening or going to bed early and it was easier to do more push-ups and plank exercises. I also experienced more calm and tranquility in my mind, making it easier to escape thought loops. All in all, quite a list of improvements!&lt;/p&gt;
+
+&lt;h4 id=&quot;next-6-weeks&quot;&gt;Next 6 weeks&lt;/h4&gt;
+
+&lt;p&gt;Would I be able to stay at my new weight, or yo-yo back up? And would I stick to intermittent fasting? I took it as an ongoing goal to stay under 90 kg and decided to be less restrictive with my eating window in the weekends and on holidays.&lt;/p&gt;
+
+&lt;p&gt;In my weight graph you can see the results from a two week camping trip in July (G-H) and a camping weekend in August (I). Yes I would gain some weight over these periods, but I would every time return back under my 90 kg baseline. 3 months in, on August 13th, I weighed &lt;strong&gt;89.8 kg&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;last-3-months&quot;&gt;Last 3 months&lt;/h4&gt;
+
+&lt;p&gt;For the last 3 months you can see that my weight fluctuated with low variability between 89 and 90 kg. At the end (during the second Coronavirus lockdown) I was going a little bit over 90 kg (1 kg), so I did my third 4-day water-only fast (K-L) to finish my 6 month stretch strongly, and ended with &lt;strong&gt;89.2 kg&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;While intermittent fasting on its own can provide you with all the fasting benefits, my plan going forward is to keep doing water-only fasts every 3-4 months as it resets your body and forces you to pay attention to your diet again after the fast. A great reminder to stay on track.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/strawberry.jpg&quot; alt=&quot;End of first water fast&quot; width=&quot;60%&quot; title=&quot;End of first water fast&quot; style=&quot;margin-left:150px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This picture was taking right after breaking my first 5 days water-only fast, eating a delicious strawberry.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;wrap-up&quot;&gt;Wrap up&lt;/h3&gt;
+
+&lt;p&gt;Of course, over the past 6 months, I not only changed my pattern of eating, but also changed my diet to a low-carb Paleo-diet and started exercising more. So which benefits can I directly address to fasting? Given I had prior experience with low-carb diets, I can say that while in both cases I experienced weight loss, I can clearly feel a positive difference in energy-levels and focus with intermittent fasting. Not to mention, all the potential long-term benefits I set myself up for with intermittent fasting.&lt;/p&gt;
+
+&lt;p&gt;Fasting and all the related body physiology is such a vast topic, and it has been a challenge to condense it into this blog post without going into too much detail. Hopefully, the scientific evidence I pointed out together with my experience over the past 6 months of putting intermittent fasting into practise, gives you enough reasons to look into intermittent fasting yourself and try it out. It is low risk, but with lots of potential upside.&lt;/p&gt;
+
+&lt;p&gt;To be honest, the only reasons why I think you should not fast, are if you have a medical condition and your doctor tells you not to, or if you don’t want to break out of our culture of eating all the time (hint: not a good reason). Changing a habit can be difficult, but just hang in there and give it a couple of weeks. And if you get tired of explaining yourself to others why you are skipping breakfast or have not been eating for several days, just forward them this blog post.&lt;/p&gt;
+
+&lt;p&gt;I very much like to hear from you, about your experience with fasting or if this post gets you started (or not). If you have any suggestions or corrections, just let me know.&lt;/p&gt;
+
+&lt;p&gt;Breakfast is dead, long live intermittent fasting!&lt;/p&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.nejm.org/doi/full/10.1056/nejmra1905136&quot;&gt;Effects of Intermittent Fasting on Health, Aging, and Disease&lt;/a&gt;, The New England Journal of medicine&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3106288/&quot;&gt;Short-term fasting induces profound neuronal autophagy&lt;/a&gt;, Autophagy Journal&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.healthline.com/nutrition/10-health-benefits-of-intermittent-fasting&quot;&gt;10 Evidence-Based Health Benefits of Intermittent Fasting&lt;/a&gt;, Healthline.com&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://thefastingmethod.com/fasting-a-history-part-i/&quot;&gt;Fasting – A History Part I&lt;/a&gt;, The Fasting Method&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.semanticscholar.org/paper/Fuel-metabolism-in-starvation.-Cahill/a8bb8327226d35259e68ecd8edcc17a3a1380f4a&quot;&gt;Fuel metabolism in starvation&lt;/a&gt;, Medicine, Biology - Annual review of nutrition&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.nobelprize.org/prizes/medicine/2016/press-release/&quot;&gt;2016 Nobel Prize in Physiology or Medicine&lt;/a&gt; for discoveries of mechanisms for autophagy&lt;/li&gt;
+  &lt;li&gt;Video: &lt;a href=&quot;https://youtu.be/thZFIPOAGNQ&quot;&gt;Joe Rogan - Dr. Rhonda Patrick on the Carnivore Diet&lt;/a&gt;, Dr. Rhonda Patrick&lt;/li&gt;
+  &lt;li&gt;Video: &lt;a href=&quot;https://youtu.be/thgVz3837l0&quot;&gt;Amazing New Study Reveals Miracle Benefits Of Fasting&lt;/a&gt;, Dr. Sten Ekberg&lt;/li&gt;
+  &lt;li&gt;Video: &lt;a href=&quot;https://youtu.be/LLVf3d0rqqY&quot;&gt;How to do Intermittent Fasting: Complete Guide&lt;/a&gt;, Thomas DeLauer&lt;/li&gt;
+  &lt;li&gt;Video: &lt;a href=&quot;https://youtu.be/eQxJMtMvWLQ&quot;&gt;5 Reasons You should ALWAYS Workout During a Fast [Burn more fat]&lt;/a&gt;, Thomas DeLauer&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;Special thanks to my wife Femke Stevens for supporting my journey and &lt;a href=&quot;https://www.linkedin.com/in/markvoortman/&quot;&gt;Mark Voortman&lt;/a&gt; for proofreading!&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Docker on macOS without noisy fans</title>
@@ -1212,35 +1510,6 @@ interests in a realtime image stream.&lt;/p&gt;
 
 &lt;p&gt;Just checkout &lt;a href=&quot;http://skylines.net&quot;&gt;skylines.net&lt;/a&gt; and download
 the app from the app store.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>BeatleTech generated with Jekyll</title>
-   <link href="http://beatletech.com/2011/01/03/beatletech-generated-with-jekyll"/>
-   <updated>2011-01-03T00:00:00+01:00</updated>
-   <id>http://beatletech.com/2011/01/03/beatletech-generated-with-jekyll</id>
-   <content type="html">&lt;p&gt;When I started with the creation of BeatleTech.com and blog, I didn’t
-want to rely on Wordpress (or others) as I wanted more flexibility and
-control, and I definitely didn’t want to separate the blog from the main site,
-i.e. linking to a blog on Posterous.&lt;/p&gt;
-
-&lt;p&gt;So my initial plan was to build the site in clojure, given a nice
-online clojure blog example, Brian Carper’s &lt;a href=&quot;https://github.com/briancarper/cow-blog&quot;&gt;Cow-blog&lt;/a&gt;.
-However, shortly after having started, my friend Jeff Rose introduced
-me to &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt;, which is
-a blog-aware, static site generator in Ruby. It allows for templating,
-and uses Disqus for showing a dynamic javascript blog. Generating a static
-site allowed me to copy all the html files to my Transip webhosting
-server, and thereby keeping it extremely low cost. Running a clojure
-site on Google App Engine could have been a good alterative, but I
-liked giving Jekyll a try. It turned out to be very easy and already has tons of
-examples online to check out. I also put the source code of BeatleTech
-on &lt;a href=&quot;https://github.com/beatlevic/BeatleTech&quot;&gt;Github&lt;/a&gt; for sharing, and hope it could be of any use for you.&lt;/p&gt;
-
-&lt;p&gt;So if you are looking for a way to create your website-blog and
-(just like me) already paid for webhosting, which sadly only allows you to do some php
-wizardry, then rest assured as Jekyll can save your day.&lt;/p&gt;
 </content>
  </entry>
  
