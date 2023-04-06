@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2023-04-06T14:47:25+02:00</updated>
+ <updated>2023-04-06T15:00:55+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -16,7 +16,7 @@
    <link href="http://beatletech.com/2023/04/06/minium-viable-kubernetes"/>
    <updated>2023-04-06T00:00:00+02:00</updated>
    <id>http://beatletech.com/2023/04/06/minium-viable-kubernetes</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/tools_logos.png&quot; alt=&quot;Minimum Viable Kubernetes&quot; width=&quot;80%&quot; title=&quot;Minimum Viable Kubernetes&quot; style=&quot;margin-left:50px&quot; /&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;img src=&quot;https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/tools_logos2.jpg&quot; alt=&quot;Minimum Viable Kubernetes&quot; width=&quot;80%&quot; title=&quot;Minimum Viable Kubernetes&quot; style=&quot;margin-left:50px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;When you made the decision to start a Startup and begin working on your MVP (Minimum Viable Product), you at some point need to deploy and run your software somewhere to get your product in the hands of actual users. With their feedback you can iterate your product to find that precious product-market fit and become the next unicorn (or at the very least start making money instead of losing it).&lt;/p&gt;
 

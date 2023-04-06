@@ -7,11 +7,11 @@ meta_keywords: post, kubernetes, k8s, node.js, startup, mvp, mvk
 tags: [startup, kubernetes, node.js, bedrock]
 category: [development]
 image: tools_logos.png
-image_s3: https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/tools_logos.png
+image_s3: https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/tools_logos2.jpg
 published: true
 ---
 
-<img src="https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/tools_logos.png" alt="Minimum Viable Kubernetes" width="80%" title="Minimum Viable Kubernetes"  style="margin-left:50px">
+<img src="https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/tools_logos2.jpg" alt="Minimum Viable Kubernetes" width="80%" title="Minimum Viable Kubernetes"  style="margin-left:50px">
 
 When you made the decision to start a Startup and begin working on your MVP (Minimum Viable Product), you at some point need to deploy and run your software somewhere to get your product in the hands of actual users. With their feedback you can iterate your product to find that precious product-market fit and become the next unicorn (or at the very least start making money instead of losing it).
 
