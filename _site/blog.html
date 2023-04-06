@@ -72,6 +72,336 @@
 
   
   <div class="post blog">
+    <h2><a href="/2023/04/06/minium-viable-kubernetes">Running your Startup on Kubernetes ($90 per month)</a></h2>
+    <p class="publishdate">Thursday, 06 April  2023 </p>
+    <p><p><img src="https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/tools_logos.png" alt="Minimum Viable Kubernetes" width="80%" title="Minimum Viable Kubernetes" style="margin-left:50px" /></p>
+
+<p>When you made the decision to start a Startup and begin working on your MVP (Minimum Viable Product), you at some point need to deploy and run your software somewhere to get your product in the hands of actual users. With their feedback you can iterate your product to find that precious product-market fit and become the next unicorn (or at the very least start making money instead of losing it).</p>
+
+<p>While your MVP is often guaranteed to change drastically over time (even without pivots), a strong foundation will help you iterate faster and scale your product at a later stage without major rewrites. You primarily want to spend your time developing product features and squashing bugs, and not so much on devops and infrastructure (but still keep running costs to a minimum).</p>
+
+<p>In this blog post I like to present what I consider a great foundation with templates to bootstrap your project, which runs on Google Cloud and Kubernetes (K8s). I know there is an ongoing discussion and heated debates about Cloud vs Dedicated servers, and why you should or shouldn’t use Kubernetes for your business. Take for example <a href="https://dev.37signals.com/bringing-our-apps-back-home/">this</a> recent post from 37signals, discussing their journey on and off the cloud, on and off Kubernetes. As always, it depends on your situation and your expertise, and I’m aware that I’m biased having used Google Cloud and Kubernetes a lot, but I hope that my experience and the <a href="http://github.com/bedrockio/bedrock-cli">tools</a> and <a href="http://github.com/beatlevic/bedrock">resources</a> that I’ll share here, will help you hit the ground running and create a successful company.</p>
+
+<h4 id="contents">Contents</h4>
+
+<ul>
+  <li><a href="#minimum-viable-kubernetes-mvk">Minimum Viable Kubernetes (MVK)</a></li>
+  <li><a href="#google-kubernetes-engine-gke">Google Kubernetes Engine (GKE)</a></li>
+  <li><a href="#project-template-bedrockio">Project Template (Bedrock.io)</a>
+    <ul>
+      <li><a href="#namespaces">Namespaces</a></li>
+      <li><a href="#gateway-and-httproutes">Gateway and HTTPRoutes</a></li>
+      <li><a href="#environment-configuration">Environment Configuration</a></li>
+    </ul>
+  </li>
+  <li><a href="#deployment">Deployment</a>
+    <ul>
+      <li><a href="#bootstrap-your-project">Bootstrap your Project</a></li>
+      <li><a href="#gke-workloads">GKE Workloads</a></li>
+      <li><a href="#cloudflare-dns">Cloudflare DNS</a></li>
+      <li><a href="#bedrock-dashboard">Bedrock Dashboard</a></li>
+    </ul>
+  </li>
+  <li><a href="#cost-breakdown">Cost breakdown</a></li>
+  <li><a href="#resources">Resources</a></li>
+</ul>
+
+<hr />
+
+<h3 id="minimum-viable-kubernetes-mvk">Minimum Viable Kubernetes (MVK)</h3>
+
+<p>I’m assuming here that you have heard of k8s and that you know that it is an open-source orchestration tool for containerized applications, originally developed at Google. In case you need an introduction or a refresher, I would refer you to their excellent <a href="https://kubernetes.io/docs/home/">documentation</a>.</p>
+
+<p>Like the minimum set of features you define for your MVP, I like to start defining the minimum set of features you should expect to get from your k8s cluster, in other words, your Minimum Viable Kubernetes (MVK):</p>
+<ul>
+  <li><strong>Flexibility</strong>: Run any containerized (Docker) application or database. If your startup requires a high level of customization, then Kubernetes is great.</li>
+  <li><strong>Scalability</strong>: Scaling your application up and down based on CPU-usage. If your startup expects to grow rapidly, you can easily horizontally scale your load.</li>
+  <li><strong>Load balancing</strong>: Load-balance across pods and services</li>
+  <li><strong>Self-healing and Auto-recovery</strong>: High availability is a nice bonus, but one of my main goals in life is to sleep at night, so we want self-healing and restart containers and nodes that fail.</li>
+  <li><strong>Easy deployment</strong>: K8s comes with a great command line interface (CLI) to manage deployments, but I’ll later introduce a great CLI wrapper (<a href="#bedrockio">Bedrock-CLI</a>) that also helps in building (Docker) and provisioning (Terraform) your infrastructure and applications.</li>
+  <li><strong>Future proofing</strong>: Kubernetes has become the de facto standard for container orchestration.</li>
+  <li><strong>Maintainable over time</strong>: Yes, you can install and run Kubernetes everywhere, but k8s is quite complex with many running components (control plane nodes, compute nodes, scheduler, proxy networking, load balancers, kubelets, etc). Unless you have a dedicated team of devops people (which you don’t, and if you have, congrats on securing your Series A investment!), I would stay away from installing and managing k8s on dedicated servers and instead choose a Cloud managed solution. This supports auto-upgrading to newer versions and making sure you run with the latest security fixes. In the next section I’ll discuss why Google Cloud’s GKE is the best option.</li>
+  <li><strong>Low cost</strong>: We always like to keep costs at a minimum too (traded off against gained features). Running in the Cloud is often synonymous with spending big bucks, but I’ll show you that a production ready cluster can be had for $90 a month (or even $50 if you cheap out on compute resources).</li>
+  <li><strong>Supporting multiple environments</strong>: Last but not least, we like to support different environments (e.g, staging and production). Of course you can spin up a separate k8s cluster for each environment, but we already have <strong>low cost</strong> as a minimum feature, so I’ll show you later how you can manage multiple environments with <code class="language-plaintext highlighter-rouge">Namespaces</code> and <code class="language-plaintext highlighter-rouge">Gateway</code> load balancers in a single cluster.</li>
+</ul>
+
+<p>So now that we have defined our MVK, where running in the Cloud is a must, let’s see why the Google Cloud managed solution (GKE) is the way to go.</p>
+
+<hr />
+
+<h3 id="google-kubernetes-engine-gke">Google Kubernetes Engine (GKE)</h3>
+
+<p>Google Cloud Platform (GCP) offers a managed k8s solution which is called <code class="language-plaintext highlighter-rouge">Google Kubernetes Engine</code> (GKE). As noted earlier, Google is the birthplace of Kubernetes and they have over 15 years of experience running massive workloads. However, that doesn’t mean Google is the only Cloud provider with a managed solution. Amazon Web Services (AWS) and Microsoft Azure both introduced managed clusters, as well as Digital Ocean and a long tail of other providers, adding to the immense growth and popularity of Kubernetes in the industry, overtaking other container orchestration tools like <a href="https://mesos.apache.org/">Mesos</a> and <a href="https://docs.docker.com/engine/swarm/">Docker Swarm</a>, and being a cloud-agnostic alternative to their own vendor lock-in services like AWS ECS for example. A push in Hybrid-cloud and Multi-cloud environments further fueled the need for k8s, allowing you to run the same container everywhere.</p>
+
+<p>I don’t have much experience with Microsoft’s AKS (Azure Kubernetes Service) or any with Digital Ocean’s managed Kubernetes, but I have extensively used both EKS (AWS) and GKE (GCP). I know that choosing a Cloud provider often comes down to your personal preference and sticking to what you already know and have used before. When it comes to managed k8s however, I believe GKE is the clear winner for three main reasons:</p>
+
+<ol>
+  <li><strong>Usability</strong>: The AWS UI console for EKS is nowhere near as clean as GKE. Giving users access to your cluster is painful and logging out of the box is terrible. GKE also has better support and flawless version upgrades. All in all AWS EKS gives me the feeling that they try to push you to use ECS instead. Comparing EKS and ECS is a whole topic on its own, but some limitations of ECS are:
+    <ul>
+      <li>You can only mount EFS volumes, which are not to be used to run stateful applications like databases. While EKS actually has EBS support.</li>
+      <li>No configMaps.</li>
+      <li>No init containers</li>
+      <li>No post-start or pre-stop hooks</li>
+      <li>AWS vendor lock-in</li>
+    </ul>
+  </li>
+  <li><strong>Competitive Advantage</strong>: GKE has features that are not available on other platforms, such as GKE Autopilot, which is a fully managed Kubernetes experience that eliminates the need for cluster management tasks such as node maintenance and upgrades. GCP has a strong focus on containerization which is evident in its portfolio of container-related services, including Cloud Run, Cloud Build, and Anthos. GCP also offers a range of integrated tools for monitoring, logging, and managing Kubernetes clusters, making it easier to manage and maintain Kubernetes workloads.</li>
+  <li><strong>Price</strong>: While both GKE and EKS have a management fee of $0.10 per cluster per hour (~$72 per month), your first cluster in GKE is free of management charge. This is also the reason why we will create multiple environments in one GKE cluster, to avoid this fee (and additional node compute resources). GCP offers sustained use discounts, which can lead to significant cost savings for long-running workloads.</li>
+</ol>
+
+<p>So for starters I would recommend GKE over EKS. GCP’s pricing and integrated tools make it a more attractive option. If you were somehow determined to run on AWS, then I would still recommend running k8s over ECS, and migrate to GKE later ;) Both cloud providers also come with the additional benefit of getting access to a massive suite of other managed cloud services you can easily integrate with, like BigQuery, PubSub, VertexAI, and <a href="https://cloud.google.com/terms/services">many</a> more. And before you start spending your own money on these services, don’t forget to apply for <a href="https://cloud.google.com/free">free credits</a> or in case you secured some funding, you might be eligible for the <a href="https://cloud.google.com/startup">startups cloud program</a>, which can cover up to $100,000 USD in Google Cloud credits in your first year.</p>
+
+<p>One feature I like to highlight, which you get out of the box in the Cloud, but takes some effort  to setup yourself when running your own dedicated solution, are automated backups of your persistent (database) disks. You can provision your cluster (as we will see later) with a disk policy attached to your persistent volumes that runs (hourly) incremental snapshots. So from the get go you are safeguarded against data corruption, storage failures and coding/human mistakes like dropping the wrong collection (or for maximum damage the entire database).</p>
+
+<p>Before diving into the tools to setup your own GKE cluster, I briefly like to mention one other alternative platform that is often used to build MVPs and that is the Platform as a Service (PaaS): <a href="https://www.heroku.com/platform">Heroku</a>. While it is super easy to get started with Heroku and get up and running quickly, you will also quickly ramp up the costs when you need more compute resources (and there no longer is a free tier). You can create your own estimates <a href="https://www.heroku.com/pricing">here</a>, but I ended up with an estimate that is at least 5 times higher for the same resources in Google Cloud. Besides the cost argument, I believe it is worth your time to learn k8s and GKE (even if you are a complete beginner) and not completely abstract away your infrastructure and limiting your flexibility and scalability in the future.</p>
+
+<p>Next up, I’ll provide a project template to setup you own GKE cluster with Bedroock.io (Terraform + Node.js + MongoDB).</p>
+
+<hr />
+
+<h3 id="project-template-bedrockio">Project Template (Bedrock.io)</h3>
+
+<p>For creating your MVP and running it on GKE I like to introduce <a href="http://bedrock.io">Bedrock.io</a>, a platform template which was open-sourced over two years ago. Disclaimer, I’m one of the contributors, and it is the result of iterating over a decade on projects and platforms. This makes Bedrock a battle-tested collection of components, automation and patterns that allow you to rapidly build modern software solutions, tying together Node.js, MongoDB &amp; React.</p>
+
+<p>I would say Bedrock is ideally suited for startups and a strong foundation to build on. On the bedrock.io website you can find a great post on how to <a href="https://blog.bedrock.io/deploying-a-production-ready-kubernetes-node-react-platform-in-under-15-minutes/">deploy a production ready Kubernetes Node+React platform in under 15 minutes</a>. I will recapture some of those steps here, but also introduce some changes (that we are still planning to land in Bedrock). For your convenience I also included the Bedrock <code class="language-plaintext highlighter-rouge">From 0 to production</code> video (by <a href="https://github.com/dominiek">Dominiek</a>) below, which is slightly outdated (from 2 years ago) but still nicely captures all the steps involved:</p>
+
+<iframe src="https://player.vimeo.com/video/443474352?h=0dc02d544a" width="100%" height="540" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>All you need to get started is getting the <a href="http://https://github.com/bedrockio/bedrock-cli">bedrock-cli</a> and creating your own bedrock project as follows:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>curl <span class="nt">-s</span> https://install.bedrock.io | bash
+<span class="nv">$ </span>bedrock create
+</code></pre></div></div>
+
+<p>Your bedrock project will be a Mono Repo that includes the following parts:</p>
+
+<ul>
+  <li><a href="https://github.com/beatlevic/bedrock/tree/master/deployment"><code class="language-plaintext highlighter-rouge">deployment/</code></a> - K8s (GKE) &amp; Terraform deployment automation and playbooks.</li>
+  <li><a href="(https://github.com/beatlevic/bedrock/tree/master/services/api)"><code class="language-plaintext highlighter-rouge">services/api</code></a> - A Node.js API, enabled with authentication middleware, OpenAPI, Mongoose ORM and other best practices.</li>
+  <li><a href="https://github.com/beatlevic/bedrock/tree/master/services/web"><code class="language-plaintext highlighter-rouge">services/web</code></a> - A React Single Page App (SPA) that can interact with that API. Includes React Router, authentication screens, placeholder, API portal, dashboard and a repository of components and helper functions.</li>
+  <li>Documentation for all aspects of your new platform (Github markdown)</li>
+  <li>CI system. If besides Continuous Integration (CI) you also want to enable Continuous Deployment (CD), then you can extend the default Github actions with a <a href="https://docs.github.com/en/actions/deployment/deploying-to-your-cloud-provider/deploying-to-google-kubernetes-engine#creating-the-workflow">GKE deploy workflow</a>.</li>
+</ul>
+
+<p>Currently the Bedrock template is designed to setup a separate GCP project (and hence separate GKE cluster) for each environment (e.g, staging and production). This is great to isolate the environments from each other, but for our startup we like to start with only one cluster to keep the costs down (and avoid the cluster management fee, remember that your first GKE cluster is free of the $0.10 an hour charge). In the next sections I’ll walk you through the following changes you have to make in order to support multiple environments on one cluster:</p>
+
+<ol>
+  <li><strong>Namespaces</strong>: Production, Staging, Data and Infra namespaces with limits and resource quotas.</li>
+  <li><strong>Gateway</strong>: Using a Gateway with HTTP routes instead of Ingresses with VPC native loadbalancing.</li>
+  <li><strong>Environment configuration</strong>: Updating the <code class="language-plaintext highlighter-rouge">config.json</code> for each environment, including the GCR image prefix and cluster details.</li>
+</ol>
+
+<p>We plan to add a <code class="language-plaintext highlighter-rouge">Startup</code> starting template to Bedrock itself too (as an option during the CLI project creation), but until then, I created an example project (<a href="github.com:beatlevic/bedrock">repo</a>) for you as a reference. You can checkout the project running the following, and replacing all mentions of project name <code class="language-plaintext highlighter-rouge">beatlevic</code> across the repo with your the name of your own created GCP project:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone https://github.com/beatlevic/bedrock.git
+</code></pre></div></div>
+
+<p>Or you <code class="language-plaintext highlighter-rouge">bedrock create</code> a new project and make the following changes yourself.</p>
+
+<h4 id="namespaces">Namespaces</h4>
+
+<p>Kubernetes namespaces are a way to logically partition a Kubernetes cluster into multiple virtual clusters. Each namespace provides a separate scope for the resources in the cluster, including pods, services, and other objects. Namespaces can be used for a variety of purposes, such as:</p>
+
+<ul>
+  <li><strong>Resource isolation</strong>: Namespaces can be used to isolate resources between different teams or projects. In our case we will use separate namespaces for each environment, but also for shared <code class="language-plaintext highlighter-rouge">data</code> and <code class="language-plaintext highlighter-rouge">infra</code> namespaces.</li>
+  <li><strong>Access control</strong>: Namespaces can be used to control access to resources in the cluster. For example, you can use namespaces to restrict access to certain pods or services based on user or role.</li>
+  <li><strong>Resource quotas</strong>: Namespaces can be used to set resource quotas for the resources in the cluster. This can help prevent one team or project from monopolizing resources in the cluster.</li>
+  <li><strong>Multitenancy</strong>: Namespaces can be used to support multitenancy in the cluster. For example, you can create a separate namespace for each tenant or customer, which can be very important for a SaaS startup.</li>
+</ul>
+
+<p>Kubernetes includes a default namespace that is used if no other namespace is specified. You can create additional namespaces using the Kubernetes API or the command line interface. In the bedrock k8s template you will four <a href="https://github.com/beatlevic/bedrock/tree/master/deployment/environments/production/namespaces">templates</a> that will be created when you bootstrap the cluster. Resources in K8s are defined in YAML files, like for example the following definition for the <a href="https://github.com/beatlevic/bedrock/blob/master/deployment/environments/production/namespaces/production.yml">production</a> namespace:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Namespace</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">production</span>
+</code></pre></div></div>
+
+<p>To make sure all the production resources are running in the production namespace, you need to specify the namespace for each resource in the <code class="language-plaintext highlighter-rouge">metadata.namespace</code> field. For example the <a href="https://github.com/beatlevic/bedrock/blob/master/deployment/environments/production/services/api-deployment.yml">API</a> deployment for production starts with the following:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">api</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">production</span> <span class="c1"># &lt;= Added environment namespace</span>
+<span class="c1">## ...</span>
+</code></pre></div></div>
+
+<p>We can now also share a single Database (MongoDB) deployment between environments (each with their own database, i.e., bedrock_staging and bedrock_production) by running a Mongo deployment and Mongo service in the <code class="language-plaintext highlighter-rouge">data</code> namespace. We can then access the Mongo service from other namespaces (staging and production) by appending <code class="language-plaintext highlighter-rouge">.data</code> as a suffix to the service name. So the <a href="https://github.com/beatlevic/bedrock/blob/master/deployment/environments/production/services/api-deployment.yml#L31">MONGO_URI</a> in the api-deployment environment variables becomes: <code class="language-plaintext highlighter-rouge">mongodb://mongo.data:27017/bedrock_production</code>.</p>
+
+<p>Finally the <code class="language-plaintext highlighter-rouge">infra</code> namespace will contain infrastructure resources, i.e., <code class="language-plaintext highlighter-rouge">Gateway</code> and <code class="language-plaintext highlighter-rouge">HTTPRoutes</code>, for load balancing and making our services accessible to the public internet.</p>
+
+<h4 id="gateway-and-httproutes">Gateway and HTTPRoutes</h4>
+
+<p>Default Bedrock uses <a href="https://cloud.google.com/kubernetes-engine/docs/concepts/ingress">GKE Ingresses</a> for routing HTTP(S) traffic to applications running in a cluster. We can create separate ingresses for each environment, but each Ingress comes with its own load balancer that we have to pay for ($20 a month). However running a single Ingress will not work, because by default an Ingress does not have cross-namespace support. Luckily we can nowadays use a Gateway instead, which evolves the Ingress resource and does have cross-namespace support (and other improvements that I won’t go into detail here).</p>
+
+<p>To use a Kubernetes Gateway, we first need to define the <code class="language-plaintext highlighter-rouge">Gateway</code> object in our Kubernetes configuration. You can then define an <code class="language-plaintext highlighter-rouge">HTTPRoute</code> object to specify how incoming traffic should be routed to your services.</p>
+
+<p>The <a href="https://github.com/beatlevic/bedrock/blob/master/deployment/environments/production/gateways/gateway.yml">Gateway resource</a> is defined as follows (in the <code class="language-plaintext highlighter-rouge">infra</code> namespace):</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">gateway.networking.k8s.io/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Gateway</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">external-http</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">infra</span>  <span class="c1"># &lt;= Gateway is deployed in infra namespace</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">gatewayClassName</span><span class="pi">:</span> <span class="s">gke-l7-gxlb</span> <span class="c1"># &lt;= Global external HTTP(S) load balancer</span>
+  <span class="na">listeners</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">http</span>
+      <span class="na">protocol</span><span class="pi">:</span> <span class="s">HTTP</span>
+      <span class="na">port</span><span class="pi">:</span> <span class="m">80</span>
+      <span class="na">allowedRoutes</span><span class="pi">:</span>
+        <span class="na">namespaces</span><span class="pi">:</span>
+          <span class="na">from</span><span class="pi">:</span> <span class="s">All</span>
+  <span class="na">addresses</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">NamedAddress</span>
+      <span class="na">value</span><span class="pi">:</span> <span class="s">external-gateway</span> <span class="c1"># &lt;= Name of GCP global external IP address, defined with Terraform</span>
+</code></pre></div></div>
+
+<p>Then within each namespace you create HTTPRoutes that bind to the Gateway to route traffic from, and define which Services to route to, and rules that define what traffic the HTTPRoute matches. Take for example the following <a href="https://github.com/beatlevic/bedrock/blob/master/deployment/environments/production/gateways/bedrock-api-route-staging.yml">bedrock-api HTTPRoute</a> that routes traffic from <code class="language-plaintext highlighter-rouge">bedrock-api.beatlevic.dev</code> to the api service in the staging namespace:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">kind</span><span class="pi">:</span> <span class="s">HTTPRoute</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">gateway.networking.k8s.io/v1beta1</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">bedrock-api</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">staging</span> <span class="c1"># &lt;= HTTPRoute and api are deployed in the staging namespace</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">parentRefs</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">external-http</span>
+      <span class="na">namespace</span><span class="pi">:</span> <span class="s">infra</span> <span class="c1"># &lt;= Gateway is deployed in the infra namespace</span>
+  <span class="na">hostnames</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">bedrock-api.beatlevic.dev</span>
+  <span class="na">rules</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">backendRefs</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">api</span>
+          <span class="na">port</span><span class="pi">:</span> <span class="m">80</span>
+</code></pre></div></div>
+
+<h4 id="environment-configuration">Environment Configuration</h4>
+
+<p>One final (small) change we need to make is to the environment configuration of the staging environment. Each environment has its own <code class="language-plaintext highlighter-rouge">config.json</code> file to specify the GCP project and GKE cluster name. We just need to use the same values here as we do in the config for production, with only one additional variable that is setting the <code class="language-plaintext highlighter-rouge">gcrPrefix</code> to <code class="language-plaintext highlighter-rouge">staging-</code>. The reason for this is when we build and deploy a service using the bedrock cli (<code class="language-plaintext highlighter-rouge">bedrock cloud deploy production api</code>), it by default pushes to the Google Container Registry (GCR) and defines the specific registry for the service as follows: <code class="language-plaintext highlighter-rouge">gcr.io/&lt;PROJECT&gt;/&lt;REPO&gt;-services-&lt;SERVICE&gt;</code>, e.g., <code class="language-plaintext highlighter-rouge">gcr.io/beatlevic/bedrock-services-api</code> for the API service. We like to build separate images for production and staging, so the <code class="language-plaintext highlighter-rouge">gcrPrefix</code> adds an additional prefix to the registry name, e.g., <code class="language-plaintext highlighter-rouge">gcr.io/beatlevic/staging-bedrock-services-api</code> for the API staging docker image.</p>
+
+<p>Staging <a href="github.com:beatlevic/bedrock/deployment/environments/staging/config.json">config.json</a>:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"gcloud"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"envName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"staging"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"project"</span><span class="p">:</span><span class="w"> </span><span class="s2">"beatlevic"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"gcrPrefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"staging-"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dropDeploymentPostfix"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"computeZone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"europe-west4-a"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"kubernetes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"clusterName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cluster-1"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<hr />
+
+<h3 id="deployment">Deployment</h3>
+
+<h4 id="bootstrap-your-project">Bootstrap your Project</h4>
+
+<p>Bootstrapping your project only requires you to follow 3 steps:</p>
+
+<ol>
+  <li>Create your own GCP project. Or you can use an existing one. In our example we use project <code class="language-plaintext highlighter-rouge">beatlevic</code>.</li>
+  <li>Clone and modify the <a href="github.com:beatlevic/bedrock">example repo</a> to your liking, or start with creating a bedrock project on the command line with <code class="language-plaintext highlighter-rouge">bedrock create</code>, and adding the namespace, gateway and environment configuration changes.</li>
+  <li>Provision and bootstrap your cluster, services and other resources with one single command:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bedrock cloud bootstrap production &lt;gcloud-project-name&gt;
+</code></pre></div></div>
+
+<h4 id="gke-workloads">GKE Workloads</h4>
+
+<p>When the bootstrap command runs successfully and you also deployed the staging services (<code class="language-plaintext highlighter-rouge">bedrock cloud deploy staging</code>), you should be seeing the following workloads in the gcloud console (or run <code class="language-plaintext highlighter-rouge">kubectl get pods</code>):</p>
+
+<p><img src="https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/bedrock-workloads.png" alt="Bedrock GKE workloads" width="80%" title="Bedrock GKE workloads" style="margin-left:20px" /></p>
+
+<p>You can see three services (api, api-cli and web) for each environment and mongo (and mongo-backup for daily MongoDB dumps to bucket storage) in the data namespace.</p>
+
+<h4 id="cloudflare-dns">Cloudflare DNS</h4>
+
+<p>We prefer to use Cloudflare DNS to proxy traffic from your domain to the Gateway IP. You can get your Gateway global IP by checking:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gcloud compute addresses list
+NAME              ADDRESS/RANGE   TYPE      PURPOSE  NETWORK  REGION  SUBNET  STATUS
+external-gateway  34.110.231.132  EXTERNAL                                    IN_USE
+</code></pre></div></div>
+
+<p>Then next, you enter the IP for each of the (sub) domains that you have, which need to be the same hostnames that use in your HTTPRoutes. So in my case, for the <code class="language-plaintext highlighter-rouge">beatlevic.dev</code> domain:</p>
+
+<p><img src="https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/cloudflare.png" alt="Cloudflare DNS" width="100%" title="Cloudflare DNS" style="margin-left:0px" /></p>
+
+<p>You can check if the api is running successfully by requesting or opening the api endpoint in your browser:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>curl http://bedrock-api.beatlevic.dev
+<span class="o">{</span>
+  <span class="s2">"environment"</span>: <span class="s2">"staging"</span>,
+  <span class="s2">"version"</span>: <span class="s2">"0.0.1"</span>,
+  <span class="s2">"openapiPath"</span>: <span class="s2">"/openapi.json"</span>,
+  <span class="s2">"servedAt"</span>: <span class="s2">"2023-03-20T09:49:51.520Z"</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="bedrock-dashboard">Bedrock Dashboard</h4>
+
+<p>With everything running you can now check the web service (dashboard) by opening <a href="https://bedrock.beatlevic.dev">bedrock.beatlevic.dev</a>. There you should be greeted with a login/signup form.</p>
+
+<p><img src="https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/bedrock-login.png" alt="Bedrock login screen" width="60%" title="Bedrock Login" style="margin-left:150px" /></p>
+
+<hr />
+
+<p>You can login with the user/password combination as defined in the <a href="https://github.com/beatlevic/bedrock/blob/master/deployment/environments/production/services/api-cli-deployment.yml#L33">api-cli</a> deployment (Note: I changed the credentials for my own deployment), which sets up fixtures (including users) on its first run.</p>
+
+<p><img src="https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/bedrock-logged-in.png" alt="Bedrock products screen" width="100%" title="Bedrock Products" style="margin-left:0px" /></p>
+
+<p>The bedrock <a href="https://blog.bedrock.io/deploying-a-production-ready-kubernetes-node-react-platform-in-under-15-minutes/">blog post</a> goes a bit deeper into how you can make UI and API changes, and how you run things locally. However, it doesn’t yet include the generator and scaffolding features (both for code and documentation) that we introduced over time, which is due for another blog post.</p>
+
+<hr />
+
+<h3 id="cost-breakdown">Cost breakdown</h3>
+
+<p>Finally I’ll conclude with the cost breakdown of running a single production ready GKE cluster for multiple environments. The production <a href="https://github.com/beatlevic/bedrock/blob/master/deployment/environments/production/config.json">config.json</a> defines the cluster size and machine type that will be passed into the Terraform templates to provision your GKE cluster. I opted for machine type <code class="language-plaintext highlighter-rouge">n2d-standard-2</code>, which provides 2 CPUs and 8 GB of RAM, and costs $54,- monthly in the europ-west region including a sustained usage discount. It’s not only the compute resource your have to pay for, but also the load balancers, traffic, reserved IPs and storage. GCP billing reports provide a great and detailed overview of your costs, so let’s have a look at the past 30 days:</p>
+
+<p><img src="https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/cost-breakdown.png" alt="Daily cost breakdown for the past 30 days" width="100%" title="Daily cost breakdown for the past 30 days" style="margin-left:0px" /></p>
+
+<p>As you can see the total is E82,64 which translates to approximately <strong>$90,- a month</strong>.</p>
+
+<p>You could even bring this number down by using half the compute resources and selecting for example machine type <code class="language-plaintext highlighter-rouge">n1-standard-1</code>, reducing the costs with $28,-, bring the total down to $62,-. If that initially works for you, then you can always increase the resources later (and the cluster will already add more nodes when you start requesting more resources), but I prefer to start with nodes that have a bit more memory as we are also running a (shared) MongoDb instance. Running in the European region is also slightly more expensive than in the US, so you can save a couple of percentages there.</p>
+
+<p>You might be tempted to run on spot instances, which are are even cheaper, but those are only for batch jobs and fault-tolerant workloads, and you want some guarantees that your production system is available. It can however be viable to expand with node pools running on spot instances if you require more batchable compute resources over time.</p>
+
+<p>But there you have it. Running your Startup MVP on Kubernetes for $90 per month, a solid foundation, ready to scale and take over the world!</p>
+
+<hr />
+
+<h3 id="resources">Resources</h3>
+
+<ol>
+  <li>Bedrock CLI: <a href="http://github.com/bedrockio/bedrock-cli">github.com/bedrockio/bedrock-cli</a></li>
+  <li>Project template: <a href="http://github.com/beatlevic/bedrock">github.com/beatlevic/bedrock</a></li>
+</ol>
+
+      <div class='clear_both tags'>
+        <span>
+          tags: 
+          <a href="../../../archive#startup">startup</a>,  
+          <a href="../../../archive#kubernetes">kubernetes</a>,  
+          <a href="../../../archive#node.js">node.js</a>,  
+          <a href="../../../archive#bedrock">bedrock</a> 
+        </span>
+      </div>
+      <div class="comments">
+	<span style="font-size: 100%;"><a href="/2023/04/06/minium-viable-kubernetes#disqus_thread">View Comments</a> </span>
+      </div>
+    </p>
+  </div>
+  
+  <div class="post blog">
     <h2><a href="/2020/11/24/goodbye-breakfast">Goodbye breakfast: 6 months of Intermittent Fasting</a></h2>
     <p class="publishdate">Tuesday, 24 November  2020 </p>
     <p><p><img src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/intermittent-fasting-mogwai-16-8-blue.png" alt="Intermittent Fasting 16/8" width="70%" title="Intermittent Fasting 16/8" style="margin-left:100px" /></p>
@@ -648,17 +978,17 @@
 11
 12
 13
-</pre></td><td class="code"><pre>  <span class="kd">const</span> <span class="nx">search</span> <span class="o">=</span> <span class="nx">instantsearch</span><span class="p">({</span>
+</pre></td><td class="code"><pre>  <span class="kd">const</span> <span class="nx">search</span> <span class="o">=</span> <span class="nf">instantsearch</span><span class="p">({</span>
     <span class="na">appId</span><span class="p">:</span> <span class="dl">"</span><span class="s2">K4MUG7LHCA</span><span class="dl">"</span><span class="p">,</span>
     <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2b61f303d605176b556cb377d5ef3acd</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// public read-only key</span>
     <span class="na">indexName</span><span class="p">:</span> <span class="dl">"</span><span class="s2">prod_beatletech</span><span class="dl">"</span><span class="p">,</span>
-    <span class="na">searchFunction</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">helper</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kd">var</span> <span class="nx">searchResults</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">search-hits-wrapper</span><span class="dl">"</span><span class="p">);</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">helper</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">query</span> <span class="o">===</span> <span class="dl">""</span> <span class="o">&amp;&amp;</span> <span class="nx">searchResults</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">none</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="na">searchFunction</span><span class="p">:</span> <span class="nf">function </span><span class="p">(</span><span class="nx">helper</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">searchResults</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">search-hits-wrapper</span><span class="dl">"</span><span class="p">);</span>
+      <span class="nf">if </span><span class="p">(</span><span class="nx">helper</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">query</span> <span class="o">===</span> <span class="dl">""</span> <span class="o">&amp;&amp;</span> <span class="nx">searchResults</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">none</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">return</span><span class="p">;</span>
       <span class="p">}</span>
       <span class="nx">searchResults</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="nx">helper</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">query</span> <span class="p">?</span> <span class="dl">"</span><span class="s2">block</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">none</span><span class="dl">"</span><span class="p">;</span>
-      <span class="nx">helper</span><span class="p">.</span><span class="nx">search</span><span class="p">();</span>
+      <span class="nx">helper</span><span class="p">.</span><span class="nf">search</span><span class="p">();</span>
     <span class="p">},</span>
   <span class="p">});</span>
 </pre></td></tr></tbody></table></code></pre></figure>
@@ -680,16 +1010,16 @@
 11
 12
 13
-</pre></td><td class="code"><pre>  <span class="nx">search</span><span class="p">.</span><span class="nx">addWidget</span><span class="p">(</span>
-    <span class="nx">instantsearch</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">searchBox</span><span class="p">({</span>
+</pre></td><td class="code"><pre>  <span class="nx">search</span><span class="p">.</span><span class="nf">addWidget</span><span class="p">(</span>
+    <span class="nx">instantsearch</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nf">searchBox</span><span class="p">({</span>
       <span class="na">container</span><span class="p">:</span> <span class="dl">"</span><span class="s2">#search-searchbar</span><span class="dl">"</span><span class="p">,</span>
       <span class="na">placeholder</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Search into posts...</span><span class="dl">"</span><span class="p">,</span>
       <span class="na">poweredBy</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
       <span class="na">autofocus</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
       <span class="na">showLoadingIndicator</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="nx">queryHook</span><span class="p">(</span><span class="nx">query</span><span class="p">,</span> <span class="nx">refine</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timerId</span><span class="p">);</span>
-        <span class="nx">timerId</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">refine</span><span class="p">(</span><span class="nx">query</span><span class="p">),</span> <span class="mi">500</span><span class="p">);</span>
+      <span class="nf">queryHook</span><span class="p">(</span><span class="nx">query</span><span class="p">,</span> <span class="nx">refine</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">clearTimeout</span><span class="p">(</span><span class="nx">timerId</span><span class="p">);</span>
+        <span class="nx">timerId</span> <span class="o">=</span> <span class="nf">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nf">refine</span><span class="p">(</span><span class="nx">query</span><span class="p">),</span> <span class="mi">500</span><span class="p">);</span>
       <span class="p">},</span>
     <span class="p">})</span>
   <span class="p">);</span>
@@ -884,49 +1214,6 @@ any understanding of how they got there or what they have created”</em> [<a hr
       </div>
       <div class="comments">
 	<span style="font-size: 100%;"><a href="/2015/09/10/o-data-scientist-where-art-thou#disqus_thread">View Comments</a> </span>
-      </div>
-    </p>
-  </div>
-  
-  <div class="post blog">
-    <h2><a href="/2015/06/01/new-job-at-thinktopic">New Job at ThinkTopic</a></h2>
-    <p class="publishdate">Monday, 01 June  2015 </p>
-    <p><p>Two months ago a good friend of mine (<a href="https://www.linkedin.com/in/rosejn">Jeff Rose</a>), who is a
-former <a href="http://deepmind.com/">DeepMind</a> engineer (acquired by Google), presented me with an
-opportunity to come work at <a href="http://thinktopic.com">ThinkTopic</a> to build intelligent tools for a big
-publisher that involves image search, collaborative filtering, an intelligent catalog, and much more
-by applying Deep Learning techniques for learning in Neural Networks. Additionally most development
-work would be done in <a href="http://clojure.org">Clojure</a> (a Lisp dialect on the JVM), which for me really
-is the icing on the cake, being a longtime Clojure and functional programming fan.</p>
-
-<p>So after almost 4 years of working as Chief Architect and Data Scientist at
-<a href="http://bottlenose.com">Bottlenose</a>, I decided to take on this new challenge to start working for
-ThinkTopic, of which today is my first day.</p>
-
-<p>I had a great time at Bottlenose working with a great group of people. It has been amazing to see
-the company grow to where it is right now, and the potential of where it could go. Getting the
-<a href="http://beatletech.com/2015/02/09/bottlenose-series-b/">KPMG investment</a> has been a great milestone
-and together with all the work over the years the idea of no longer being part of Bottlenose feels a
-bit weird. Bottlenose has given me a lot in terms of experience, joy and friendships.</p>
-
-<p>Having said that, I’m keeping my desk at the Hackers and Founders building in Amsterdam, so I’m not
-going cold turkey on my former colleagues (only switching rooms).</p>
-
-<p>I’m excited to go on this new ThinkTopic adventure, which for today means diving back into
-Convolutional Neural Networks. May the fun and challenge begin.</p>
-
-<p><img src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/thinktopic-logo.png" alt="ThinkTopic" width="646" height="195" style="margin-left:60px" /></p>
-
-      <div class='clear_both tags'>
-        <span>
-          tags: 
-          <a href="../../../archive#thinktopic">thinktopic</a>,  
-          <a href="../../../archive#clojure">clojure</a>,  
-          <a href="../../../archive#deep-learning">deep-learning</a> 
-        </span>
-      </div>
-      <div class="comments">
-	<span style="font-size: 100%;"><a href="/2015/06/01/new-job-at-thinktopic#disqus_thread">View Comments</a> </span>
       </div>
     </p>
   </div>

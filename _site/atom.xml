@@ -4,12 +4,331 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2020-11-24T16:22:21+01:00</updated>
+ <updated>2023-04-06T14:47:25+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
  </author>
 
+ 
+ <entry>
+   <title>Running your Startup on Kubernetes ($90 per month)</title>
+   <link href="http://beatletech.com/2023/04/06/minium-viable-kubernetes"/>
+   <updated>2023-04-06T00:00:00+02:00</updated>
+   <id>http://beatletech.com/2023/04/06/minium-viable-kubernetes</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/tools_logos.png&quot; alt=&quot;Minimum Viable Kubernetes&quot; width=&quot;80%&quot; title=&quot;Minimum Viable Kubernetes&quot; style=&quot;margin-left:50px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When you made the decision to start a Startup and begin working on your MVP (Minimum Viable Product), you at some point need to deploy and run your software somewhere to get your product in the hands of actual users. With their feedback you can iterate your product to find that precious product-market fit and become the next unicorn (or at the very least start making money instead of losing it).&lt;/p&gt;
+
+&lt;p&gt;While your MVP is often guaranteed to change drastically over time (even without pivots), a strong foundation will help you iterate faster and scale your product at a later stage without major rewrites. You primarily want to spend your time developing product features and squashing bugs, and not so much on devops and infrastructure (but still keep running costs to a minimum).&lt;/p&gt;
+
+&lt;p&gt;In this blog post I like to present what I consider a great foundation with templates to bootstrap your project, which runs on Google Cloud and Kubernetes (K8s). I know there is an ongoing discussion and heated debates about Cloud vs Dedicated servers, and why you should or shouldn’t use Kubernetes for your business. Take for example &lt;a href=&quot;https://dev.37signals.com/bringing-our-apps-back-home/&quot;&gt;this&lt;/a&gt; recent post from 37signals, discussing their journey on and off the cloud, on and off Kubernetes. As always, it depends on your situation and your expertise, and I’m aware that I’m biased having used Google Cloud and Kubernetes a lot, but I hope that my experience and the &lt;a href=&quot;http://github.com/bedrockio/bedrock-cli&quot;&gt;tools&lt;/a&gt; and &lt;a href=&quot;http://github.com/beatlevic/bedrock&quot;&gt;resources&lt;/a&gt; that I’ll share here, will help you hit the ground running and create a successful company.&lt;/p&gt;
+
+&lt;h4 id=&quot;contents&quot;&gt;Contents&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#minimum-viable-kubernetes-mvk&quot;&gt;Minimum Viable Kubernetes (MVK)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#google-kubernetes-engine-gke&quot;&gt;Google Kubernetes Engine (GKE)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#project-template-bedrockio&quot;&gt;Project Template (Bedrock.io)&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#namespaces&quot;&gt;Namespaces&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#gateway-and-httproutes&quot;&gt;Gateway and HTTPRoutes&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#environment-configuration&quot;&gt;Environment Configuration&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#deployment&quot;&gt;Deployment&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#bootstrap-your-project&quot;&gt;Bootstrap your Project&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#gke-workloads&quot;&gt;GKE Workloads&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#cloudflare-dns&quot;&gt;Cloudflare DNS&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#bedrock-dashboard&quot;&gt;Bedrock Dashboard&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#cost-breakdown&quot;&gt;Cost breakdown&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#resources&quot;&gt;Resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;minimum-viable-kubernetes-mvk&quot;&gt;Minimum Viable Kubernetes (MVK)&lt;/h3&gt;
+
+&lt;p&gt;I’m assuming here that you have heard of k8s and that you know that it is an open-source orchestration tool for containerized applications, originally developed at Google. In case you need an introduction or a refresher, I would refer you to their excellent &lt;a href=&quot;https://kubernetes.io/docs/home/&quot;&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Like the minimum set of features you define for your MVP, I like to start defining the minimum set of features you should expect to get from your k8s cluster, in other words, your Minimum Viable Kubernetes (MVK):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Flexibility&lt;/strong&gt;: Run any containerized (Docker) application or database. If your startup requires a high level of customization, then Kubernetes is great.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Scalability&lt;/strong&gt;: Scaling your application up and down based on CPU-usage. If your startup expects to grow rapidly, you can easily horizontally scale your load.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Load balancing&lt;/strong&gt;: Load-balance across pods and services&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Self-healing and Auto-recovery&lt;/strong&gt;: High availability is a nice bonus, but one of my main goals in life is to sleep at night, so we want self-healing and restart containers and nodes that fail.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Easy deployment&lt;/strong&gt;: K8s comes with a great command line interface (CLI) to manage deployments, but I’ll later introduce a great CLI wrapper (&lt;a href=&quot;#bedrockio&quot;&gt;Bedrock-CLI&lt;/a&gt;) that also helps in building (Docker) and provisioning (Terraform) your infrastructure and applications.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Future proofing&lt;/strong&gt;: Kubernetes has become the de facto standard for container orchestration.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Maintainable over time&lt;/strong&gt;: Yes, you can install and run Kubernetes everywhere, but k8s is quite complex with many running components (control plane nodes, compute nodes, scheduler, proxy networking, load balancers, kubelets, etc). Unless you have a dedicated team of devops people (which you don’t, and if you have, congrats on securing your Series A investment!), I would stay away from installing and managing k8s on dedicated servers and instead choose a Cloud managed solution. This supports auto-upgrading to newer versions and making sure you run with the latest security fixes. In the next section I’ll discuss why Google Cloud’s GKE is the best option.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Low cost&lt;/strong&gt;: We always like to keep costs at a minimum too (traded off against gained features). Running in the Cloud is often synonymous with spending big bucks, but I’ll show you that a production ready cluster can be had for $90 a month (or even $50 if you cheap out on compute resources).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Supporting multiple environments&lt;/strong&gt;: Last but not least, we like to support different environments (e.g, staging and production). Of course you can spin up a separate k8s cluster for each environment, but we already have &lt;strong&gt;low cost&lt;/strong&gt; as a minimum feature, so I’ll show you later how you can manage multiple environments with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Namespaces&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gateway&lt;/code&gt; load balancers in a single cluster.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So now that we have defined our MVK, where running in the Cloud is a must, let’s see why the Google Cloud managed solution (GKE) is the way to go.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;google-kubernetes-engine-gke&quot;&gt;Google Kubernetes Engine (GKE)&lt;/h3&gt;
+
+&lt;p&gt;Google Cloud Platform (GCP) offers a managed k8s solution which is called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Google Kubernetes Engine&lt;/code&gt; (GKE). As noted earlier, Google is the birthplace of Kubernetes and they have over 15 years of experience running massive workloads. However, that doesn’t mean Google is the only Cloud provider with a managed solution. Amazon Web Services (AWS) and Microsoft Azure both introduced managed clusters, as well as Digital Ocean and a long tail of other providers, adding to the immense growth and popularity of Kubernetes in the industry, overtaking other container orchestration tools like &lt;a href=&quot;https://mesos.apache.org/&quot;&gt;Mesos&lt;/a&gt; and &lt;a href=&quot;https://docs.docker.com/engine/swarm/&quot;&gt;Docker Swarm&lt;/a&gt;, and being a cloud-agnostic alternative to their own vendor lock-in services like AWS ECS for example. A push in Hybrid-cloud and Multi-cloud environments further fueled the need for k8s, allowing you to run the same container everywhere.&lt;/p&gt;
+
+&lt;p&gt;I don’t have much experience with Microsoft’s AKS (Azure Kubernetes Service) or any with Digital Ocean’s managed Kubernetes, but I have extensively used both EKS (AWS) and GKE (GCP). I know that choosing a Cloud provider often comes down to your personal preference and sticking to what you already know and have used before. When it comes to managed k8s however, I believe GKE is the clear winner for three main reasons:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Usability&lt;/strong&gt;: The AWS UI console for EKS is nowhere near as clean as GKE. Giving users access to your cluster is painful and logging out of the box is terrible. GKE also has better support and flawless version upgrades. All in all AWS EKS gives me the feeling that they try to push you to use ECS instead. Comparing EKS and ECS is a whole topic on its own, but some limitations of ECS are:
+    &lt;ul&gt;
+      &lt;li&gt;You can only mount EFS volumes, which are not to be used to run stateful applications like databases. While EKS actually has EBS support.&lt;/li&gt;
+      &lt;li&gt;No configMaps.&lt;/li&gt;
+      &lt;li&gt;No init containers&lt;/li&gt;
+      &lt;li&gt;No post-start or pre-stop hooks&lt;/li&gt;
+      &lt;li&gt;AWS vendor lock-in&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Competitive Advantage&lt;/strong&gt;: GKE has features that are not available on other platforms, such as GKE Autopilot, which is a fully managed Kubernetes experience that eliminates the need for cluster management tasks such as node maintenance and upgrades. GCP has a strong focus on containerization which is evident in its portfolio of container-related services, including Cloud Run, Cloud Build, and Anthos. GCP also offers a range of integrated tools for monitoring, logging, and managing Kubernetes clusters, making it easier to manage and maintain Kubernetes workloads.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Price&lt;/strong&gt;: While both GKE and EKS have a management fee of $0.10 per cluster per hour (~$72 per month), your first cluster in GKE is free of management charge. This is also the reason why we will create multiple environments in one GKE cluster, to avoid this fee (and additional node compute resources). GCP offers sustained use discounts, which can lead to significant cost savings for long-running workloads.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So for starters I would recommend GKE over EKS. GCP’s pricing and integrated tools make it a more attractive option. If you were somehow determined to run on AWS, then I would still recommend running k8s over ECS, and migrate to GKE later ;) Both cloud providers also come with the additional benefit of getting access to a massive suite of other managed cloud services you can easily integrate with, like BigQuery, PubSub, VertexAI, and &lt;a href=&quot;https://cloud.google.com/terms/services&quot;&gt;many&lt;/a&gt; more. And before you start spending your own money on these services, don’t forget to apply for &lt;a href=&quot;https://cloud.google.com/free&quot;&gt;free credits&lt;/a&gt; or in case you secured some funding, you might be eligible for the &lt;a href=&quot;https://cloud.google.com/startup&quot;&gt;startups cloud program&lt;/a&gt;, which can cover up to $100,000 USD in Google Cloud credits in your first year.&lt;/p&gt;
+
+&lt;p&gt;One feature I like to highlight, which you get out of the box in the Cloud, but takes some effort  to setup yourself when running your own dedicated solution, are automated backups of your persistent (database) disks. You can provision your cluster (as we will see later) with a disk policy attached to your persistent volumes that runs (hourly) incremental snapshots. So from the get go you are safeguarded against data corruption, storage failures and coding/human mistakes like dropping the wrong collection (or for maximum damage the entire database).&lt;/p&gt;
+
+&lt;p&gt;Before diving into the tools to setup your own GKE cluster, I briefly like to mention one other alternative platform that is often used to build MVPs and that is the Platform as a Service (PaaS): &lt;a href=&quot;https://www.heroku.com/platform&quot;&gt;Heroku&lt;/a&gt;. While it is super easy to get started with Heroku and get up and running quickly, you will also quickly ramp up the costs when you need more compute resources (and there no longer is a free tier). You can create your own estimates &lt;a href=&quot;https://www.heroku.com/pricing&quot;&gt;here&lt;/a&gt;, but I ended up with an estimate that is at least 5 times higher for the same resources in Google Cloud. Besides the cost argument, I believe it is worth your time to learn k8s and GKE (even if you are a complete beginner) and not completely abstract away your infrastructure and limiting your flexibility and scalability in the future.&lt;/p&gt;
+
+&lt;p&gt;Next up, I’ll provide a project template to setup you own GKE cluster with Bedroock.io (Terraform + Node.js + MongoDB).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;project-template-bedrockio&quot;&gt;Project Template (Bedrock.io)&lt;/h3&gt;
+
+&lt;p&gt;For creating your MVP and running it on GKE I like to introduce &lt;a href=&quot;http://bedrock.io&quot;&gt;Bedrock.io&lt;/a&gt;, a platform template which was open-sourced over two years ago. Disclaimer, I’m one of the contributors, and it is the result of iterating over a decade on projects and platforms. This makes Bedrock a battle-tested collection of components, automation and patterns that allow you to rapidly build modern software solutions, tying together Node.js, MongoDB &amp;amp; React.&lt;/p&gt;
+
+&lt;p&gt;I would say Bedrock is ideally suited for startups and a strong foundation to build on. On the bedrock.io website you can find a great post on how to &lt;a href=&quot;https://blog.bedrock.io/deploying-a-production-ready-kubernetes-node-react-platform-in-under-15-minutes/&quot;&gt;deploy a production ready Kubernetes Node+React platform in under 15 minutes&lt;/a&gt;. I will recapture some of those steps here, but also introduce some changes (that we are still planning to land in Bedrock). For your convenience I also included the Bedrock &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;From 0 to production&lt;/code&gt; video (by &lt;a href=&quot;https://github.com/dominiek&quot;&gt;Dominiek&lt;/a&gt;) below, which is slightly outdated (from 2 years ago) but still nicely captures all the steps involved:&lt;/p&gt;
+
+&lt;iframe src=&quot;https://player.vimeo.com/video/443474352?h=0dc02d544a&quot; width=&quot;100%&quot; height=&quot;540&quot; frameborder=&quot;0&quot; allow=&quot;fullscreen; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;All you need to get started is getting the &lt;a href=&quot;http://https://github.com/bedrockio/bedrock-cli&quot;&gt;bedrock-cli&lt;/a&gt; and creating your own bedrock project as follows:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; https://install.bedrock.io | bash
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bedrock create
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Your bedrock project will be a Mono Repo that includes the following parts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/beatlevic/bedrock/tree/master/deployment&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deployment/&lt;/code&gt;&lt;/a&gt; - K8s (GKE) &amp;amp; Terraform deployment automation and playbooks.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;(https://github.com/beatlevic/bedrock/tree/master/services/api)&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;services/api&lt;/code&gt;&lt;/a&gt; - A Node.js API, enabled with authentication middleware, OpenAPI, Mongoose ORM and other best practices.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/beatlevic/bedrock/tree/master/services/web&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;services/web&lt;/code&gt;&lt;/a&gt; - A React Single Page App (SPA) that can interact with that API. Includes React Router, authentication screens, placeholder, API portal, dashboard and a repository of components and helper functions.&lt;/li&gt;
+  &lt;li&gt;Documentation for all aspects of your new platform (Github markdown)&lt;/li&gt;
+  &lt;li&gt;CI system. If besides Continuous Integration (CI) you also want to enable Continuous Deployment (CD), then you can extend the default Github actions with a &lt;a href=&quot;https://docs.github.com/en/actions/deployment/deploying-to-your-cloud-provider/deploying-to-google-kubernetes-engine#creating-the-workflow&quot;&gt;GKE deploy workflow&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Currently the Bedrock template is designed to setup a separate GCP project (and hence separate GKE cluster) for each environment (e.g, staging and production). This is great to isolate the environments from each other, but for our startup we like to start with only one cluster to keep the costs down (and avoid the cluster management fee, remember that your first GKE cluster is free of the $0.10 an hour charge). In the next sections I’ll walk you through the following changes you have to make in order to support multiple environments on one cluster:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Namespaces&lt;/strong&gt;: Production, Staging, Data and Infra namespaces with limits and resource quotas.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Gateway&lt;/strong&gt;: Using a Gateway with HTTP routes instead of Ingresses with VPC native loadbalancing.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Environment configuration&lt;/strong&gt;: Updating the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.json&lt;/code&gt; for each environment, including the GCR image prefix and cluster details.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We plan to add a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Startup&lt;/code&gt; starting template to Bedrock itself too (as an option during the CLI project creation), but until then, I created an example project (&lt;a href=&quot;github.com:beatlevic/bedrock&quot;&gt;repo&lt;/a&gt;) for you as a reference. You can checkout the project running the following, and replacing all mentions of project name &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;beatlevic&lt;/code&gt; across the repo with your the name of your own created GCP project:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/beatlevic/bedrock.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Or you &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bedrock create&lt;/code&gt; a new project and make the following changes yourself.&lt;/p&gt;
+
+&lt;h4 id=&quot;namespaces&quot;&gt;Namespaces&lt;/h4&gt;
+
+&lt;p&gt;Kubernetes namespaces are a way to logically partition a Kubernetes cluster into multiple virtual clusters. Each namespace provides a separate scope for the resources in the cluster, including pods, services, and other objects. Namespaces can be used for a variety of purposes, such as:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Resource isolation&lt;/strong&gt;: Namespaces can be used to isolate resources between different teams or projects. In our case we will use separate namespaces for each environment, but also for shared &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;infra&lt;/code&gt; namespaces.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Access control&lt;/strong&gt;: Namespaces can be used to control access to resources in the cluster. For example, you can use namespaces to restrict access to certain pods or services based on user or role.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Resource quotas&lt;/strong&gt;: Namespaces can be used to set resource quotas for the resources in the cluster. This can help prevent one team or project from monopolizing resources in the cluster.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Multitenancy&lt;/strong&gt;: Namespaces can be used to support multitenancy in the cluster. For example, you can create a separate namespace for each tenant or customer, which can be very important for a SaaS startup.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kubernetes includes a default namespace that is used if no other namespace is specified. You can create additional namespaces using the Kubernetes API or the command line interface. In the bedrock k8s template you will four &lt;a href=&quot;https://github.com/beatlevic/bedrock/tree/master/deployment/environments/production/namespaces&quot;&gt;templates&lt;/a&gt; that will be created when you bootstrap the cluster. Resources in K8s are defined in YAML files, like for example the following definition for the &lt;a href=&quot;https://github.com/beatlevic/bedrock/blob/master/deployment/environments/production/namespaces/production.yml&quot;&gt;production&lt;/a&gt; namespace:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;v1&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Namespace&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;production&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To make sure all the production resources are running in the production namespace, you need to specify the namespace for each resource in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;metadata.namespace&lt;/code&gt; field. For example the &lt;a href=&quot;https://github.com/beatlevic/bedrock/blob/master/deployment/environments/production/services/api-deployment.yml&quot;&gt;API&lt;/a&gt; deployment for production starts with the following:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;apps/v1&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Deployment&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;api&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;production&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# &amp;lt;= Added environment namespace&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;## ...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can now also share a single Database (MongoDB) deployment between environments (each with their own database, i.e., bedrock_staging and bedrock_production) by running a Mongo deployment and Mongo service in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data&lt;/code&gt; namespace. We can then access the Mongo service from other namespaces (staging and production) by appending &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.data&lt;/code&gt; as a suffix to the service name. So the &lt;a href=&quot;https://github.com/beatlevic/bedrock/blob/master/deployment/environments/production/services/api-deployment.yml#L31&quot;&gt;MONGO_URI&lt;/a&gt; in the api-deployment environment variables becomes: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mongodb://mongo.data:27017/bedrock_production&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Finally the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;infra&lt;/code&gt; namespace will contain infrastructure resources, i.e., &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gateway&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTTPRoutes&lt;/code&gt;, for load balancing and making our services accessible to the public internet.&lt;/p&gt;
+
+&lt;h4 id=&quot;gateway-and-httproutes&quot;&gt;Gateway and HTTPRoutes&lt;/h4&gt;
+
+&lt;p&gt;Default Bedrock uses &lt;a href=&quot;https://cloud.google.com/kubernetes-engine/docs/concepts/ingress&quot;&gt;GKE Ingresses&lt;/a&gt; for routing HTTP(S) traffic to applications running in a cluster. We can create separate ingresses for each environment, but each Ingress comes with its own load balancer that we have to pay for ($20 a month). However running a single Ingress will not work, because by default an Ingress does not have cross-namespace support. Luckily we can nowadays use a Gateway instead, which evolves the Ingress resource and does have cross-namespace support (and other improvements that I won’t go into detail here).&lt;/p&gt;
+
+&lt;p&gt;To use a Kubernetes Gateway, we first need to define the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gateway&lt;/code&gt; object in our Kubernetes configuration. You can then define an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTTPRoute&lt;/code&gt; object to specify how incoming traffic should be routed to your services.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://github.com/beatlevic/bedrock/blob/master/deployment/environments/production/gateways/gateway.yml&quot;&gt;Gateway resource&lt;/a&gt; is defined as follows (in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;infra&lt;/code&gt; namespace):&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;gateway.networking.k8s.io/v1beta1&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Gateway&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;external-http&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;infra&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# &amp;lt;= Gateway is deployed in infra namespace&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;gatewayClassName&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;gke-l7-gxlb&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# &amp;lt;= Global external HTTP(S) load balancer&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;listeners&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;http&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;protocol&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;HTTP&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;80&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;allowedRoutes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;namespaces&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;All&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;addresses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;NamedAddress&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;external-gateway&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# &amp;lt;= Name of GCP global external IP address, defined with Terraform&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then within each namespace you create HTTPRoutes that bind to the Gateway to route traffic from, and define which Services to route to, and rules that define what traffic the HTTPRoute matches. Take for example the following &lt;a href=&quot;https://github.com/beatlevic/bedrock/blob/master/deployment/environments/production/gateways/bedrock-api-route-staging.yml&quot;&gt;bedrock-api HTTPRoute&lt;/a&gt; that routes traffic from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bedrock-api.beatlevic.dev&lt;/code&gt; to the api service in the staging namespace:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;HTTPRoute&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;gateway.networking.k8s.io/v1beta1&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bedrock-api&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;staging&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# &amp;lt;= HTTPRoute and api are deployed in the staging namespace&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;parentRefs&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;external-http&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;infra&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# &amp;lt;= Gateway is deployed in the infra namespace&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;hostnames&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bedrock-api.beatlevic.dev&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;rules&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;backendRefs&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;api&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;80&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;environment-configuration&quot;&gt;Environment Configuration&lt;/h4&gt;
+
+&lt;p&gt;One final (small) change we need to make is to the environment configuration of the staging environment. Each environment has its own &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.json&lt;/code&gt; file to specify the GCP project and GKE cluster name. We just need to use the same values here as we do in the config for production, with only one additional variable that is setting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gcrPrefix&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;staging-&lt;/code&gt;. The reason for this is when we build and deploy a service using the bedrock cli (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bedrock cloud deploy production api&lt;/code&gt;), it by default pushes to the Google Container Registry (GCR) and defines the specific registry for the service as follows: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gcr.io/&amp;lt;PROJECT&amp;gt;/&amp;lt;REPO&amp;gt;-services-&amp;lt;SERVICE&amp;gt;&lt;/code&gt;, e.g., &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gcr.io/beatlevic/bedrock-services-api&lt;/code&gt; for the API service. We like to build separate images for production and staging, so the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gcrPrefix&lt;/code&gt; adds an additional prefix to the registry name, e.g., &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gcr.io/beatlevic/staging-bedrock-services-api&lt;/code&gt; for the API staging docker image.&lt;/p&gt;
+
+&lt;p&gt;Staging &lt;a href=&quot;github.com:beatlevic/bedrock/deployment/environments/staging/config.json&quot;&gt;config.json&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;gcloud&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;envName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;staging&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;project&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;beatlevic&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;gcrPrefix&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;staging-&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;dropDeploymentPostfix&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;computeZone&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;europe-west4-a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;kubernetes&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;clusterName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cluster-1&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;label&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;app&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;deployment&quot;&gt;Deployment&lt;/h3&gt;
+
+&lt;h4 id=&quot;bootstrap-your-project&quot;&gt;Bootstrap your Project&lt;/h4&gt;
+
+&lt;p&gt;Bootstrapping your project only requires you to follow 3 steps:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create your own GCP project. Or you can use an existing one. In our example we use project &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;beatlevic&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Clone and modify the &lt;a href=&quot;github.com:beatlevic/bedrock&quot;&gt;example repo&lt;/a&gt; to your liking, or start with creating a bedrock project on the command line with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bedrock create&lt;/code&gt;, and adding the namespace, gateway and environment configuration changes.&lt;/li&gt;
+  &lt;li&gt;Provision and bootstrap your cluster, services and other resources with one single command:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bedrock cloud bootstrap production &amp;lt;gcloud-project-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;gke-workloads&quot;&gt;GKE Workloads&lt;/h4&gt;
+
+&lt;p&gt;When the bootstrap command runs successfully and you also deployed the staging services (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bedrock cloud deploy staging&lt;/code&gt;), you should be seeing the following workloads in the gcloud console (or run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kubectl get pods&lt;/code&gt;):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/bedrock-workloads.png&quot; alt=&quot;Bedrock GKE workloads&quot; width=&quot;80%&quot; title=&quot;Bedrock GKE workloads&quot; style=&quot;margin-left:20px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can see three services (api, api-cli and web) for each environment and mongo (and mongo-backup for daily MongoDB dumps to bucket storage) in the data namespace.&lt;/p&gt;
+
+&lt;h4 id=&quot;cloudflare-dns&quot;&gt;Cloudflare DNS&lt;/h4&gt;
+
+&lt;p&gt;We prefer to use Cloudflare DNS to proxy traffic from your domain to the Gateway IP. You can get your Gateway global IP by checking:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gcloud compute addresses list
+NAME              ADDRESS/RANGE   TYPE      PURPOSE  NETWORK  REGION  SUBNET  STATUS
+external-gateway  34.110.231.132  EXTERNAL                                    IN_USE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then next, you enter the IP for each of the (sub) domains that you have, which need to be the same hostnames that use in your HTTPRoutes. So in my case, for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;beatlevic.dev&lt;/code&gt; domain:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/cloudflare.png&quot; alt=&quot;Cloudflare DNS&quot; width=&quot;100%&quot; title=&quot;Cloudflare DNS&quot; style=&quot;margin-left:0px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can check if the api is running successfully by requesting or opening the api endpoint in your browser:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl http://bedrock-api.beatlevic.dev
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;environment&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;staging&quot;&lt;/span&gt;,
+  &lt;span class=&quot;s2&quot;&gt;&quot;version&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;0.0.1&quot;&lt;/span&gt;,
+  &lt;span class=&quot;s2&quot;&gt;&quot;openapiPath&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;/openapi.json&quot;&lt;/span&gt;,
+  &lt;span class=&quot;s2&quot;&gt;&quot;servedAt&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;2023-03-20T09:49:51.520Z&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;bedrock-dashboard&quot;&gt;Bedrock Dashboard&lt;/h4&gt;
+
+&lt;p&gt;With everything running you can now check the web service (dashboard) by opening &lt;a href=&quot;https://bedrock.beatlevic.dev&quot;&gt;bedrock.beatlevic.dev&lt;/a&gt;. There you should be greeted with a login/signup form.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/bedrock-login.png&quot; alt=&quot;Bedrock login screen&quot; width=&quot;60%&quot; title=&quot;Bedrock Login&quot; style=&quot;margin-left:150px&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;You can login with the user/password combination as defined in the &lt;a href=&quot;https://github.com/beatlevic/bedrock/blob/master/deployment/environments/production/services/api-cli-deployment.yml#L33&quot;&gt;api-cli&lt;/a&gt; deployment (Note: I changed the credentials for my own deployment), which sets up fixtures (including users) on its first run.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/bedrock-logged-in.png&quot; alt=&quot;Bedrock products screen&quot; width=&quot;100%&quot; title=&quot;Bedrock Products&quot; style=&quot;margin-left:0px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The bedrock &lt;a href=&quot;https://blog.bedrock.io/deploying-a-production-ready-kubernetes-node-react-platform-in-under-15-minutes/&quot;&gt;blog post&lt;/a&gt; goes a bit deeper into how you can make UI and API changes, and how you run things locally. However, it doesn’t yet include the generator and scaffolding features (both for code and documentation) that we introduced over time, which is due for another blog post.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;cost-breakdown&quot;&gt;Cost breakdown&lt;/h3&gt;
+
+&lt;p&gt;Finally I’ll conclude with the cost breakdown of running a single production ready GKE cluster for multiple environments. The production &lt;a href=&quot;https://github.com/beatlevic/bedrock/blob/master/deployment/environments/production/config.json&quot;&gt;config.json&lt;/a&gt; defines the cluster size and machine type that will be passed into the Terraform templates to provision your GKE cluster. I opted for machine type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n2d-standard-2&lt;/code&gt;, which provides 2 CPUs and 8 GB of RAM, and costs $54,- monthly in the europ-west region including a sustained usage discount. It’s not only the compute resource your have to pay for, but also the load balancers, traffic, reserved IPs and storage. GCP billing reports provide a great and detailed overview of your costs, so let’s have a look at the past 30 days:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/cost-breakdown.png&quot; alt=&quot;Daily cost breakdown for the past 30 days&quot; width=&quot;100%&quot; title=&quot;Daily cost breakdown for the past 30 days&quot; style=&quot;margin-left:0px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see the total is E82,64 which translates to approximately &lt;strong&gt;$90,- a month&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;You could even bring this number down by using half the compute resources and selecting for example machine type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n1-standard-1&lt;/code&gt;, reducing the costs with $28,-, bring the total down to $62,-. If that initially works for you, then you can always increase the resources later (and the cluster will already add more nodes when you start requesting more resources), but I prefer to start with nodes that have a bit more memory as we are also running a (shared) MongoDb instance. Running in the European region is also slightly more expensive than in the US, so you can save a couple of percentages there.&lt;/p&gt;
+
+&lt;p&gt;You might be tempted to run on spot instances, which are are even cheaper, but those are only for batch jobs and fault-tolerant workloads, and you want some guarantees that your production system is available. It can however be viable to expand with node pools running on spot instances if you require more batchable compute resources over time.&lt;/p&gt;
+
+&lt;p&gt;But there you have it. Running your Startup MVP on Kubernetes for $90 per month, a solid foundation, ready to scale and take over the world!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;resources&quot;&gt;Resources&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Bedrock CLI: &lt;a href=&quot;http://github.com/bedrockio/bedrock-cli&quot;&gt;github.com/bedrockio/bedrock-cli&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Project template: &lt;a href=&quot;http://github.com/beatlevic/bedrock&quot;&gt;github.com/beatlevic/bedrock&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Goodbye breakfast: 6 months of Intermittent Fasting</title>
@@ -196,8 +515,8 @@
       max: 100,
       min: 85,
       // hAxis: {
-      //   format: 'M/d',
-      //   //title: 'Date'
+      //   format: &apos;M/d&apos;,
+      //   //title: &apos;Date&apos;
       // },
       vAxis: {
         title: &quot;Weight (kg)&quot;,
@@ -210,8 +529,8 @@
       },
       // trendlines: {
       //   0: {
-      //     type: 'linear',
-      //     // title: 'Trend',
+      //     type: &apos;linear&apos;,
+      //     // title: &apos;Trend&apos;,
       //     visibleInLegend: true,
       //     showR2: true,
       //   }
@@ -518,7 +837,7 @@
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;c1&quot;&gt;# Gemfile&lt;/span&gt;
 
   &lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jekyll-algolia'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'~&amp;gt; 1.0'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;jekyll-algolia&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;~&amp;gt; 1.0&apos;&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -533,14 +852,14 @@
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;c1&quot;&gt;# _.config.yaml&lt;/span&gt;
 
   &lt;span class=&quot;na&quot;&gt;algolia&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;application_id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;your_application_id'&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;index_name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;your_indexname'&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;search_only_api_key&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;2b61f303d605176b556cb377d5ef3acd'&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;application_id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;your_application_id&apos;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;index_name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;your_indexname&apos;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;search_only_api_key&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;2b61f303d605176b556cb377d5ef3acd&apos;&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Finally, get your private Algolia admin key (which you can find in your Algolia dashboard) and run the following to execute the indexing:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  &lt;span class=&quot;nv&quot;&gt;ALGOLIA_API_KEY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'your_admin_api_key'&lt;/span&gt; bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll algolia&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  &lt;span class=&quot;nv&quot;&gt;ALGOLIA_API_KEY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;your_admin_api_key&apos;&lt;/span&gt; bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll algolia&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h4 id=&quot;2-adding-instantsearchjs-to-the-front-end&quot;&gt;2. Adding instantsearch.js to the front-end&lt;/h4&gt;
 
@@ -570,17 +889,17 @@
 11
 12
 13
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;search&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;instantsearch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;search&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;instantsearch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
     &lt;span class=&quot;na&quot;&gt;appId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;K4MUG7LHCA&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;na&quot;&gt;apiKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;2b61f303d605176b556cb377d5ef3acd&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// public read-only key&lt;/span&gt;
     &lt;span class=&quot;na&quot;&gt;indexName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;prod_beatletech&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;searchFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;helper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;searchResults&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;search-hits-wrapper&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;helper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;searchResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;display&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;searchFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;function &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;helper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;searchResults&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;search-hits-wrapper&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;nf&quot;&gt;if &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;helper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;searchResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;display&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
       &lt;span class=&quot;nx&quot;&gt;searchResults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;display&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;helper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;helper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;helper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -602,16 +921,16 @@
 11
 12
 13
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;nx&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addWidget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;instantsearch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;widgets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;searchBox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;  &lt;span class=&quot;nx&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addWidget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;instantsearch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;widgets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;searchBox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;#search-searchbar&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Search into posts...&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;poweredBy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;autofocus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
       &lt;span class=&quot;na&quot;&gt;showLoadingIndicator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;queryHook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;refine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;clearTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timerId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;timerId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;refine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;nf&quot;&gt;queryHook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;refine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;clearTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timerId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;timerId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;refine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
       &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -1489,29 +1808,6 @@ twitter and facebook experience.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/bottlenose.png&quot; alt=&quot;Bottleno.se&quot; height=&quot;157&quot; width=&quot;523&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Bottlenose = Node.js = #winning&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Skylines 1.0</title>
-   <link href="http://beatletech.com/2011/03/27/skylines-1-0"/>
-   <updated>2011-03-27T00:00:00+01:00</updated>
-   <id>http://beatletech.com/2011/03/27/skylines-1-0</id>
-   <content type="html">&lt;p&gt;Skylines is a really cool iPhone app that helps you follow what you
-like, based on realtime pictures, and for the last couple of weeks I
-have been working with the skylines team to create a solid and scalable
-backend.&lt;/p&gt;
-
-&lt;p&gt;Last week at the SXSW conference we had our 1.0 soft launch and the app is
-now available in the app store. We are currently working hard on the
-next 1.1 version, which will feature some great additional
-options. In the meantime please try out the app, and follow your
-interests in a realtime image stream.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/skylines.png&quot; alt=&quot;Skylines.net&quot; height=&quot;485&quot; width=&quot;467&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Just checkout &lt;a href=&quot;http://skylines.net&quot;&gt;skylines.net&lt;/a&gt; and download
-the app from the app store.&lt;/p&gt;
 </content>
  </entry>
  

@@ -246,17 +246,17 @@
 11
 12
 13
-</pre></td><td class="code"><pre>  <span class="kd">const</span> <span class="nx">search</span> <span class="o">=</span> <span class="nx">instantsearch</span><span class="p">({</span>
+</pre></td><td class="code"><pre>  <span class="kd">const</span> <span class="nx">search</span> <span class="o">=</span> <span class="nf">instantsearch</span><span class="p">({</span>
     <span class="na">appId</span><span class="p">:</span> <span class="dl">"</span><span class="s2">K4MUG7LHCA</span><span class="dl">"</span><span class="p">,</span>
     <span class="na">apiKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2b61f303d605176b556cb377d5ef3acd</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// public read-only key</span>
     <span class="na">indexName</span><span class="p">:</span> <span class="dl">"</span><span class="s2">prod_beatletech</span><span class="dl">"</span><span class="p">,</span>
-    <span class="na">searchFunction</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">helper</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kd">var</span> <span class="nx">searchResults</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">search-hits-wrapper</span><span class="dl">"</span><span class="p">);</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">helper</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">query</span> <span class="o">===</span> <span class="dl">""</span> <span class="o">&amp;&amp;</span> <span class="nx">searchResults</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">none</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="na">searchFunction</span><span class="p">:</span> <span class="nf">function </span><span class="p">(</span><span class="nx">helper</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">searchResults</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">search-hits-wrapper</span><span class="dl">"</span><span class="p">);</span>
+      <span class="nf">if </span><span class="p">(</span><span class="nx">helper</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">query</span> <span class="o">===</span> <span class="dl">""</span> <span class="o">&amp;&amp;</span> <span class="nx">searchResults</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">none</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">return</span><span class="p">;</span>
       <span class="p">}</span>
       <span class="nx">searchResults</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="nx">helper</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">query</span> <span class="p">?</span> <span class="dl">"</span><span class="s2">block</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">none</span><span class="dl">"</span><span class="p">;</span>
-      <span class="nx">helper</span><span class="p">.</span><span class="nx">search</span><span class="p">();</span>
+      <span class="nx">helper</span><span class="p">.</span><span class="nf">search</span><span class="p">();</span>
     <span class="p">},</span>
   <span class="p">});</span>
 </pre></td></tr></tbody></table></code></pre></figure>
@@ -278,16 +278,16 @@
 11
 12
 13
-</pre></td><td class="code"><pre>  <span class="nx">search</span><span class="p">.</span><span class="nx">addWidget</span><span class="p">(</span>
-    <span class="nx">instantsearch</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nx">searchBox</span><span class="p">({</span>
+</pre></td><td class="code"><pre>  <span class="nx">search</span><span class="p">.</span><span class="nf">addWidget</span><span class="p">(</span>
+    <span class="nx">instantsearch</span><span class="p">.</span><span class="nx">widgets</span><span class="p">.</span><span class="nf">searchBox</span><span class="p">({</span>
       <span class="na">container</span><span class="p">:</span> <span class="dl">"</span><span class="s2">#search-searchbar</span><span class="dl">"</span><span class="p">,</span>
       <span class="na">placeholder</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Search into posts...</span><span class="dl">"</span><span class="p">,</span>
       <span class="na">poweredBy</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
       <span class="na">autofocus</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
       <span class="na">showLoadingIndicator</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="nx">queryHook</span><span class="p">(</span><span class="nx">query</span><span class="p">,</span> <span class="nx">refine</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timerId</span><span class="p">);</span>
-        <span class="nx">timerId</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">refine</span><span class="p">(</span><span class="nx">query</span><span class="p">),</span> <span class="mi">500</span><span class="p">);</span>
+      <span class="nf">queryHook</span><span class="p">(</span><span class="nx">query</span><span class="p">,</span> <span class="nx">refine</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">clearTimeout</span><span class="p">(</span><span class="nx">timerId</span><span class="p">);</span>
+        <span class="nx">timerId</span> <span class="o">=</span> <span class="nf">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nf">refine</span><span class="p">(</span><span class="nx">query</span><span class="p">),</span> <span class="mi">500</span><span class="p">);</span>
       <span class="p">},</span>
     <span class="p">})</span>
   <span class="p">);</span>
@@ -346,6 +346,20 @@
             
 
             <li>
+              06 Apr 2023 &raquo;
+
+              <a href="/2023/04/06/minium-viable-kubernetes">Running your Startup on Kubernetes ($90 per month)</a>
+
+              <em>
+                <a
+                  href="https://www.google.com/search?q=+site%3Abeatletech.com"
+                  ></a
+                >
+              </em>
+            </li>
+            
+
+            <li>
               24 Nov 2020 &raquo;
 
               <a href="/2020/11/24/goodbye-breakfast">Goodbye breakfast: 6 months of Intermittent Fasting</a>
@@ -363,20 +377,6 @@
               26 Oct 2020 &raquo;
 
               <a href="/2020/10/26/docker-on-macos-without-noisy-fans">Docker on macOS without noisy fans</a>
-
-              <em>
-                <a
-                  href="https://www.google.com/search?q=+site%3Abeatletech.com"
-                  ></a
-                >
-              </em>
-            </li>
-            
-
-            <li>
-              11 Feb 2015 &raquo;
-
-              <a href="/2015/02/11/coursera-courses">My recent Coursera journey</a>
 
               <em>
                 <a

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://beatletech.com/2023/04/06/minium-viable-kubernetes</loc>
+    
+    <lastmod>2023-04-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://beatletech.com/2020/11/24/goodbye-breakfast</loc>
     
     <lastmod>2020-11-24</lastmod>
@@ -164,22 +171,22 @@
   
   <url>
     <loc>https://beatletech.com</loc>
-    <lastmod>2020-11-24</lastmod>
+    <lastmod>2023-04-06</lastmod>
     <changefreq>weekly</changefreq>
   </url>
     <url>
     <loc>https://beatletech.com/setup.html</loc>
-    <lastmod>2020-11-24</lastmod>
+    <lastmod>2023-04-06</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://beatletech.com/blog.html</loc>
-    <lastmod>2020-11-24</lastmod>
+    <lastmod>2023-04-06</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://beatletech.com/archive.html</loc>
-    <lastmod>2020-11-24</lastmod>
+    <lastmod>2023-04-06</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
