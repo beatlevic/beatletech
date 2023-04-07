@@ -89,7 +89,7 @@ I would say Bedrock is ideally suited for startups and a strong foundation to bu
 
 <iframe src="https://player.vimeo.com/video/443474352?h=0dc02d544a" width="100%" height="540" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
 
-All you need to get started is getting the [bedrock-cli](http://https://github.com/bedrockio/bedrock-cli) and creating your own bedrock project as follows:
+All you need to get started is getting the [bedrock-cli](github.com/bedrockio/bedrock-cli) and creating your own bedrock project as follows:
 
 
 ```bash
@@ -111,7 +111,7 @@ Currently the Bedrock template is designed to setup a separate GCP project (and 
 2. **Gateway**: Using a Gateway with HTTP routes instead of Ingresses with VPC native loadbalancing.
 3. **Environment configuration**: Updating the `config.json` for each environment, including the GCR image prefix and cluster details.
 
-We plan to add a `Startup` starting template to Bedrock itself too (as an option during the CLI project creation), but until then, I created an example project ([repo](github.com:beatlevic/bedrock)) for you as a reference. You can checkout the project running the following, and replacing all mentions of project name `beatlevic` across the repo with your the name of your own created GCP project:
+We plan to add a `Startup` starting template to Bedrock itself too (as an option during the CLI project creation), but until then, I created an example project ([repo](github.com/beatlevic/bedrock)) for you as a reference. You can checkout the project running the following, and replacing all mentions of project name `beatlevic` across the repo with your the name of your own created GCP project:
 
 ```bash
 $ git clone https://github.com/beatlevic/bedrock.git
@@ -232,7 +232,7 @@ Staging [config.json](github.com:beatlevic/bedrock/deployment/environments/stagi
 Bootstrapping your project only requires you to follow 3 steps:
 
 1. Create your own GCP project. Or you can use an existing one. In our example we use project `beatlevic`.
-2. Clone and modify the [example repo](github.com:beatlevic/bedrock) to your liking, or start with creating a bedrock project on the command line with `bedrock create`, and adding the namespace, gateway and environment configuration changes.
+2. Clone and modify the [example repo](github.com/beatlevic/bedrock) to your liking, or start with creating a bedrock project on the command line with `bedrock create`, and adding the namespace, gateway and environment configuration changes.
 3. Provision and bootstrap your cluster, services and other resources with one single command:
 
 ```bash
