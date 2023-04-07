@@ -159,7 +159,7 @@
 
 <p>While your MVP is often guaranteed to change drastically over time (even without pivots), a strong foundation will help you iterate faster and scale your product at a later stage without major rewrites. You primarily want to spend your time developing product features and squashing bugs, and not so much on devops and infrastructure (but still keep running costs to a minimum).</p>
 
-<p>In this blog post I like to present what I consider a great foundation with templates to bootstrap your project, which runs on Google Cloud and Kubernetes (K8s). I know there is an ongoing discussion and heated debates about Cloud vs Dedicated servers, and why you should or shouldn’t use Kubernetes for your business. Take for example <a href="https://dev.37signals.com/bringing-our-apps-back-home/">this</a> recent post from 37signals, discussing their journey on and off the cloud, on and off Kubernetes. As always, it depends on your situation and your expertise, and I’m aware that I’m biased having used Google Cloud and Kubernetes a lot, but I hope that my experience and the <a href="http://github.com/bedrockio/bedrock-cli">tools</a> and <a href="http://github.com/beatlevic/bedrock">resources</a> that I’ll share here, will help you hit the ground running and create a successful company.</p>
+<p>In this blog post I like to present what I consider a great foundation with templates to bootstrap your project, which runs on Google Cloud and Kubernetes (K8s). I know there is an ongoing discussion and heated debates about Cloud vs Dedicated servers, and why you should or shouldn’t use Kubernetes for your business. Take for example <a href="https://dev.37signals.com/bringing-our-apps-back-home/">this</a> recent post from 37signals, discussing their journey on and off the cloud, on and off Kubernetes. As always, it depends on your situation and your expertise, and I’m aware that I’m biased having used Google Cloud and Kubernetes a lot, but I hope that my experience and the <a href="http://github.com/bedrockio/bedrock-cli">tools</a> and <a href="https://github.com/beatlevic/bedrock">resources</a> that I’ll share here, will help you hit the ground running and create a successful company.</p>
 
 <h4 id="contents">Contents</h4>
 
@@ -197,7 +197,7 @@
   <li><strong>Scalability</strong>: Scaling your application up and down based on CPU-usage. If your startup expects to grow rapidly, you can easily horizontally scale your load.</li>
   <li><strong>Load balancing</strong>: Load-balance across pods and services</li>
   <li><strong>Self-healing and Auto-recovery</strong>: High availability is a nice bonus, but one of my main goals in life is to sleep at night, so we want self-healing and restart containers and nodes that fail.</li>
-  <li><strong>Easy deployment</strong>: K8s comes with a great command line interface (CLI) to manage deployments, but I’ll later introduce a great CLI wrapper (<a href="#bedrockio">Bedrock-CLI</a>) that also helps in building (Docker) and provisioning (Terraform) your infrastructure and applications.</li>
+  <li><strong>Easy deployment</strong>: K8s comes with a great command line interface (CLI) to manage deployments, but I’ll later introduce a great CLI wrapper (<a href="#project-template-bedrockio">Bedrock-CLI</a>) that also helps in building (Docker) and provisioning (Terraform) your infrastructure and applications.</li>
   <li><strong>Future proofing</strong>: Kubernetes has become the de facto standard for container orchestration.</li>
   <li><strong>Maintainable over time</strong>: Yes, you can install and run Kubernetes everywhere, but k8s is quite complex with many running components (control plane nodes, compute nodes, scheduler, proxy networking, load balancers, kubelets, etc). Unless you have a dedicated team of devops people (which you don’t, and if you have, congrats on securing your Series A investment!), I would stay away from installing and managing k8s on dedicated servers and instead choose a Cloud managed solution. This supports auto-upgrading to newer versions and making sure you run with the latest security fixes. In the next section I’ll discuss why Google Cloud’s GKE is the best option.</li>
   <li><strong>Low cost</strong>: We always like to keep costs at a minimum too (traded off against gained features). Running in the Cloud is often synonymous with spending big bucks, but I’ll show you that a production ready cluster can be had for $90 a month (or even $50 if you cheap out on compute resources).</li>
@@ -246,7 +246,7 @@
 
 <iframe src="https://player.vimeo.com/video/443474352?h=0dc02d544a" width="100%" height="540" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen=""></iframe>
 
-<p>All you need to get started is getting the <a href="http://https://github.com/bedrockio/bedrock-cli">bedrock-cli</a> and creating your own bedrock project as follows:</p>
+<p>All you need to get started is getting the <a href="http://github.com/bedrockio/bedrock-cli">bedrock-cli</a> and creating your own bedrock project as follows:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>curl <span class="nt">-s</span> https://install.bedrock.io | bash
 <span class="nv">$ </span>bedrock create
@@ -270,7 +270,7 @@
   <li><strong>Environment configuration</strong>: Updating the <code class="language-plaintext highlighter-rouge">config.json</code> for each environment, including the GCR image prefix and cluster details.</li>
 </ol>
 
-<p>We plan to add a <code class="language-plaintext highlighter-rouge">Startup</code> starting template to Bedrock itself too (as an option during the CLI project creation), but until then, I created an example project (<a href="github.com:beatlevic/bedrock">repo</a>) for you as a reference. You can checkout the project running the following, and replacing all mentions of project name <code class="language-plaintext highlighter-rouge">beatlevic</code> across the repo with your the name of your own created GCP project:</p>
+<p>We plan to add a <code class="language-plaintext highlighter-rouge">Startup</code> starting template to Bedrock itself too (as an option during the CLI project creation), but until then, I created an example project (<a href="http://github.com/beatlevic/bedrock">repo</a>) for you as a reference. You can checkout the project running the following, and replacing all mentions of project name <code class="language-plaintext highlighter-rouge">beatlevic</code> across the repo with your the name of your own created GCP project:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone https://github.com/beatlevic/bedrock.git
 </code></pre></div></div>
@@ -360,7 +360,7 @@
 
 <p>One final (small) change we need to make is to the environment configuration of the staging environment. Each environment has its own <code class="language-plaintext highlighter-rouge">config.json</code> file to specify the GCP project and GKE cluster name. We just need to use the same values here as we do in the config for production, with only one additional variable that is setting the <code class="language-plaintext highlighter-rouge">gcrPrefix</code> to <code class="language-plaintext highlighter-rouge">staging-</code>. The reason for this is when we build and deploy a service using the bedrock cli (<code class="language-plaintext highlighter-rouge">bedrock cloud deploy production api</code>), it by default pushes to the Google Container Registry (GCR) and defines the specific registry for the service as follows: <code class="language-plaintext highlighter-rouge">gcr.io/&lt;PROJECT&gt;/&lt;REPO&gt;-services-&lt;SERVICE&gt;</code>, e.g., <code class="language-plaintext highlighter-rouge">gcr.io/beatlevic/bedrock-services-api</code> for the API service. We like to build separate images for production and staging, so the <code class="language-plaintext highlighter-rouge">gcrPrefix</code> adds an additional prefix to the registry name, e.g., <code class="language-plaintext highlighter-rouge">gcr.io/beatlevic/staging-bedrock-services-api</code> for the API staging docker image.</p>
 
-<p>Staging <a href="github.com:beatlevic/bedrock/deployment/environments/staging/config.json">config.json</a>:</p>
+<p>Staging <a href="https://github.com/beatlevic/bedrock/blob/master/deployment/environments/staging/config.json">config.json</a>:</p>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"gcloud"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -387,7 +387,7 @@
 
 <ol>
   <li>Create your own GCP project. Or you can use an existing one. In our example we use project <code class="language-plaintext highlighter-rouge">beatlevic</code>.</li>
-  <li>Clone and modify the <a href="github.com:beatlevic/bedrock">example repo</a> to your liking, or start with creating a bedrock project on the command line with <code class="language-plaintext highlighter-rouge">bedrock create</code>, and adding the namespace, gateway and environment configuration changes.</li>
+  <li>Clone and modify the <a href="http://github.com/beatlevic/bedrock">example repo</a> to your liking, or start with creating a bedrock project on the command line with <code class="language-plaintext highlighter-rouge">bedrock create</code>, and adding the namespace, gateway and environment configuration changes.</li>
   <li>Provision and bootstrap your cluster, services and other resources with one single command:</li>
 </ol>
 
@@ -500,6 +500,20 @@ external-gateway  34.110.231.132  EXTERNAL                                    IN
             
 
             <li>
+              06 Apr 2023 &raquo;
+
+              <a href="/2023/04/06/minimum-viable-kubernetes">Running your Startup on Kubernetes ($90 per month)</a>
+
+              <em>
+                <a
+                  href="https://www.google.com/search?q=+site%3Abeatletech.com"
+                  ></a
+                >
+              </em>
+            </li>
+            
+
+            <li>
               26 Oct 2020 &raquo;
 
               <a href="/2020/10/26/docker-on-macos-without-noisy-fans">Docker on macOS without noisy fans</a>
@@ -517,20 +531,6 @@ external-gateway  34.110.231.132  EXTERNAL                                    IN
               24 Nov 2020 &raquo;
 
               <a href="/2020/11/24/goodbye-breakfast">Goodbye breakfast: 6 months of Intermittent Fasting</a>
-
-              <em>
-                <a
-                  href="https://www.google.com/search?q=+site%3Abeatletech.com"
-                  ></a
-                >
-              </em>
-            </li>
-            
-
-            <li>
-              11 Feb 2015 &raquo;
-
-              <a href="/2015/02/11/coursera-courses">My recent Coursera journey</a>
 
               <em>
                 <a

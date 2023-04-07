@@ -17,7 +17,7 @@ When you made the decision to start a Startup and begin working on your MVP (Min
 
 While your MVP is often guaranteed to change drastically over time (even without pivots), a strong foundation will help you iterate faster and scale your product at a later stage without major rewrites. You primarily want to spend your time developing product features and squashing bugs, and not so much on devops and infrastructure (but still keep running costs to a minimum).
 
-In this blog post I like to present what I consider a great foundation with templates to bootstrap your project, which runs on Google Cloud and Kubernetes (K8s). I know there is an ongoing discussion and heated debates about Cloud vs Dedicated servers, and why you should or shouldn't use Kubernetes for your business. Take for example [this](https://dev.37signals.com/bringing-our-apps-back-home/) recent post from 37signals, discussing their journey on and off the cloud, on and off Kubernetes. As always, it depends on your situation and your expertise, and I'm aware that I'm biased having used Google Cloud and Kubernetes a lot, but I hope that my experience and the [tools](http://github.com/bedrockio/bedrock-cli) and [resources](http://github.com/beatlevic/bedrock) that I'll share here, will help you hit the ground running and create a successful company.
+In this blog post I like to present what I consider a great foundation with templates to bootstrap your project, which runs on Google Cloud and Kubernetes (K8s). I know there is an ongoing discussion and heated debates about Cloud vs Dedicated servers, and why you should or shouldn't use Kubernetes for your business. Take for example [this](https://dev.37signals.com/bringing-our-apps-back-home/) recent post from 37signals, discussing their journey on and off the cloud, on and off Kubernetes. As always, it depends on your situation and your expertise, and I'm aware that I'm biased having used Google Cloud and Kubernetes a lot, but I hope that my experience and the [tools](http://github.com/bedrockio/bedrock-cli) and [resources](https://github.com/beatlevic/bedrock) that I'll share here, will help you hit the ground running and create a successful company.
 
 #### Contents
 
@@ -46,7 +46,7 @@ Like the minimum set of features you define for your MVP, I like to start defini
 - **Scalability**: Scaling your application up and down based on CPU-usage. If your startup expects to grow rapidly, you can easily horizontally scale your load.
 - **Load balancing**: Load-balance across pods and services
 - **Self-healing and Auto-recovery**: High availability is a nice bonus, but one of my main goals in life is to sleep at night, so we want self-healing and restart containers and nodes that fail.
-- **Easy deployment**: K8s comes with a great command line interface (CLI) to manage deployments, but I'll later introduce a great CLI wrapper ([Bedrock-CLI](#bedrockio)) that also helps in building (Docker) and provisioning (Terraform) your infrastructure and applications.
+- **Easy deployment**: K8s comes with a great command line interface (CLI) to manage deployments, but I'll later introduce a great CLI wrapper ([Bedrock-CLI](#project-template-bedrockio)) that also helps in building (Docker) and provisioning (Terraform) your infrastructure and applications.
 - **Future proofing**: Kubernetes has become the de facto standard for container orchestration.
 - **Maintainable over time**: Yes, you can install and run Kubernetes everywhere, but k8s is quite complex with many running components (control plane nodes, compute nodes, scheduler, proxy networking, load balancers, kubelets, etc). Unless you have a dedicated team of devops people (which you don't, and if you have, congrats on securing your Series A investment!), I would stay away from installing and managing k8s on dedicated servers and instead choose a Cloud managed solution. This supports auto-upgrading to newer versions and making sure you run with the latest security fixes. In the next section I'll discuss why Google Cloud's GKE is the best option.
 - **Low cost**: We always like to keep costs at a minimum too (traded off against gained features). Running in the Cloud is often synonymous with spending big bucks, but I'll show you that a production ready cluster can be had for $90 a month (or even $50 if you cheap out on compute resources).
@@ -89,7 +89,7 @@ I would say Bedrock is ideally suited for startups and a strong foundation to bu
 
 <iframe src="https://player.vimeo.com/video/443474352?h=0dc02d544a" width="100%" height="540" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
 
-All you need to get started is getting the [bedrock-cli](github.com/bedrockio/bedrock-cli) and creating your own bedrock project as follows:
+All you need to get started is getting the [bedrock-cli](http://github.com/bedrockio/bedrock-cli) and creating your own bedrock project as follows:
 
 
 ```bash
@@ -111,7 +111,7 @@ Currently the Bedrock template is designed to setup a separate GCP project (and 
 2. **Gateway**: Using a Gateway with HTTP routes instead of Ingresses with VPC native loadbalancing.
 3. **Environment configuration**: Updating the `config.json` for each environment, including the GCR image prefix and cluster details.
 
-We plan to add a `Startup` starting template to Bedrock itself too (as an option during the CLI project creation), but until then, I created an example project ([repo](github.com/beatlevic/bedrock)) for you as a reference. You can checkout the project running the following, and replacing all mentions of project name `beatlevic` across the repo with your the name of your own created GCP project:
+We plan to add a `Startup` starting template to Bedrock itself too (as an option during the CLI project creation), but until then, I created an example project ([repo](http://github.com/beatlevic/bedrock)) for you as a reference. You can checkout the project running the following, and replacing all mentions of project name `beatlevic` across the repo with your the name of your own created GCP project:
 
 ```bash
 $ git clone https://github.com/beatlevic/bedrock.git
@@ -205,7 +205,7 @@ spec:
 
 One final (small) change we need to make is to the environment configuration of the staging environment. Each environment has its own `config.json` file to specify the GCP project and GKE cluster name. We just need to use the same values here as we do in the config for production, with only one additional variable that is setting the `gcrPrefix` to `staging-`. The reason for this is when we build and deploy a service using the bedrock cli (`bedrock cloud deploy production api`), it by default pushes to the Google Container Registry (GCR) and defines the specific registry for the service as follows: `gcr.io/<PROJECT>/<REPO>-services-<SERVICE>`, e.g., `gcr.io/beatlevic/bedrock-services-api` for the API service. We like to build separate images for production and staging, so the `gcrPrefix` adds an additional prefix to the registry name, e.g., `gcr.io/beatlevic/staging-bedrock-services-api` for the API staging docker image.
 
-Staging [config.json](github.com:beatlevic/bedrock/deployment/environments/staging/config.json):
+Staging [config.json](https://github.com/beatlevic/bedrock/blob/master/deployment/environments/staging/config.json):
 
 ```json
 {
@@ -232,7 +232,7 @@ Staging [config.json](github.com:beatlevic/bedrock/deployment/environments/stagi
 Bootstrapping your project only requires you to follow 3 steps:
 
 1. Create your own GCP project. Or you can use an existing one. In our example we use project `beatlevic`.
-2. Clone and modify the [example repo](github.com/beatlevic/bedrock) to your liking, or start with creating a bedrock project on the command line with `bedrock create`, and adding the namespace, gateway and environment configuration changes.
+2. Clone and modify the [example repo](http://github.com/beatlevic/bedrock) to your liking, or start with creating a bedrock project on the command line with `bedrock create`, and adding the namespace, gateway and environment configuration changes.
 3. Provision and bootstrap your cluster, services and other resources with one single command:
 
 ```bash
