@@ -52,6 +52,8 @@ GEM
       nokogiri (~> 1.6)
       progressbar (~> 1.9)
       verbal_expressions (~> 0.1.5)
+    jekyll-redirect-from (0.16.0)
+      jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (3.0.0)
       sass-embedded (~> 1.54)
     jekyll-sitemap (1.4.0)
@@ -97,6 +99,7 @@ DEPENDENCIES
   classifier-reborn (~> 2.2)
   jekyll
   jekyll-algolia (~> 1.0)
+  jekyll-redirect-from
   jekyll-sitemap
 
 BUNDLED WITH

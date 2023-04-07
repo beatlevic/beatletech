@@ -4,7 +4,7 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2023-04-06T15:13:37+02:00</updated>
+ <updated>2023-04-07T13:05:40+02:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
@@ -22,7 +22,7 @@
 
 &lt;p&gt;While your MVP is often guaranteed to change drastically over time (even without pivots), a strong foundation will help you iterate faster and scale your product at a later stage without major rewrites. You primarily want to spend your time developing product features and squashing bugs, and not so much on devops and infrastructure (but still keep running costs to a minimum).&lt;/p&gt;
 
-&lt;p&gt;In this blog post I like to present what I consider a great foundation with templates to bootstrap your project, which runs on Google Cloud and Kubernetes (K8s). I know there is an ongoing discussion and heated debates about Cloud vs Dedicated servers, and why you should or shouldn’t use Kubernetes for your business. Take for example &lt;a href=&quot;https://dev.37signals.com/bringing-our-apps-back-home/&quot;&gt;this&lt;/a&gt; recent post from 37signals, discussing their journey on and off the cloud, on and off Kubernetes. As always, it depends on your situation and your expertise, and I’m aware that I’m biased having used Google Cloud and Kubernetes a lot, but I hope that my experience and the &lt;a href=&quot;http://github.com/bedrockio/bedrock-cli&quot;&gt;tools&lt;/a&gt; and &lt;a href=&quot;http://github.com/beatlevic/bedrock&quot;&gt;resources&lt;/a&gt; that I’ll share here, will help you hit the ground running and create a successful company.&lt;/p&gt;
+&lt;p&gt;In this blog post I like to present what I consider a great foundation with templates to bootstrap your project, which runs on Google Cloud and Kubernetes (K8s). I know there is an ongoing discussion and heated debates about Cloud vs Dedicated servers, and why you should or shouldn’t use Kubernetes for your business. Take for example &lt;a href=&quot;https://dev.37signals.com/bringing-our-apps-back-home/&quot;&gt;this&lt;/a&gt; recent post from 37signals, discussing their journey on and off the cloud, on and off Kubernetes. As always, it depends on your situation and your expertise, and I’m aware that I’m biased having used Google Cloud and Kubernetes a lot, but I hope that my experience and the &lt;a href=&quot;http://github.com/bedrockio/bedrock-cli&quot;&gt;tools&lt;/a&gt; and &lt;a href=&quot;https://github.com/beatlevic/bedrock&quot;&gt;resources&lt;/a&gt; that I’ll share here, will help you hit the ground running and create a successful company.&lt;/p&gt;
 
 &lt;h4 id=&quot;contents&quot;&gt;Contents&lt;/h4&gt;
 
@@ -60,7 +60,7 @@
   &lt;li&gt;&lt;strong&gt;Scalability&lt;/strong&gt;: Scaling your application up and down based on CPU-usage. If your startup expects to grow rapidly, you can easily horizontally scale your load.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Load balancing&lt;/strong&gt;: Load-balance across pods and services&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Self-healing and Auto-recovery&lt;/strong&gt;: High availability is a nice bonus, but one of my main goals in life is to sleep at night, so we want self-healing and restart containers and nodes that fail.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Easy deployment&lt;/strong&gt;: K8s comes with a great command line interface (CLI) to manage deployments, but I’ll later introduce a great CLI wrapper (&lt;a href=&quot;#bedrockio&quot;&gt;Bedrock-CLI&lt;/a&gt;) that also helps in building (Docker) and provisioning (Terraform) your infrastructure and applications.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Easy deployment&lt;/strong&gt;: K8s comes with a great command line interface (CLI) to manage deployments, but I’ll later introduce a great CLI wrapper (&lt;a href=&quot;#project-template-bedrockio&quot;&gt;Bedrock-CLI&lt;/a&gt;) that also helps in building (Docker) and provisioning (Terraform) your infrastructure and applications.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Future proofing&lt;/strong&gt;: Kubernetes has become the de facto standard for container orchestration.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Maintainable over time&lt;/strong&gt;: Yes, you can install and run Kubernetes everywhere, but k8s is quite complex with many running components (control plane nodes, compute nodes, scheduler, proxy networking, load balancers, kubelets, etc). Unless you have a dedicated team of devops people (which you don’t, and if you have, congrats on securing your Series A investment!), I would stay away from installing and managing k8s on dedicated servers and instead choose a Cloud managed solution. This supports auto-upgrading to newer versions and making sure you run with the latest security fixes. In the next section I’ll discuss why Google Cloud’s GKE is the best option.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Low cost&lt;/strong&gt;: We always like to keep costs at a minimum too (traded off against gained features). Running in the Cloud is often synonymous with spending big bucks, but I’ll show you that a production ready cluster can be had for $90 a month (or even $50 if you cheap out on compute resources).&lt;/li&gt;
@@ -109,7 +109,7 @@
 
 &lt;iframe src=&quot;https://player.vimeo.com/video/443474352?h=0dc02d544a&quot; width=&quot;100%&quot; height=&quot;540&quot; frameborder=&quot;0&quot; allow=&quot;fullscreen; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
-&lt;p&gt;All you need to get started is getting the &lt;a href=&quot;http://https://github.com/bedrockio/bedrock-cli&quot;&gt;bedrock-cli&lt;/a&gt; and creating your own bedrock project as follows:&lt;/p&gt;
+&lt;p&gt;All you need to get started is getting the &lt;a href=&quot;http://github.com/bedrockio/bedrock-cli&quot;&gt;bedrock-cli&lt;/a&gt; and creating your own bedrock project as follows:&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; https://install.bedrock.io | bash
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bedrock create
@@ -133,7 +133,7 @@
   &lt;li&gt;&lt;strong&gt;Environment configuration&lt;/strong&gt;: Updating the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.json&lt;/code&gt; for each environment, including the GCR image prefix and cluster details.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;We plan to add a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Startup&lt;/code&gt; starting template to Bedrock itself too (as an option during the CLI project creation), but until then, I created an example project (&lt;a href=&quot;github.com:beatlevic/bedrock&quot;&gt;repo&lt;/a&gt;) for you as a reference. You can checkout the project running the following, and replacing all mentions of project name &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;beatlevic&lt;/code&gt; across the repo with your the name of your own created GCP project:&lt;/p&gt;
+&lt;p&gt;We plan to add a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Startup&lt;/code&gt; starting template to Bedrock itself too (as an option during the CLI project creation), but until then, I created an example project (&lt;a href=&quot;http://github.com/beatlevic/bedrock&quot;&gt;repo&lt;/a&gt;) for you as a reference. You can checkout the project running the following, and replacing all mentions of project name &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;beatlevic&lt;/code&gt; across the repo with your the name of your own created GCP project:&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/beatlevic/bedrock.git
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -223,7 +223,7 @@
 
 &lt;p&gt;One final (small) change we need to make is to the environment configuration of the staging environment. Each environment has its own &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.json&lt;/code&gt; file to specify the GCP project and GKE cluster name. We just need to use the same values here as we do in the config for production, with only one additional variable that is setting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gcrPrefix&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;staging-&lt;/code&gt;. The reason for this is when we build and deploy a service using the bedrock cli (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bedrock cloud deploy production api&lt;/code&gt;), it by default pushes to the Google Container Registry (GCR) and defines the specific registry for the service as follows: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gcr.io/&amp;lt;PROJECT&amp;gt;/&amp;lt;REPO&amp;gt;-services-&amp;lt;SERVICE&amp;gt;&lt;/code&gt;, e.g., &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gcr.io/beatlevic/bedrock-services-api&lt;/code&gt; for the API service. We like to build separate images for production and staging, so the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gcrPrefix&lt;/code&gt; adds an additional prefix to the registry name, e.g., &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gcr.io/beatlevic/staging-bedrock-services-api&lt;/code&gt; for the API staging docker image.&lt;/p&gt;
 
-&lt;p&gt;Staging &lt;a href=&quot;github.com:beatlevic/bedrock/deployment/environments/staging/config.json&quot;&gt;config.json&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Staging &lt;a href=&quot;https://github.com/beatlevic/bedrock/blob/master/deployment/environments/staging/config.json&quot;&gt;config.json&lt;/a&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;gcloud&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -250,7 +250,7 @@
 
 &lt;ol&gt;
   &lt;li&gt;Create your own GCP project. Or you can use an existing one. In our example we use project &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;beatlevic&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Clone and modify the &lt;a href=&quot;github.com:beatlevic/bedrock&quot;&gt;example repo&lt;/a&gt; to your liking, or start with creating a bedrock project on the command line with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bedrock create&lt;/code&gt;, and adding the namespace, gateway and environment configuration changes.&lt;/li&gt;
+  &lt;li&gt;Clone and modify the &lt;a href=&quot;http://github.com/beatlevic/bedrock&quot;&gt;example repo&lt;/a&gt; to your liking, or start with creating a bedrock project on the command line with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bedrock create&lt;/code&gt;, and adding the namespace, gateway and environment configuration changes.&lt;/li&gt;
   &lt;li&gt;Provision and bootstrap your cluster, services and other resources with one single command:&lt;/li&gt;
 &lt;/ol&gt;
 

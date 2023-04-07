@@ -9,6 +9,9 @@ category: [development]
 image: tools_logos.png
 image_s3: https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/tools_logos2.jpg
 published: true
+redirect_from:
+  - 2023/04/06/mvk
+  - 2023/04/06/minium-viable-kubernetes
 ---
 
 <img src="https://s3.eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/tools_logos2.jpg" alt="Minimum Viable Kubernetes" width="80%" title="Minimum Viable Kubernetes"  style="margin-left:50px">

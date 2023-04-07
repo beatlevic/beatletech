@@ -10,6 +10,8 @@ gem "jekyll"
 
 gem "classifier-reborn", "~> 2.2"
 
+gem 'jekyll-redirect-from'
+
 # Gemfile
 
 group :jekyll_plugins do
