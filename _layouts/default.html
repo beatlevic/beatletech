@@ -31,6 +31,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="alternate" type="application/atom+xml" title="Recent Posts" href="https://feeds.feedburner.com/beatletech" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+
     <!--[if lt IE 9]>
       <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]-->
@@ -47,7 +51,7 @@
 
       <header id="header" class="grid_12">
 
-        <h1><a href="/">BeatleTech</a></h1>
+        <h1 ><a href="/" style="margin-top:-10px;color:rgb(47, 50, 57)"><span style="font-family:pattaya;font-size:140%">B</span>eatleTech</a></h1>
         <img id="headshot" src="https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/headshot.png" alt="It's only Hubris if you lose." title="It's only Hubris if you lose." height="155" width="200" class="thumbnail alignright" onmouseover="onHover();" onmouseout="offHover();" />
         <div id="freelancer">Coen JC Stevens</div>
       </header> <!-- end header -->
@@ -60,8 +64,8 @@
             <li {% if page.menu == 'setup' %}class="current"{% endif %}><a href="setup">Setup</a></li>
             <li {% if page.menu == 'blog' %}class="current"{% endif %}><a href="blog">Blog</a></li>
             <li {% if page.menu == 'archive' %}class="current"{% endif %}><a href="archive">Archive</a></li>
-            <li><div id="search-searchbar" style="margin-top: -4px; margin-bottom: -10px; width: 265px"></div></li>
-            <li><a href="#" style="background-color: rgb(250, 181, 122); color:white;" data-token="3c500cdbb042fff8c045dd8ba7175b16" onclick="mjOpenPopin(event, this)">Subscribe!</a></li>
+            <li><div id="search-searchbar" style="margin-top: -4px; margin-bottom: -10px; width: 365px"></div></li>
+            <!-- <li><a href="#" style="background-color: rgb(250, 181, 122); color:white;" data-token="3c500cdbb042fff8c045dd8ba7175b16" onclick="mjOpenPopin(event, this)">Subscribe!</a></li> -->
           </ul>
 
           <br class="clear" />
