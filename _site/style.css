@@ -448,15 +448,15 @@ h1 {
   font-size: 32px;
 }
 h2 {
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 22px;
+  line-height: 22px;
 }
 h3 {
-  font-size: 22px;
+  font-size: 20px;
   letter-spacing: 0px;
 }
 h4 {
-  font-size: 20px;
+  font-size: 18px;
 }
 h5 {
   font-size: 17px;
@@ -465,13 +465,16 @@ h6 {
   font-size: 16px;
 }
 
-#header h1,
+#header h1 {
+  font-family: "ChunkFive Regular", Arial, Helvetica, sans-serif; /* Chunkfive is called via @font-face */
+}
+
 .post h2,
 .setup h2,
 #freelancer,
 h3,
 h4 {
-  font-family: "ChunkFive Regular", Arial, Helvetica, sans-serif; /* Chunkfive is called via @font-face */
+  font-family: Oxygen, Arial, Helvetica, sans-serif;
 }
 
 hr {
@@ -703,7 +706,8 @@ blockquote p {
 .setup h2 {
   color: #78a7d6; /*#6b96c1;/* #333; */
   display: block;
-  font-size: 24px;
+  font-size: 22px;
+  font-weight: bold;
   margin-left: -15px;
   margin-top: 10px;
   letter-spacing: -1px;
