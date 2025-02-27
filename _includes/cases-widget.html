@@ -1,0 +1,18 @@
+<aside class="widget">
+  <!-- <ul id="menu" class="clearfix"> -->
+  <!--   <li {% if page.menu == 'blog' %}class="current"{% endif %}><a href="blog">Blog</a></li> -->
+  <!--   <li {% if page.menu == 'archive' %}class="current"{% endif %}><a href="archive">Archive</a></li> -->
+  <!-- </ul> -->
+
+  <h3>Highlighted Cases</h3>
+  <table>
+    <tbody>
+      {% for case in site.cases reversed offset: 0 limit: 8 %}
+      <tr class="posttr">
+        <!-- <td class="year">{{ case.year }}</td> -->
+        <td class="caselink"><a href="{{ case.url }}">{{ case.title }}</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</aside>

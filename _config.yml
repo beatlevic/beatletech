@@ -11,6 +11,7 @@ algolia:
   search_only_api_key: "2b61f303d605176b556cb377d5ef3acd"
   files_to_exclude:
     - blog.html
+    - cases.html
     - setup.html
     - archive.html
     - index.html
@@ -20,3 +21,9 @@ url: https://beatletech.com
 
 plugins:
   - jekyll-redirect-from
+
+collections:
+  cases:
+    output: true
+    sort_by: year
+    permalink: /case/:name

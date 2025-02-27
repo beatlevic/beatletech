@@ -13,12 +13,27 @@ layout: null
     {% endif %}
   </url>
   {% endfor %}
+  {% for post in site.case_collections %}
+  <url>
+    <loc>https://beatletech.com{{ post.url }}</loc>
+    {% if post.updated %}
+    <lastmod>{{ post.updated | date: "%Y-%m-%d" }}</lastmod>
+    {% else %}
+    <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
+    {% endif %}
+  </url>
+  {% endfor %}
   <url>
     <loc>https://beatletech.com</loc>
     <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
     <changefreq>weekly</changefreq>
   </url>
-    <url>
+  <url>
+    <loc>https://beatletech.com/cases.html</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://beatletech.com/setup.html</loc>
     <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
     <changefreq>weekly</changefreq>
