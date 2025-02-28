@@ -33,59 +33,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
 
-    <!-- Calendly badge widget begin -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/coen-stevens/30min', text: "Schedule time with me", color: '#5694ef', textColor: '#ffffff' }); }</script>
+    <script type="text/javascript">
+      function reveal() {
+        var revealsX = document.querySelectorAll(".revealx");
 
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        for (var i = 0; i < revealsX.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = revealsX[i].getBoundingClientRect().top;
+          var elementVisible = 120;
 
-<script>
-function reveal() {
-  var revealsX = document.querySelectorAll(".revealx");
+          if (elementTop < windowHeight - elementVisible) {
+            revealsX[i].classList.add("active");
+          } else {
+            revealsX[i].classList.remove("active");
+          }
+        }
 
-  for (var i = 0; i < revealsX.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = revealsX[i].getBoundingClientRect().top;
-    var elementVisible = 120;
+        var revealsY = document.querySelectorAll(".revealy");
 
-    if (elementTop < windowHeight - elementVisible) {
-      revealsX[i].classList.add("active");
-    } else {
-      revealsX[i].classList.remove("active");
-    }
-  }
+        for (var i = 0; i < revealsY.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = revealsY[i].getBoundingClientRect().top;
+          var elementVisible = 120;
 
-  var revealsY = document.querySelectorAll(".revealy");
+          if (elementTop < windowHeight - elementVisible) {
+            revealsY[i].classList.add("active");
+          } else {
+            revealsY[i].classList.remove("active");
+          }
+        }
+      }
 
-  for (var i = 0; i < revealsY.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = revealsY[i].getBoundingClientRect().top;
-    var elementVisible = 120;
+      window.addEventListener("scroll", reveal, {passive: true});
 
-    if (elementTop < windowHeight - elementVisible) {
-      revealsY[i].classList.add("active");
-    } else {
-      revealsY[i].classList.remove("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", reveal, {passive: true});
-
-// window.onscroll = function() {updateProgressBar()};
-
-// function updateProgressBar() {
-//   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-//   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-//   var scrolled = (winScroll / height) * 100;
-//   document.getElementById("progressBar").style.width = scrolled + "%";
-// }
-
-
-</script>
-<!-- Calendly badge widget end -->
+      window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/coen-stevens/30min', text: "Schedule time with me", color: '#5694ef', textColor: '#ffffff' }); reveal(); }
+    </script>
 
     <!--[if lt IE 9]>
       <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
@@ -97,7 +81,7 @@ window.addEventListener("scroll", reveal, {passive: true});
 
   </head>
 
-  <body onload="reveal()">
+  <body>
     <!-- <div class="progress-container">
       <div class="progress-bar" id="progressBar"></div>
     </div> -->

@@ -293,7 +293,9 @@ body {
   /* font: 13px 'Helvetica Neue', Verdana, Arial, Helvetica, sans-serif; */
   font: 300 90%/1.5 Oxygen, "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
-  background-image: url("https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/escher8.jpg");
+  background-image: url("https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/escher8.jpg"),
+    linear-gradient(#ffffff, #e2f1fc, #fdf3e2);
+  background-blend-mode: multiply;
   /* background:url('images/gradient.jpg') repeat-x; */
   /* background-color:black; */
   overflow-y: scroll;
