@@ -50,7 +50,7 @@ function reveal() {
   for (var i = 0; i < revealsX.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = revealsX[i].getBoundingClientRect().top;
-    var elementVisible = 150;
+    var elementVisible = 100;
 
     if (elementTop < windowHeight - elementVisible) {
       revealsX[i].classList.add("active");
@@ -64,7 +64,7 @@ function reveal() {
   for (var i = 0; i < revealsY.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = revealsY[i].getBoundingClientRect().top;
-    var elementVisible = 150;
+    var elementVisible = 100;
 
     if (elementTop < windowHeight - elementVisible) {
       revealsY[i].classList.add("active");
@@ -76,14 +76,14 @@ function reveal() {
 
 window.addEventListener("scroll", reveal, {passive: true});
 
-window.onscroll = function() {updateProgressBar()};
+// window.onscroll = function() {updateProgressBar()};
 
-function updateProgressBar() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("progressBar").style.width = scrolled + "%";
-}
+// function updateProgressBar() {
+//   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+//   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+//   var scrolled = (winScroll / height) * 100;
+//   document.getElementById("progressBar").style.width = scrolled + "%";
+// }
 
 
 </script>
@@ -100,9 +100,9 @@ function updateProgressBar() {
   </head>
 
   <body>
-    <div class="progress-container">
+    <!-- <div class="progress-container">
       <div class="progress-bar" id="progressBar"></div>
-    </div>
+    </div> -->
 
     <div id="wrapper" class="container_12">
 
