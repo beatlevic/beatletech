@@ -1404,3 +1404,27 @@ pre .lineno {
 .highlight .gi {
   color: #a6e22e;
 } /* Generic.Inserted & Diff Inserted */
+
+.revealx {
+  position: relative;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.revealx.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.revealy {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.revealy.active {
+  transform: translateY(0);
+  opacity: 1;
+}

@@ -40,6 +40,42 @@
 
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+<script>
+function reveal() {
+  var revealsX = document.querySelectorAll(".revealx");
+
+  for (var i = 0; i < revealsX.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = revealsX[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      revealsX[i].classList.add("active");
+    } else {
+      revealsX[i].classList.remove("active");
+    }
+  }
+
+  var revealsY = document.querySelectorAll(".revealy");
+
+  for (var i = 0; i < revealsY.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = revealsY[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      revealsY[i].classList.add("active");
+    } else {
+      revealsY[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal, {passive: true});
+
+
+</script>
 <!-- Calendly badge widget end -->
 
     <!--[if lt IE 9]>
