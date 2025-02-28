@@ -74,6 +74,15 @@ function reveal() {
 
 window.addEventListener("scroll", reveal, {passive: true});
 
+window.onscroll = function() {updateProgressBar()};
+
+function updateProgressBar() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("progressBar").style.width = scrolled + "%";
+}
+
 
 </script>
 <!-- Calendly badge widget end -->
@@ -89,6 +98,9 @@ window.addEventListener("scroll", reveal, {passive: true});
   </head>
 
   <body>
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
 
     <div id="wrapper" class="container_12">
 
