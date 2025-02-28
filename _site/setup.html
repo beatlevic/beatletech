@@ -50,7 +50,7 @@ function reveal() {
   for (var i = 0; i < revealsX.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = revealsX[i].getBoundingClientRect().top;
-    var elementVisible = 100;
+    var elementVisible = 120;
 
     if (elementTop < windowHeight - elementVisible) {
       revealsX[i].classList.add("active");
@@ -64,7 +64,7 @@ function reveal() {
   for (var i = 0; i < revealsY.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = revealsY[i].getBoundingClientRect().top;
-    var elementVisible = 100;
+    var elementVisible = 120;
 
     if (elementTop < windowHeight - elementVisible) {
       revealsY[i].classList.add("active");
@@ -99,7 +99,7 @@ window.addEventListener("scroll", reveal, {passive: true});
 
   </head>
 
-  <body>
+  <body onload="reveal()">
     <!-- <div class="progress-container">
       <div class="progress-bar" id="progressBar"></div>
     </div> -->
