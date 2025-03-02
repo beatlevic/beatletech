@@ -296,8 +296,6 @@ body {
   background-image: url("https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/escher8.jpg"),
     linear-gradient(#ffffff, #e2f1fc, #fdf3e2);
   background-blend-mode: multiply;
-  /* background:url('images/gradient.jpg') repeat-x; */
-  /* background-color:black; */
   overflow-y: scroll;
 }
 
