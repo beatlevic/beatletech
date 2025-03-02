@@ -299,6 +299,11 @@ body {
   overflow-y: scroll;
 }
 
+/* Ensure the background properties are applied specifically for the post page */
+body.post-page {
+  background-image: url("https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/escher8.jpg");
+}
+
 /* HTML5 */
 article,
 aside,
