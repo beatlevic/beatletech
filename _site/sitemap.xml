@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://beatletech.com/2025/03/09/fractional-vs-advisor-vs-interim-cto</loc>
+    
+    <lastmod>2025-03-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://beatletech.com/2024/01/25/morning-routine</loc>
     
     <lastmod>2024-01-25</lastmod>
@@ -179,27 +186,27 @@
   
   <url>
     <loc>https://beatletech.com</loc>
-    <lastmod>2025-03-04</lastmod>
+    <lastmod>2025-03-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://beatletech.com/cases.html</loc>
-    <lastmod>2025-03-04</lastmod>
+    <lastmod>2025-03-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://beatletech.com/setup.html</loc>
-    <lastmod>2025-03-04</lastmod>
+    <lastmod>2025-03-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://beatletech.com/blog.html</loc>
-    <lastmod>2025-03-04</lastmod>
+    <lastmod>2025-03-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://beatletech.com/archive.html</loc>
-    <lastmod>2025-03-04</lastmod>
+    <lastmod>2025-03-09</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
