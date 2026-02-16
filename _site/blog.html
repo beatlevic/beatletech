@@ -84,6 +84,126 @@
   </head>
 
   <body>
+    <!-- Redirect Banner — stevens.dev -->
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap");
+
+  .redirect-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    background: linear-gradient(135deg, #0a0a0f 0%, #12121a 50%, #0a0a0f 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family:
+      "DM Sans",
+      -apple-system,
+      BlinkMacSystemFont,
+      sans-serif;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    animation: bannerSlideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes bannerSlideIn {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .redirect-banner__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #6ee7b7;
+    box-shadow: 0 0 8px rgba(110, 231, 183, 0.5);
+    animation: pulse 2s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.6;
+      transform: scale(0.85);
+    }
+  }
+
+  .redirect-banner__text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1;
+  }
+
+  .redirect-banner__link {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.2s ease;
+    padding-bottom: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .redirect-banner__link:hover {
+    color: #6ee7b7;
+    border-bottom-color: #6ee7b7;
+  }
+
+  .redirect-banner__arrow {
+    display: inline-block;
+    margin-left: 4px;
+    transition: transform 0.2s ease;
+    font-size: 13px;
+  }
+
+  .redirect-banner__link:hover .redirect-banner__arrow {
+    transform: translateX(3px);
+  }
+
+  /* Push page content down so it's not hidden behind the fixed banner */
+  body {
+    padding-top: 48px !important;
+  }
+
+  @media (max-width: 480px) {
+    .redirect-banner {
+      padding: 12px 16px;
+      gap: 8px;
+    }
+    .redirect-banner__text {
+      font-size: 13px;
+    }
+  }
+</style>
+
+<div class="redirect-banner" role="banner">
+  <span class="redirect-banner__dot" aria-hidden="true"></span>
+  <span class="redirect-banner__text">
+    BeatleTech is now
+    <a href="https://stevens.dev" class="redirect-banner__link">
+      stevens.dev<span class="redirect-banner__arrow">&rarr;</span>
+    </a>
+    still me, fresh look.
+  </span>
+</div>
+
     <!-- <div class="progress-container">
       <div class="progress-bar" id="progressBar"></div>
     </div> -->
@@ -124,6 +244,71 @@
     <hr>
   </div>
 
+  
+  <div class="post blog">
+    <h2><a href="/2026/02/16/beatletech-is-now-stevens-dev">BeatleTech is now stevens.dev</a></h2>
+    <p class="publishdate">Monday, 16 February  2026 </p>
+    <p><p><img src="https://beatletech.com/images/stevens-dev-screenshot.webp" alt="stevens.dev" width="90%" title="stevens.dev" style="margin-left:20px" /></p>
+
+<p>After 15 years, <strong>BeatleTech</strong> has a new home: <a href="https://stevens.dev"><strong>stevens.dev</strong></a>.</p>
+
+<p>What started as a simple blog in <a href="/2010/12/19/beatletech-online">December 2010</a> has now grown into something that better reflects where I am today. The old Jekyll site served me well, but it was time for a fresh start with a modern stack and a cleaner identity.</p>
+
+<hr />
+
+<h2 id="why-the-move">Why the move?</h2>
+
+<p>I wanted a site that feels modern and fast. The old site was showing its age, and I had been itching to rebuild from scratch using a stack I actually enjoy working with day-to-day. I also like to use my actual (family) name instead of BeatleTech, which was more related to a nickname I received as a kid.</p>
+
+<hr />
+
+<h2 id="the-new-stack">The new stack</h2>
+
+<p>The new site is built with <strong>Next.js</strong>, giving it a modern, responsive feel with fast page loads and smooth transitions. The dark design with the swirling generative background felt like the right aesthetic for a Fractional CTO &amp; AI Engineer in 2026.</p>
+
+<hr />
+
+<h2 id="hosted-entirely-in-europe">Hosted entirely in Europe</h2>
+
+<p>One thing I care about is keeping things close to home. The entire setup runs in Europe:</p>
+
+<ul>
+  <li><strong>Hosting</strong>: Deployed to a <strong>Hetzner VM in Germany</strong>: Reliable, fast, and no data leaving the continent</li>
+  <li><strong>Domain</strong>: Registered at a <strong>Dutch registrar</strong></li>
+  <li><strong>Email</strong>: <strong>coen@stevens.dev</strong> via <strong>ProtonMail</strong> (Switzerland)</li>
+</ul>
+
+<p>No US cloud dependencies for the personal site. It felt right to keep it all on this side of the Atlantic.</p>
+
+<hr />
+
+<h2 id="built-on-a-sunday-afternoon">Built on a Sunday afternoon</h2>
+
+<p>The best part? I built this together with my oldest son on a <strong>Sunday afternoon</strong>, which turned into a Sunday evening, which turned into a Sunday late-night session. Crazy what you can now build in a single day when you work together with Claude Code (and yes, it is just a static landing page, but still).</p>
+
+<hr />
+
+<h2 id="what-happens-to-beatletech">What happens to BeatleTech?</h2>
+
+<p>BeatleTech isn’t going away entirely. This site will stay online as an archive, and you can see the banner at the top pointing you to <a href="https://stevens.dev">stevens.dev</a>. All the old blog posts and content remain here. But all new content and updates will live at the new address.</p>
+
+<p>If you want to get in touch, reach me at <strong>coen@stevens.dev</strong>.</p>
+
+<p>See you at <a href="https://stevens.dev">stevens.dev</a>.</p>
+
+      <div class='clear_both tags'>
+        <span>
+          tags: 
+          <a href="../../../archive#beatletech">beatletech</a>,  
+          <a href="../../../archive#development">development</a>,  
+          <a href="../../../archive#stevens.dev">stevens.dev</a> 
+        </span>
+      </div>
+      <div class="comments">
+	<span style="font-size: 100%;"><a href="/2026/02/16/beatletech-is-now-stevens-dev#disqus_thread">View Comments</a> </span>
+      </div>
+    </p>
+  </div>
   
   <div class="post blog">
     <h2><a href="/2025/03/09/fractional-vs-advisor-vs-interim-cto">Fractional CTO vs. Technical Advisor vs. Interim CTO: What’s the Difference?</a></h2>
@@ -1397,59 +1582,6 @@ external-gateway  34.110.231.132  EXTERNAL                                    IN
     </p>
   </div>
   
-  <div class="post blog">
-    <h2><a href="/2018/08/06/the-post-persgroep-era">The post-Persgroep era</a></h2>
-    <p class="publishdate">Monday, 06 August  2018 </p>
-    <p><p>Last week I finished my job as Lead Data Engineer at the <a href="https://persgroep.nl">Persgroep</a> in Amsterdam, where
-I worked for the past year. I had a great time crafting ETL pipelines, writing Scala and Python for Spark (AWS
-EMR), scheduling tasks (DAGs) with Airflow, and scaling with Redshift (Minus some boring, but important GDPR
-work). But most of all I liked the (Kanban) team, which grew during my time from just 3 members to 15, and I
-enjoyed coaching and helping out the new recruits, as well as providing technical support and architectural advise to other teams.</p>
-
-<p>So why leave my esteemed colleagues, when everything is fine and dandy? Can Christian van Thillo really do
-without me? (Better known by insiders as Christiaan van de Thillo). Well, I have this tendency to shake things
-up once in a while, and I felt the need to explore new startup opportunities. So here we are, I cleared my
-schedule for the next half a year, and will be diving into Strong-AI, Genomics, Crypto and Healthcare to find
-interesting (and doable) business angles. First I like to explore the latest research and follow a couple of
-Coursera courses, while simultaneously hack on some neural nets for crypto value predictions. In other words,
-playing around until I hit something concrete and tangible. I have a couple of friends that also have
-available overtime to join in on the fun. I’m also keeping an ear to the ground for any other opportunities in
-these domains.</p>
-
-<p>So what was the first thing I did last week with my free time? I updated my BeatleTech website, the site you
-are actually reading right now! One of my TODOs was to run everything over https, now that Chrome by default
-shows your website as not secure when it is served over http
-(<a href="https://www.theverge.com/2018/2/8/16991254/chrome-not-secure-marked-http-encryption-ssl">news</a>). This was
-relatively easy to fix thanks to <a href="https://letsencrypt.org/">Let’s Encrypt</a> and
-<a href="https://certbot.eff.org/">Certbot</a>. As long as you know that Letsencrypt will verify your website over IPv6
-if you added an AAAA DNS record, so make sure it points to the correct IPv6 address (mine wasn’t :/ so I
-dropped the incorrect AAAA record).</p>
-
-<p>Secondly I was inspired by a Hacker News <a href="https://news.ycombinator.com/item?id=17671490">discussion</a> on improving
-your portfolio website, to include a section about my home office setup. I have spent many hours perfecting my
-work setup, so it was only logical to also write about it. You can find it
-<a href="https://beatletech.com/Setup">here</a> and in the top menu.</p>
-
-<p>Finally after cleaning up my HTML, upgrading Jekyll, minimizing assets and moving them to S3
-(<a href="https://github.com/beatlevic/beatletech">source</a>), I’m concluding my stint on BeatleTech improvements with
-this blog post. Next up, research and play time!</p>
-
-<p>Wish me luck.</p>
-
-      <div class='clear_both tags'>
-        <span>
-          tags: 
-          <a href="../../../archive#startup">startup</a>,  
-          <a href="../../../archive#machine learning">machine learning</a>,  
-          <a href="../../../archive#AI">AI</a> 
-        </span>
-      </div>
-      <div class="comments">
-	<span style="font-size: 100%;"><a href="/2018/08/06/the-post-persgroep-era#disqus_thread">View Comments</a> </span>
-      </div>
-    </p>
-  </div>
-  
 
   <div class="post blog">
     <h2><a href="archive">More...</a></h2>
@@ -1469,7 +1601,7 @@ this blog post. Next up, research and play time!</p>
       />
     </div>
     <div style="margin-left:40px;margin-top:-10px">
-    Copyright &copy; 2010-2025 |
+    Copyright &copy; 2010-2026 |
     <a
       href="https://beatletech.com"
       title="BeatleTech by Coen

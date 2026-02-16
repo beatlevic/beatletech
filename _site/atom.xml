@@ -4,12 +4,67 @@
  <title>beatltetech.com</title>
  <link href="http://beatletech.com/atom.xml" rel="self"/>
  <link href="http://beatletech.com/"/>
- <updated>2025-03-09T12:56:30+01:00</updated>
+ <updated>2026-02-16T20:37:07+01:00</updated>
  <id>http://beatletech.com/</id>
  <author>
    <name>Coen Stevens</name>
  </author>
 
+ 
+ <entry>
+   <title>BeatleTech is now stevens.dev</title>
+   <link href="http://beatletech.com/2026/02/16/beatletech-is-now-stevens-dev"/>
+   <updated>2026-02-16T00:00:00+01:00</updated>
+   <id>http://beatletech.com/2026/02/16/beatletech-is-now-stevens-dev</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;https://beatletech.com/images/stevens-dev-screenshot.webp&quot; alt=&quot;stevens.dev&quot; width=&quot;90%&quot; title=&quot;stevens.dev&quot; style=&quot;margin-left:20px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After 15 years, &lt;strong&gt;BeatleTech&lt;/strong&gt; has a new home: &lt;a href=&quot;https://stevens.dev&quot;&gt;&lt;strong&gt;stevens.dev&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;What started as a simple blog in &lt;a href=&quot;/2010/12/19/beatletech-online&quot;&gt;December 2010&lt;/a&gt; has now grown into something that better reflects where I am today. The old Jekyll site served me well, but it was time for a fresh start with a modern stack and a cleaner identity.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;why-the-move&quot;&gt;Why the move?&lt;/h2&gt;
+
+&lt;p&gt;I wanted a site that feels modern and fast. The old site was showing its age, and I had been itching to rebuild from scratch using a stack I actually enjoy working with day-to-day. I also like to use my actual (family) name instead of BeatleTech, which was more related to a nickname I received as a kid.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;the-new-stack&quot;&gt;The new stack&lt;/h2&gt;
+
+&lt;p&gt;The new site is built with &lt;strong&gt;Next.js&lt;/strong&gt;, giving it a modern, responsive feel with fast page loads and smooth transitions. The dark design with the swirling generative background felt like the right aesthetic for a Fractional CTO &amp;amp; AI Engineer in 2026.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;hosted-entirely-in-europe&quot;&gt;Hosted entirely in Europe&lt;/h2&gt;
+
+&lt;p&gt;One thing I care about is keeping things close to home. The entire setup runs in Europe:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Hosting&lt;/strong&gt;: Deployed to a &lt;strong&gt;Hetzner VM in Germany&lt;/strong&gt;: Reliable, fast, and no data leaving the continent&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Domain&lt;/strong&gt;: Registered at a &lt;strong&gt;Dutch registrar&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt;: &lt;strong&gt;coen@stevens.dev&lt;/strong&gt; via &lt;strong&gt;ProtonMail&lt;/strong&gt; (Switzerland)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;No US cloud dependencies for the personal site. It felt right to keep it all on this side of the Atlantic.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;built-on-a-sunday-afternoon&quot;&gt;Built on a Sunday afternoon&lt;/h2&gt;
+
+&lt;p&gt;The best part? I built this together with my oldest son on a &lt;strong&gt;Sunday afternoon&lt;/strong&gt;, which turned into a Sunday evening, which turned into a Sunday late-night session. Crazy what you can now build in a single day when you work together with Claude Code (and yes, it is just a static landing page, but still).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;what-happens-to-beatletech&quot;&gt;What happens to BeatleTech?&lt;/h2&gt;
+
+&lt;p&gt;BeatleTech isn’t going away entirely. This site will stay online as an archive, and you can see the banner at the top pointing you to &lt;a href=&quot;https://stevens.dev&quot;&gt;stevens.dev&lt;/a&gt;. All the old blog posts and content remain here. But all new content and updates will live at the new address.&lt;/p&gt;
+
+&lt;p&gt;If you want to get in touch, reach me at &lt;strong&gt;coen@stevens.dev&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;See you at &lt;a href=&quot;https://stevens.dev&quot;&gt;stevens.dev&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Fractional CTO vs. Technical Advisor vs. Interim CTO: What’s the Difference?</title>
@@ -1933,42 +1988,6 @@ next or future meetups. You can follow any announcement on &lt;a href=&quot;http
 &lt;p&gt;And for those of you who love Clojure or like to know more about it,
 check out the &lt;a href=&quot;http://www.meetup.com/The-Amsterdam-Clojure-Meetup-Group/&quot;&gt;
 Amsterdam Clojure meetup.&lt;/a&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Bottlenose 2012</title>
-   <link href="http://beatletech.com/2012/01/04/bottlenose-2012"/>
-   <updated>2012-01-04T00:00:00+01:00</updated>
-   <id>http://beatletech.com/2012/01/04/bottlenose-2012</id>
-   <content type="html">&lt;p&gt;The past couple of months I have been busy working for &lt;a href=&quot;http://bottlenose.com&quot;&gt;Bottlenose&lt;/a&gt;, for which I did some work
-before (earlier in 2011). As I wrote about Bottlenose in a previous
-post, it is a really cool (American) tech startup partly based in the
-Netherlands that is building a new social assistance application that
-helps you make sense of all your social activity streams. It helps
-navigate the depths of your networks and keep up with your social
-streams so you can engage more intelligently.&lt;/p&gt;
-
-&lt;p&gt;I really enjoy working on all the technical challenges that we need to
-tackle to create a smart and intelligent client. Challenges involving:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Natural Language Processing (NLP)&lt;/li&gt;
-  &lt;li&gt;Interest and Topic extraction/clustering&lt;/li&gt;
-  &lt;li&gt;Interest (machine) learning&lt;/li&gt;
-  &lt;li&gt;High concurrency, handling millions of users&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Most of 2011 Bottlenose operated in stealth mode, until we were ready
-in December 2011 to launch the Beta version to the public. The launch
-was a great success and we got loads of positive &lt;a href=&quot;http://press.bottlenose.com/news&quot;&gt;media coverage&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This year I will continue to work for Bottlenose as their chief architect and allround
-(Node.js) developer. I love to see where we will get with Bottlenose in 2012.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://s3-eu-west-1.amazonaws.com/eu-west-1.beatletech.com/images/bottlenose-beta.png&quot; alt=&quot;Bottlenose.com&quot; height=&quot;128&quot; width=&quot;315&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Bottlenose = Node.js = #winning&lt;/p&gt;
 </content>
  </entry>
  
